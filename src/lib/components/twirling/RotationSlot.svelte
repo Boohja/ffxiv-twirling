@@ -48,7 +48,7 @@
       <Icon src={CgTrash} /> 
     </div>
   </div>
-  <div class="edit absolute border border-slate-500 rounded h-16">
+  <div class="edit absolute border border-slate-500 rounded h-16 invisible">
     <input type="text" />
     Or pick from right side
   </div>
