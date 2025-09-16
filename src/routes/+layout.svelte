@@ -5,6 +5,6 @@
 
 <Navbar />
 
-<div class="container mx-auto text-slate-200">
+<div class="container mx-auto text-slate-200" style="position: relative">
   <slot />
 </div>

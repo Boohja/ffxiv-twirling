@@ -69,7 +69,7 @@
   {#each $rotations as rot}
     <a
       href="/rotations/{rot.slug}"
-      class="p-2 border rounded border-slate-600 mt-4 relative block"
+      class="p-2 border rounded border-slate-600 mt-4 relative block hover:border-slate-400 hover:bg-slate-800"
     >
       <div class="flex items-center gap-3">
         {#if jobIconUrl[rot.job]}
