@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tick } from 'svelte';
-  import Icon from 'svelte-icons-pack/Icon.svelte';
-  import CgAddR from 'svelte-icons-pack/cg/CgAddR.js';
+  import { Icon } from 'svelte-icons-pack';
+  import { CgAddR } from 'svelte-icons-pack/cg';
   import { createEventDispatcher } from 'svelte';
 
   let opened = true

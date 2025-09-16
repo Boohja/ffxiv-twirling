@@ -14,7 +14,7 @@
   console.log($page.params)
 
   onMount(async () => {
-    const rot = rots.find(r => r.name === $page.params?.slug)
+    const rot = rots.find(r => r.slug === $page.params?.slug)
     if (rot === undefined) {
       goto('/rotations')
       return

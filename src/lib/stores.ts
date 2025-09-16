@@ -14,7 +14,8 @@ export interface RotationSkill {
 
 export interface Rotation {
   name: string,
-  job?: string,
+  job: string,
+  slug: string,
   steps: RotationStep[]
 }
 

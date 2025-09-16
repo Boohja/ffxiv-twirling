@@ -16,29 +16,32 @@ interface RoleWithJobs extends Role {
 export const Roles: Role[] = [
   { id: 'heal', name: 'Heal' },
   { id: 'tank', name: 'Tank' },
-  { id: 'dps', name: 'DPS' }
+  { id: 'melee', name: 'Melee DPS' },
+  { id: 'rangedMagic', name: 'Magical Ranged DPS' },
+  { id: 'rangedPhysical', name: 'Physical Ranged DPS' },
 ]
 
 export const Jobs: Job[] = [
+  { id: 'ast', name: 'Astrologian', role: 'heal' },
+  { id: 'blm', name: 'Black Mage', role: 'rangedMagic' },
+  { id: 'brd', name: 'Bard', role: 'rangedPhysical' },
+  { id: 'dnc', name: 'Dancer', role: 'rangedPhysical' },
+  { id: 'drg', name: 'Dragoon', role: 'melee' },
   { id: 'drk', name: 'Dark Knight', role: 'tank' },
   { id: 'gnb', name: 'Gunbreaker', role: 'tank' },
+  { id: 'mch', name: 'Machinist', role: 'rangedPhysical' },
+  { id: 'mnk', name: 'Monk', role: 'melee' },
+  { id: 'nin', name: 'Ninja', role: 'melee' },
+  { id: 'pct', name: 'Pictomancer', role: 'rangedMagic' },
   { id: 'pld', name: 'Paladin', role: 'tank' },
-  { id: 'war', name: 'Warrior', role: 'tank' },
-  { id: 'ast', name: 'Astrologian', role: 'heal' },
-  { id: 'sge', name: 'Sage', role: 'heal' },
+  { id: 'rdm', name: 'Red Mage', role: 'rangedMagic' },
+  { id: 'rpr', name: 'Reaper', role: 'melee' },
+  { id: 'sam', name: 'Samurai', role: 'melee' },
   { id: 'sch', name: 'Scholar', role: 'heal' },
-  { id: 'whm', name: 'White Mage', role: 'heal' },
-  { id: 'brd', name: 'Bard', role: 'dps' },
-  { id: 'blm', name: 'Black Mage', role: 'dps' },
-  { id: 'dnc', name: 'Dancer', role: 'dps' },
-  { id: 'drg', name: 'Dragoon', role: 'dps' },
-  { id: 'mch', name: 'Machinist', role: 'dps' },
-  { id: 'mnk', name: 'Monk', role: 'dps' },
-  { id: 'nin', name: 'Ninja', role: 'dps' },
-  { id: 'rpr', name: 'Reaper', role: 'dps' },
-  { id: 'rdm', name: 'Red Mage', role: 'dps' },
-  { id: 'sam', name: 'Samurai', role: 'dps' },
-  { id: 'smn', name: 'Summoner', role: 'dps' },
+  { id: 'sge', name: 'Sage', role: 'heal' },
+  { id: 'smn', name: 'Summoner', role: 'rangedMagic' },
+  { id: 'war', name: 'Warrior', role: 'tank' },
+  { id: 'whm', name: 'White Mage', role: 'heal' }
 ]
 
 export const JobsByRole: RoleWithJobs[] = Roles.reduce((list, role) => {
