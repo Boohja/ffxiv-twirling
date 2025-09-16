@@ -1,1 +1,242 @@
-[{"icon": "rdm/acceleration.png", "name": "Acceleration"}, {"icon": "rdm/addle.png", "name": "Addle"}, {"icon": "rdm/contre_sixte.png", "name": "Contre Sixte"}, {"icon": "rdm/corps-a-corps.png", "name": "Corps-A-Corps"}, {"icon": "rdm/displacement.png", "name": "Displacement"}, {"icon": "rdm/embolden.png", "name": "Embolden"}, {"icon": "rdm/enchanted_moulinet.png", "name": "Enchanted Moulinet"}, {"icon": "rdm/enchanted_redoublement.png", "name": "Enchanted Redoublement"}, {"icon": "rdm/enchanted_reprise.png", "name": "Enchanted Reprise"}, {"icon": "rdm/enchanted_riposte.png", "name": "Enchanted Riposte"}, {"icon": "rdm/enchanted_zwerchhau.png", "name": "Enchanted Zwerchhau"}, {"icon": "rdm/engagement.png", "name": "Engagement"}, {"icon": "rdm/fleche.png", "name": "Fleche"}, {"icon": "rdm/impact.png", "name": "Impact"}, {"icon": "rdm/jolt.png", "name": "Jolt"}, {"icon": "rdm/jolt_II.png", "name": "Jolt Ii"}, {"icon": "rdm/lucid_dreaming.png", "name": "Lucid Dreaming"}, {"icon": "rdm/magick_barrier.png", "name": "Magick Barrier"}, {"icon": "rdm/manafication.png", "name": "Manafication"}, {"icon": "rdm/moulinet.png", "name": "Moulinet"}, {"icon": "rdm/redoublement.png", "name": "Redoublement"}, {"icon": "rdm/reprise.png", "name": "Reprise"}, {"icon": "rdm/resolution.png", "name": "Resolution"}, {"icon": "rdm/riposte.png", "name": "Riposte"}, {"icon": "rdm/scatter.png", "name": "Scatter"}, {"icon": "rdm/scorch.png", "name": "Scorch"}, {"icon": "rdm/sleep.png", "name": "Sleep"}, {"icon": "rdm/surecast.png", "name": "Surecast"}, {"icon": "rdm/swiftcast.png", "name": "Swiftcast"}, {"icon": "rdm/veraero.png", "name": "Veraero"}, {"icon": "rdm/veraero_II.png", "name": "Veraero Ii"}, {"icon": "rdm/veraero_III.png", "name": "Veraero Iii"}, {"icon": "rdm/vercure.png", "name": "Vercure"}, {"icon": "rdm/verfire.png", "name": "Verfire"}, {"icon": "rdm/verflare.png", "name": "Verflare"}, {"icon": "rdm/verholy.png", "name": "Verholy"}, {"icon": "rdm/verraise.png", "name": "Verraise"}, {"icon": "rdm/verstone.png", "name": "Verstone"}, {"icon": "rdm/verthunder.png", "name": "Verthunder"}, {"icon": "rdm/verthunder_II.png", "name": "Verthunder Ii"}, {"icon": "rdm/verthunder_III.png", "name": "Verthunder Iii"}, {"icon": "rdm/zwerchhau.png", "name": "Zwerchhau"}]
+[
+  {
+    "row_id": 7518,
+    "name": "Acceleration",
+    "icon": "actions/7518.png"
+  },
+  {
+    "row_id": 7560,
+    "name": "Addle",
+    "icon": "actions/7560.png"
+  },
+  {
+    "row_id": 7519,
+    "name": "Contre Sixte",
+    "icon": "actions/7519.png"
+  },
+  {
+    "row_id": 7506,
+    "name": "Corps-a-corps",
+    "icon": "actions/7506.png"
+  },
+  {
+    "row_id": 29699,
+    "name": "Corps-a-corps",
+    "icon": "actions/29699.png"
+  },
+  {
+    "row_id": 7515,
+    "name": "Displacement",
+    "icon": "actions/7515.png"
+  },
+  {
+    "row_id": 29700,
+    "name": "Displacement",
+    "icon": "actions/29700.png"
+  },
+  {
+    "row_id": 7520,
+    "name": "Embolden",
+    "icon": "actions/7520.png"
+  },
+  {
+    "row_id": 41494,
+    "name": "Embolden",
+    "icon": "actions/41494.png"
+  },
+  {
+    "row_id": 41488,
+    "name": "Enchanted Riposte",
+    "icon": "actions/41488.png"
+  },
+  {
+    "row_id": 16527,
+    "name": "Engagement",
+    "icon": "actions/16527.png"
+  },
+  {
+    "row_id": 7517,
+    "name": "Fleche",
+    "icon": "actions/7517.png"
+  },
+  {
+    "row_id": 41496,
+    "name": "Forte",
+    "icon": "actions/41496.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 16526,
+    "name": "Impact",
+    "icon": "actions/16526.png"
+  },
+  {
+    "row_id": 7503,
+    "name": "Jolt",
+    "icon": "actions/7503.png"
+  },
+  {
+    "row_id": 7524,
+    "name": "Jolt II",
+    "icon": "actions/7524.png"
+  },
+  {
+    "row_id": 37004,
+    "name": "Jolt III",
+    "icon": "actions/37004.png"
+  },
+  {
+    "row_id": 41486,
+    "name": "Jolt III",
+    "icon": "actions/41486.png"
+  },
+  {
+    "row_id": 7562,
+    "name": "Lucid Dreaming",
+    "icon": "actions/7562.png"
+  },
+  {
+    "row_id": 25857,
+    "name": "Magick Barrier",
+    "icon": "actions/25857.png"
+  },
+  {
+    "row_id": 7521,
+    "name": "Manafication",
+    "icon": "actions/7521.png"
+  },
+  {
+    "row_id": 7513,
+    "name": "Moulinet",
+    "icon": "actions/7513.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7516,
+    "name": "Redoublement",
+    "icon": "actions/7516.png"
+  },
+  {
+    "row_id": 16529,
+    "name": "Reprise",
+    "icon": "actions/16529.png"
+  },
+  {
+    "row_id": 41492,
+    "name": "Resolution",
+    "icon": "actions/41492.png"
+  },
+  {
+    "row_id": 7504,
+    "name": "Riposte",
+    "icon": "actions/7504.png"
+  },
+  {
+    "row_id": 7509,
+    "name": "Scatter",
+    "icon": "actions/7509.png"
+  },
+  {
+    "row_id": 25880,
+    "name": "Sleep",
+    "icon": "actions/25880.png"
+  },
+  {
+    "row_id": 41498,
+    "name": "Southern Cross",
+    "icon": "actions/41498.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 7559,
+    "name": "Surecast",
+    "icon": "actions/7559.png"
+  },
+  {
+    "row_id": 7561,
+    "name": "Swiftcast",
+    "icon": "actions/7561.png"
+  },
+  {
+    "row_id": 7507,
+    "name": "Veraero",
+    "icon": "actions/7507.png"
+  },
+  {
+    "row_id": 16525,
+    "name": "Veraero II",
+    "icon": "actions/16525.png"
+  },
+  {
+    "row_id": 25856,
+    "name": "Veraero III",
+    "icon": "actions/25856.png"
+  },
+  {
+    "row_id": 7514,
+    "name": "Vercure",
+    "icon": "actions/7514.png"
+  },
+  {
+    "row_id": 7510,
+    "name": "Verfire",
+    "icon": "actions/7510.png"
+  },
+  {
+    "row_id": 7523,
+    "name": "Verraise",
+    "icon": "actions/7523.png"
+  },
+  {
+    "row_id": 7511,
+    "name": "Verstone",
+    "icon": "actions/7511.png"
+  },
+  {
+    "row_id": 7505,
+    "name": "Verthunder",
+    "icon": "actions/7505.png"
+  },
+  {
+    "row_id": 16524,
+    "name": "Verthunder II",
+    "icon": "actions/16524.png"
+  },
+  {
+    "row_id": 25855,
+    "name": "Verthunder III",
+    "icon": "actions/25855.png"
+  },
+  {
+    "row_id": 37005,
+    "name": "Vice of Thorns",
+    "icon": "actions/37005.png"
+  },
+  {
+    "row_id": 7512,
+    "name": "Zwerchhau",
+    "icon": "actions/7512.png"
+  }
+]

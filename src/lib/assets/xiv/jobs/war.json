@@ -1,1 +1,232 @@
-[{"icon": "war/arm's_length.png", "name": "Arm'S Length"}, {"icon": "war/berserk.png", "name": "Berserk"}, {"icon": "war/bloodwhetting.png", "name": "Bloodwhetting"}, {"icon": "war/chaotic_cyclone.png", "name": "Chaotic Cyclone"}, {"icon": "war/decimate.png", "name": "Decimate"}, {"icon": "war/defiance.png", "name": "Defiance"}, {"icon": "war/equilibrium.png", "name": "Equilibrium"}, {"icon": "war/fell_cleave.png", "name": "Fell Cleave"}, {"icon": "war/heavy_swing.png", "name": "Heavy Swing"}, {"icon": "war/holmgang.png", "name": "Holmgang"}, {"icon": "war/infuriate.png", "name": "Infuriate"}, {"icon": "war/inner_beast.png", "name": "Inner Beast"}, {"icon": "war/inner_chaos.png", "name": "Inner Chaos"}, {"icon": "war/inner_release.png", "name": "Inner Release"}, {"icon": "war/interject.png", "name": "Interject"}, {"icon": "war/low_blow.png", "name": "Low Blow"}, {"icon": "war/maim.png", "name": "Maim"}, {"icon": "war/mythril_tempest.png", "name": "Mythril Tempest"}, {"icon": "war/nascent_flash.png", "name": "Nascent Flash"}, {"icon": "war/onslaught.png", "name": "Onslaught"}, {"icon": "war/orogeny.png", "name": "Orogeny"}, {"icon": "war/overpower.png", "name": "Overpower"}, {"icon": "war/primal_rend.png", "name": "Primal Rend"}, {"icon": "war/provoke.png", "name": "Provoke"}, {"icon": "war/rampart.png", "name": "Rampart"}, {"icon": "war/raw_intuition.png", "name": "Raw Intuition"}, {"icon": "war/reprisal.png", "name": "Reprisal"}, {"icon": "war/shake_it_off.png", "name": "Shake It Off"}, {"icon": "war/shirk.png", "name": "Shirk"}, {"icon": "war/steel_cyclone.png", "name": "Steel Cyclone"}, {"icon": "war/storm's_eye.png", "name": "Storm'S Eye"}, {"icon": "war/storm's_path.png", "name": "Storm'S Path"}, {"icon": "war/thrill_of_battle.png", "name": "Thrill Of Battle"}, {"icon": "war/tomahawk.png", "name": "Tomahawk"}, {"icon": "war/upheaval.png", "name": "Upheaval"}, {"icon": "war/vengeance.png", "name": "Vengeance"}]
+[
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 38,
+    "name": "Berserk",
+    "icon": "actions/38.png"
+  },
+  {
+    "row_id": 25751,
+    "name": "Bloodwhetting",
+    "icon": "actions/25751.png"
+  },
+  {
+    "row_id": 29082,
+    "name": "Bloodwhetting",
+    "icon": "actions/29082.png"
+  },
+  {
+    "row_id": 29081,
+    "name": "Blota",
+    "icon": "actions/29081.png"
+  },
+  {
+    "row_id": 36923,
+    "name": "Damnation",
+    "icon": "actions/36923.png"
+  },
+  {
+    "row_id": 3550,
+    "name": "Decimate",
+    "icon": "actions/3550.png"
+  },
+  {
+    "row_id": 48,
+    "name": "Defiance",
+    "icon": "actions/48.png"
+  },
+  {
+    "row_id": 3552,
+    "name": "Equilibrium",
+    "icon": "actions/3552.png"
+  },
+  {
+    "row_id": 3549,
+    "name": "Fell Cleave",
+    "icon": "actions/3549.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 31,
+    "name": "Heavy Swing",
+    "icon": "actions/31.png"
+  },
+  {
+    "row_id": 43,
+    "name": "Holmgang",
+    "icon": "actions/43.png"
+  },
+  {
+    "row_id": 52,
+    "name": "Infuriate",
+    "icon": "actions/52.png"
+  },
+  {
+    "row_id": 49,
+    "name": "Inner Beast",
+    "icon": "actions/49.png"
+  },
+  {
+    "row_id": 7389,
+    "name": "Inner Release",
+    "icon": "actions/7389.png"
+  },
+  {
+    "row_id": 7538,
+    "name": "Interject",
+    "icon": "actions/7538.png"
+  },
+  {
+    "row_id": 7540,
+    "name": "Low Blow",
+    "icon": "actions/7540.png"
+  },
+  {
+    "row_id": 37,
+    "name": "Maim",
+    "icon": "actions/37.png"
+  },
+  {
+    "row_id": 16462,
+    "name": "Mythril Tempest",
+    "icon": "actions/16462.png"
+  },
+  {
+    "row_id": 16464,
+    "name": "Nascent Flash",
+    "icon": "actions/16464.png"
+  },
+  {
+    "row_id": 7386,
+    "name": "Onslaught",
+    "icon": "actions/7386.png"
+  },
+  {
+    "row_id": 29079,
+    "name": "Onslaught",
+    "icon": "actions/29079.png"
+  },
+  {
+    "row_id": 25752,
+    "name": "Orogeny",
+    "icon": "actions/25752.png"
+  },
+  {
+    "row_id": 29080,
+    "name": "Orogeny",
+    "icon": "actions/29080.png"
+  },
+  {
+    "row_id": 41,
+    "name": "Overpower",
+    "icon": "actions/41.png"
+  },
+  {
+    "row_id": 25753,
+    "name": "Primal Rend",
+    "icon": "actions/25753.png"
+  },
+  {
+    "row_id": 29084,
+    "name": "Primal Rend",
+    "icon": "actions/29084.png"
+  },
+  {
+    "row_id": 29083,
+    "name": "Primal Scream",
+    "icon": "actions/29083.png"
+  },
+  {
+    "row_id": 7533,
+    "name": "Provoke",
+    "icon": "actions/7533.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 7531,
+    "name": "Rampart",
+    "icon": "actions/7531.png"
+  },
+  {
+    "row_id": 3551,
+    "name": "Raw Intuition",
+    "icon": "actions/3551.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7535,
+    "name": "Reprisal",
+    "icon": "actions/7535.png"
+  },
+  {
+    "row_id": 7388,
+    "name": "Shake It Off",
+    "icon": "actions/7388.png"
+  },
+  {
+    "row_id": 7537,
+    "name": "Shirk",
+    "icon": "actions/7537.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 51,
+    "name": "Steel Cyclone",
+    "icon": "actions/51.png"
+  },
+  {
+    "row_id": 45,
+    "name": "Storm's Eye",
+    "icon": "actions/45.png"
+  },
+  {
+    "row_id": 42,
+    "name": "Storm's Path",
+    "icon": "actions/42.png"
+  },
+  {
+    "row_id": 40,
+    "name": "Thrill of Battle",
+    "icon": "actions/40.png"
+  },
+  {
+    "row_id": 46,
+    "name": "Tomahawk",
+    "icon": "actions/46.png"
+  },
+  {
+    "row_id": 7387,
+    "name": "Upheaval",
+    "icon": "actions/7387.png"
+  },
+  {
+    "row_id": 44,
+    "name": "Vengeance",
+    "icon": "actions/44.png"
+  }
+]

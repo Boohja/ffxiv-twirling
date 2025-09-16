@@ -1,1 +1,262 @@
-[{"icon": "smn/addle.png", "name": "Addle"}, {"icon": "smn/aethercharge.png", "name": "Aethercharge"}, {"icon": "smn/akh_morn.png", "name": "Akh Morn"}, {"icon": "smn/astral_flare.png", "name": "Astral Flare"}, {"icon": "smn/astral_flow.png", "name": "Astral Flow"}, {"icon": "smn/astral_impulse.png", "name": "Astral Impulse"}, {"icon": "smn/brand_of_purgatory.png", "name": "Brand Of Purgatory"}, {"icon": "smn/crimson_cyclone.png", "name": "Crimson Cyclone"}, {"icon": "smn/crimson_strike.png", "name": "Crimson Strike"}, {"icon": "smn/deathflare.png", "name": "Deathflare"}, {"icon": "smn/dreadwyrm_trance.png", "name": "Dreadwyrm Trance"}, {"icon": "smn/emerald_catastrophe.png", "name": "Emerald Catastrophe"}, {"icon": "smn/emerald_rite.png", "name": "Emerald Rite"}, {"icon": "smn/energy_drain.png", "name": "Energy Drain"}, {"icon": "smn/energy_siphon.png", "name": "Energy Siphon"}, {"icon": "smn/enkindle_bahamut.png", "name": "Enkindle Bahamut"}, {"icon": "smn/enkindle_phoenix.png", "name": "Enkindle Phoenix"}, {"icon": "smn/everlasting_flight.png", "name": "Everlasting Flight"}, {"icon": "smn/fester.png", "name": "Fester"}, {"icon": "smn/fountain_of_fire.png", "name": "Fountain Of Fire"}, {"icon": "smn/gemshine.png", "name": "Gemshine"}, {"icon": "smn/lucid_dreaming.png", "name": "Lucid Dreaming"}, {"icon": "smn/mountain_buster.png", "name": "Mountain Buster"}, {"icon": "smn/outburst.png", "name": "Outburst"}, {"icon": "smn/painflare.png", "name": "Painflare"}, {"icon": "smn/physick.png", "name": "Physick"}, {"icon": "smn/precious_brilliance.png", "name": "Precious Brilliance"}, {"icon": "smn/radiant_aegis.png", "name": "Radiant Aegis"}, {"icon": "smn/rekindle.png", "name": "Rekindle"}, {"icon": "smn/resurrection.png", "name": "Resurrection"}, {"icon": "smn/revelation.png", "name": "Revelation"}, {"icon": "smn/ruby_catastrophe.png", "name": "Ruby Catastrophe"}, {"icon": "smn/ruby_rite.png", "name": "Ruby Rite"}, {"icon": "smn/ruin.png", "name": "Ruin"}, {"icon": "smn/ruin_II.png", "name": "Ruin Ii"}, {"icon": "smn/ruin_III.png", "name": "Ruin Iii"}, {"icon": "smn/ruin_IV.png", "name": "Ruin Iv"}, {"icon": "smn/scarlet_flame.png", "name": "Scarlet Flame"}, {"icon": "smn/searing_light.png", "name": "Searing Light"}, {"icon": "smn/sleep.png", "name": "Sleep"}, {"icon": "smn/slipstream.png", "name": "Slipstream"}, {"icon": "smn/summon_bahamut.png", "name": "Summon Bahamut"}, {"icon": "smn/summon_carbuncle.png", "name": "Summon Carbuncle"}, {"icon": "smn/summon_emerald.png", "name": "Summon Emerald"}, {"icon": "smn/summon_garuda.png", "name": "Summon Garuda"}, {"icon": "smn/summon_garuda_II.png", "name": "Summon Garuda Ii"}, {"icon": "smn/summon_ifrit.png", "name": "Summon Ifrit"}, {"icon": "smn/summon_ifrit_II.png", "name": "Summon Ifrit Ii"}, {"icon": "smn/summon_phoenix.png", "name": "Summon Phoenix"}, {"icon": "smn/summon_ruby.png", "name": "Summon Ruby"}, {"icon": "smn/summon_titan.png", "name": "Summon Titan"}, {"icon": "smn/summon_titan_II.png", "name": "Summon Titan Ii"}, {"icon": "smn/summon_topaz.png", "name": "Summon Topaz"}, {"icon": "smn/surecast.png", "name": "Surecast"}, {"icon": "smn/swiftcast.png", "name": "Swiftcast"}, {"icon": "smn/topaz_catastrophe.png", "name": "Topaz Catastrophe"}, {"icon": "smn/topaz_rite.png", "name": "Topaz Rite"}, {"icon": "smn/tri-disaster.png", "name": "Tri-Disaster"}, {"icon": "smn/wyrmwave.png", "name": "Wyrmwave"}]
+[
+  {
+    "row_id": 7560,
+    "name": "Addle",
+    "icon": "actions/7560.png"
+  },
+  {
+    "row_id": 25800,
+    "name": "Aethercharge",
+    "icon": "actions/25800.png"
+  },
+  {
+    "row_id": 25822,
+    "name": "Astral Flow",
+    "icon": "actions/25822.png"
+  },
+  {
+    "row_id": 29667,
+    "name": "Crimson Cyclone",
+    "icon": "actions/29667.png"
+  },
+  {
+    "row_id": 3581,
+    "name": "Dreadwyrm Trance",
+    "icon": "actions/3581.png"
+  },
+  {
+    "row_id": 16508,
+    "name": "Energy Drain",
+    "icon": "actions/16508.png"
+  },
+  {
+    "row_id": 16510,
+    "name": "Energy Siphon",
+    "icon": "actions/16510.png"
+  },
+  {
+    "row_id": 7429,
+    "name": "Enkindle Bahamut",
+    "icon": "actions/7429.png"
+  },
+  {
+    "row_id": 181,
+    "name": "Fester",
+    "icon": "actions/181.png"
+  },
+  {
+    "row_id": 25883,
+    "name": "Gemshine",
+    "icon": "actions/25883.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 7562,
+    "name": "Lucid Dreaming",
+    "icon": "actions/7562.png"
+  },
+  {
+    "row_id": 36997,
+    "name": "Lux Solaris",
+    "icon": "actions/36997.png"
+  },
+  {
+    "row_id": 29671,
+    "name": "Mountain Buster",
+    "icon": "actions/29671.png"
+  },
+  {
+    "row_id": 36990,
+    "name": "Necrotize",
+    "icon": "actions/36990.png"
+  },
+  {
+    "row_id": 41483,
+    "name": "Necrotize",
+    "icon": "actions/41483.png"
+  },
+  {
+    "row_id": 16511,
+    "name": "Outburst",
+    "icon": "actions/16511.png"
+  },
+  {
+    "row_id": 3578,
+    "name": "Painflare",
+    "icon": "actions/3578.png"
+  },
+  {
+    "row_id": 16230,
+    "name": "Physick",
+    "icon": "actions/16230.png"
+  },
+  {
+    "row_id": 25884,
+    "name": "Precious Brilliance",
+    "icon": "actions/25884.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 25799,
+    "name": "Radiant Aegis",
+    "icon": "actions/25799.png"
+  },
+  {
+    "row_id": 29670,
+    "name": "Radiant Aegis",
+    "icon": "actions/29670.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 173,
+    "name": "Resurrection",
+    "icon": "actions/173.png"
+  },
+  {
+    "row_id": 163,
+    "name": "Ruin",
+    "icon": "actions/163.png"
+  },
+  {
+    "row_id": 172,
+    "name": "Ruin II",
+    "icon": "actions/172.png"
+  },
+  {
+    "row_id": 3579,
+    "name": "Ruin III",
+    "icon": "actions/3579.png"
+  },
+  {
+    "row_id": 29664,
+    "name": "Ruin III",
+    "icon": "actions/29664.png"
+  },
+  {
+    "row_id": 7426,
+    "name": "Ruin IV",
+    "icon": "actions/7426.png"
+  },
+  {
+    "row_id": 36991,
+    "name": "Searing Flash",
+    "icon": "actions/36991.png"
+  },
+  {
+    "row_id": 25801,
+    "name": "Searing Light",
+    "icon": "actions/25801.png"
+  },
+  {
+    "row_id": 25880,
+    "name": "Sleep",
+    "icon": "actions/25880.png"
+  },
+  {
+    "row_id": 29669,
+    "name": "Slipstream",
+    "icon": "actions/29669.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 7427,
+    "name": "Summon Bahamut",
+    "icon": "actions/7427.png"
+  },
+  {
+    "row_id": 29673,
+    "name": "Summon Bahamut",
+    "icon": "actions/29673.png"
+  },
+  {
+    "row_id": 25798,
+    "name": "Summon Carbuncle",
+    "icon": "actions/25798.png"
+  },
+  {
+    "row_id": 25804,
+    "name": "Summon Emerald",
+    "icon": "actions/25804.png"
+  },
+  {
+    "row_id": 25807,
+    "name": "Summon Garuda",
+    "icon": "actions/25807.png"
+  },
+  {
+    "row_id": 25840,
+    "name": "Summon Garuda II",
+    "icon": "actions/25840.png"
+  },
+  {
+    "row_id": 25805,
+    "name": "Summon Ifrit",
+    "icon": "actions/25805.png"
+  },
+  {
+    "row_id": 25838,
+    "name": "Summon Ifrit II",
+    "icon": "actions/25838.png"
+  },
+  {
+    "row_id": 29678,
+    "name": "Summon Phoenix",
+    "icon": "actions/29678.png"
+  },
+  {
+    "row_id": 25802,
+    "name": "Summon Ruby",
+    "icon": "actions/25802.png"
+  },
+  {
+    "row_id": 25806,
+    "name": "Summon Titan",
+    "icon": "actions/25806.png"
+  },
+  {
+    "row_id": 25839,
+    "name": "Summon Titan II",
+    "icon": "actions/25839.png"
+  },
+  {
+    "row_id": 25803,
+    "name": "Summon Topaz",
+    "icon": "actions/25803.png"
+  },
+  {
+    "row_id": 7559,
+    "name": "Surecast",
+    "icon": "actions/7559.png"
+  },
+  {
+    "row_id": 7561,
+    "name": "Swiftcast",
+    "icon": "actions/7561.png"
+  },
+  {
+    "row_id": 25826,
+    "name": "Tri-disaster",
+    "icon": "actions/25826.png"
+  }
+]

@@ -1,1 +1,242 @@
-[{"icon": "drk/abyssal_drain.png", "name": "Abyssal Drain"}, {"icon": "drk/arm's_length.png", "name": "Arm'S Length"}, {"icon": "drk/bloodspiller.png", "name": "Bloodspiller"}, {"icon": "drk/blood_weapon.png", "name": "Blood Weapon"}, {"icon": "drk/carve_and_spit.png", "name": "Carve And Spit"}, {"icon": "drk/dark_mind.png", "name": "Dark Mind"}, {"icon": "drk/dark_missionary.png", "name": "Dark Missionary"}, {"icon": "drk/delirium.png", "name": "Delirium"}, {"icon": "drk/edge_of_darkness.png", "name": "Edge Of Darkness"}, {"icon": "drk/edge_of_shadow.png", "name": "Edge Of Shadow"}, {"icon": "drk/flood_of_darkness.png", "name": "Flood Of Darkness"}, {"icon": "drk/flood_of_shadow.png", "name": "Flood Of Shadow"}, {"icon": "drk/grit.png", "name": "Grit"}, {"icon": "drk/hard_slash.png", "name": "Hard Slash"}, {"icon": "drk/interject.png", "name": "Interject"}, {"icon": "drk/living_dead.png", "name": "Living Dead"}, {"icon": "drk/living_shadow.png", "name": "Living Shadow"}, {"icon": "drk/low_blow.png", "name": "Low Blow"}, {"icon": "drk/oblation.png", "name": "Oblation"}, {"icon": "drk/plunge.png", "name": "Plunge"}, {"icon": "drk/provoke.png", "name": "Provoke"}, {"icon": "drk/quietus.png", "name": "Quietus"}, {"icon": "drk/rampart.png", "name": "Rampart"}, {"icon": "drk/reprisal.png", "name": "Reprisal"}, {"icon": "drk/salted_earth.png", "name": "Salted Earth"}, {"icon": "drk/salt_and_darkness.png", "name": "Salt And Darkness"}, {"icon": "drk/shadowbringer.png", "name": "Shadowbringer"}, {"icon": "drk/shadow_wall.png", "name": "Shadow Wall"}, {"icon": "drk/shirk.png", "name": "Shirk"}, {"icon": "drk/souleater.png", "name": "Souleater"}, {"icon": "drk/stalwart_soul.png", "name": "Stalwart Soul"}, {"icon": "drk/syphon_strike.png", "name": "Syphon Strike"}, {"icon": "drk/the_blackest_night.png", "name": "The Blackest Night"}, {"icon": "drk/unleash.png", "name": "Unleash"}, {"icon": "drk/unmend.png", "name": "Unmend"}]
+[
+  {
+    "row_id": 3641,
+    "name": "Abyssal Drain",
+    "icon": "actions/3641.png"
+  },
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 3625,
+    "name": "Blood Weapon",
+    "icon": "actions/3625.png"
+  },
+  {
+    "row_id": 7392,
+    "name": "Bloodspiller",
+    "icon": "actions/7392.png"
+  },
+  {
+    "row_id": 3643,
+    "name": "Carve and Spit",
+    "icon": "actions/3643.png"
+  },
+  {
+    "row_id": 3634,
+    "name": "Dark Mind",
+    "icon": "actions/3634.png"
+  },
+  {
+    "row_id": 16471,
+    "name": "Dark Missionary",
+    "icon": "actions/16471.png"
+  },
+  {
+    "row_id": 7390,
+    "name": "Delirium",
+    "icon": "actions/7390.png"
+  },
+  {
+    "row_id": 36932,
+    "name": "Disesteem",
+    "icon": "actions/36932.png"
+  },
+  {
+    "row_id": 16467,
+    "name": "Edge of Darkness",
+    "icon": "actions/16467.png"
+  },
+  {
+    "row_id": 16470,
+    "name": "Edge of Shadow",
+    "icon": "actions/16470.png"
+  },
+  {
+    "row_id": 29097,
+    "name": "Eventide",
+    "icon": "actions/29097.png"
+  },
+  {
+    "row_id": 16466,
+    "name": "Flood of Darkness",
+    "icon": "actions/16466.png"
+  },
+  {
+    "row_id": 16469,
+    "name": "Flood of Shadow",
+    "icon": "actions/16469.png"
+  },
+  {
+    "row_id": 3629,
+    "name": "Grit",
+    "icon": "actions/3629.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 3617,
+    "name": "Hard Slash",
+    "icon": "actions/3617.png"
+  },
+  {
+    "row_id": 41438,
+    "name": "Impalement",
+    "icon": "actions/41438.png"
+  },
+  {
+    "row_id": 7538,
+    "name": "Interject",
+    "icon": "actions/7538.png"
+  },
+  {
+    "row_id": 3638,
+    "name": "Living Dead",
+    "icon": "actions/3638.png"
+  },
+  {
+    "row_id": 16472,
+    "name": "Living Shadow",
+    "icon": "actions/16472.png"
+  },
+  {
+    "row_id": 7540,
+    "name": "Low Blow",
+    "icon": "actions/7540.png"
+  },
+  {
+    "row_id": 25754,
+    "name": "Oblation",
+    "icon": "actions/25754.png"
+  },
+  {
+    "row_id": 29092,
+    "name": "Plunge",
+    "icon": "actions/29092.png"
+  },
+  {
+    "row_id": 7533,
+    "name": "Provoke",
+    "icon": "actions/7533.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 7391,
+    "name": "Quietus",
+    "icon": "actions/7391.png"
+  },
+  {
+    "row_id": 7531,
+    "name": "Rampart",
+    "icon": "actions/7531.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7535,
+    "name": "Reprisal",
+    "icon": "actions/7535.png"
+  },
+  {
+    "row_id": 25755,
+    "name": "Salt and Darkness",
+    "icon": "actions/25755.png"
+  },
+  {
+    "row_id": 3639,
+    "name": "Salted Earth",
+    "icon": "actions/3639.png"
+  },
+  {
+    "row_id": 29094,
+    "name": "Salted Earth",
+    "icon": "actions/29094.png"
+  },
+  {
+    "row_id": 3636,
+    "name": "Shadow Wall",
+    "icon": "actions/3636.png"
+  },
+  {
+    "row_id": 25757,
+    "name": "Shadowbringer",
+    "icon": "actions/25757.png"
+  },
+  {
+    "row_id": 29091,
+    "name": "Shadowbringer",
+    "icon": "actions/29091.png"
+  },
+  {
+    "row_id": 36927,
+    "name": "Shadowed Vigil",
+    "icon": "actions/36927.png"
+  },
+  {
+    "row_id": 36926,
+    "name": "Shadowstride",
+    "icon": "actions/36926.png"
+  },
+  {
+    "row_id": 7537,
+    "name": "Shirk",
+    "icon": "actions/7537.png"
+  },
+  {
+    "row_id": 3632,
+    "name": "Souleater",
+    "icon": "actions/3632.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 16468,
+    "name": "Stalwart Soul",
+    "icon": "actions/16468.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 3623,
+    "name": "Syphon Strike",
+    "icon": "actions/3623.png"
+  },
+  {
+    "row_id": 29093,
+    "name": "the Blackest Night",
+    "icon": "actions/29093.png"
+  },
+  {
+    "row_id": 7393,
+    "name": "The Blackest Night",
+    "icon": "actions/7393.png"
+  },
+  {
+    "row_id": 3621,
+    "name": "Unleash",
+    "icon": "actions/3621.png"
+  },
+  {
+    "row_id": 3624,
+    "name": "Unmend",
+    "icon": "actions/3624.png"
+  }
+]

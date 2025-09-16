@@ -1,1 +1,262 @@
-[{"icon": "blm/addle.png", "name": "Addle"}, {"icon": "blm/aetherial_manipulation.png", "name": "Aetherial Manipulation"}, {"icon": "blm/amplifier.png", "name": "Amplifier"}, {"icon": "blm/between_the_lines.png", "name": "Between The Lines"}, {"icon": "blm/blizzard.png", "name": "Blizzard"}, {"icon": "blm/blizzard_II.png", "name": "Blizzard Ii"}, {"icon": "blm/blizzard_III.png", "name": "Blizzard Iii"}, {"icon": "blm/blizzard_IV.png", "name": "Blizzard Iv"}, {"icon": "blm/despair.png", "name": "Despair"}, {"icon": "blm/fire.png", "name": "Fire"}, {"icon": "blm/fire_II.png", "name": "Fire Ii"}, {"icon": "blm/fire_III.png", "name": "Fire Iii"}, {"icon": "blm/fire_IV.png", "name": "Fire Iv"}, {"icon": "blm/flare.png", "name": "Flare"}, {"icon": "blm/foul.png", "name": "Foul"}, {"icon": "blm/freeze.png", "name": "Freeze"}, {"icon": "blm/high_blizzard_II.png", "name": "High Blizzard Ii"}, {"icon": "blm/high_fire_II.png", "name": "High Fire Ii"}, {"icon": "blm/ley_lines.png", "name": "Ley Lines"}, {"icon": "blm/lucid_dreaming.png", "name": "Lucid Dreaming"}, {"icon": "blm/manafont.png", "name": "Manafont"}, {"icon": "blm/manaward.png", "name": "Manaward"}, {"icon": "blm/paradox.png", "name": "Paradox"}, {"icon": "blm/scathe.png", "name": "Scathe"}, {"icon": "blm/sharpcast.png", "name": "Sharpcast"}, {"icon": "blm/sleep.png", "name": "Sleep"}, {"icon": "blm/surecast.png", "name": "Surecast"}, {"icon": "blm/swiftcast.png", "name": "Swiftcast"}, {"icon": "blm/thunder.png", "name": "Thunder"}, {"icon": "blm/thunder_II.png", "name": "Thunder Ii"}, {"icon": "blm/thunder_III.png", "name": "Thunder Iii"}, {"icon": "blm/thunder_IV.png", "name": "Thunder Iv"}, {"icon": "blm/transpose.png", "name": "Transpose"}, {"icon": "blm/triplecast.png", "name": "Triplecast"}, {"icon": "blm/umbral_soul.png", "name": "Umbral Soul"}, {"icon": "blm/xenoglossy.png", "name": "Xenoglossy"}]
+[
+  {
+    "row_id": 7560,
+    "name": "Addle",
+    "icon": "actions/7560.png"
+  },
+  {
+    "row_id": 155,
+    "name": "Aetherial Manipulation",
+    "icon": "actions/155.png"
+  },
+  {
+    "row_id": 29660,
+    "name": "Aetherial Manipulation",
+    "icon": "actions/29660.png"
+  },
+  {
+    "row_id": 25796,
+    "name": "Amplifier",
+    "icon": "actions/25796.png"
+  },
+  {
+    "row_id": 7419,
+    "name": "Between the Lines",
+    "icon": "actions/7419.png"
+  },
+  {
+    "row_id": 142,
+    "name": "Blizzard",
+    "icon": "actions/142.png"
+  },
+  {
+    "row_id": 29653,
+    "name": "Blizzard",
+    "icon": "actions/29653.png"
+  },
+  {
+    "row_id": 25793,
+    "name": "Blizzard II",
+    "icon": "actions/25793.png"
+  },
+  {
+    "row_id": 154,
+    "name": "Blizzard III",
+    "icon": "actions/154.png"
+  },
+  {
+    "row_id": 3576,
+    "name": "Blizzard IV",
+    "icon": "actions/3576.png"
+  },
+  {
+    "row_id": 29657,
+    "name": "Burst",
+    "icon": "actions/29657.png"
+  },
+  {
+    "row_id": 16505,
+    "name": "Despair",
+    "icon": "actions/16505.png"
+  },
+  {
+    "row_id": 41475,
+    "name": "Elemental Weave",
+    "icon": "actions/41475.png"
+  },
+  {
+    "row_id": 141,
+    "name": "Fire",
+    "icon": "actions/141.png"
+  },
+  {
+    "row_id": 29649,
+    "name": "Fire",
+    "icon": "actions/29649.png"
+  },
+  {
+    "row_id": 147,
+    "name": "Fire II",
+    "icon": "actions/147.png"
+  },
+  {
+    "row_id": 152,
+    "name": "Fire III",
+    "icon": "actions/152.png"
+  },
+  {
+    "row_id": 3577,
+    "name": "Fire IV",
+    "icon": "actions/3577.png"
+  },
+  {
+    "row_id": 162,
+    "name": "Flare",
+    "icon": "actions/162.png"
+  },
+  {
+    "row_id": 36989,
+    "name": "Flare Star",
+    "icon": "actions/36989.png"
+  },
+  {
+    "row_id": 7422,
+    "name": "Foul",
+    "icon": "actions/7422.png"
+  },
+  {
+    "row_id": 159,
+    "name": "Freeze",
+    "icon": "actions/159.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 25795,
+    "name": "High Blizzard II",
+    "icon": "actions/25795.png"
+  },
+  {
+    "row_id": 25794,
+    "name": "High Fire II",
+    "icon": "actions/25794.png"
+  },
+  {
+    "row_id": 36986,
+    "name": "High Thunder",
+    "icon": "actions/36986.png"
+  },
+  {
+    "row_id": 36987,
+    "name": "High Thunder II",
+    "icon": "actions/36987.png"
+  },
+  {
+    "row_id": 41510,
+    "name": "Lethargy",
+    "icon": "actions/41510.png"
+  },
+  {
+    "row_id": 3573,
+    "name": "Ley Lines",
+    "icon": "actions/3573.png"
+  },
+  {
+    "row_id": 7562,
+    "name": "Lucid Dreaming",
+    "icon": "actions/7562.png"
+  },
+  {
+    "row_id": 158,
+    "name": "Manafont",
+    "icon": "actions/158.png"
+  },
+  {
+    "row_id": 157,
+    "name": "Manaward",
+    "icon": "actions/157.png"
+  },
+  {
+    "row_id": 29663,
+    "name": "Paradox",
+    "icon": "actions/29663.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 36988,
+    "name": "Retrace",
+    "icon": "actions/36988.png"
+  },
+  {
+    "row_id": 156,
+    "name": "Scathe",
+    "icon": "actions/156.png"
+  },
+  {
+    "row_id": 25880,
+    "name": "Sleep",
+    "icon": "actions/25880.png"
+  },
+  {
+    "row_id": 29662,
+    "name": "Soul Resonance",
+    "icon": "actions/29662.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 7559,
+    "name": "Surecast",
+    "icon": "actions/7559.png"
+  },
+  {
+    "row_id": 7561,
+    "name": "Swiftcast",
+    "icon": "actions/7561.png"
+  },
+  {
+    "row_id": 144,
+    "name": "Thunder",
+    "icon": "actions/144.png"
+  },
+  {
+    "row_id": 7447,
+    "name": "Thunder II",
+    "icon": "actions/7447.png"
+  },
+  {
+    "row_id": 153,
+    "name": "Thunder III",
+    "icon": "actions/153.png"
+  },
+  {
+    "row_id": 7420,
+    "name": "Thunder IV",
+    "icon": "actions/7420.png"
+  },
+  {
+    "row_id": 149,
+    "name": "Transpose",
+    "icon": "actions/149.png"
+  },
+  {
+    "row_id": 7421,
+    "name": "Triplecast",
+    "icon": "actions/7421.png"
+  },
+  {
+    "row_id": 16506,
+    "name": "Umbral Soul",
+    "icon": "actions/16506.png"
+  },
+  {
+    "row_id": 16507,
+    "name": "Xenoglossy",
+    "icon": "actions/16507.png"
+  },
+  {
+    "row_id": 29658,
+    "name": "Xenoglossy",
+    "icon": "actions/29658.png"
+  }
+]

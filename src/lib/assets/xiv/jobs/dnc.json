@@ -1,1 +1,212 @@
-[{"icon": "dnc/arm's_length.png", "name": "Arm'S Length"}, {"icon": "dnc/bladeshower.png", "name": "Bladeshower"}, {"icon": "dnc/bloodshower.png", "name": "Bloodshower"}, {"icon": "dnc/cascade.png", "name": "Cascade"}, {"icon": "dnc/closed_position.png", "name": "Closed Position"}, {"icon": "dnc/curing_waltz.png", "name": "Curing Waltz"}, {"icon": "dnc/devilment.png", "name": "Devilment"}, {"icon": "dnc/emboite.png", "name": "Emboite"}, {"icon": "dnc/Ending.png", "name": "Ending"}, {"icon": "dnc/entrechat.png", "name": "Entrechat"}, {"icon": "dnc/en_avant.png", "name": "En Avant"}, {"icon": "dnc/fan_dance.png", "name": "Fan Dance"}, {"icon": "dnc/fan_dance_II.png", "name": "Fan Dance Ii"}, {"icon": "dnc/fan_dance_III.png", "name": "Fan Dance Iii"}, {"icon": "dnc/fan_dance_IV.png", "name": "Fan Dance Iv"}, {"icon": "dnc/flourish.png", "name": "Flourish"}, {"icon": "dnc/foot_graze.png", "name": "Foot Graze"}, {"icon": "dnc/fountain.png", "name": "Fountain"}, {"icon": "dnc/fountainfall.png", "name": "Fountainfall"}, {"icon": "dnc/head_graze.png", "name": "Head Graze"}, {"icon": "dnc/Improvisation.png", "name": "Improvisation"}, {"icon": "dnc/improvised_finish.png", "name": "Improvised Finish"}, {"icon": "dnc/jete.png", "name": "Jete"}, {"icon": "dnc/leg_graze.png", "name": "Leg Graze"}, {"icon": "dnc/peloton.png", "name": "Peloton"}, {"icon": "dnc/pirouette.png", "name": "Pirouette"}, {"icon": "dnc/reverse_cascade.png", "name": "Reverse Cascade"}, {"icon": "dnc/rising_windmill.png", "name": "Rising Windmill"}, {"icon": "dnc/saber_dance.png", "name": "Saber Dance"}, {"icon": "dnc/second_wind.png", "name": "Second Wind"}, {"icon": "dnc/shield_samba.png", "name": "Shield Samba"}, {"icon": "dnc/standard_finish.png", "name": "Standard Finish"}, {"icon": "dnc/standard_step.png", "name": "Standard Step"}, {"icon": "dnc/starfall_dance.png", "name": "Starfall Dance"}, {"icon": "dnc/technical_finish.png", "name": "Technical Finish"}, {"icon": "dnc/technical_step.png", "name": "Technical Step"}, {"icon": "dnc/tillana.png", "name": "Tillana"}, {"icon": "dnc/windmill.png", "name": "Windmill"}]
+[
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 15994,
+    "name": "Bladeshower",
+    "icon": "actions/15994.png"
+  },
+  {
+    "row_id": 15996,
+    "name": "Bloodshower",
+    "icon": "actions/15996.png"
+  },
+  {
+    "row_id": 15989,
+    "name": "Cascade",
+    "icon": "actions/15989.png"
+  },
+  {
+    "row_id": 16006,
+    "name": "Closed Position",
+    "icon": "actions/16006.png"
+  },
+  {
+    "row_id": 29431,
+    "name": "Closed Position",
+    "icon": "actions/29431.png"
+  },
+  {
+    "row_id": 29432,
+    "name": "Contradance",
+    "icon": "actions/29432.png"
+  },
+  {
+    "row_id": 16015,
+    "name": "Curing Waltz",
+    "icon": "actions/16015.png"
+  },
+  {
+    "row_id": 29429,
+    "name": "Curing Waltz",
+    "icon": "actions/29429.png"
+  },
+  {
+    "row_id": 16011,
+    "name": "Devilment",
+    "icon": "actions/16011.png"
+  },
+  {
+    "row_id": 16010,
+    "name": "En Avant",
+    "icon": "actions/16010.png"
+  },
+  {
+    "row_id": 29430,
+    "name": "En Avant",
+    "icon": "actions/29430.png"
+  },
+  {
+    "row_id": 16007,
+    "name": "Fan Dance",
+    "icon": "actions/16007.png"
+  },
+  {
+    "row_id": 29428,
+    "name": "Fan Dance",
+    "icon": "actions/29428.png"
+  },
+  {
+    "row_id": 16008,
+    "name": "Fan Dance II",
+    "icon": "actions/16008.png"
+  },
+  {
+    "row_id": 16009,
+    "name": "Fan Dance III",
+    "icon": "actions/16009.png"
+  },
+  {
+    "row_id": 25791,
+    "name": "Fan Dance IV",
+    "icon": "actions/25791.png"
+  },
+  {
+    "row_id": 16013,
+    "name": "Flourish",
+    "icon": "actions/16013.png"
+  },
+  {
+    "row_id": 7553,
+    "name": "Foot Graze",
+    "icon": "actions/7553.png"
+  },
+  {
+    "row_id": 15990,
+    "name": "Fountain",
+    "icon": "actions/15990.png"
+  },
+  {
+    "row_id": 15992,
+    "name": "Fountainfall",
+    "icon": "actions/15992.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 7551,
+    "name": "Head Graze",
+    "icon": "actions/7551.png"
+  },
+  {
+    "row_id": 29422,
+    "name": "Honing Dance",
+    "icon": "actions/29422.png"
+  },
+  {
+    "row_id": 16014,
+    "name": "Improvisation",
+    "icon": "actions/16014.png"
+  },
+  {
+    "row_id": 36983,
+    "name": "Last Dance",
+    "icon": "actions/36983.png"
+  },
+  {
+    "row_id": 7554,
+    "name": "Leg Graze",
+    "icon": "actions/7554.png"
+  },
+  {
+    "row_id": 7557,
+    "name": "Peloton",
+    "icon": "actions/7557.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 15991,
+    "name": "Reverse Cascade",
+    "icon": "actions/15991.png"
+  },
+  {
+    "row_id": 15995,
+    "name": "Rising Windmill",
+    "icon": "actions/15995.png"
+  },
+  {
+    "row_id": 16005,
+    "name": "Saber Dance",
+    "icon": "actions/16005.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 16012,
+    "name": "Shield Samba",
+    "icon": "actions/16012.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 15997,
+    "name": "Standard Step",
+    "icon": "actions/15997.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 25792,
+    "name": "Starfall Dance",
+    "icon": "actions/25792.png"
+  },
+  {
+    "row_id": 29421,
+    "name": "Starfall Dance",
+    "icon": "actions/29421.png"
+  },
+  {
+    "row_id": 15998,
+    "name": "Technical Step",
+    "icon": "actions/15998.png"
+  },
+  {
+    "row_id": 15993,
+    "name": "Windmill",
+    "icon": "actions/15993.png"
+  }
+]

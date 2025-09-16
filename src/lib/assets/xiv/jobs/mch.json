@@ -1,1 +1,262 @@
-[{"icon": "mch/air_anchor.png", "name": "Air Anchor"}, {"icon": "mch/arm's_length.png", "name": "Arm'S Length"}, {"icon": "mch/arm_punch.png", "name": "Arm Punch"}, {"icon": "mch/automaton_queen.png", "name": "Automaton Queen"}, {"icon": "mch/auto_crossbow.png", "name": "Auto Crossbow"}, {"icon": "mch/barrel_stabilizer.png", "name": "Barrel Stabilizer"}, {"icon": "mch/bioblaster.png", "name": "Bioblaster"}, {"icon": "mch/chain_saw.png", "name": "Chain Saw"}, {"icon": "mch/clean_shot.png", "name": "Clean Shot"}, {"icon": "mch/crowned_collider.png", "name": "Crowned Collider"}, {"icon": "mch/detonator.png", "name": "Detonator"}, {"icon": "mch/drill.png", "name": "Drill"}, {"icon": "mch/flamethrower.png", "name": "Flamethrower"}, {"icon": "mch/foot_graze.png", "name": "Foot Graze"}, {"icon": "mch/gauss_round.png", "name": "Gauss Round"}, {"icon": "mch/head_graze.png", "name": "Head Graze"}, {"icon": "mch/heated_clean_shot.png", "name": "Heated Clean Shot"}, {"icon": "mch/heated_slug_shot.png", "name": "Heated Slug Shot"}, {"icon": "mch/heated_split_shot.png", "name": "Heated Split Shot"}, {"icon": "mch/heat_blast.png", "name": "Heat Blast"}, {"icon": "mch/hot_shot.png", "name": "Hot Shot"}, {"icon": "mch/hypercharge.png", "name": "Hypercharge"}, {"icon": "mch/leg_graze.png", "name": "Leg Graze"}, {"icon": "mch/peloton.png", "name": "Peloton"}, {"icon": "mch/pile_bunker.png", "name": "Pile Bunker"}, {"icon": "mch/queen_overdrive.png", "name": "Queen Overdrive"}, {"icon": "mch/reassemble.png", "name": "Reassemble"}, {"icon": "mch/ricochet.png", "name": "Ricochet"}, {"icon": "mch/roller_dash.png", "name": "Roller Dash"}, {"icon": "mch/rook_autoturret.png", "name": "Rook Autoturret"}, {"icon": "mch/rook_overdrive.png", "name": "Rook Overdrive"}, {"icon": "mch/rook_overload.png", "name": "Rook Overload"}, {"icon": "mch/scattergun.png", "name": "Scattergun"}, {"icon": "mch/second_wind.png", "name": "Second Wind"}, {"icon": "mch/slug_shot.png", "name": "Slug Shot"}, {"icon": "mch/split_shot.png", "name": "Split Shot"}, {"icon": "mch/spread_shot.png", "name": "Spread Shot"}, {"icon": "mch/tactician.png", "name": "Tactician"}, {"icon": "mch/wildfire.png", "name": "Wildfire"}]
+[
+  {
+    "row_id": 16500,
+    "name": "Air Anchor",
+    "icon": "actions/16500.png"
+  },
+  {
+    "row_id": 29414,
+    "name": "Analysis",
+    "icon": "actions/29414.png"
+  },
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 16497,
+    "name": "Auto Crossbow",
+    "icon": "actions/16497.png"
+  },
+  {
+    "row_id": 16501,
+    "name": "Automaton Queen",
+    "icon": "actions/16501.png"
+  },
+  {
+    "row_id": 7414,
+    "name": "Barrel Stabilizer",
+    "icon": "actions/7414.png"
+  },
+  {
+    "row_id": 16499,
+    "name": "Bioblaster",
+    "icon": "actions/16499.png"
+  },
+  {
+    "row_id": 29412,
+    "name": "Bishop Autoturret",
+    "icon": "actions/29412.png"
+  },
+  {
+    "row_id": 29402,
+    "name": "Blast Charge",
+    "icon": "actions/29402.png"
+  },
+  {
+    "row_id": 36978,
+    "name": "Blazing Shot",
+    "icon": "actions/36978.png"
+  },
+  {
+    "row_id": 25788,
+    "name": "Chain Saw",
+    "icon": "actions/25788.png"
+  },
+  {
+    "row_id": 36980,
+    "name": "Checkmate",
+    "icon": "actions/36980.png"
+  },
+  {
+    "row_id": 2873,
+    "name": "Clean Shot",
+    "icon": "actions/2873.png"
+  },
+  {
+    "row_id": 2887,
+    "name": "Dismantle",
+    "icon": "actions/2887.png"
+  },
+  {
+    "row_id": 36979,
+    "name": "Double Check",
+    "icon": "actions/36979.png"
+  },
+  {
+    "row_id": 16498,
+    "name": "Drill",
+    "icon": "actions/16498.png"
+  },
+  {
+    "row_id": 29405,
+    "name": "Drill",
+    "icon": "actions/29405.png"
+  },
+  {
+    "row_id": 7418,
+    "name": "Flamethrower",
+    "icon": "actions/7418.png"
+  },
+  {
+    "row_id": 7553,
+    "name": "Foot Graze",
+    "icon": "actions/7553.png"
+  },
+  {
+    "row_id": 36982,
+    "name": "Full Metal Field",
+    "icon": "actions/36982.png"
+  },
+  {
+    "row_id": 41469,
+    "name": "Full Metal Field",
+    "icon": "actions/41469.png"
+  },
+  {
+    "row_id": 2874,
+    "name": "Gauss Round",
+    "icon": "actions/2874.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 7551,
+    "name": "Head Graze",
+    "icon": "actions/7551.png"
+  },
+  {
+    "row_id": 7410,
+    "name": "Heat Blast",
+    "icon": "actions/7410.png"
+  },
+  {
+    "row_id": 29403,
+    "name": "Heat Blast",
+    "icon": "actions/29403.png"
+  },
+  {
+    "row_id": 7413,
+    "name": "Heated Clean Shot",
+    "icon": "actions/7413.png"
+  },
+  {
+    "row_id": 7412,
+    "name": "Heated Slug Shot",
+    "icon": "actions/7412.png"
+  },
+  {
+    "row_id": 7411,
+    "name": "Heated Split Shot",
+    "icon": "actions/7411.png"
+  },
+  {
+    "row_id": 2872,
+    "name": "Hot Shot",
+    "icon": "actions/2872.png"
+  },
+  {
+    "row_id": 17209,
+    "name": "Hypercharge",
+    "icon": "actions/17209.png"
+  },
+  {
+    "row_id": 7554,
+    "name": "Leg Graze",
+    "icon": "actions/7554.png"
+  },
+  {
+    "row_id": 29415,
+    "name": "Marksman's Spite",
+    "icon": "actions/29415.png"
+  },
+  {
+    "row_id": 7557,
+    "name": "Peloton",
+    "icon": "actions/7557.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 16502,
+    "name": "Queen Overdrive",
+    "icon": "actions/16502.png"
+  },
+  {
+    "row_id": 2876,
+    "name": "Reassemble",
+    "icon": "actions/2876.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 2890,
+    "name": "Ricochet",
+    "icon": "actions/2890.png"
+  },
+  {
+    "row_id": 2864,
+    "name": "Rook Autoturret",
+    "icon": "actions/2864.png"
+  },
+  {
+    "row_id": 7415,
+    "name": "Rook Overdrive",
+    "icon": "actions/7415.png"
+  },
+  {
+    "row_id": 25786,
+    "name": "Scattergun",
+    "icon": "actions/25786.png"
+  },
+  {
+    "row_id": 29404,
+    "name": "Scattergun",
+    "icon": "actions/29404.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 2868,
+    "name": "Slug Shot",
+    "icon": "actions/2868.png"
+  },
+  {
+    "row_id": 2866,
+    "name": "Split Shot",
+    "icon": "actions/2866.png"
+  },
+  {
+    "row_id": 2870,
+    "name": "Spread Shot",
+    "icon": "actions/2870.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 16889,
+    "name": "Tactician",
+    "icon": "actions/16889.png"
+  },
+  {
+    "row_id": 2878,
+    "name": "Wildfire",
+    "icon": "actions/2878.png"
+  },
+  {
+    "row_id": 29409,
+    "name": "Wildfire",
+    "icon": "actions/29409.png"
+  }
+]

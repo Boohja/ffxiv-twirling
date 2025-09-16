@@ -1,1 +1,267 @@
-[{"icon": "sge/diagnosis.png", "name": "Diagnosis"}, {"icon": "sge/dosis.png", "name": "Dosis"}, {"icon": "sge/dosis_II.png", "name": "Dosis Ii"}, {"icon": "sge/dosis_III.png", "name": "Dosis Iii"}, {"icon": "sge/druochole.png", "name": "Druochole"}, {"icon": "sge/dyskrasia.png", "name": "Dyskrasia"}, {"icon": "sge/dyskrasia_II.png", "name": "Dyskrasia Ii"}, {"icon": "sge/egeiro.png", "name": "Egeiro"}, {"icon": "sge/esuna.png", "name": "Esuna"}, {"icon": "sge/eukrasia.png", "name": "Eukrasia"}, {"icon": "sge/eukrasian_diagnosis.png", "name": "Eukrasian Diagnosis"}, {"icon": "sge/eukrasian_dosis.png", "name": "Eukrasian Dosis"}, {"icon": "sge/eukrasian_dosis_II.png", "name": "Eukrasian Dosis Ii"}, {"icon": "sge/eukrasian_dosis_III.png", "name": "Eukrasian Dosis Iii"}, {"icon": "sge/eukrasian_prognosis.png", "name": "Eukrasian Prognosis"}, {"icon": "sge/haima.png", "name": "Haima"}, {"icon": "sge/holos.png", "name": "Holos"}, {"icon": "sge/icarus.png", "name": "Icarus"}, {"icon": "sge/ixochole.png", "name": "Ixochole"}, {"icon": "sge/kardia.png", "name": "Kardia"}, {"icon": "sge/kerachole.png", "name": "Kerachole"}, {"icon": "sge/krasis.png", "name": "Krasis"}, {"icon": "sge/lucid_dreaming.png", "name": "Lucid Dreaming"}, {"icon": "sge/panhaima.png", "name": "Panhaima"}, {"icon": "sge/pepsis.png", "name": "Pepsis"}, {"icon": "sge/phlegma.png", "name": "Phlegma"}, {"icon": "sge/phlegma_II.png", "name": "Phlegma Ii"}, {"icon": "sge/phlegma_III.png", "name": "Phlegma Iii"}, {"icon": "sge/physis.png", "name": "Physis"}, {"icon": "sge/physis_II.png", "name": "Physis Ii"}, {"icon": "sge/pneuma.png", "name": "Pneuma"}, {"icon": "sge/prognosis.png", "name": "Prognosis"}, {"icon": "sge/Repose.png", "name": "Repose"}, {"icon": "sge/rescue.png", "name": "Rescue"}, {"icon": "sge/rhizomata.png", "name": "Rhizomata"}, {"icon": "sge/soteria.png", "name": "Soteria"}, {"icon": "sge/surecast.png", "name": "Surecast"}, {"icon": "sge/swiftcast.png", "name": "Swiftcast"}, {"icon": "sge/taurochole.png", "name": "Taurochole"}, {"icon": "sge/toxikon.png", "name": "Toxikon"}, {"icon": "sge/toxikon_II.png", "name": "Toxikon Ii"}, {"icon": "sge/zoe.png", "name": "Zoe"}]
+[
+  {
+    "row_id": 24284,
+    "name": "Diagnosis",
+    "icon": "actions/24284.png"
+  },
+  {
+    "row_id": 24283,
+    "name": "Dosis",
+    "icon": "actions/24283.png"
+  },
+  {
+    "row_id": 24306,
+    "name": "Dosis II",
+    "icon": "actions/24306.png"
+  },
+  {
+    "row_id": 24312,
+    "name": "Dosis III",
+    "icon": "actions/24312.png"
+  },
+  {
+    "row_id": 29256,
+    "name": "Dosis III",
+    "icon": "actions/29256.png"
+  },
+  {
+    "row_id": 24296,
+    "name": "Druochole",
+    "icon": "actions/24296.png"
+  },
+  {
+    "row_id": 24297,
+    "name": "Dyskrasia",
+    "icon": "actions/24297.png"
+  },
+  {
+    "row_id": 24315,
+    "name": "Dyskrasia II",
+    "icon": "actions/24315.png"
+  },
+  {
+    "row_id": 24287,
+    "name": "Egeiro",
+    "icon": "actions/24287.png"
+  },
+  {
+    "row_id": 7568,
+    "name": "Esuna",
+    "icon": "actions/7568.png"
+  },
+  {
+    "row_id": 24290,
+    "name": "Eukrasia",
+    "icon": "actions/24290.png"
+  },
+  {
+    "row_id": 29258,
+    "name": "Eukrasia",
+    "icon": "actions/29258.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 24305,
+    "name": "Haima",
+    "icon": "actions/24305.png"
+  },
+  {
+    "row_id": 24310,
+    "name": "Holos",
+    "icon": "actions/24310.png"
+  },
+  {
+    "row_id": 24295,
+    "name": "Icarus",
+    "icon": "actions/24295.png"
+  },
+  {
+    "row_id": 29261,
+    "name": "Icarus",
+    "icon": "actions/29261.png"
+  },
+  {
+    "row_id": 24299,
+    "name": "Ixochole",
+    "icon": "actions/24299.png"
+  },
+  {
+    "row_id": 24285,
+    "name": "Kardia",
+    "icon": "actions/24285.png"
+  },
+  {
+    "row_id": 29264,
+    "name": "Kardia",
+    "icon": "actions/29264.png"
+  },
+  {
+    "row_id": 24298,
+    "name": "Kerachole",
+    "icon": "actions/24298.png"
+  },
+  {
+    "row_id": 24317,
+    "name": "Krasis",
+    "icon": "actions/24317.png"
+  },
+  {
+    "row_id": 7562,
+    "name": "Lucid Dreaming",
+    "icon": "actions/7562.png"
+  },
+  {
+    "row_id": 29266,
+    "name": "Mesotes",
+    "icon": "actions/29266.png"
+  },
+  {
+    "row_id": 24311,
+    "name": "Panhaima",
+    "icon": "actions/24311.png"
+  },
+  {
+    "row_id": 24301,
+    "name": "Pepsis",
+    "icon": "actions/24301.png"
+  },
+  {
+    "row_id": 37035,
+    "name": "Philosophia",
+    "icon": "actions/37035.png"
+  },
+  {
+    "row_id": 24289,
+    "name": "Phlegma",
+    "icon": "actions/24289.png"
+  },
+  {
+    "row_id": 24307,
+    "name": "Phlegma II",
+    "icon": "actions/24307.png"
+  },
+  {
+    "row_id": 24313,
+    "name": "Phlegma III",
+    "icon": "actions/24313.png"
+  },
+  {
+    "row_id": 29259,
+    "name": "Phlegma III",
+    "icon": "actions/29259.png"
+  },
+  {
+    "row_id": 24288,
+    "name": "Physis",
+    "icon": "actions/24288.png"
+  },
+  {
+    "row_id": 24302,
+    "name": "Physis II",
+    "icon": "actions/24302.png"
+  },
+  {
+    "row_id": 24318,
+    "name": "Pneuma",
+    "icon": "actions/24318.png"
+  },
+  {
+    "row_id": 29260,
+    "name": "Pneuma",
+    "icon": "actions/29260.png"
+  },
+  {
+    "row_id": 24286,
+    "name": "Prognosis",
+    "icon": "actions/24286.png"
+  },
+  {
+    "row_id": 37033,
+    "name": "Psyche",
+    "icon": "actions/37033.png"
+  },
+  {
+    "row_id": 1584,
+    "name": "Purify",
+    "icon": "actions/1584.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 16560,
+    "name": "Repose",
+    "icon": "actions/16560.png"
+  },
+  {
+    "row_id": 7571,
+    "name": "Rescue",
+    "icon": "actions/7571.png"
+  },
+  {
+    "row_id": 24309,
+    "name": "Rhizomata",
+    "icon": "actions/24309.png"
+  },
+  {
+    "row_id": 24294,
+    "name": "Soteria",
+    "icon": "actions/24294.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 7559,
+    "name": "Surecast",
+    "icon": "actions/7559.png"
+  },
+  {
+    "row_id": 7561,
+    "name": "Swiftcast",
+    "icon": "actions/7561.png"
+  },
+  {
+    "row_id": 24303,
+    "name": "Taurochole",
+    "icon": "actions/24303.png"
+  },
+  {
+    "row_id": 24304,
+    "name": "Toxikon",
+    "icon": "actions/24304.png"
+  },
+  {
+    "row_id": 29262,
+    "name": "Toxikon",
+    "icon": "actions/29262.png"
+  },
+  {
+    "row_id": 24316,
+    "name": "Toxikon II",
+    "icon": "actions/24316.png"
+  },
+  {
+    "row_id": 24300,
+    "name": "Zoe",
+    "icon": "actions/24300.png"
+  }
+]

@@ -1,1 +1,237 @@
-[{"icon": "gnb/abdomen_tear.png", "name": "Abdomen Tear"}, {"icon": "gnb/arm's_length.png", "name": "Arm'S Length"}, {"icon": "gnb/aurora.png", "name": "Aurora"}, {"icon": "gnb/blasting_zone.png", "name": "Blasting Zone"}, {"icon": "gnb/bloodfest.png", "name": "Bloodfest"}, {"icon": "gnb/bow_shock.png", "name": "Bow Shock"}, {"icon": "gnb/brutal_shell.png", "name": "Brutal Shell"}, {"icon": "gnb/burst_strike.png", "name": "Burst Strike"}, {"icon": "gnb/camouflage.png", "name": "Camouflage"}, {"icon": "gnb/continuation.png", "name": "Continuation"}, {"icon": "gnb/danger_zone.png", "name": "Danger Zone"}, {"icon": "gnb/demon_slaughter.png", "name": "Demon Slaughter"}, {"icon": "gnb/demon_slice.png", "name": "Demon Slice"}, {"icon": "gnb/double_down.png", "name": "Double Down"}, {"icon": "gnb/eye_gouge.png", "name": "Eye Gouge"}, {"icon": "gnb/fated_circle.png", "name": "Fated Circle"}, {"icon": "gnb/gnashing_fang.png", "name": "Gnashing Fang"}, {"icon": "gnb/heart_of_corundum.png", "name": "Heart Of Corundum"}, {"icon": "gnb/heart_of_light.png", "name": "Heart Of Light"}, {"icon": "gnb/heart_of_stone.png", "name": "Heart Of Stone"}, {"icon": "gnb/hypervelocity.png", "name": "Hypervelocity"}, {"icon": "gnb/interject.png", "name": "Interject"}, {"icon": "gnb/jugular_rip.png", "name": "Jugular Rip"}, {"icon": "gnb/keen_edge.png", "name": "Keen Edge"}, {"icon": "gnb/lightning_shot.png", "name": "Lightning Shot"}, {"icon": "gnb/low_blow.png", "name": "Low Blow"}, {"icon": "gnb/nebula.png", "name": "Nebula"}, {"icon": "gnb/no_mercy.png", "name": "No Mercy"}, {"icon": "gnb/provoke.png", "name": "Provoke"}, {"icon": "gnb/rampart.png", "name": "Rampart"}, {"icon": "gnb/reprisal.png", "name": "Reprisal"}, {"icon": "gnb/rough_divide.png", "name": "Rough Divide"}, {"icon": "gnb/royal_guard.png", "name": "Royal Guard"}, {"icon": "gnb/savage_claw.png", "name": "Savage Claw"}, {"icon": "gnb/shirk.png", "name": "Shirk"}, {"icon": "gnb/solid_barrel.png", "name": "Solid Barrel"}, {"icon": "gnb/sonic_break.png", "name": "Sonic Break"}, {"icon": "gnb/superbolide.png", "name": "Superbolide"}, {"icon": "gnb/wicked_talon.png", "name": "Wicked Talon"}]
+[
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 16151,
+    "name": "Aurora",
+    "icon": "actions/16151.png"
+  },
+  {
+    "row_id": 16165,
+    "name": "Blasting Zone",
+    "icon": "actions/16165.png"
+  },
+  {
+    "row_id": 29128,
+    "name": "Blasting Zone",
+    "icon": "actions/29128.png"
+  },
+  {
+    "row_id": 16164,
+    "name": "Bloodfest",
+    "icon": "actions/16164.png"
+  },
+  {
+    "row_id": 16159,
+    "name": "Bow Shock",
+    "icon": "actions/16159.png"
+  },
+  {
+    "row_id": 16139,
+    "name": "Brutal Shell",
+    "icon": "actions/16139.png"
+  },
+  {
+    "row_id": 16162,
+    "name": "Burst Strike",
+    "icon": "actions/16162.png"
+  },
+  {
+    "row_id": 16140,
+    "name": "Camouflage",
+    "icon": "actions/16140.png"
+  },
+  {
+    "row_id": 16155,
+    "name": "Continuation",
+    "icon": "actions/16155.png"
+  },
+  {
+    "row_id": 29106,
+    "name": "Continuation",
+    "icon": "actions/29106.png"
+  },
+  {
+    "row_id": 16144,
+    "name": "Danger Zone",
+    "icon": "actions/16144.png"
+  },
+  {
+    "row_id": 16149,
+    "name": "Demon Slaughter",
+    "icon": "actions/16149.png"
+  },
+  {
+    "row_id": 16141,
+    "name": "Demon Slice",
+    "icon": "actions/16141.png"
+  },
+  {
+    "row_id": 25760,
+    "name": "Double Down",
+    "icon": "actions/25760.png"
+  },
+  {
+    "row_id": 16163,
+    "name": "Fated Circle",
+    "icon": "actions/16163.png"
+  },
+  {
+    "row_id": 41511,
+    "name": "Fated Circle",
+    "icon": "actions/41511.png"
+  },
+  {
+    "row_id": 16146,
+    "name": "Gnashing Fang",
+    "icon": "actions/16146.png"
+  },
+  {
+    "row_id": 29102,
+    "name": "Gnashing Fang",
+    "icon": "actions/29102.png"
+  },
+  {
+    "row_id": 36935,
+    "name": "Great Nebula",
+    "icon": "actions/36935.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 25758,
+    "name": "Heart of Corundum",
+    "icon": "actions/25758.png"
+  },
+  {
+    "row_id": 41443,
+    "name": "Heart of Corundum",
+    "icon": "actions/41443.png"
+  },
+  {
+    "row_id": 16160,
+    "name": "Heart of Light",
+    "icon": "actions/16160.png"
+  },
+  {
+    "row_id": 16161,
+    "name": "Heart of Stone",
+    "icon": "actions/16161.png"
+  },
+  {
+    "row_id": 7538,
+    "name": "Interject",
+    "icon": "actions/7538.png"
+  },
+  {
+    "row_id": 16137,
+    "name": "Keen Edge",
+    "icon": "actions/16137.png"
+  },
+  {
+    "row_id": 16143,
+    "name": "Lightning Shot",
+    "icon": "actions/16143.png"
+  },
+  {
+    "row_id": 7540,
+    "name": "Low Blow",
+    "icon": "actions/7540.png"
+  },
+  {
+    "row_id": 16148,
+    "name": "Nebula",
+    "icon": "actions/16148.png"
+  },
+  {
+    "row_id": 16138,
+    "name": "No Mercy",
+    "icon": "actions/16138.png"
+  },
+  {
+    "row_id": 7533,
+    "name": "Provoke",
+    "icon": "actions/7533.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 7531,
+    "name": "Rampart",
+    "icon": "actions/7531.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 36937,
+    "name": "Reign of Beasts",
+    "icon": "actions/36937.png"
+  },
+  {
+    "row_id": 29130,
+    "name": "Relentless Rush",
+    "icon": "actions/29130.png"
+  },
+  {
+    "row_id": 7535,
+    "name": "Reprisal",
+    "icon": "actions/7535.png"
+  },
+  {
+    "row_id": 29123,
+    "name": "Rough Divide",
+    "icon": "actions/29123.png"
+  },
+  {
+    "row_id": 16142,
+    "name": "Royal Guard",
+    "icon": "actions/16142.png"
+  },
+  {
+    "row_id": 7537,
+    "name": "Shirk",
+    "icon": "actions/7537.png"
+  },
+  {
+    "row_id": 16145,
+    "name": "Solid Barrel",
+    "icon": "actions/16145.png"
+  },
+  {
+    "row_id": 16153,
+    "name": "Sonic Break",
+    "icon": "actions/16153.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 16152,
+    "name": "Superbolide",
+    "icon": "actions/16152.png"
+  },
+  {
+    "row_id": 36934,
+    "name": "Trajectory",
+    "icon": "actions/36934.png"
+  }
+]

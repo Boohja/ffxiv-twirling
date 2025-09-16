@@ -1,1 +1,232 @@
-[{"icon": "nin/aeolian_edge.png", "name": "Aeolian Edge"}, {"icon": "nin/arm's_length.png", "name": "Arm'S Length"}, {"icon": "nin/armor_crush.png", "name": "Armor Crush"}, {"icon": "nin/assassinate.png", "name": "Assassinate"}, {"icon": "nin/bhavacakra.png", "name": "Bhavacakra"}, {"icon": "nin/bloodbath.png", "name": "Bloodbath"}, {"icon": "nin/bunshin.png", "name": "Bunshin"}, {"icon": "nin/chi.png", "name": "Chi"}, {"icon": "nin/death_blossom.png", "name": "Death Blossom"}, {"icon": "nin/doton.png", "name": "Doton"}, {"icon": "nin/dream_within_a_dream.png", "name": "Dream Within A Dream"}, {"icon": "nin/feint.png", "name": "Feint"}, {"icon": "nin/fleeting_raiju.png", "name": "Fleeting Raiju"}, {"icon": "nin/forked_raiju.png", "name": "Forked Raiju"}, {"icon": "nin/fuma_shuriken.png", "name": "Fuma Shuriken"}, {"icon": "nin/goka_mekkyaku.png", "name": "Goka Mekkyaku"}, {"icon": "nin/gust_slash.png", "name": "Gust Slash"}, {"icon": "nin/hakke_mujinsatsu.png", "name": "Hakke Mujinsatsu"}, {"icon": "nin/hellfrog_medium.png", "name": "Hellfrog Medium"}, {"icon": "nin/hide.png", "name": "Hide"}, {"icon": "nin/hollow_nozuchi.png", "name": "Hollow Nozuchi"}, {"icon": "nin/huraijin.png", "name": "Huraijin"}, {"icon": "nin/huton.png", "name": "Huton"}, {"icon": "nin/hyosho_ranryu.png", "name": "Hyosho Ranryu"}, {"icon": "nin/hyoton.png", "name": "Hyoton"}, {"icon": "nin/jin.png", "name": "Jin"}, {"icon": "nin/kassatsu.png", "name": "Kassatsu"}, {"icon": "nin/katon.png", "name": "Katon"}, {"icon": "nin/leg_sweep.png", "name": "Leg Sweep"}, {"icon": "nin/meisui.png", "name": "Meisui"}, {"icon": "nin/mug.png", "name": "Mug"}, {"icon": "nin/ninjutsu.png", "name": "Ninjutsu"}, {"icon": "nin/phantom_kamaitachi.png", "name": "Phantom Kamaitachi"}, {"icon": "nin/rabbit_medium.png", "name": "Rabbit Medium"}, {"icon": "nin/raiton.png", "name": "Raiton"}, {"icon": "nin/second_wind.png", "name": "Second Wind"}, {"icon": "nin/shade_shift.png", "name": "Shade Shift"}, {"icon": "nin/shukuchi.png", "name": "Shukuchi"}, {"icon": "nin/spinning_edge.png", "name": "Spinning Edge"}, {"icon": "nin/suiton.png", "name": "Suiton"}, {"icon": "nin/ten.png", "name": "Ten"}, {"icon": "nin/ten_chi_jin.png", "name": "Ten Chi Jin"}, {"icon": "nin/throwing_dagger.png", "name": "Throwing Dagger"}, {"icon": "nin/trick_attack.png", "name": "Trick Attack"}, {"icon": "nin/true_north.png", "name": "True North"}]
+[
+  {
+    "row_id": 2255,
+    "name": "Aeolian Edge",
+    "icon": "actions/2255.png"
+  },
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 3563,
+    "name": "Armor Crush",
+    "icon": "actions/3563.png"
+  },
+  {
+    "row_id": 2246,
+    "name": "Assassinate",
+    "icon": "actions/2246.png"
+  },
+  {
+    "row_id": 7402,
+    "name": "Bhavacakra",
+    "icon": "actions/7402.png"
+  },
+  {
+    "row_id": 7542,
+    "name": "Bloodbath",
+    "icon": "actions/7542.png"
+  },
+  {
+    "row_id": 16493,
+    "name": "Bunshin",
+    "icon": "actions/16493.png"
+  },
+  {
+    "row_id": 29511,
+    "name": "Bunshin",
+    "icon": "actions/29511.png"
+  },
+  {
+    "row_id": 2261,
+    "name": "Chi",
+    "icon": "actions/2261.png"
+  },
+  {
+    "row_id": 2254,
+    "name": "Death Blossom",
+    "icon": "actions/2254.png"
+  },
+  {
+    "row_id": 36957,
+    "name": "Dokumori",
+    "icon": "actions/36957.png"
+  },
+  {
+    "row_id": 41451,
+    "name": "Dokumori",
+    "icon": "actions/41451.png"
+  },
+  {
+    "row_id": 3566,
+    "name": "Dream Within a Dream",
+    "icon": "actions/3566.png"
+  },
+  {
+    "row_id": 7549,
+    "name": "Feint",
+    "icon": "actions/7549.png"
+  },
+  {
+    "row_id": 25778,
+    "name": "Fleeting Raiju",
+    "icon": "actions/25778.png"
+  },
+  {
+    "row_id": 25777,
+    "name": "Forked Raiju",
+    "icon": "actions/25777.png"
+  },
+  {
+    "row_id": 29505,
+    "name": "Fuma Shuriken",
+    "icon": "actions/29505.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 2242,
+    "name": "Gust Slash",
+    "icon": "actions/2242.png"
+  },
+  {
+    "row_id": 16488,
+    "name": "Hakke Mujinsatsu",
+    "icon": "actions/16488.png"
+  },
+  {
+    "row_id": 7401,
+    "name": "Hellfrog Medium",
+    "icon": "actions/7401.png"
+  },
+  {
+    "row_id": 2245,
+    "name": "Hide",
+    "icon": "actions/2245.png"
+  },
+  {
+    "row_id": 2263,
+    "name": "Jin",
+    "icon": "actions/2263.png"
+  },
+  {
+    "row_id": 2264,
+    "name": "Kassatsu",
+    "icon": "actions/2264.png"
+  },
+  {
+    "row_id": 36958,
+    "name": "Kunai's Bane",
+    "icon": "actions/36958.png"
+  },
+  {
+    "row_id": 7863,
+    "name": "Leg Sweep",
+    "icon": "actions/7863.png"
+  },
+  {
+    "row_id": 16489,
+    "name": "Meisui",
+    "icon": "actions/16489.png"
+  },
+  {
+    "row_id": 2248,
+    "name": "Mug",
+    "icon": "actions/2248.png"
+  },
+  {
+    "row_id": 2260,
+    "name": "Ninjutsu",
+    "icon": "actions/2260.png"
+  },
+  {
+    "row_id": 25774,
+    "name": "Phantom Kamaitachi",
+    "icon": "actions/25774.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 29515,
+    "name": "Seiton Tenchu",
+    "icon": "actions/29515.png"
+  },
+  {
+    "row_id": 2241,
+    "name": "Shade Shift",
+    "icon": "actions/2241.png"
+  },
+  {
+    "row_id": 2262,
+    "name": "Shukuchi",
+    "icon": "actions/2262.png"
+  },
+  {
+    "row_id": 29513,
+    "name": "Shukuchi",
+    "icon": "actions/29513.png"
+  },
+  {
+    "row_id": 2240,
+    "name": "Spinning Edge",
+    "icon": "actions/2240.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 2259,
+    "name": "Ten",
+    "icon": "actions/2259.png"
+  },
+  {
+    "row_id": 7403,
+    "name": "Ten Chi Jin",
+    "icon": "actions/7403.png"
+  },
+  {
+    "row_id": 29507,
+    "name": "Three Mudra",
+    "icon": "actions/29507.png"
+  },
+  {
+    "row_id": 2247,
+    "name": "Throwing Dagger",
+    "icon": "actions/2247.png"
+  },
+  {
+    "row_id": 2258,
+    "name": "Trick Attack",
+    "icon": "actions/2258.png"
+  },
+  {
+    "row_id": 7546,
+    "name": "True North",
+    "icon": "actions/7546.png"
+  }
+]

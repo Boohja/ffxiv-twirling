@@ -1,1 +1,212 @@
-[{"icon": "rpr/arcane_circle.png", "name": "Arcane Circle"}, {"icon": "rpr/arcane_crest.png", "name": "Arcane Crest"}, {"icon": "rpr/arm's_length.png", "name": "Arm'S Length"}, {"icon": "rpr/bloodbath.png", "name": "Bloodbath"}, {"icon": "rpr/blood_stalk.png", "name": "Blood Stalk"}, {"icon": "rpr/communio.png", "name": "Communio"}, {"icon": "rpr/cross_reaping.png", "name": "Cross Reaping"}, {"icon": "rpr/enshroud.png", "name": "Enshroud"}, {"icon": "rpr/feint.png", "name": "Feint"}, {"icon": "rpr/gallows.png", "name": "Gallows"}, {"icon": "rpr/gibbet.png", "name": "Gibbet"}, {"icon": "rpr/gluttony.png", "name": "Gluttony"}, {"icon": "rpr/grim_reaping.png", "name": "Grim Reaping"}, {"icon": "rpr/grim_swathe.png", "name": "Grim Swathe"}, {"icon": "rpr/guillotine.png", "name": "Guillotine"}, {"icon": "rpr/harpe.png", "name": "Harpe"}, {"icon": "rpr/harvest_moon.png", "name": "Harvest Moon"}, {"icon": "rpr/hell's_egress.png", "name": "Hell'S Egress"}, {"icon": "rpr/hell's_ingress.png", "name": "Hell'S Ingress"}, {"icon": "rpr/infernal_slice.png", "name": "Infernal Slice"}, {"icon": "rpr/leg_sweep.png", "name": "Leg Sweep"}, {"icon": "rpr/lemure's_scythe.png", "name": "Lemure'S Scythe"}, {"icon": "rpr/lemure's_slice.png", "name": "Lemure'S Slice"}, {"icon": "rpr/nightmare_scythe.png", "name": "Nightmare Scythe"}, {"icon": "rpr/plentiful_harvest.png", "name": "Plentiful Harvest"}, {"icon": "rpr/regress.png", "name": "Regress"}, {"icon": "rpr/second_wind.png", "name": "Second Wind"}, {"icon": "rpr/shadow_of_death.png", "name": "Shadow Of Death"}, {"icon": "rpr/slice.png", "name": "Slice"}, {"icon": "rpr/soulsow.png", "name": "Soulsow"}, {"icon": "rpr/soul_scythe.png", "name": "Soul Scythe"}, {"icon": "rpr/soul_slice.png", "name": "Soul Slice"}, {"icon": "rpr/spinning_scythe.png", "name": "Spinning Scythe"}, {"icon": "rpr/true_north.png", "name": "True North"}, {"icon": "rpr/unveiled_gallows.png", "name": "Unveiled Gallows"}, {"icon": "rpr/unveiled_gibbet.png", "name": "Unveiled Gibbet"}, {"icon": "rpr/void_reaping.png", "name": "Void Reaping"}, {"icon": "rpr/waxing_slice.png", "name": "Waxing Slice"}, {"icon": "rpr/whorl_of_death.png", "name": "Whorl Of Death"}]
+[
+  {
+    "row_id": 24405,
+    "name": "Arcane Circle",
+    "icon": "actions/24405.png"
+  },
+  {
+    "row_id": 24404,
+    "name": "Arcane Crest",
+    "icon": "actions/24404.png"
+  },
+  {
+    "row_id": 29552,
+    "name": "Arcane Crest",
+    "icon": "actions/29552.png"
+  },
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 24389,
+    "name": "Blood Stalk",
+    "icon": "actions/24389.png"
+  },
+  {
+    "row_id": 7542,
+    "name": "Bloodbath",
+    "icon": "actions/7542.png"
+  },
+  {
+    "row_id": 24398,
+    "name": "Communio",
+    "icon": "actions/24398.png"
+  },
+  {
+    "row_id": 29549,
+    "name": "Death Warrant",
+    "icon": "actions/29549.png"
+  },
+  {
+    "row_id": 24394,
+    "name": "Enshroud",
+    "icon": "actions/24394.png"
+  },
+  {
+    "row_id": 7549,
+    "name": "Feint",
+    "icon": "actions/7549.png"
+  },
+  {
+    "row_id": 24383,
+    "name": "Gallows",
+    "icon": "actions/24383.png"
+  },
+  {
+    "row_id": 24382,
+    "name": "Gibbet",
+    "icon": "actions/24382.png"
+  },
+  {
+    "row_id": 24393,
+    "name": "Gluttony",
+    "icon": "actions/24393.png"
+  },
+  {
+    "row_id": 24392,
+    "name": "Grim Swathe",
+    "icon": "actions/24392.png"
+  },
+  {
+    "row_id": 29547,
+    "name": "Grim Swathe",
+    "icon": "actions/29547.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 24384,
+    "name": "Guillotine",
+    "icon": "actions/24384.png"
+  },
+  {
+    "row_id": 24386,
+    "name": "Harpe",
+    "icon": "actions/24386.png"
+  },
+  {
+    "row_id": 29545,
+    "name": "Harvest Moon",
+    "icon": "actions/29545.png"
+  },
+  {
+    "row_id": 24402,
+    "name": "Hell's Egress",
+    "icon": "actions/24402.png"
+  },
+  {
+    "row_id": 24401,
+    "name": "Hell's Ingress",
+    "icon": "actions/24401.png"
+  },
+  {
+    "row_id": 29550,
+    "name": "Hell's Ingress",
+    "icon": "actions/29550.png"
+  },
+  {
+    "row_id": 24375,
+    "name": "Infernal Slice",
+    "icon": "actions/24375.png"
+  },
+  {
+    "row_id": 7863,
+    "name": "Leg Sweep",
+    "icon": "actions/7863.png"
+  },
+  {
+    "row_id": 24377,
+    "name": "Nightmare Scythe",
+    "icon": "actions/24377.png"
+  },
+  {
+    "row_id": 24385,
+    "name": "Plentiful Harvest",
+    "icon": "actions/24385.png"
+  },
+  {
+    "row_id": 29546,
+    "name": "Plentiful Harvest",
+    "icon": "actions/29546.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 24378,
+    "name": "Shadow of Death",
+    "icon": "actions/24378.png"
+  },
+  {
+    "row_id": 24373,
+    "name": "Slice",
+    "icon": "actions/24373.png"
+  },
+  {
+    "row_id": 24381,
+    "name": "Soul Scythe",
+    "icon": "actions/24381.png"
+  },
+  {
+    "row_id": 24380,
+    "name": "Soul Slice",
+    "icon": "actions/24380.png"
+  },
+  {
+    "row_id": 24387,
+    "name": "Soulsow",
+    "icon": "actions/24387.png"
+  },
+  {
+    "row_id": 24376,
+    "name": "Spinning Scythe",
+    "icon": "actions/24376.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 29553,
+    "name": "Tenebrae Lemurum",
+    "icon": "actions/29553.png"
+  },
+  {
+    "row_id": 7546,
+    "name": "True North",
+    "icon": "actions/7546.png"
+  },
+  {
+    "row_id": 24374,
+    "name": "Waxing Slice",
+    "icon": "actions/24374.png"
+  },
+  {
+    "row_id": 24379,
+    "name": "Whorl of Death",
+    "icon": "actions/24379.png"
+  }
+]

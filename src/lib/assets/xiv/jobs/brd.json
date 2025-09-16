@@ -1,1 +1,257 @@
-[{"icon": "brd/apex_arrow.png", "name": "Apex Arrow"}, {"icon": "brd/arm's_length.png", "name": "Arm'S Length"}, {"icon": "brd/army's_paeon.png", "name": "Army'S Paeon"}, {"icon": "brd/barrage.png", "name": "Barrage"}, {"icon": "brd/battle_voice.png", "name": "Battle Voice"}, {"icon": "brd/blast_arrow.png", "name": "Blast Arrow"}, {"icon": "brd/bloodletter.png", "name": "Bloodletter"}, {"icon": "brd/burst_shot.png", "name": "Burst Shot"}, {"icon": "brd/caustic_bite.png", "name": "Caustic Bite"}, {"icon": "brd/empyreal_arrow.png", "name": "Empyreal Arrow"}, {"icon": "brd/foot_graze.png", "name": "Foot Graze"}, {"icon": "brd/head_graze.png", "name": "Head Graze"}, {"icon": "brd/heavy_shot.png", "name": "Heavy Shot"}, {"icon": "brd/iron_jaws.png", "name": "Iron Jaws"}, {"icon": "brd/ladonsbite.png", "name": "Ladonsbite"}, {"icon": "brd/leg_graze.png", "name": "Leg Graze"}, {"icon": "brd/mage's_ballad.png", "name": "Mage'S Ballad"}, {"icon": "brd/nature's_minne.png", "name": "Nature'S Minne"}, {"icon": "brd/peloton.png", "name": "Peloton"}, {"icon": "brd/pitch_perfect.png", "name": "Pitch Perfect"}, {"icon": "brd/quick_nock.png", "name": "Quick Nock"}, {"icon": "brd/radiant_finale.png", "name": "Radiant Finale"}, {"icon": "brd/raging_strikes.png", "name": "Raging Strikes"}, {"icon": "brd/rain_of_death.png", "name": "Rain Of Death"}, {"icon": "brd/refulgent_arrow.png", "name": "Refulgent Arrow"}, {"icon": "brd/repelling_shot.png", "name": "Repelling Shot"}, {"icon": "brd/second_wind.png", "name": "Second Wind"}, {"icon": "brd/shadowbite.png", "name": "Shadowbite"}, {"icon": "brd/sidewinder.png", "name": "Sidewinder"}, {"icon": "brd/stormbite.png", "name": "Stormbite"}, {"icon": "brd/straight_shot.png", "name": "Straight Shot"}, {"icon": "brd/the_wanderer's_minuet.png", "name": "The Wanderer'S Minuet"}, {"icon": "brd/the_warden's_paean.png", "name": "The Warden'S Paean"}, {"icon": "brd/troubadour.png", "name": "Troubadour"}, {"icon": "brd/venomous_bite.png", "name": "Venomous Bite"}, {"icon": "brd/windbite.png", "name": "Windbite"}]
+[
+  {
+    "row_id": 16496,
+    "name": "Apex Arrow",
+    "icon": "actions/16496.png"
+  },
+  {
+    "row_id": 29393,
+    "name": "Apex Arrow",
+    "icon": "actions/29393.png"
+  },
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 116,
+    "name": "Army's Paeon",
+    "icon": "actions/116.png"
+  },
+  {
+    "row_id": 107,
+    "name": "Barrage",
+    "icon": "actions/107.png"
+  },
+  {
+    "row_id": 118,
+    "name": "Battle Voice",
+    "icon": "actions/118.png"
+  },
+  {
+    "row_id": 110,
+    "name": "Bloodletter",
+    "icon": "actions/110.png"
+  },
+  {
+    "row_id": 16495,
+    "name": "Burst Shot",
+    "icon": "actions/16495.png"
+  },
+  {
+    "row_id": 7406,
+    "name": "Caustic Bite",
+    "icon": "actions/7406.png"
+  },
+  {
+    "row_id": 3558,
+    "name": "Empyreal Arrow",
+    "icon": "actions/3558.png"
+  },
+  {
+    "row_id": 29401,
+    "name": "Final Fantasia",
+    "icon": "actions/29401.png"
+  },
+  {
+    "row_id": 7553,
+    "name": "Foot Graze",
+    "icon": "actions/7553.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 41464,
+    "name": "Harmonic Arrow",
+    "icon": "actions/41464.png"
+  },
+  {
+    "row_id": 7551,
+    "name": "Head Graze",
+    "icon": "actions/7551.png"
+  },
+  {
+    "row_id": 36975,
+    "name": "Heartbreak Shot",
+    "icon": "actions/36975.png"
+  },
+  {
+    "row_id": 97,
+    "name": "Heavy Shot",
+    "icon": "actions/97.png"
+  },
+  {
+    "row_id": 3560,
+    "name": "Iron Jaws",
+    "icon": "actions/3560.png"
+  },
+  {
+    "row_id": 25783,
+    "name": "Ladonsbite",
+    "icon": "actions/25783.png"
+  },
+  {
+    "row_id": 7554,
+    "name": "Leg Graze",
+    "icon": "actions/7554.png"
+  },
+  {
+    "row_id": 114,
+    "name": "Mage's Ballad",
+    "icon": "actions/114.png"
+  },
+  {
+    "row_id": 7408,
+    "name": "Nature's Minne",
+    "icon": "actions/7408.png"
+  },
+  {
+    "row_id": 7557,
+    "name": "Peloton",
+    "icon": "actions/7557.png"
+  },
+  {
+    "row_id": 7404,
+    "name": "Pitch Perfect",
+    "icon": "actions/7404.png"
+  },
+  {
+    "row_id": 29391,
+    "name": "Powerful Shot",
+    "icon": "actions/29391.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 106,
+    "name": "Quick Nock",
+    "icon": "actions/106.png"
+  },
+  {
+    "row_id": 36977,
+    "name": "Radiant Encore",
+    "icon": "actions/36977.png"
+  },
+  {
+    "row_id": 25785,
+    "name": "Radiant Finale",
+    "icon": "actions/25785.png"
+  },
+  {
+    "row_id": 101,
+    "name": "Raging Strikes",
+    "icon": "actions/101.png"
+  },
+  {
+    "row_id": 117,
+    "name": "Rain of Death",
+    "icon": "actions/117.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7409,
+    "name": "Refulgent Arrow",
+    "icon": "actions/7409.png"
+  },
+  {
+    "row_id": 112,
+    "name": "Repelling Shot",
+    "icon": "actions/112.png"
+  },
+  {
+    "row_id": 29399,
+    "name": "Repelling Shot",
+    "icon": "actions/29399.png"
+  },
+  {
+    "row_id": 36976,
+    "name": "Resonant Arrow",
+    "icon": "actions/36976.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 16494,
+    "name": "Shadowbite",
+    "icon": "actions/16494.png"
+  },
+  {
+    "row_id": 3562,
+    "name": "Sidewinder",
+    "icon": "actions/3562.png"
+  },
+  {
+    "row_id": 29395,
+    "name": "Silent Nocturne",
+    "icon": "actions/29395.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 7407,
+    "name": "Stormbite",
+    "icon": "actions/7407.png"
+  },
+  {
+    "row_id": 98,
+    "name": "Straight Shot",
+    "icon": "actions/98.png"
+  },
+  {
+    "row_id": 3559,
+    "name": "the Wanderer's Minuet",
+    "icon": "actions/3559.png"
+  },
+  {
+    "row_id": 3561,
+    "name": "the Warden's Paean",
+    "icon": "actions/3561.png"
+  },
+  {
+    "row_id": 29400,
+    "name": "the Warden's Paean",
+    "icon": "actions/29400.png"
+  },
+  {
+    "row_id": 7405,
+    "name": "Troubadour",
+    "icon": "actions/7405.png"
+  },
+  {
+    "row_id": 100,
+    "name": "Venomous Bite",
+    "icon": "actions/100.png"
+  },
+  {
+    "row_id": 36974,
+    "name": "Wide Volley",
+    "icon": "actions/36974.png"
+  },
+  {
+    "row_id": 113,
+    "name": "Windbite",
+    "icon": "actions/113.png"
+  }
+]

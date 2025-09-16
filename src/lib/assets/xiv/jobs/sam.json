@@ -1,1 +1,232 @@
-[{"icon": "sam/arm's_length.png", "name": "Arm'S Length"}, {"icon": "sam/bloodbath.png", "name": "Bloodbath"}, {"icon": "sam/enpi.png", "name": "Enpi"}, {"icon": "sam/feint.png", "name": "Feint"}, {"icon": "sam/fuga.png", "name": "Fuga"}, {"icon": "sam/fuko.png", "name": "Fuko"}, {"icon": "sam/gekko.png", "name": "Gekko"}, {"icon": "sam/hagakure.png", "name": "Hagakure"}, {"icon": "sam/hakaze.png", "name": "Hakaze"}, {"icon": "sam/higanbana.png", "name": "Higanbana"}, {"icon": "sam/hissatsu_guren.png", "name": "Hissatsu Guren"}, {"icon": "sam/hissatsu_gyoten.png", "name": "Hissatsu Gyoten"}, {"icon": "sam/hissatsu_kyuten.png", "name": "Hissatsu Kyuten"}, {"icon": "sam/hissatsu_senei.png", "name": "Hissatsu Senei"}, {"icon": "sam/hissatsu_shinten.png", "name": "Hissatsu Shinten"}, {"icon": "sam/hissatsu_yaten.png", "name": "Hissatsu Yaten"}, {"icon": "sam/Iaijutsu.png", "name": "Iaijutsu"}, {"icon": "sam/ikishoten.png", "name": "Ikishoten"}, {"icon": "sam/jinpu.png", "name": "Jinpu"}, {"icon": "sam/kaeshi_goken.png", "name": "Kaeshi Goken"}, {"icon": "sam/kaeshi_higanbana.png", "name": "Kaeshi Higanbana"}, {"icon": "sam/kaeshi_namikiri.png", "name": "Kaeshi Namikiri"}, {"icon": "sam/kaeshi_setsugekka.png", "name": "Kaeshi Setsugekka"}, {"icon": "sam/kasha.png", "name": "Kasha"}, {"icon": "sam/leg_sweep.png", "name": "Leg Sweep"}, {"icon": "sam/mangetsu.png", "name": "Mangetsu"}, {"icon": "sam/meditate.png", "name": "Meditate"}, {"icon": "sam/meikyo_shisui.png", "name": "Meikyo Shisui"}, {"icon": "sam/midare_setsugekka.png", "name": "Midare Setsugekka"}, {"icon": "sam/ogi_namikiri.png", "name": "Ogi Namikiri"}, {"icon": "sam/oka.png", "name": "Oka"}, {"icon": "sam/second_wind.png", "name": "Second Wind"}, {"icon": "sam/shifu.png", "name": "Shifu"}, {"icon": "sam/shoha.png", "name": "Shoha"}, {"icon": "sam/shoha_II.png", "name": "Shoha Ii"}, {"icon": "sam/tenka_goken.png", "name": "Tenka Goken"}, {"icon": "sam/third_eye.png", "name": "Third Eye"}, {"icon": "sam/true_north.png", "name": "True North"}, {"icon": "sam/tsubame-gaeshi.png", "name": "Tsubame-Gaeshi"}, {"icon": "sam/yukikaze.png", "name": "Yukikaze"}]
+[
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 7542,
+    "name": "Bloodbath",
+    "icon": "actions/7542.png"
+  },
+  {
+    "row_id": 7486,
+    "name": "Enpi",
+    "icon": "actions/7486.png"
+  },
+  {
+    "row_id": 7549,
+    "name": "Feint",
+    "icon": "actions/7549.png"
+  },
+  {
+    "row_id": 7483,
+    "name": "Fuga",
+    "icon": "actions/7483.png"
+  },
+  {
+    "row_id": 25780,
+    "name": "Fuko",
+    "icon": "actions/25780.png"
+  },
+  {
+    "row_id": 7481,
+    "name": "Gekko",
+    "icon": "actions/7481.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 36963,
+    "name": "Gyofu",
+    "icon": "actions/36963.png"
+  },
+  {
+    "row_id": 7495,
+    "name": "Hagakure",
+    "icon": "actions/7495.png"
+  },
+  {
+    "row_id": 7477,
+    "name": "Hakaze",
+    "icon": "actions/7477.png"
+  },
+  {
+    "row_id": 29533,
+    "name": "Hissatsu: Chiten",
+    "icon": "actions/29533.png"
+  },
+  {
+    "row_id": 7496,
+    "name": "Hissatsu: Guren",
+    "icon": "actions/7496.png"
+  },
+  {
+    "row_id": 7492,
+    "name": "Hissatsu: Gyoten",
+    "icon": "actions/7492.png"
+  },
+  {
+    "row_id": 7491,
+    "name": "Hissatsu: Kyuten",
+    "icon": "actions/7491.png"
+  },
+  {
+    "row_id": 16481,
+    "name": "Hissatsu: Senei",
+    "icon": "actions/16481.png"
+  },
+  {
+    "row_id": 7490,
+    "name": "Hissatsu: Shinten",
+    "icon": "actions/7490.png"
+  },
+  {
+    "row_id": 29532,
+    "name": "Hissatsu: Soten",
+    "icon": "actions/29532.png"
+  },
+  {
+    "row_id": 7493,
+    "name": "Hissatsu: Yaten",
+    "icon": "actions/7493.png"
+  },
+  {
+    "row_id": 7867,
+    "name": "Iaijutsu",
+    "icon": "actions/7867.png"
+  },
+  {
+    "row_id": 16482,
+    "name": "Ikishoten",
+    "icon": "actions/16482.png"
+  },
+  {
+    "row_id": 7478,
+    "name": "Jinpu",
+    "icon": "actions/7478.png"
+  },
+  {
+    "row_id": 7482,
+    "name": "Kasha",
+    "icon": "actions/7482.png"
+  },
+  {
+    "row_id": 7863,
+    "name": "Leg Sweep",
+    "icon": "actions/7863.png"
+  },
+  {
+    "row_id": 7484,
+    "name": "Mangetsu",
+    "icon": "actions/7484.png"
+  },
+  {
+    "row_id": 7497,
+    "name": "Meditate",
+    "icon": "actions/7497.png"
+  },
+  {
+    "row_id": 7499,
+    "name": "Meikyo Shisui",
+    "icon": "actions/7499.png"
+  },
+  {
+    "row_id": 29536,
+    "name": "Meikyo Shisui",
+    "icon": "actions/29536.png"
+  },
+  {
+    "row_id": 29535,
+    "name": "Mineuchi",
+    "icon": "actions/29535.png"
+  },
+  {
+    "row_id": 25781,
+    "name": "Ogi Namikiri",
+    "icon": "actions/25781.png"
+  },
+  {
+    "row_id": 29530,
+    "name": "Ogi Namikiri",
+    "icon": "actions/29530.png"
+  },
+  {
+    "row_id": 7485,
+    "name": "Oka",
+    "icon": "actions/7485.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 7479,
+    "name": "Shifu",
+    "icon": "actions/7479.png"
+  },
+  {
+    "row_id": 16487,
+    "name": "Shoha",
+    "icon": "actions/16487.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 36962,
+    "name": "Tengentsu",
+    "icon": "actions/36962.png"
+  },
+  {
+    "row_id": 7498,
+    "name": "Third Eye",
+    "icon": "actions/7498.png"
+  },
+  {
+    "row_id": 7546,
+    "name": "True North",
+    "icon": "actions/7546.png"
+  },
+  {
+    "row_id": 16483,
+    "name": "Tsubame-gaeshi",
+    "icon": "actions/16483.png"
+  },
+  {
+    "row_id": 7480,
+    "name": "Yukikaze",
+    "icon": "actions/7480.png"
+  },
+  {
+    "row_id": 36964,
+    "name": "Zanshin",
+    "icon": "actions/36964.png"
+  },
+  {
+    "row_id": 29537,
+    "name": "Zantetsuken",
+    "icon": "actions/29537.png"
+  }
+]

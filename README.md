@@ -1,38 +1,18 @@
-# create-svelte
+# FFXIV Twirling
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+An experimental tool helping me to learn FF14 rotations outside of the actual game, simply in the browser.
 
-## Creating a project
+This tool does not give a flying moogle for anything like cooldowns, spell/skill times, (o)GCD or anything like that. It is simply meant for practicing the order of actions in a rotation - especially if you are not too familiar with your keybinds yet.
 
-If you're seeing this, you've probably already done this step. Congrats!
+(I changed my hotbars and keybinds completely so I programmed this to help my muscle memory to adjust).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+There is not much to it, the usual `npm` stuff, `npm run dev -- --open` for local svelte testing.
 
-```bash
-npm run dev
+### Updating Job Data
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+In the beginning I didn't want to bother with databases, so I kept game data in JSON files. 
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+When a game patch adds new skills, wait for a few days until [XIVAPI](https://xivapi.com/) has updated their data, then run `npm run update:jobs -- --test` to see if the implementation is still working. If it does, run `npm run update:jobs` to add missing skills/actions and their corresponding icons.

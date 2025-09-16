@@ -1,1 +1,257 @@
-[{"icon": "mnk/anatman.png", "name": "Anatman"}, {"icon": "mnk/arm's_length.png", "name": "Arm'S Length"}, {"icon": "mnk/arm_of_the_destroyer.png", "name": "Arm Of The Destroyer"}, {"icon": "mnk/bloodbath.png", "name": "Bloodbath"}, {"icon": "mnk/bootshine.png", "name": "Bootshine"}, {"icon": "mnk/brotherhood.png", "name": "Brotherhood"}, {"icon": "mnk/celestial_revolution.png", "name": "Celestial Revolution"}, {"icon": "mnk/demolish.png", "name": "Demolish"}, {"icon": "mnk/dragon_kick.png", "name": "Dragon Kick"}, {"icon": "mnk/elixir_field.png", "name": "Elixir Field"}, {"icon": "mnk/enlightenment.png", "name": "Enlightenment"}, {"icon": "mnk/feint.png", "name": "Feint"}, {"icon": "mnk/flint_strike.png", "name": "Flint Strike"}, {"icon": "mnk/form_shift.png", "name": "Form Shift"}, {"icon": "mnk/four-point_fury.png", "name": "Four-Point Fury"}, {"icon": "mnk/howling_fist.png", "name": "Howling Fist"}, {"icon": "mnk/leg_sweep.png", "name": "Leg Sweep"}, {"icon": "mnk/mantra.png", "name": "Mantra"}, {"icon": "mnk/masterful_blitz.png", "name": "Masterful Blitz"}, {"icon": "mnk/meditation.png", "name": "Meditation"}, {"icon": "mnk/perfect_balance.png", "name": "Perfect Balance"}, {"icon": "mnk/phantom_rush.png", "name": "Phantom Rush"}, {"icon": "mnk/riddle_of_earth.png", "name": "Riddle Of Earth"}, {"icon": "mnk/riddle_of_fire.png", "name": "Riddle Of Fire"}, {"icon": "mnk/riddle_of_wind.png", "name": "Riddle Of Wind"}, {"icon": "mnk/rising_phoenix.png", "name": "Rising Phoenix"}, {"icon": "mnk/rockbreaker.png", "name": "Rockbreaker"}, {"icon": "mnk/second_wind.png", "name": "Second Wind"}, {"icon": "mnk/shadow_of_the_destroyer.png", "name": "Shadow Of The Destroyer"}, {"icon": "mnk/six-sided_star.png", "name": "Six-Sided Star"}, {"icon": "mnk/snap_punch.png", "name": "Snap Punch"}, {"icon": "mnk/steel_peak.png", "name": "Steel Peak"}, {"icon": "mnk/the_forbidden_chakra.png", "name": "The Forbidden Chakra"}, {"icon": "mnk/thunderclap.png", "name": "Thunderclap"}, {"icon": "mnk/tornado_kick.png", "name": "Tornado Kick"}, {"icon": "mnk/true_north.png", "name": "True North"}, {"icon": "mnk/true_strike.png", "name": "True Strike"}, {"icon": "mnk/twin_snakes.png", "name": "Twin Snakes"}]
+[
+  {
+    "row_id": 62,
+    "name": "Arm of the Destroyer",
+    "icon": "actions/62.png"
+  },
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 7542,
+    "name": "Bloodbath",
+    "icon": "actions/7542.png"
+  },
+  {
+    "row_id": 53,
+    "name": "Bootshine",
+    "icon": "actions/53.png"
+  },
+  {
+    "row_id": 7396,
+    "name": "Brotherhood",
+    "icon": "actions/7396.png"
+  },
+  {
+    "row_id": 66,
+    "name": "Demolish",
+    "icon": "actions/66.png"
+  },
+  {
+    "row_id": 74,
+    "name": "Dragon Kick",
+    "icon": "actions/74.png"
+  },
+  {
+    "row_id": 36944,
+    "name": "Earth's Reply",
+    "icon": "actions/36944.png"
+  },
+  {
+    "row_id": 36943,
+    "name": "Enlightened Meditation",
+    "icon": "actions/36943.png"
+  },
+  {
+    "row_id": 16474,
+    "name": "Enlightenment",
+    "icon": "actions/16474.png"
+  },
+  {
+    "row_id": 7549,
+    "name": "Feint",
+    "icon": "actions/7549.png"
+  },
+  {
+    "row_id": 36950,
+    "name": "Fire's Reply",
+    "icon": "actions/36950.png"
+  },
+  {
+    "row_id": 41447,
+    "name": "Flint's Reply",
+    "icon": "actions/41447.png"
+  },
+  {
+    "row_id": 36942,
+    "name": "Forbidden Meditation",
+    "icon": "actions/36942.png"
+  },
+  {
+    "row_id": 4262,
+    "name": "Form Shift",
+    "icon": "actions/4262.png"
+  },
+  {
+    "row_id": 16473,
+    "name": "Four-point Fury",
+    "icon": "actions/16473.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 25763,
+    "name": "Howling Fist",
+    "icon": "actions/25763.png"
+  },
+  {
+    "row_id": 36941,
+    "name": "Inspirited Meditation",
+    "icon": "actions/36941.png"
+  },
+  {
+    "row_id": 36945,
+    "name": "Leaping Opo",
+    "icon": "actions/36945.png"
+  },
+  {
+    "row_id": 7863,
+    "name": "Leg Sweep",
+    "icon": "actions/7863.png"
+  },
+  {
+    "row_id": 65,
+    "name": "Mantra",
+    "icon": "actions/65.png"
+  },
+  {
+    "row_id": 25764,
+    "name": "Masterful Blitz",
+    "icon": "actions/25764.png"
+  },
+  {
+    "row_id": 29485,
+    "name": "Meteodrive",
+    "icon": "actions/29485.png"
+  },
+  {
+    "row_id": 69,
+    "name": "Perfect Balance",
+    "icon": "actions/69.png"
+  },
+  {
+    "row_id": 36947,
+    "name": "Pouncing Coeurl",
+    "icon": "actions/36947.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7394,
+    "name": "Riddle of Earth",
+    "icon": "actions/7394.png"
+  },
+  {
+    "row_id": 29482,
+    "name": "Riddle of Earth",
+    "icon": "actions/29482.png"
+  },
+  {
+    "row_id": 7395,
+    "name": "Riddle of Fire",
+    "icon": "actions/7395.png"
+  },
+  {
+    "row_id": 25766,
+    "name": "Riddle of Wind",
+    "icon": "actions/25766.png"
+  },
+  {
+    "row_id": 29481,
+    "name": "Rising Phoenix",
+    "icon": "actions/29481.png"
+  },
+  {
+    "row_id": 36946,
+    "name": "Rising Raptor",
+    "icon": "actions/36946.png"
+  },
+  {
+    "row_id": 70,
+    "name": "Rockbreaker",
+    "icon": "actions/70.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 25767,
+    "name": "Shadow of the Destroyer",
+    "icon": "actions/25767.png"
+  },
+  {
+    "row_id": 16476,
+    "name": "Six-sided Star",
+    "icon": "actions/16476.png"
+  },
+  {
+    "row_id": 56,
+    "name": "Snap Punch",
+    "icon": "actions/56.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 25761,
+    "name": "Steel Peak",
+    "icon": "actions/25761.png"
+  },
+  {
+    "row_id": 36940,
+    "name": "Steeled Meditation",
+    "icon": "actions/36940.png"
+  },
+  {
+    "row_id": 3547,
+    "name": "the Forbidden Chakra",
+    "icon": "actions/3547.png"
+  },
+  {
+    "row_id": 25762,
+    "name": "Thunderclap",
+    "icon": "actions/25762.png"
+  },
+  {
+    "row_id": 29484,
+    "name": "Thunderclap",
+    "icon": "actions/29484.png"
+  },
+  {
+    "row_id": 7546,
+    "name": "True North",
+    "icon": "actions/7546.png"
+  },
+  {
+    "row_id": 54,
+    "name": "True Strike",
+    "icon": "actions/54.png"
+  },
+  {
+    "row_id": 61,
+    "name": "Twin Snakes",
+    "icon": "actions/61.png"
+  },
+  {
+    "row_id": 36949,
+    "name": "Wind's Reply",
+    "icon": "actions/36949.png"
+  },
+  {
+    "row_id": 41509,
+    "name": "Wind's Reply",
+    "icon": "actions/41509.png"
+  }
+]

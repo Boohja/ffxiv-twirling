@@ -1,1 +1,257 @@
-[{"icon": "pld/arm's_length.png", "name": "Arm'S Length"}, {"icon": "pld/atonement.png", "name": "Atonement"}, {"icon": "pld/blade_of_faith.png", "name": "Blade Of Faith"}, {"icon": "pld/blade_of_truth.png", "name": "Blade Of Truth"}, {"icon": "pld/blade_of_valor.png", "name": "Blade Of Valor"}, {"icon": "pld/circle_of_scorn.png", "name": "Circle Of Scorn"}, {"icon": "pld/clemency.png", "name": "Clemency"}, {"icon": "pld/confiteor.png", "name": "Confiteor"}, {"icon": "pld/cover.png", "name": "Cover"}, {"icon": "pld/divine_veil.png", "name": "Divine Veil"}, {"icon": "pld/expiacion.png", "name": "Expiacion"}, {"icon": "pld/fast_blade.png", "name": "Fast Blade"}, {"icon": "pld/fight_or_flight.png", "name": "Fight Or Flight"}, {"icon": "pld/goring_blade.png", "name": "Goring Blade"}, {"icon": "pld/hallowed_ground.png", "name": "Hallowed Ground"}, {"icon": "pld/holy_circle.png", "name": "Holy Circle"}, {"icon": "pld/holy_sheltron.png", "name": "Holy Sheltron"}, {"icon": "pld/holy_spirit.png", "name": "Holy Spirit"}, {"icon": "pld/interject.png", "name": "Interject"}, {"icon": "pld/intervene.png", "name": "Intervene"}, {"icon": "pld/intervention.png", "name": "Intervention"}, {"icon": "pld/iron_will.png", "name": "Iron Will"}, {"icon": "pld/low_blow.png", "name": "Low Blow"}, {"icon": "pld/passage_of_arms.png", "name": "Passage Of Arms"}, {"icon": "pld/prominence.png", "name": "Prominence"}, {"icon": "pld/provoke.png", "name": "Provoke"}, {"icon": "pld/rage_of_halone.png", "name": "Rage Of Halone"}, {"icon": "pld/rampart.png", "name": "Rampart"}, {"icon": "pld/reprisal.png", "name": "Reprisal"}, {"icon": "pld/requiescat.png", "name": "Requiescat"}, {"icon": "pld/riot_blade.png", "name": "Riot Blade"}, {"icon": "pld/royal_authority.png", "name": "Royal Authority"}, {"icon": "pld/sentinel.png", "name": "Sentinel"}, {"icon": "pld/sheltron.png", "name": "Sheltron"}, {"icon": "pld/shield_bash.png", "name": "Shield Bash"}, {"icon": "pld/shield_lob.png", "name": "Shield Lob"}, {"icon": "pld/shirk.png", "name": "Shirk"}, {"icon": "pld/spirits_within.png", "name": "Spirits Within"}, {"icon": "pld/total_eclipse.png", "name": "Total Eclipse"}]
+[
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 16460,
+    "name": "Atonement",
+    "icon": "actions/16460.png"
+  },
+  {
+    "row_id": 22,
+    "name": "Bulwark",
+    "icon": "actions/22.png"
+  },
+  {
+    "row_id": 23,
+    "name": "Circle of Scorn",
+    "icon": "actions/23.png"
+  },
+  {
+    "row_id": 3541,
+    "name": "Clemency",
+    "icon": "actions/3541.png"
+  },
+  {
+    "row_id": 16459,
+    "name": "Confiteor",
+    "icon": "actions/16459.png"
+  },
+  {
+    "row_id": 27,
+    "name": "Cover",
+    "icon": "actions/27.png"
+  },
+  {
+    "row_id": 3540,
+    "name": "Divine Veil",
+    "icon": "actions/3540.png"
+  },
+  {
+    "row_id": 25747,
+    "name": "Expiacion",
+    "icon": "actions/25747.png"
+  },
+  {
+    "row_id": 9,
+    "name": "Fast Blade",
+    "icon": "actions/9.png"
+  },
+  {
+    "row_id": 20,
+    "name": "Fight or Flight",
+    "icon": "actions/20.png"
+  },
+  {
+    "row_id": 3538,
+    "name": "Goring Blade",
+    "icon": "actions/3538.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 29066,
+    "name": "Guardian",
+    "icon": "actions/29066.png"
+  },
+  {
+    "row_id": 36920,
+    "name": "Guardian",
+    "icon": "actions/36920.png"
+  },
+  {
+    "row_id": 30,
+    "name": "Hallowed Ground",
+    "icon": "actions/30.png"
+  },
+  {
+    "row_id": 16458,
+    "name": "Holy Circle",
+    "icon": "actions/16458.png"
+  },
+  {
+    "row_id": 25746,
+    "name": "Holy Sheltron",
+    "icon": "actions/25746.png"
+  },
+  {
+    "row_id": 29067,
+    "name": "Holy Sheltron",
+    "icon": "actions/29067.png"
+  },
+  {
+    "row_id": 7384,
+    "name": "Holy Spirit",
+    "icon": "actions/7384.png"
+  },
+  {
+    "row_id": 29062,
+    "name": "Holy Spirit",
+    "icon": "actions/29062.png"
+  },
+  {
+    "row_id": 36921,
+    "name": "Imperator",
+    "icon": "actions/36921.png"
+  },
+  {
+    "row_id": 41431,
+    "name": "Imperator",
+    "icon": "actions/41431.png"
+  },
+  {
+    "row_id": 7538,
+    "name": "Interject",
+    "icon": "actions/7538.png"
+  },
+  {
+    "row_id": 16461,
+    "name": "Intervene",
+    "icon": "actions/16461.png"
+  },
+  {
+    "row_id": 29065,
+    "name": "Intervene",
+    "icon": "actions/29065.png"
+  },
+  {
+    "row_id": 7382,
+    "name": "Intervention",
+    "icon": "actions/7382.png"
+  },
+  {
+    "row_id": 28,
+    "name": "Iron Will",
+    "icon": "actions/28.png"
+  },
+  {
+    "row_id": 7540,
+    "name": "Low Blow",
+    "icon": "actions/7540.png"
+  },
+  {
+    "row_id": 7385,
+    "name": "Passage of Arms",
+    "icon": "actions/7385.png"
+  },
+  {
+    "row_id": 29069,
+    "name": "Phalanx",
+    "icon": "actions/29069.png"
+  },
+  {
+    "row_id": 16457,
+    "name": "Prominence",
+    "icon": "actions/16457.png"
+  },
+  {
+    "row_id": 7533,
+    "name": "Provoke",
+    "icon": "actions/7533.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 21,
+    "name": "Rage of Halone",
+    "icon": "actions/21.png"
+  },
+  {
+    "row_id": 7531,
+    "name": "Rampart",
+    "icon": "actions/7531.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 7535,
+    "name": "Reprisal",
+    "icon": "actions/7535.png"
+  },
+  {
+    "row_id": 7383,
+    "name": "Requiescat",
+    "icon": "actions/7383.png"
+  },
+  {
+    "row_id": 15,
+    "name": "Riot Blade",
+    "icon": "actions/15.png"
+  },
+  {
+    "row_id": 3539,
+    "name": "Royal Authority",
+    "icon": "actions/3539.png"
+  },
+  {
+    "row_id": 17,
+    "name": "Sentinel",
+    "icon": "actions/17.png"
+  },
+  {
+    "row_id": 3542,
+    "name": "Sheltron",
+    "icon": "actions/3542.png"
+  },
+  {
+    "row_id": 16,
+    "name": "Shield Bash",
+    "icon": "actions/16.png"
+  },
+  {
+    "row_id": 24,
+    "name": "Shield Lob",
+    "icon": "actions/24.png"
+  },
+  {
+    "row_id": 41430,
+    "name": "Shield Smite",
+    "icon": "actions/41430.png"
+  },
+  {
+    "row_id": 7537,
+    "name": "Shirk",
+    "icon": "actions/7537.png"
+  },
+  {
+    "row_id": 29,
+    "name": "Spirits Within",
+    "icon": "actions/29.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 7381,
+    "name": "Total Eclipse",
+    "icon": "actions/7381.png"
+  }
+]

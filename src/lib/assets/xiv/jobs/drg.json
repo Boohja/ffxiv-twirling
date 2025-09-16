@@ -1,1 +1,242 @@
-[{"icon": "drg/arm's_length.png", "name": "Arm'S Length"}, {"icon": "drg/battle_litany.png", "name": "Battle Litany"}, {"icon": "drg/bloodbath.png", "name": "Bloodbath"}, {"icon": "drg/chaos_thrust.png", "name": "Chaos Thrust"}, {"icon": "drg/chaotic_spring.png", "name": "Chaotic Spring"}, {"icon": "drg/coerthan_torment.png", "name": "Coerthan Torment"}, {"icon": "drg/disembowel.png", "name": "Disembowel"}, {"icon": "drg/doom_spike.png", "name": "Doom Spike"}, {"icon": "drg/draconian_fury.png", "name": "Draconian Fury"}, {"icon": "drg/dragonfire_dive.png", "name": "Dragonfire Dive"}, {"icon": "drg/dragon_sight.png", "name": "Dragon Sight"}, {"icon": "drg/elusive_jump.png", "name": "Elusive Jump"}, {"icon": "drg/fang_and_claw.png", "name": "Fang And Claw"}, {"icon": "drg/feint.png", "name": "Feint"}, {"icon": "drg/full_thrust.png", "name": "Full Thrust"}, {"icon": "drg/geirskogul.png", "name": "Geirskogul"}, {"icon": "drg/heavens'_thrust.png", "name": "Heavens' Thrust"}, {"icon": "drg/high_jump.png", "name": "High Jump"}, {"icon": "drg/jump.png", "name": "Jump"}, {"icon": "drg/lance_charge.png", "name": "Lance Charge"}, {"icon": "drg/leg_sweep.png", "name": "Leg Sweep"}, {"icon": "drg/life_surge.png", "name": "Life Surge"}, {"icon": "drg/mirage_dive.png", "name": "Mirage Dive"}, {"icon": "drg/nastrond.png", "name": "Nastrond"}, {"icon": "drg/piercing_talon.png", "name": "Piercing Talon"}, {"icon": "drg/raiden_thrust.png", "name": "Raiden Thrust"}, {"icon": "drg/second_wind.png", "name": "Second Wind"}, {"icon": "drg/sonic_thrust.png", "name": "Sonic Thrust"}, {"icon": "drg/spineshatter_dive.png", "name": "Spineshatter Dive"}, {"icon": "drg/stardiver.png", "name": "Stardiver"}, {"icon": "drg/true_north.png", "name": "True North"}, {"icon": "drg/true_thrust.png", "name": "True Thrust"}, {"icon": "drg/vorpal_thrust.png", "name": "Vorpal Thrust"}, {"icon": "drg/wheeling_thrust.png", "name": "Wheeling Thrust"}, {"icon": "drg/wyrmwind_thrust.png", "name": "Wyrmwind Thrust"}]
+[
+  {
+    "row_id": 7548,
+    "name": "Arm's Length",
+    "icon": "actions/7548.png"
+  },
+  {
+    "row_id": 3557,
+    "name": "Battle Litany",
+    "icon": "actions/3557.png"
+  },
+  {
+    "row_id": 7542,
+    "name": "Bloodbath",
+    "icon": "actions/7542.png"
+  },
+  {
+    "row_id": 88,
+    "name": "Chaos Thrust",
+    "icon": "actions/88.png"
+  },
+  {
+    "row_id": 25772,
+    "name": "Chaotic Spring",
+    "icon": "actions/25772.png"
+  },
+  {
+    "row_id": 29490,
+    "name": "Chaotic Spring",
+    "icon": "actions/29490.png"
+  },
+  {
+    "row_id": 16477,
+    "name": "Coerthan Torment",
+    "icon": "actions/16477.png"
+  },
+  {
+    "row_id": 87,
+    "name": "Disembowel",
+    "icon": "actions/87.png"
+  },
+  {
+    "row_id": 86,
+    "name": "Doom Spike",
+    "icon": "actions/86.png"
+  },
+  {
+    "row_id": 96,
+    "name": "Dragonfire Dive",
+    "icon": "actions/96.png"
+  },
+  {
+    "row_id": 36952,
+    "name": "Drakesbane",
+    "icon": "actions/36952.png"
+  },
+  {
+    "row_id": 94,
+    "name": "Elusive Jump",
+    "icon": "actions/94.png"
+  },
+  {
+    "row_id": 29494,
+    "name": "Elusive Jump",
+    "icon": "actions/29494.png"
+  },
+  {
+    "row_id": 3554,
+    "name": "Fang and Claw",
+    "icon": "actions/3554.png"
+  },
+  {
+    "row_id": 7549,
+    "name": "Feint",
+    "icon": "actions/7549.png"
+  },
+  {
+    "row_id": 84,
+    "name": "Full Thrust",
+    "icon": "actions/84.png"
+  },
+  {
+    "row_id": 3555,
+    "name": "Geirskogul",
+    "icon": "actions/3555.png"
+  },
+  {
+    "row_id": 29491,
+    "name": "Geirskogul",
+    "icon": "actions/29491.png"
+  },
+  {
+    "row_id": 29054,
+    "name": "Guard",
+    "icon": "actions/29054.png"
+  },
+  {
+    "row_id": 25771,
+    "name": "Heavens' Thrust",
+    "icon": "actions/25771.png"
+  },
+  {
+    "row_id": 16478,
+    "name": "High Jump",
+    "icon": "actions/16478.png"
+  },
+  {
+    "row_id": 29493,
+    "name": "High Jump",
+    "icon": "actions/29493.png"
+  },
+  {
+    "row_id": 29496,
+    "name": "Horrid Roar",
+    "icon": "actions/29496.png"
+  },
+  {
+    "row_id": 92,
+    "name": "Jump",
+    "icon": "actions/92.png"
+  },
+  {
+    "row_id": 36954,
+    "name": "Lance Barrage",
+    "icon": "actions/36954.png"
+  },
+  {
+    "row_id": 85,
+    "name": "Lance Charge",
+    "icon": "actions/85.png"
+  },
+  {
+    "row_id": 7863,
+    "name": "Leg Sweep",
+    "icon": "actions/7863.png"
+  },
+  {
+    "row_id": 83,
+    "name": "Life Surge",
+    "icon": "actions/83.png"
+  },
+  {
+    "row_id": 7399,
+    "name": "Mirage Dive",
+    "icon": "actions/7399.png"
+  },
+  {
+    "row_id": 7400,
+    "name": "Nastrond",
+    "icon": "actions/7400.png"
+  },
+  {
+    "row_id": 90,
+    "name": "Piercing Talon",
+    "icon": "actions/90.png"
+  },
+  {
+    "row_id": 29056,
+    "name": "Purify",
+    "icon": "actions/29056.png"
+  },
+  {
+    "row_id": 29711,
+    "name": "Recuperate",
+    "icon": "actions/29711.png"
+  },
+  {
+    "row_id": 36953,
+    "name": "Rise of the Dragon",
+    "icon": "actions/36953.png"
+  },
+  {
+    "row_id": 7541,
+    "name": "Second Wind",
+    "icon": "actions/7541.png"
+  },
+  {
+    "row_id": 29497,
+    "name": "Sky High",
+    "icon": "actions/29497.png"
+  },
+  {
+    "row_id": 7397,
+    "name": "Sonic Thrust",
+    "icon": "actions/7397.png"
+  },
+  {
+    "row_id": 36955,
+    "name": "Spiral Blow",
+    "icon": "actions/36955.png"
+  },
+  {
+    "row_id": 29057,
+    "name": "Sprint",
+    "icon": "actions/29057.png"
+  },
+  {
+    "row_id": 29055,
+    "name": "Standard-issue Elixir",
+    "icon": "actions/29055.png"
+  },
+  {
+    "row_id": 36956,
+    "name": "Starcross",
+    "icon": "actions/36956.png"
+  },
+  {
+    "row_id": 16480,
+    "name": "Stardiver",
+    "icon": "actions/16480.png"
+  },
+  {
+    "row_id": 7546,
+    "name": "True North",
+    "icon": "actions/7546.png"
+  },
+  {
+    "row_id": 75,
+    "name": "True Thrust",
+    "icon": "actions/75.png"
+  },
+  {
+    "row_id": 78,
+    "name": "Vorpal Thrust",
+    "icon": "actions/78.png"
+  },
+  {
+    "row_id": 3556,
+    "name": "Wheeling Thrust",
+    "icon": "actions/3556.png"
+  },
+  {
+    "row_id": 36951,
+    "name": "Winged Glide",
+    "icon": "actions/36951.png"
+  },
+  {
+    "row_id": 25773,
+    "name": "Wyrmwind Thrust",
+    "icon": "actions/25773.png"
+  }
+]
