@@ -2,14 +2,18 @@ import { persisted } from 'svelte-local-storage-store'
 
 export interface RotationStep {
   name: string,
-  key?: string
+  icon: string,
+  duration?: number,
+  key?: RotationStepKey
 }
 
-export interface RotationSkill {
-  id: number,
-  name: string,
-  icon?: string,
-  key?: string
+export type RotationStepKey = {
+  shift: boolean
+  ctrl: boolean
+  alt: boolean
+  mouse?: false | number
+  keyName?: string
+  keyCode?: string
 }
 
 export interface Rotation {
