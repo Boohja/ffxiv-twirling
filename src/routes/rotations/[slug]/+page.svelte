@@ -6,10 +6,11 @@
   import { rotations, type Rotation, type RotationStep, type RotationStepKey } from '$lib/stores'
   import { get, writable } from 'svelte/store'
 	import EmptySlot from "$lib/components/twirling/EmptySlot.svelte";
- import { onMount } from 'svelte'
+import { onMount } from 'svelte'
   import PageTitle from '$lib/components/page/PageTitle.svelte'
   import { Icon } from 'svelte-icons-pack'
-  import { CgMouse } from 'svelte-icons-pack/cg'
+  import { CgMouse, CgTrash } from 'svelte-icons-pack/cg'
+  import { BiX } from 'svelte-icons-pack/bi'
   import { BiChevronLeft } from 'svelte-icons-pack/bi'
   import {formatKeybind, hasKeybind} from "$lib/helpers.js"
 
@@ -29,8 +30,23 @@
     return iconModules[key] ?? ''
   }
 
+  // Lazily load job JSON files using alias; map by basename so keys don't depend on '/src'
+  const jobJsonModules = import.meta.glob('$lib/assets/xiv/jobs/*.json') as Record<string, () => Promise<{ default: any }>>
+  const jobLoaderById: Record<string, () => Promise<{ default: any }>> = Object.fromEntries(
+    Object.entries(jobJsonModules).map(([path, loader]) => {
+      const file = path.split('/').pop() || ''
+      const id = file.replace(/\.json$/i, '')
+      return [id, loader]
+    })
+  )
+  const loadJobActions = async (job: string): Promise<any[]> => {
+    const loader = jobLoaderById[job]
+    if (!loader) return []
+    const mod = await loader()
+    return mod?.default ?? []
+  }
+
   $: jobIconUrl = rotation?.job ? iconUrl(`jobs/${rotation.job}.png`) : ''
-  $: filteredActions = (actionFilter?.trim()?.length ? jobActions.filter(a => a.name?.toLowerCase().includes(actionFilter.trim().toLowerCase())) : jobActions)
 
   onMount(async () => {
     try {
@@ -40,27 +56,105 @@
         return
       }
       rotation = rot
-      // const foo = await fetch('/api/actions/' + rotation.job)
-      const foo = await import('$lib/assets/xiv/jobs/drg.json')
-      jobActions = foo.default
+      const actions = await loadJobActions(rotation.job)
+      console.log(rotation)
+      jobActions = actions
       stepsStore.set(rotation.steps as RotationStep[])
-    } finally {
+    }
+    finally {
       loading = false
     }
   })
 
-  function moveStep (idx: number, change: 1 | -1) {
-    const newIdx = idx + change
-    if (newIdx < 0 || newIdx >= steps.length) {
+  // Removed moveStep functionality (drag & drop handles reordering now)
+
+  // Drag & Drop state
+  let draggingIndex: number | null = null
+  // dropIndex represents the position BETWEEN items where the dragged item would be inserted (0..steps.length)
+  let dropIndex: number | null = null
+  let selectedIdx: number | null = null
+
+  function selectStep (idx: number, step: RotationStep) {
+    // Toggle selection: clicking the same selected step deselects and clears editor
+    if (selectedIdx === idx) {
+      selectedIdx = null
+      slotEditor.reset()
       return
     }
+    selectedIdx = idx
+    slotEditor.editStep(idx, step)
+  }
+
+  function handleDragStart (e: DragEvent, index: number) {
+    draggingIndex = index
+    // Initialize drop position to current index so a bar shows up where it will re-insert
+    dropIndex = index
+    if (e.dataTransfer) {
+      e.dataTransfer.setData('text/plain', String(index))
+      e.dataTransfer.effectAllowed = 'move'
+    }
+  }
+
+  function handleDragOver (e: DragEvent, index: number) {
+    // index here is the target step index to insert BEFORE
+    e.preventDefault()
+    if (e.dataTransfer) e.dataTransfer.dropEffect = 'move'
+    dropIndex = index
+  }
+
+  function handleDragOverAfter (e: DragEvent, index: number) {
+    // index here is the target step index to insert AFTER
+    e.preventDefault()
+    if (e.dataTransfer) e.dataTransfer.dropEffect = 'move'
+    dropIndex = index + 1
+  }
+
+  function handleDrop (e: DragEvent) {
+    e.preventDefault()
+    const fromStr = e.dataTransfer?.getData('text/plain') ?? ''
+    const from = fromStr ? parseInt(fromStr, 10) : draggingIndex
+    if (from == null || Number.isNaN(from) || dropIndex == null) {
+      handleDragEnd()
+      return
+    }
+    // Compute target insertion index based on dropIndex (position between items)
+    let to = dropIndex
+    if (from < to) to = to - 1
+    if (to === from) {
+      handleDragEnd()
+      return
+    }
+
+    let updated: RotationStep[] = []
     stepsStore.update(existingSteps => {
-      const newSteps = [...existingSteps]
-      const temp = newSteps[idx]
-      newSteps[idx] = newSteps[newIdx]
-      newSteps[newIdx] = temp
-      return newSteps
+      const ns = [...existingSteps]
+      const [moved] = ns.splice(from, 1)
+      ns.splice(to, 0, moved)
+      updated = ns
+      return ns
     })
+    // Maintain selection on the moved item
+    if (selectedIdx != null) {
+      const f = from
+      const t = to
+      if (selectedIdx === f) {
+        selectedIdx = t
+      } else if (f < t) {
+        // Items between f+1..t shift up by 1
+        if (selectedIdx > f && selectedIdx <= t) selectedIdx = selectedIdx - 1
+      } else if (f > t) {
+        // Items between t..f-1 shift down by 1
+        if (selectedIdx >= t && selectedIdx < f) selectedIdx = selectedIdx + 1
+      }
+    }
+    rotation.steps = updated
+    rotations.set(rots)
+    handleDragEnd()
+  }
+
+  function handleDragEnd () {
+    draggingIndex = null
+    dropIndex = null
   }
 
   $: canTwirl = $stepsStore.every(step => hasKeybind(step.key)) && $stepsStore.length > 0
@@ -70,6 +164,7 @@
       name: entry.name,
       icon: entry.icon,
       key: entry.key,
+      action: (entry as any).action
     }
     stepsStore.update(existingSteps => [...existingSteps, newStep])
     rotation.steps.push(newStep)
@@ -77,7 +172,7 @@
     // console.log('new entry rotation: ', rotation)
     // rotation.steps = steps
     rotations.set(rots)
-    if (propagateKeybind) {
+    if (propagateKeybind && entry.key) {
       copyKeybindToSteps(entry.key, entry.name)
     }
   }
@@ -90,7 +185,7 @@
     })
     rotation.steps[idx] = entry
     rotations.set(rots)
-    if (propagateKeybind) {
+    if (propagateKeybind && entry.key) {
       copyKeybindToSteps(entry.key, entry.name)
     }
   }
@@ -128,7 +223,8 @@
   function pickAction(action: any) {
     if (!rotation) return
     rotation.steps = rotation.steps || []
-    rotation.steps.push({ name: action.name })
+    // Store relative icon so it can be resolved at runtime
+    rotation.steps.push({ name: action.name, icon: action.icon, action: action.row_id })
     rotations.set(rots)
   }
 
@@ -166,101 +262,75 @@
 </div>
 
 <div class="grid gap-4 grid-cols-2">
-  <div class="border border-slate-500 p-3">
-    <button class="mb-3 py-3 w-full px-5 border border-teal-700 hover:bg-teal-700 {canTwirl ? '' : 'opacity-40'} rounded-full text-white font-semibold" on:click={goTwirl}>Twirl</button>
-    <div>
+  <div class="border border-slate-500 p-3 mb-5">
+    <div class="pr-1">
       {#each $stepsStore as step, idx (step)}
-        <div
-          class="step border rounded border-slate-600 mb-4 relative grid divide-x divide-slate-500 hover:bg-slate-700"
-          animate:flip={{ duration: 200 }}
-          transition:slide
-        >
-          <div class="align-middle" on:click={() => { slotEditor.editStep(idx, step) }} on:keypress={() => { slotEditor.editStep(idx, step) }}>
-            <img src={step.icon} class="w-12" alt="" />
+        <div animate:flip={{ duration: 200 }}>
+          <!-- Pre-step drop zone -->
+          <div
+            class="drop-zone {dropIndex === idx ? 'active' : ''}"
+            on:dragover={(e) => handleDragOver(e, idx)}
+            on:drop={handleDrop}
+          />
+          <div
+            class="step border rounded border-slate-600 mb-2 relative grid hover:bg-slate-700 cursor-grab active:cursor-grabbing {selectedIdx === idx ? 'border-teal-500 ring-1 ring-teal-400/40 bg-slate-700/50' : ''}"
+            class:dragging={draggingIndex === idx}
+            draggable={true}
+            on:dragstart={(e) => handleDragStart(e, idx)}
+            on:dragover={(e) => handleDragOverAfter(e, idx)}
+            on:drop={handleDrop}
+            on:dragend={handleDragEnd}
+          >
+          <div class="px-2 py-3 text-right tabular-nums text-slate-400 select-none self-center">
+            {idx + 1}
           </div>
-          <div class="p-3" on:click={() => { slotEditor.editStep(idx, step) }} on:keypress={() => { slotEditor.editStep(idx, step) }}>
-            {idx}: {step.name}<br>
-            <div class="font-thin text-xs bg-opacity-40 {hasKeybind(step.key) ? 'bg-black' : 'bg-yellow-400' } px-2 py-1 inline-block rounded-full">
-              <Icon src={CgMouse} className="inline" /> {formatKeybind(step.key) }
+          <div class="align-middle self-center" on:click={() => selectStep(idx, step)} on:keypress={() => selectStep(idx, step)}>
+            <img src={step.icon?.startsWith('actions/') ? iconUrl(step.icon) : step.icon} class="w-14 h-14 object-contain" alt="" />
+          </div>
+          <div class="p-3 self-center" on:click={() => selectStep(idx, step)} on:keypress={() => selectStep(idx, step)}>
+            <div class="font-medium leading-tight">{step.name}</div>
+            <div class="mt-1 flex items-center gap-2">
+              <span class="font-thin text-xs bg-opacity-40 {hasKeybind(step.key) ? 'bg-black' : 'bg-yellow-400' } px-2 py-1 inline-flex items-center gap-1 rounded-full">
+                <Icon src={CgMouse} className="inline" /> {formatKeybind(step.key)}
+              </span>
             </div>
           </div>
           <button
-            class="hover:bg-slate-500"
+            class="delete-btn hover:bg-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400"
+            aria-label="Delete step {step.name}"
+            title="Delete step"
             on:click={() => {
               stepsStore.update(existingSteps => existingSteps.filter((_, i) => i !== idx))
               rotation.steps = $stepsStore
               rotations.set(rots)
             }}
           >
-            ✘
+            <Icon src={BiX} size="1.1em" />
           </button>
-          <button
-            class="hover:bg-slate-500"
-            disabled={idx === 0}
-            on:click={() => {
-              moveStep(idx, -1)
-              rotation.steps = $stepsStore
-              rotations.set(rots)
-            }}
-          >
-            ▲
-          </button>
-          <button
-            class="hover:bg-slate-500"
-            disabled={idx === $stepsStore.length - 1}
-            on:click={() => {
-              moveStep(idx, 1)
-              rotation.steps = $stepsStore
-              rotations.set(rots)
-            }}
-          >
-            ▼
-          </button>
+          </div>
         </div>
       {/each}
+      <!-- Final drop zone at end -->
+      <div
+        class="drop-zone end {dropIndex === $stepsStore.length ? 'active' : ''}"
+        on:dragover={(e) => handleDragOver(e, $stepsStore.length)}
+        on:drop={handleDrop}
+      />
     </div>
-    {#if $stepsStore.length}
-      <button class="mt-3 py-3 w-full px-5 border border-teal-700 hover:bg-teal-700 {canTwirl ? '' : 'opacity-40'} rounded-full text-white font-semibold" on:click={goTwirl}>Twirl</button>
-    {/if}
+    <div class="pt-3 mt-3 border-t border-slate-700">
+      <button class="py-3 w-full px-5 border border-teal-700 hover:bg-teal-700 {canTwirl ? '' : 'opacity-40'} rounded-full text-white font-semibold" on:click={goTwirl}>Twirl</button>
+    </div>
   </div>
-  <div>
+  <div class="p-4 border border-slate-900/60 rounded mb-8 bg-slate-900/40 sticky top-4 self-start">
     <EmptySlot
       on:newentry={(e) => newEntry(e.detail.step, e.detail.propagateKeybind)}
       on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
       bind:this={slotEditor}
       suggestions={jobActions}
+      existingSteps={$stepsStore}
     />
   </div>
 
-  <div class="col-span-2 sticky bottom-0 z-20 bg-slate-900/90 backdrop-blur border-t border-slate-700">
-    <div class="max-w-7xl mx-auto px-4 py-3">
-      <div class="flex items-center gap-3 mb-3">
-        <input
-          bind:value={actionFilter}
-          type="text"
-          placeholder="Filter actions…"
-          class="w-full sm:w-80 rounded border border-slate-600 bg-slate-800 px-3 py-2 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50"
-        />
-        <div class="text-xs text-slate-400 hidden sm:block">{filteredActions.length} of {jobActions.length}</div>
-      </div>
-
-      <div class="max-h-64 overflow-y-auto pr-1">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 gap-2">
-          {#each filteredActions as action (action.icon)}
-            <button
-              type="button"
-              class="group flex items-center gap-2 rounded border border-slate-700 bg-slate-800/60 hover:bg-slate-700/60 focus:outline-none focus:ring-2 focus:ring-primary/40 px-2 py-2 text-left"
-              title={action.name}
-              on:click={() => pickAction(action)}
-            >
-              <img src={iconUrl(action.icon)} alt={action.name} class="h-8 w-8 shrink-0 rounded" />
-              <span class="truncate text-sm">{action.name}</span>
-            </button>
-          {/each}
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 
@@ -269,16 +339,36 @@
 
   /* Apply a CSS transition to the steps */
   .step {
-    grid-template-columns: max-content auto max-content max-content max-content
+    /* Adjusted columns: index | icon | info | delete */
+    grid-template-columns: 2.25rem max-content auto 3rem;
+    align-items: stretch;
   }
-  .step button {
-    width: 2.5rem;
-    --tw-border-opacity: 1;
+  .step.dragging {
+    opacity: 0.6;
   }
-  .step button[disabled] {
-    opacity: 0.5;
+  /* Full-height drop zones before each step and at end */
+  .drop-zone {
+    position: relative;
+    height: 0.5rem; /* collapsed until active */
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    transition: all 80ms ease;
+    background: transparent;
+    outline: 2px dashed transparent;
   }
-  .step button[disabled]:hover {
-    background-color: transparent;
+  .drop-zone.active {
+    height: 3.5rem; /* approximate step height for easier targeting */
+    background: rgba(45,212,191,0.08);
+    outline-color: rgba(45,212,191,0.6);
+    box-shadow: 0 0 0 1px rgba(45,212,191,0.45), 0 0 12px rgba(45,212,191,0.25) inset;
+  }
+  .drop-zone.end { margin-top: 0.75rem; }
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.25rem;
   }
 </style>

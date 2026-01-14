@@ -9,6 +9,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { Jobs } from '../src/lib/jobs.ts';
 
 const ROOT = process.cwd();
 const JOBS_DIR = path.join(ROOT, 'src', 'lib', 'assets', 'xiv', 'jobs');
@@ -37,6 +38,15 @@ type JobEntry = { row_id: number; name: string; icon: string };
 
 async function ensureDir(dir: string) {
 	await fs.mkdir(dir, { recursive: true });
+}
+
+async function fileExists(p: string): Promise<boolean> {
+	try {
+		await fs.access(p);
+		return true;
+	} catch {
+		return false;
+	}
 }
 
 async function getJSON<T>(url: string): Promise<T> {
@@ -77,12 +87,13 @@ function hasRowId(entries: JobEntry[], id: number): boolean {
 	return entries.some((e) => e.row_id === id);
 }
 
-function jobAbbrToFileMap(fileNames: string[]): Map<string, string> {
+// Build a map of job ABBR (uppercase) -> json file path using exported Jobs list
+function jobsListToFileMap(): Map<string, string> {
 	const map = new Map<string, string>();
-	for (const name of fileNames) {
-		if (!name.endsWith('.json')) continue;
-		const short = path.basename(name, '.json').toLowerCase();
-		map.set(short.toUpperCase(), path.join(JOBS_DIR, name));
+	for (const j of Jobs) {
+		const abbr = j.id.toUpperCase();
+		const filePath = path.join(JOBS_DIR, `${j.id}.json`);
+		map.set(abbr, filePath);
 	}
 	return map;
 }
@@ -122,13 +133,16 @@ async function fetchAndStoreIconOnce(rowId: number, iconPath: string | undefined
 
 export async function updateJobFiles(): Promise<void> {
 	await ensureDir(ACTIONS_DIR);
-	const dirents = await fs.readdir(JOBS_DIR, { withFileTypes: true });
-	const jobJsonFiles = dirents.filter((d) => d.isFile() && d.name.endsWith('.json')).map((d) => d.name);
-	const jobMap = jobAbbrToFileMap(jobJsonFiles); // e.g., WHM -> <path>/whm.json
+  await ensureDir(JOBS_DIR);
+  const jobMap = jobsListToFileMap(); // e.g., WHM -> <path>/whm.json
 
 	// Load all job files once into memory
 	const jobCache = new Map<string, JobEntry[]>(); // ABBR -> entries
 	for (const [abbr, filePath] of jobMap.entries()) {
+    // Ensure file exists; create empty if missing
+    if (!(await fileExists(filePath))) {
+      await writeJobJson(filePath, []);
+    }
 		const entries = await readJobJson(filePath);
 		jobCache.set(abbr, entries);
 	}
@@ -146,7 +160,7 @@ export async function updateJobFiles(): Promise<void> {
   const requestedFields = 'Name,Icon,ClassJobCategory';
 	let pagesProcessed = 0;
 	let url = `${V2}/api/search?sheets=Action&fields=${requestedFields}&query=${encodeURIComponent(
-		'IsPlayerAction=true -ClassJobCategory=0'
+		'+IsPlayerAction=true +IsPvP=false -ClassJobCategory=0'
 	)}`;
 
   while (url && pagesProcessed <= maxPages) {

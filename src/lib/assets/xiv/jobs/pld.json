@@ -60,16 +60,6 @@
     "icon": "actions/3538.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
-    "row_id": 29066,
-    "name": "Guardian",
-    "icon": "actions/29066.png"
-  },
-  {
     "row_id": 36920,
     "name": "Guardian",
     "icon": "actions/36920.png"
@@ -90,29 +80,14 @@
     "icon": "actions/25746.png"
   },
   {
-    "row_id": 29067,
-    "name": "Holy Sheltron",
-    "icon": "actions/29067.png"
-  },
-  {
     "row_id": 7384,
     "name": "Holy Spirit",
     "icon": "actions/7384.png"
   },
   {
-    "row_id": 29062,
-    "name": "Holy Spirit",
-    "icon": "actions/29062.png"
-  },
-  {
     "row_id": 36921,
     "name": "Imperator",
     "icon": "actions/36921.png"
-  },
-  {
-    "row_id": 41431,
-    "name": "Imperator",
-    "icon": "actions/41431.png"
   },
   {
     "row_id": 7538,
@@ -123,11 +98,6 @@
     "row_id": 16461,
     "name": "Intervene",
     "icon": "actions/16461.png"
-  },
-  {
-    "row_id": 29065,
-    "name": "Intervene",
-    "icon": "actions/29065.png"
   },
   {
     "row_id": 7382,
@@ -150,11 +120,6 @@
     "icon": "actions/7385.png"
   },
   {
-    "row_id": 29069,
-    "name": "Phalanx",
-    "icon": "actions/29069.png"
-  },
-  {
     "row_id": 16457,
     "name": "Prominence",
     "icon": "actions/16457.png"
@@ -165,11 +130,6 @@
     "icon": "actions/7533.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
     "row_id": 21,
     "name": "Rage of Halone",
     "icon": "actions/21.png"
@@ -178,11 +138,6 @@
     "row_id": 7531,
     "name": "Rampart",
     "icon": "actions/7531.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 7535,
@@ -225,11 +180,6 @@
     "icon": "actions/24.png"
   },
   {
-    "row_id": 41430,
-    "name": "Shield Smite",
-    "icon": "actions/41430.png"
-  },
-  {
     "row_id": 7537,
     "name": "Shirk",
     "icon": "actions/7537.png"
@@ -238,16 +188,6 @@
     "row_id": 29,
     "name": "Spirits Within",
     "icon": "actions/29.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 7381,

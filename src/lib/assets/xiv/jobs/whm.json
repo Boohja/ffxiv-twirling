@@ -20,16 +20,6 @@
     "icon": "actions/16535.png"
   },
   {
-    "row_id": 29226,
-    "name": "Afflatus Misery",
-    "icon": "actions/29226.png"
-  },
-  {
-    "row_id": 29230,
-    "name": "Afflatus Purgation",
-    "icon": "actions/29230.png"
-  },
-  {
     "row_id": 16534,
     "name": "Afflatus Rapture",
     "icon": "actions/16534.png"
@@ -43,11 +33,6 @@
     "row_id": 25861,
     "name": "Aquaveil",
     "icon": "actions/25861.png"
-  },
-  {
-    "row_id": 29227,
-    "name": "Aquaveil",
-    "icon": "actions/29227.png"
   },
   {
     "row_id": 3571,
@@ -73,11 +58,6 @@
     "row_id": 135,
     "name": "Cure II",
     "icon": "actions/135.png"
-  },
-  {
-    "row_id": 29224,
-    "name": "Cure II",
-    "icon": "actions/29224.png"
   },
   {
     "row_id": 131,
@@ -115,19 +95,9 @@
     "icon": "actions/25859.png"
   },
   {
-    "row_id": 29223,
-    "name": "Glare III",
-    "icon": "actions/29223.png"
-  },
-  {
     "row_id": 37009,
     "name": "Glare IV",
     "icon": "actions/37009.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
   },
   {
     "row_id": 139,
@@ -165,11 +135,6 @@
     "icon": "actions/37010.png"
   },
   {
-    "row_id": 29228,
-    "name": "Miracle of Nature",
-    "icon": "actions/29228.png"
-  },
-  {
     "row_id": 7433,
     "name": "Plenary Indulgence",
     "icon": "actions/7433.png"
@@ -185,19 +150,9 @@
     "icon": "actions/1584.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
     "row_id": 125,
     "name": "Raise",
     "icon": "actions/125.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 137,
@@ -213,21 +168,6 @@
     "row_id": 7571,
     "name": "Rescue",
     "icon": "actions/7571.png"
-  },
-  {
-    "row_id": 29229,
-    "name": "Seraph Strike",
-    "icon": "actions/29229.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 119,

@@ -15,16 +15,6 @@
     "icon": "actions/25751.png"
   },
   {
-    "row_id": 29082,
-    "name": "Bloodwhetting",
-    "icon": "actions/29082.png"
-  },
-  {
-    "row_id": 29081,
-    "name": "Blota",
-    "icon": "actions/29081.png"
-  },
-  {
     "row_id": 36923,
     "name": "Damnation",
     "icon": "actions/36923.png"
@@ -48,11 +38,6 @@
     "row_id": 3549,
     "name": "Fell Cleave",
     "icon": "actions/3549.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
   },
   {
     "row_id": 31,
@@ -110,19 +95,9 @@
     "icon": "actions/7386.png"
   },
   {
-    "row_id": 29079,
-    "name": "Onslaught",
-    "icon": "actions/29079.png"
-  },
-  {
     "row_id": 25752,
     "name": "Orogeny",
     "icon": "actions/25752.png"
-  },
-  {
-    "row_id": 29080,
-    "name": "Orogeny",
-    "icon": "actions/29080.png"
   },
   {
     "row_id": 41,
@@ -135,24 +110,9 @@
     "icon": "actions/25753.png"
   },
   {
-    "row_id": 29084,
-    "name": "Primal Rend",
-    "icon": "actions/29084.png"
-  },
-  {
-    "row_id": 29083,
-    "name": "Primal Scream",
-    "icon": "actions/29083.png"
-  },
-  {
     "row_id": 7533,
     "name": "Provoke",
     "icon": "actions/7533.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
   },
   {
     "row_id": 7531,
@@ -163,11 +123,6 @@
     "row_id": 3551,
     "name": "Raw Intuition",
     "icon": "actions/3551.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 7535,
@@ -183,16 +138,6 @@
     "row_id": 7537,
     "name": "Shirk",
     "icon": "actions/7537.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 51,

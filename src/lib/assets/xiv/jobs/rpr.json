@@ -10,11 +10,6 @@
     "icon": "actions/24404.png"
   },
   {
-    "row_id": 29552,
-    "name": "Arcane Crest",
-    "icon": "actions/29552.png"
-  },
-  {
     "row_id": 7548,
     "name": "Arm's Length",
     "icon": "actions/7548.png"
@@ -33,11 +28,6 @@
     "row_id": 24398,
     "name": "Communio",
     "icon": "actions/24398.png"
-  },
-  {
-    "row_id": 29549,
-    "name": "Death Warrant",
-    "icon": "actions/29549.png"
   },
   {
     "row_id": 24394,
@@ -70,16 +60,6 @@
     "icon": "actions/24392.png"
   },
   {
-    "row_id": 29547,
-    "name": "Grim Swathe",
-    "icon": "actions/29547.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
     "row_id": 24384,
     "name": "Guillotine",
     "icon": "actions/24384.png"
@@ -90,11 +70,6 @@
     "icon": "actions/24386.png"
   },
   {
-    "row_id": 29545,
-    "name": "Harvest Moon",
-    "icon": "actions/29545.png"
-  },
-  {
     "row_id": 24402,
     "name": "Hell's Egress",
     "icon": "actions/24402.png"
@@ -103,11 +78,6 @@
     "row_id": 24401,
     "name": "Hell's Ingress",
     "icon": "actions/24401.png"
-  },
-  {
-    "row_id": 29550,
-    "name": "Hell's Ingress",
-    "icon": "actions/29550.png"
   },
   {
     "row_id": 24375,
@@ -128,21 +98,6 @@
     "row_id": 24385,
     "name": "Plentiful Harvest",
     "icon": "actions/24385.png"
-  },
-  {
-    "row_id": 29546,
-    "name": "Plentiful Harvest",
-    "icon": "actions/29546.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 7541,
@@ -178,21 +133,6 @@
     "row_id": 24376,
     "name": "Spinning Scythe",
     "icon": "actions/24376.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
-    "row_id": 29553,
-    "name": "Tenebrae Lemurum",
-    "icon": "actions/29553.png"
   },
   {
     "row_id": 7546,

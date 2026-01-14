@@ -35,11 +35,6 @@
     "icon": "actions/16493.png"
   },
   {
-    "row_id": 29511,
-    "name": "Bunshin",
-    "icon": "actions/29511.png"
-  },
-  {
     "row_id": 2261,
     "name": "Chi",
     "icon": "actions/2261.png"
@@ -53,11 +48,6 @@
     "row_id": 36957,
     "name": "Dokumori",
     "icon": "actions/36957.png"
-  },
-  {
-    "row_id": 41451,
-    "name": "Dokumori",
-    "icon": "actions/41451.png"
   },
   {
     "row_id": 3566,
@@ -78,16 +68,6 @@
     "row_id": 25777,
     "name": "Forked Raiju",
     "icon": "actions/25777.png"
-  },
-  {
-    "row_id": 29505,
-    "name": "Fuma Shuriken",
-    "icon": "actions/29505.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
   },
   {
     "row_id": 2242,
@@ -150,24 +130,9 @@
     "icon": "actions/25774.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
     "row_id": 7541,
     "name": "Second Wind",
     "icon": "actions/7541.png"
-  },
-  {
-    "row_id": 29515,
-    "name": "Seiton Tenchu",
-    "icon": "actions/29515.png"
   },
   {
     "row_id": 2241,
@@ -180,24 +145,9 @@
     "icon": "actions/2262.png"
   },
   {
-    "row_id": 29513,
-    "name": "Shukuchi",
-    "icon": "actions/29513.png"
-  },
-  {
     "row_id": 2240,
     "name": "Spinning Edge",
     "icon": "actions/2240.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 2259,
@@ -208,11 +158,6 @@
     "row_id": 7403,
     "name": "Ten Chi Jin",
     "icon": "actions/7403.png"
-  },
-  {
-    "row_id": 29507,
-    "name": "Three Mudra",
-    "icon": "actions/29507.png"
   },
   {
     "row_id": 2247,

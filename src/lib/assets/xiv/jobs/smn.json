@@ -15,11 +15,6 @@
     "icon": "actions/25822.png"
   },
   {
-    "row_id": 29667,
-    "name": "Crimson Cyclone",
-    "icon": "actions/29667.png"
-  },
-  {
     "row_id": 3581,
     "name": "Dreadwyrm Trance",
     "icon": "actions/3581.png"
@@ -50,11 +45,6 @@
     "icon": "actions/25883.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
     "row_id": 7562,
     "name": "Lucid Dreaming",
     "icon": "actions/7562.png"
@@ -65,19 +55,9 @@
     "icon": "actions/36997.png"
   },
   {
-    "row_id": 29671,
-    "name": "Mountain Buster",
-    "icon": "actions/29671.png"
-  },
-  {
     "row_id": 36990,
     "name": "Necrotize",
     "icon": "actions/36990.png"
-  },
-  {
-    "row_id": 41483,
-    "name": "Necrotize",
-    "icon": "actions/41483.png"
   },
   {
     "row_id": 16511,
@@ -100,24 +80,9 @@
     "icon": "actions/25884.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
     "row_id": 25799,
     "name": "Radiant Aegis",
     "icon": "actions/25799.png"
-  },
-  {
-    "row_id": 29670,
-    "name": "Radiant Aegis",
-    "icon": "actions/29670.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 173,
@@ -140,11 +105,6 @@
     "icon": "actions/3579.png"
   },
   {
-    "row_id": 29664,
-    "name": "Ruin III",
-    "icon": "actions/29664.png"
-  },
-  {
     "row_id": 7426,
     "name": "Ruin IV",
     "icon": "actions/7426.png"
@@ -165,29 +125,9 @@
     "icon": "actions/25880.png"
   },
   {
-    "row_id": 29669,
-    "name": "Slipstream",
-    "icon": "actions/29669.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
     "row_id": 7427,
     "name": "Summon Bahamut",
     "icon": "actions/7427.png"
-  },
-  {
-    "row_id": 29673,
-    "name": "Summon Bahamut",
-    "icon": "actions/29673.png"
   },
   {
     "row_id": 25798,
@@ -218,11 +158,6 @@
     "row_id": 25838,
     "name": "Summon Ifrit II",
     "icon": "actions/25838.png"
-  },
-  {
-    "row_id": 29678,
-    "name": "Summon Phoenix",
-    "icon": "actions/29678.png"
   },
   {
     "row_id": 25802,

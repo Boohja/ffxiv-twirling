@@ -20,34 +20,14 @@
     "icon": "actions/7506.png"
   },
   {
-    "row_id": 29699,
-    "name": "Corps-a-corps",
-    "icon": "actions/29699.png"
-  },
-  {
     "row_id": 7515,
     "name": "Displacement",
     "icon": "actions/7515.png"
   },
   {
-    "row_id": 29700,
-    "name": "Displacement",
-    "icon": "actions/29700.png"
-  },
-  {
     "row_id": 7520,
     "name": "Embolden",
     "icon": "actions/7520.png"
-  },
-  {
-    "row_id": 41494,
-    "name": "Embolden",
-    "icon": "actions/41494.png"
-  },
-  {
-    "row_id": 41488,
-    "name": "Enchanted Riposte",
-    "icon": "actions/41488.png"
   },
   {
     "row_id": 16527,
@@ -58,16 +38,6 @@
     "row_id": 7517,
     "name": "Fleche",
     "icon": "actions/7517.png"
-  },
-  {
-    "row_id": 41496,
-    "name": "Forte",
-    "icon": "actions/41496.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
   },
   {
     "row_id": 16526,
@@ -90,11 +60,6 @@
     "icon": "actions/37004.png"
   },
   {
-    "row_id": 41486,
-    "name": "Jolt III",
-    "icon": "actions/41486.png"
-  },
-  {
     "row_id": 7562,
     "name": "Lucid Dreaming",
     "icon": "actions/7562.png"
@@ -115,16 +80,6 @@
     "icon": "actions/7513.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
     "row_id": 7516,
     "name": "Redoublement",
     "icon": "actions/7516.png"
@@ -133,11 +88,6 @@
     "row_id": 16529,
     "name": "Reprise",
     "icon": "actions/16529.png"
-  },
-  {
-    "row_id": 41492,
-    "name": "Resolution",
-    "icon": "actions/41492.png"
   },
   {
     "row_id": 7504,
@@ -153,21 +103,6 @@
     "row_id": 25880,
     "name": "Sleep",
     "icon": "actions/25880.png"
-  },
-  {
-    "row_id": 41498,
-    "name": "Southern Cross",
-    "icon": "actions/41498.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 7559,

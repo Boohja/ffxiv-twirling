@@ -55,11 +55,6 @@
     "icon": "actions/16470.png"
   },
   {
-    "row_id": 29097,
-    "name": "Eventide",
-    "icon": "actions/29097.png"
-  },
-  {
     "row_id": 16466,
     "name": "Flood of Darkness",
     "icon": "actions/16466.png"
@@ -75,19 +70,9 @@
     "icon": "actions/3629.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
     "row_id": 3617,
     "name": "Hard Slash",
     "icon": "actions/3617.png"
-  },
-  {
-    "row_id": 41438,
-    "name": "Impalement",
-    "icon": "actions/41438.png"
   },
   {
     "row_id": 7538,
@@ -115,19 +100,9 @@
     "icon": "actions/25754.png"
   },
   {
-    "row_id": 29092,
-    "name": "Plunge",
-    "icon": "actions/29092.png"
-  },
-  {
     "row_id": 7533,
     "name": "Provoke",
     "icon": "actions/7533.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
   },
   {
     "row_id": 7391,
@@ -138,11 +113,6 @@
     "row_id": 7531,
     "name": "Rampart",
     "icon": "actions/7531.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 7535,
@@ -160,11 +130,6 @@
     "icon": "actions/3639.png"
   },
   {
-    "row_id": 29094,
-    "name": "Salted Earth",
-    "icon": "actions/29094.png"
-  },
-  {
     "row_id": 3636,
     "name": "Shadow Wall",
     "icon": "actions/3636.png"
@@ -173,11 +138,6 @@
     "row_id": 25757,
     "name": "Shadowbringer",
     "icon": "actions/25757.png"
-  },
-  {
-    "row_id": 29091,
-    "name": "Shadowbringer",
-    "icon": "actions/29091.png"
   },
   {
     "row_id": 36927,
@@ -200,29 +160,14 @@
     "icon": "actions/3632.png"
   },
   {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
     "row_id": 16468,
     "name": "Stalwart Soul",
     "icon": "actions/16468.png"
   },
   {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
     "row_id": 3623,
     "name": "Syphon Strike",
     "icon": "actions/3623.png"
-  },
-  {
-    "row_id": 29093,
-    "name": "the Blackest Night",
-    "icon": "actions/29093.png"
   },
   {
     "row_id": 7393,

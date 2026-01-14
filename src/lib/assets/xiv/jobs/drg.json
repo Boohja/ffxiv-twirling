@@ -25,11 +25,6 @@
     "icon": "actions/25772.png"
   },
   {
-    "row_id": 29490,
-    "name": "Chaotic Spring",
-    "icon": "actions/29490.png"
-  },
-  {
     "row_id": 16477,
     "name": "Coerthan Torment",
     "icon": "actions/16477.png"
@@ -60,11 +55,6 @@
     "icon": "actions/94.png"
   },
   {
-    "row_id": 29494,
-    "name": "Elusive Jump",
-    "icon": "actions/29494.png"
-  },
-  {
     "row_id": 3554,
     "name": "Fang and Claw",
     "icon": "actions/3554.png"
@@ -85,16 +75,6 @@
     "icon": "actions/3555.png"
   },
   {
-    "row_id": 29491,
-    "name": "Geirskogul",
-    "icon": "actions/29491.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
     "row_id": 25771,
     "name": "Heavens' Thrust",
     "icon": "actions/25771.png"
@@ -103,16 +83,6 @@
     "row_id": 16478,
     "name": "High Jump",
     "icon": "actions/16478.png"
-  },
-  {
-    "row_id": 29493,
-    "name": "High Jump",
-    "icon": "actions/29493.png"
-  },
-  {
-    "row_id": 29496,
-    "name": "Horrid Roar",
-    "icon": "actions/29496.png"
   },
   {
     "row_id": 92,
@@ -155,16 +125,6 @@
     "icon": "actions/90.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
     "row_id": 36953,
     "name": "Rise of the Dragon",
     "icon": "actions/36953.png"
@@ -175,11 +135,6 @@
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 29497,
-    "name": "Sky High",
-    "icon": "actions/29497.png"
-  },
-  {
     "row_id": 7397,
     "name": "Sonic Thrust",
     "icon": "actions/7397.png"
@@ -188,16 +143,6 @@
     "row_id": 36955,
     "name": "Spiral Blow",
     "icon": "actions/36955.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 36956,

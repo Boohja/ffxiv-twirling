@@ -60,11 +60,6 @@
     "icon": "actions/36950.png"
   },
   {
-    "row_id": 41447,
-    "name": "Flint's Reply",
-    "icon": "actions/41447.png"
-  },
-  {
     "row_id": 36942,
     "name": "Forbidden Meditation",
     "icon": "actions/36942.png"
@@ -78,11 +73,6 @@
     "row_id": 16473,
     "name": "Four-point Fury",
     "icon": "actions/16473.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
   },
   {
     "row_id": 25763,
@@ -115,11 +105,6 @@
     "icon": "actions/25764.png"
   },
   {
-    "row_id": 29485,
-    "name": "Meteodrive",
-    "icon": "actions/29485.png"
-  },
-  {
     "row_id": 69,
     "name": "Perfect Balance",
     "icon": "actions/69.png"
@@ -130,24 +115,9 @@
     "icon": "actions/36947.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
     "row_id": 7394,
     "name": "Riddle of Earth",
     "icon": "actions/7394.png"
-  },
-  {
-    "row_id": 29482,
-    "name": "Riddle of Earth",
-    "icon": "actions/29482.png"
   },
   {
     "row_id": 7395,
@@ -158,11 +128,6 @@
     "row_id": 25766,
     "name": "Riddle of Wind",
     "icon": "actions/25766.png"
-  },
-  {
-    "row_id": 29481,
-    "name": "Rising Phoenix",
-    "icon": "actions/29481.png"
   },
   {
     "row_id": 36946,
@@ -195,16 +160,6 @@
     "icon": "actions/56.png"
   },
   {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
     "row_id": 25761,
     "name": "Steel Peak",
     "icon": "actions/25761.png"
@@ -225,11 +180,6 @@
     "icon": "actions/25762.png"
   },
   {
-    "row_id": 29484,
-    "name": "Thunderclap",
-    "icon": "actions/29484.png"
-  },
-  {
     "row_id": 7546,
     "name": "True North",
     "icon": "actions/7546.png"
@@ -248,10 +198,5 @@
     "row_id": 36949,
     "name": "Wind's Reply",
     "icon": "actions/36949.png"
-  },
-  {
-    "row_id": 41509,
-    "name": "Wind's Reply",
-    "icon": "actions/41509.png"
   }
 ]

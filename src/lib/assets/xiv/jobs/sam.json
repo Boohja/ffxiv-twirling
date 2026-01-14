@@ -35,11 +35,6 @@
     "icon": "actions/7481.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
     "row_id": 36963,
     "name": "Gyofu",
     "icon": "actions/36963.png"
@@ -53,11 +48,6 @@
     "row_id": 7477,
     "name": "Hakaze",
     "icon": "actions/7477.png"
-  },
-  {
-    "row_id": 29533,
-    "name": "Hissatsu: Chiten",
-    "icon": "actions/29533.png"
   },
   {
     "row_id": 7496,
@@ -83,11 +73,6 @@
     "row_id": 7490,
     "name": "Hissatsu: Shinten",
     "icon": "actions/7490.png"
-  },
-  {
-    "row_id": 29532,
-    "name": "Hissatsu: Soten",
-    "icon": "actions/29532.png"
   },
   {
     "row_id": 7493,
@@ -135,39 +120,14 @@
     "icon": "actions/7499.png"
   },
   {
-    "row_id": 29536,
-    "name": "Meikyo Shisui",
-    "icon": "actions/29536.png"
-  },
-  {
-    "row_id": 29535,
-    "name": "Mineuchi",
-    "icon": "actions/29535.png"
-  },
-  {
     "row_id": 25781,
     "name": "Ogi Namikiri",
     "icon": "actions/25781.png"
   },
   {
-    "row_id": 29530,
-    "name": "Ogi Namikiri",
-    "icon": "actions/29530.png"
-  },
-  {
     "row_id": 7485,
     "name": "Oka",
     "icon": "actions/7485.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 7541,
@@ -183,16 +143,6 @@
     "row_id": 16487,
     "name": "Shoha",
     "icon": "actions/16487.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
   },
   {
     "row_id": 36962,
@@ -223,10 +173,5 @@
     "row_id": 36964,
     "name": "Zanshin",
     "icon": "actions/36964.png"
-  },
-  {
-    "row_id": 29537,
-    "name": "Zantetsuken",
-    "icon": "actions/29537.png"
   }
 ]

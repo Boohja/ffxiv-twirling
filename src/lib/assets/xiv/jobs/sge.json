@@ -20,11 +20,6 @@
     "icon": "actions/24312.png"
   },
   {
-    "row_id": 29256,
-    "name": "Dosis III",
-    "icon": "actions/29256.png"
-  },
-  {
     "row_id": 24296,
     "name": "Druochole",
     "icon": "actions/24296.png"
@@ -55,16 +50,6 @@
     "icon": "actions/24290.png"
   },
   {
-    "row_id": 29258,
-    "name": "Eukrasia",
-    "icon": "actions/29258.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
     "row_id": 24305,
     "name": "Haima",
     "icon": "actions/24305.png"
@@ -80,11 +65,6 @@
     "icon": "actions/24295.png"
   },
   {
-    "row_id": 29261,
-    "name": "Icarus",
-    "icon": "actions/29261.png"
-  },
-  {
     "row_id": 24299,
     "name": "Ixochole",
     "icon": "actions/24299.png"
@@ -93,11 +73,6 @@
     "row_id": 24285,
     "name": "Kardia",
     "icon": "actions/24285.png"
-  },
-  {
-    "row_id": 29264,
-    "name": "Kardia",
-    "icon": "actions/29264.png"
   },
   {
     "row_id": 24298,
@@ -113,11 +88,6 @@
     "row_id": 7562,
     "name": "Lucid Dreaming",
     "icon": "actions/7562.png"
-  },
-  {
-    "row_id": 29266,
-    "name": "Mesotes",
-    "icon": "actions/29266.png"
   },
   {
     "row_id": 24311,
@@ -150,11 +120,6 @@
     "icon": "actions/24313.png"
   },
   {
-    "row_id": 29259,
-    "name": "Phlegma III",
-    "icon": "actions/29259.png"
-  },
-  {
     "row_id": 24288,
     "name": "Physis",
     "icon": "actions/24288.png"
@@ -170,11 +135,6 @@
     "icon": "actions/24318.png"
   },
   {
-    "row_id": 29260,
-    "name": "Pneuma",
-    "icon": "actions/29260.png"
-  },
-  {
     "row_id": 24286,
     "name": "Prognosis",
     "icon": "actions/24286.png"
@@ -188,16 +148,6 @@
     "row_id": 1584,
     "name": "Purify",
     "icon": "actions/1584.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
   },
   {
     "row_id": 16560,
@@ -220,16 +170,6 @@
     "icon": "actions/24294.png"
   },
   {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
     "row_id": 7559,
     "name": "Surecast",
     "icon": "actions/7559.png"
@@ -248,11 +188,6 @@
     "row_id": 24304,
     "name": "Toxikon",
     "icon": "actions/24304.png"
-  },
-  {
-    "row_id": 29262,
-    "name": "Toxikon",
-    "icon": "actions/29262.png"
   },
   {
     "row_id": 24316,

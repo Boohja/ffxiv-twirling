@@ -1,1 +1,127 @@
-[]
+[
+  {
+    "row_id": 7560,
+    "name": "Addle",
+    "icon": "actions/7560.png"
+  },
+  {
+    "row_id": 34659,
+    "name": "Blizzard II in Cyan",
+    "icon": "actions/34659.png"
+  },
+  {
+    "row_id": 34653,
+    "name": "Blizzard in Cyan",
+    "icon": "actions/34653.png"
+  },
+  {
+    "row_id": 34663,
+    "name": "Comet in Black",
+    "icon": "actions/34663.png"
+  },
+  {
+    "row_id": 34689,
+    "name": "Creature Motif",
+    "icon": "actions/34689.png"
+  },
+  {
+    "row_id": 34656,
+    "name": "Fire II in Red",
+    "icon": "actions/34656.png"
+  },
+  {
+    "row_id": 34650,
+    "name": "Fire in Red",
+    "icon": "actions/34650.png"
+  },
+  {
+    "row_id": 34678,
+    "name": "Hammer Stamp",
+    "icon": "actions/34678.png"
+  },
+  {
+    "row_id": 34662,
+    "name": "Holy in White",
+    "icon": "actions/34662.png"
+  },
+  {
+    "row_id": 34691,
+    "name": "Landscape Motif",
+    "icon": "actions/34691.png"
+  },
+  {
+    "row_id": 35347,
+    "name": "Living Muse",
+    "icon": "actions/35347.png"
+  },
+  {
+    "row_id": 7562,
+    "name": "Lucid Dreaming",
+    "icon": "actions/7562.png"
+  },
+  {
+    "row_id": 34676,
+    "name": "Mog of the Ages",
+    "icon": "actions/34676.png"
+  },
+  {
+    "row_id": 34688,
+    "name": "Rainbow Drip",
+    "icon": "actions/34688.png"
+  },
+  {
+    "row_id": 35349,
+    "name": "Scenic Muse",
+    "icon": "actions/35349.png"
+  },
+  {
+    "row_id": 25880,
+    "name": "Sleep",
+    "icon": "actions/25880.png"
+  },
+  {
+    "row_id": 34684,
+    "name": "Smudge",
+    "icon": "actions/34684.png"
+  },
+  {
+    "row_id": 34681,
+    "name": "Star Prism",
+    "icon": "actions/34681.png"
+  },
+  {
+    "row_id": 35348,
+    "name": "Steel Muse",
+    "icon": "actions/35348.png"
+  },
+  {
+    "row_id": 34683,
+    "name": "Subtractive Palette",
+    "icon": "actions/34683.png"
+  },
+  {
+    "row_id": 7559,
+    "name": "Surecast",
+    "icon": "actions/7559.png"
+  },
+  {
+    "row_id": 7561,
+    "name": "Swiftcast",
+    "icon": "actions/7561.png"
+  },
+  {
+    "row_id": 34685,
+    "name": "Tempera Coat",
+    "icon": "actions/34685.png"
+  },
+  {
+    "row_id": 34686,
+    "name": "Tempera Grassa",
+    "icon": "actions/34686.png"
+  },
+  {
+    "row_id": 34690,
+    "name": "Weapon Motif",
+    "icon": "actions/34690.png"
+  }
+]
