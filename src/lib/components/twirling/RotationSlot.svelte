@@ -1,10 +1,6 @@
 <script lang="ts">
-  import Icon from 'svelte-icons-pack/Icon.svelte';
-  import CgPen from 'svelte-icons-pack/cg/CgPen.js';
-  import CgAddR from 'svelte-icons-pack/cg/CgAddR.js';
-  import CgTrash from 'svelte-icons-pack/cg/CgTrash.js';
-  import CgChevronUp from 'svelte-icons-pack/cg/CgChevronUp.js';
-  import CgChevronDown from 'svelte-icons-pack/cg/CgChevronDown.js';
+  import { Icon } from 'svelte-icons-pack';
+  import { CgPen, CgAddR, CgTrash, CgChevronUp, CgChevronDown } from 'svelte-icons-pack/cg';
 
   function showMenu () {
     console.log('show')

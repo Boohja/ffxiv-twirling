@@ -24,7 +24,7 @@
     alt: false,
     ctrl: false,
     shift: false,
-    mouse: false,
+    mouse: 0,
     keyCode: ''
   }
   let recording = false
@@ -79,10 +79,10 @@
    * Whenever a key is pressed, check if it matches the current step.
    */
   function validateSnapshot () {
-    if (snapshot.alt === currentStep.key.alt &&
-      snapshot.ctrl === currentStep.key.ctrl &&
-      snapshot.shift === currentStep.key.shift &&
-      snapshot.keyCode === currentStep.key.keyCode) {
+    if (snapshot.alt === currentStep.key?.alt &&
+      snapshot.ctrl === currentStep.key?.ctrl &&
+      snapshot.shift === currentStep.key?.shift &&
+      snapshot.keyCode === currentStep.key?.keyCode) {
       if (settings.playSounds) {
         correctSound.play()
       }
