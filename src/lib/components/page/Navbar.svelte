@@ -3,7 +3,7 @@
 </script>
 
 <nav class="bg-slate-900 dark:bg-gray-900 mb-6">
-  <div class="container mx-auto flex flex-wrap items-center justify-between mx-auto">
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
     <a href="/" class="flex items-center">
         <img src={logo} alt="fxiv-twirling" class="h-5 mr-3 sm:h-7" />
         <span class="self-center text-2xl font-normal whitespace-nowrap text-teal-400 tracking-wider">
