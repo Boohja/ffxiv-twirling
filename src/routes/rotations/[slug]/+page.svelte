@@ -10,6 +10,7 @@
   import { Icon } from 'svelte-icons-pack'
   import { BiChevronLeft } from 'svelte-icons-pack/bi'
   import { hasKeybind } from "$lib/helpers.js"
+  import { getIconUrl, loadJobActions, getJobIconUrl } from '$lib/iconLoader'
 
   const rots = get(rotations)
   let rotation: Rotation
@@ -20,30 +21,7 @@
   let loading = true
   let selectedIdx: number | null = null
 
-  // Map all action icons to URLs for dynamic usage in the template
-  const iconModules = import.meta.glob('/src/lib/assets/xiv/**/*.png', { eager: true, as: 'url' }) as Record<string, string>
-  const iconUrl = (iconPath: string): string => {
-    const key = '/src/lib/assets/xiv/' + iconPath.replace(/^\/+/, '')
-    return iconModules[key] ?? ''
-  }
-
-  // Lazily load job JSON files using alias; map by basename so keys don't depend on '/src'
-  const jobJsonModules = import.meta.glob('$lib/assets/xiv/jobs/*.json') as Record<string, () => Promise<{ default: any }>>
-  const jobLoaderById: Record<string, () => Promise<{ default: any }>> = Object.fromEntries(
-    Object.entries(jobJsonModules).map(([path, loader]) => {
-      const file = path.split('/').pop() || ''
-      const id = file.replace(/\.json$/i, '')
-      return [id, loader]
-    })
-  )
-  const loadJobActions = async (job: string): Promise<any[]> => {
-    const loader = jobLoaderById[job]
-    if (!loader) return []
-    const mod = await loader()
-    return mod?.default ?? []
-  }
-
-  $: jobIconUrl = rotation?.job ? iconUrl(`jobs/${rotation.job}.png`) : ''
+  $: jobIconUrl = rotation?.job ? getJobIconUrl(rotation.job) : ''
 
   onMount(async () => {
     try {
@@ -214,7 +192,7 @@
     <RotationStepList
       steps={$stepsStore}
       {selectedIdx}
-      {iconUrl}
+      iconUrl={getIconUrl}
       on:reorder={(e) => handleReorder(e.detail)}
       on:selectstep={(e) => handleSelectStep(e.detail)}
       on:deletestep={(e) => handleDeleteStep(e.detail)}

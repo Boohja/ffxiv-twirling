@@ -31,6 +31,7 @@
   function handleEvent(e: KeyboardEvent | MouseEvent) {
     e.stopPropagation();
     e.preventDefault();
+    console.log(e.type)
     if (e.type === "keydown" || e.type === "keyup") {
       const ke = e as KeyboardEvent;
       shift = ke.shiftKey;

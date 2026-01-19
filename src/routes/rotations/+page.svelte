@@ -8,6 +8,7 @@
   import { crossfade, fade } from 'svelte/transition'
   import { tick } from 'svelte'
   import { goto } from '$app/navigation'
+  import { getJobIconUrls } from '$lib/iconLoader'
 
   let name = ''
   let job = ''
@@ -15,13 +16,7 @@
   let nameInput: HTMLInputElement | null = null
 
   // Load job icons dynamically from assets directory
-  const iconModules = import.meta.glob<string>('$lib/assets/xiv/jobs/*.png', { eager: true, as: 'url' })
-  const jobIconUrl: Record<string, string> = {}
-  for (const path in iconModules) {
-    const base = path.split('/').pop() || ''
-    const id = base.replace(/\.png$/i, '')
-    jobIconUrl[id] = iconModules[path] as string
-  }
+  const jobIconUrl = getJobIconUrls()
 
   $: selectedJob = Jobs.find(j => j.id === job)
   $: xfKey = job || lastSelected
@@ -121,7 +116,7 @@
               {#each role.jobs as j}
                 <button
                   type="button"
-                  class="group flex items-center gap-3 rounded border p-2 text-left transition hover:border-slate-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/50 {j.id === job ? 'border-primary bg-primary/10' : 'border-slate-700'}"
+                  class="group {role.colorClass} flex items-center gap-3 rounded border p-2 text-left transition hover:border-slate-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary/50 {j.id === job ? 'border-primary bg-primary/10' : 'border-slate-700'}"
                   aria-pressed={j.id === job}
                   on:click={() => { lastSelected = j.id; job = j.id }}
                 >

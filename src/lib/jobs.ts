@@ -7,6 +7,7 @@ export type Job = {
 type Role = {
   id: string
   name: string
+  colorClass: string
 }
 
 interface RoleWithJobs extends Role {
@@ -14,11 +15,11 @@ interface RoleWithJobs extends Role {
 }
 
 export const Roles: Role[] = [
-  { id: 'heal', name: 'Heal' },
-  { id: 'tank', name: 'Tank' },
-  { id: 'melee', name: 'Melee DPS' },
-  { id: 'rangedMagic', name: 'Magical Ranged DPS' },
-  { id: 'rangedPhysical', name: 'Physical Ranged DPS' },
+  { id: 'tank', name: 'Tank', colorClass: 'bg-blue-600 bg-opacity-10' },
+  { id: 'heal', name: 'Heal', colorClass: 'bg-green-600 bg-opacity-10' },
+  { id: 'melee', name: 'Melee DPS', colorClass: 'bg-red-600 bg-opacity-10' },
+  { id: 'rangedMagic', name: 'Magical Ranged DPS', colorClass: 'bg-red-600 bg-opacity-10' },
+  { id: 'rangedPhysical', name: 'Physical Ranged DPS', colorClass: 'bg-red-600 bg-opacity-10' },
 ]
 
 export const Jobs: Job[] = [

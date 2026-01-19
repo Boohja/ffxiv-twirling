@@ -47,17 +47,12 @@
     '/images/skills/yellow_9.png',
     '/images/skills/yellow_10.png'
   ]
+  import { getIconUrl } from '$lib/iconLoader'
+
   let imgSrc = '/images/skills/unknown.png'
   export let suggestions: ActionSuggestion[]
   export let existingSteps: RotationStep[] = []
   const dispatch = createEventDispatcher();
-
-  // Action icon resolver for XIV assets
-  const iconModules = import.meta.glob('/src/lib/assets/xiv/**/*.png', { eager: true, as: 'url' }) as Record<string, string>
-  const iconUrl = (iconPath: string): string => {
-    const key = '/src/lib/assets/xiv/' + iconPath.replace(/^\/+/, '')
-    return iconModules[key] ?? ''
-  }
 
   // Mode: choose between XIV Action vs Custom step
   let mode: 'action' | 'custom' = 'action'
@@ -107,7 +102,7 @@
         icon: step.icon,
         row_id: step.action
       }
-      imgSrc = iconUrl(step.icon)
+      imgSrc = getIconUrl(step.icon)
       actionFilter = ''
     } else {
       mode = 'custom'
@@ -160,7 +155,7 @@
 
   function selectAction(a: ActionSuggestion) {
     selectedAction = a
-    imgSrc = iconUrl(a.icon)
+    imgSrc = getIconUrl(a.icon)
     inputValue = a.name
     // Auto-assign keybind if propagate is on and an existing step has a keybind
     maybeAdoptExistingKeybind()
@@ -230,7 +225,7 @@
               title={action.name}
               on:click={() => selectAction(action)}
             >
-              <img src={iconUrl(action.icon)} alt={action.name} class="h-8 w-8 shrink-0 rounded" />
+              <img src={getIconUrl(action.icon)} alt={action.name} class="h-8 w-8 shrink-0 rounded" />
               <span class="truncate text-sm">{action.name}</span>
             </button>
           {/each}
