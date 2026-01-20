@@ -9,6 +9,11 @@ const iconModules = import.meta.glob<string>('/src/lib/assets/xiv/**/*.png', {
   as: 'url' 
 })
 
+const gamepadButtonModules = import.meta.glob<string>('/src/lib/assets/gamepad/**/*.png', { 
+  eager: true, 
+  as: 'url' 
+})
+
 const jobJsonModules = import.meta.glob('$lib/assets/xiv/jobs/*.json') as Record<
   string, 
   () => Promise<{ default: any }>
@@ -114,4 +119,20 @@ export function getJobIconUrls(): Record<string, string> {
  */
 export function getJobIconUrl(jobId: string): string {
   return getIconUrl(`jobs/${jobId}.png`)
+}
+
+/**
+ * Get the URL for a gamepad button icon
+ * 
+ * @param layout - The gamepad layout ('ps' or 'xbox')
+ * @param buttonIndex - The button index (0-3 for face buttons)
+ * @returns The resolved URL for the button icon, or empty string if not found
+ * 
+ * @example
+ * const url = getGamepadButtonUrl('ps', 0) // Cross button
+ * const url = getGamepadButtonUrl('xbox', 1) // B button
+ */
+export function getGamepadButtonUrl(layout: 'ps' | 'xbox', buttonIndex: number): string {
+  const key = `/src/lib/assets/gamepad/${layout}/${buttonIndex}.png`
+  return gamepadButtonModules[key] ?? ''
 }
