@@ -81,6 +81,7 @@
         class:dragging={draggingIndex === idx}
         draggable={true}
         role="listitem"
+        data-step-index={idx}
         on:dragstart={(e) => handleDragStart(e, idx)}
         on:dragover={(e) => handleDragOverAfter(e, idx)}
         on:drop={handleDrop}

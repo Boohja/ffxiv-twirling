@@ -4,8 +4,9 @@
   import { rotations, type Rotation, type RotationStep, type KeyboardInput, type GamepadInput } from '$lib/stores'
   import { get, writable } from 'svelte/store'
 	import SlotEditor from "$lib/components/twirling/SlotEditor.svelte";
+  import SlotRecorder from "$lib/components/twirling/SlotRecorder.svelte";
   import RotationStepList from "$lib/components/twirling/RotationStepList.svelte";
-  import { onMount } from 'svelte'
+  import { onMount, tick } from 'svelte'
   import PageTitle from '$lib/components/page/PageTitle.svelte'
   import { Icon } from 'svelte-icons-pack'
   import { BiChevronLeft } from 'svelte-icons-pack/bi'
@@ -16,10 +17,12 @@
   let rotation: Rotation
   let jobActions: any[] = []
   let slotEditor: SlotEditor
+  let slotRecorder: SlotRecorder
   const stepsStore = writable([] as RotationStep[])
   $: steps = $stepsStore
   let loading = true
   let selectedIdx: number | null = null
+  let isRecording = false
 
   $: jobIconUrl = rotation?.job ? getJobIconUrl(rotation.job) : ''
 
@@ -161,6 +164,83 @@
     }
     goto('/rotations/' + rotation.name + '/twirl')
   }
+
+  async function startRecording() {
+    isRecording = true
+    const startIdx = selectedIdx !== null ? selectedIdx : 0
+    selectedIdx = null
+    await tick()
+    
+    // Select the starting step if it exists
+    if ($stepsStore.length > 0 && startIdx < $stepsStore.length) {
+      selectedIdx = startIdx
+      await scrollToStep(startIdx)
+    } else if ($stepsStore.length > 0) {
+      // If startIdx was out of bounds, start from first step
+      selectedIdx = 0
+      await scrollToStep(0)
+    }
+    
+    // Start recording
+    if (slotRecorder) {
+      slotRecorder.startRecording()
+    }
+  }
+
+  function stopRecording() {
+    isRecording = false
+    selectedIdx = null
+    slotEditor?.reset()
+  }
+
+  async function handleRecordInput(e: CustomEvent<KeyboardInput | GamepadInput>) {
+    const input = e.detail
+    
+    if (selectedIdx === null) {
+      // Create new step
+      const newStep: RotationStep = {
+        name: '',
+        icon: '/images/skills/unknown.png',
+        input
+      }
+      stepsStore.update(existingSteps => [...existingSteps, newStep])
+      rotation.steps.push(newStep)
+      rotations.set(rots)
+      selectedIdx = $stepsStore.length - 1
+      await scrollToStep(selectedIdx)
+    } else {
+      // Update existing step
+      stepsStore.update(existingSteps => {
+        const newSteps = [...existingSteps]
+        newSteps[selectedIdx!] = { ...newSteps[selectedIdx!], input }
+        return newSteps
+      })
+      rotation.steps[selectedIdx].input = input
+      rotations.set(rots)
+    }
+    
+    // Move to next step
+    const nextIdx = selectedIdx + 1
+    if (nextIdx < $stepsStore.length) {
+      selectedIdx = nextIdx
+      await scrollToStep(selectedIdx)
+      await tick()
+      slotRecorder?.startRecording()
+    } else {
+      // No more steps, wait for new input to create next step
+      selectedIdx = null
+      await tick()
+      slotRecorder?.startRecording()
+    }
+  }
+
+  async function scrollToStep(idx: number) {
+    await tick()
+    const stepElement = document.querySelector(`[data-step-index="${idx}"]`)
+    if (stepElement) {
+      stepElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
 </script>
 
 {#if loading}
@@ -185,6 +265,25 @@
       </div>
     </div>
   </PageTitle>
+  <div class="flex justify-end mt-3">
+    {#if !isRecording}
+      <button
+        type="button"
+        class="py-2 px-4 border border-teal-600 hover:bg-teal-700 rounded-full text-white font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+        on:click={startRecording}
+      >
+        Record Rotation
+      </button>
+    {:else}
+      <button
+        type="button"
+        class="py-2 px-4 border border-red-600 bg-red-900/20 hover:bg-red-900/40 rounded-full text-red-300 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+        on:click={stopRecording}
+      >
+        Stop Recording
+      </button>
+    {/if}
+  </div>
 </div>
 
 <div class="grid gap-4 grid-cols-2">
@@ -202,14 +301,22 @@
     </div>
   </div>
   <div class="p-4 border border-slate-900/60 rounded mb-8 bg-slate-900/40 sticky top-4 self-start">
-    <SlotEditor
-      on:newentry={(e) => newEntry(e.detail.step, e.detail.propagateKeybind)}
-      on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
-      on:deletestep={(e) => handleDeleteStep(e.detail)}
-      bind:this={slotEditor}
-      suggestions={jobActions}
-      existingSteps={$stepsStore}
-    />
+    {#if isRecording}
+      <SlotRecorder
+        bind:this={slotRecorder}
+        on:input={handleRecordInput}
+        on:cancel={stopRecording}
+      />
+    {:else}
+      <SlotEditor
+        on:newentry={(e) => newEntry(e.detail.step, e.detail.propagateKeybind)}
+        on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
+        on:deletestep={(e) => handleDeleteStep(e.detail)}
+        bind:this={slotEditor}
+        suggestions={jobActions}
+        existingSteps={$stepsStore}
+      />
+    {/if}
   </div>
 
 </div>

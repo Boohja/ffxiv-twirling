@@ -56,8 +56,10 @@ export function isModifierKey (keyName: string) {
 }
 
 export function deriveKeyName (keyName: string, keyCode: string) {
+  // For letter keys, use the actual key character to respect keyboard layout
   if (keyCode.startsWith('Key')) {
-    return keyCode.slice(3)
+    // Use the key value (what the user sees) instead of physical position
+    return keyName.toUpperCase()
   }
   if (keyCode.startsWith('Digit')) {
     return keyCode.slice(5)

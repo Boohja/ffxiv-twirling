@@ -14,11 +14,13 @@
 
   let recording = false;
   let hasSnapshot = false;
+  let waitingForRelease = false;
   let detectedDeviceName: string | null = null;
   
   // Blacklisted buttons (dynamically adjusted based on cancellable prop)
   $: BLACKLISTED_KEYBOARD_CODES = cancellable ? ['Enter', 'F5'] : ['Escape', 'Enter', 'F5'];
   $: BLACKLISTED_GAMEPAD_BUTTONS = cancellable ? [8] : [8, 9]; // Select always blacklisted, Start only when not cancellable
+  $: BLACKLISTED_MOUSE_BUTTONS = [0]; // Left click (mouse button 0) is blacklisted
   
   // Keyboard/mouse state
   let shift = false;
@@ -35,6 +37,10 @@
   let gamepadAnimationFrameId: number | null = null;
   
   let snapshot: KeyboardInput | GamepadInput | undefined = undefined;
+  let pendingSnapshot: KeyboardInput | GamepadInput | undefined = undefined;
+  
+  // Track active keys for release detection
+  let activeKeys: Set<string> = new Set();
 
   // Export function to start recording externally
   export function start() {
@@ -49,7 +55,7 @@
     e.stopPropagation();
     e.preventDefault();
     
-    if (e.type === "keydown" || e.type === "keyup") {
+    if (e.type === "keydown") {
       const ke = e as KeyboardEvent;
       
       // Handle cancellation with Escape
@@ -58,6 +64,11 @@
         dispatch("cancel");
         return false;
       }
+      
+      activeKeys.add(ke.code);
+      
+      // Don't process if already waiting for release
+      if (waitingForRelease) return false;
       
       shift = ke.shiftKey;
       alt = ke.altKey;
@@ -72,13 +83,36 @@
         keyCode = ke.code;
         keyName = deriveKeyName(ke.key, ke.code);
         detectedDeviceName = "Keyboard & Mouse";
-        makeKeyboardSnapshot();
+        storeKeyboardSnapshot();
+      }
+    } else if (e.type === "keyup") {
+      const ke = e as KeyboardEvent;
+      activeKeys.delete(ke.code);
+      
+      shift = ke.shiftKey;
+      alt = ke.altKey;
+      ctrl = ke.ctrlKey;
+      
+      checkForCompleteRelease();
+    } else if (e.type === "mousedown") {
+      const me = e as MouseEvent;
+      
+      // Ignore blacklisted mouse buttons
+      if (BLACKLISTED_MOUSE_BUTTONS.includes(me.button)) {
+        return false;
+      }
+      
+      activeKeys.add(`Mouse${me.button}`);
+      
+      if (!waitingForRelease) {
+        mouse = me.button;
+        detectedDeviceName = "Keyboard & Mouse";
+        storeKeyboardSnapshot();
       }
     } else if (e.type === "mouseup") {
       const me = e as MouseEvent;
-      mouse = me.button;
-      detectedDeviceName = "Keyboard & Mouse";
-      makeKeyboardSnapshot();
+      activeKeys.delete(`Mouse${me.button}`);
+      checkForCompleteRelease();
     }
     return false;
   }
@@ -132,6 +166,16 @@
           continue;
         }
         
+        // Don't process new presses if waiting for release
+        if (waitingForRelease) {
+          pressedButtons = currentPressed;
+          // Check if all buttons released
+          if (currentPressed.size === 0) {
+            checkForCompleteRelease();
+          }
+          continue;
+        }
+        
         // Track the first button pressed
         if (newPresses.length > 0 && firstPressedButton === null) {
           firstPressedButton = newPresses[0];
@@ -143,16 +187,16 @@
           // Valid combo: first button must be a combo button
           if (mainButton !== undefined && comboButtons.includes(firstPressedButton!)) {
             detectedDeviceName = gamepad.id;
-            makeGamepadSnapshot(mainButton, firstPressedButton!);
+            storeGamepadSnapshot(mainButton, firstPressedButton!);
           }
         }
         
         // Check for button releases
-        if (released.length > 0 && !hasSnapshot) {
+        if (released.length > 0 && !waitingForRelease) {
           // If releasing the first pressed button and no combo was formed
           if (released.includes(firstPressedButton!) && currentPressed.size === 0) {
             detectedDeviceName = gamepad.id;
-            makeGamepadSnapshot(firstPressedButton!);
+            storeGamepadSnapshot(firstPressedButton!);
           }
         }
         
@@ -170,8 +214,10 @@
     }
   }
 
-  function makeKeyboardSnapshot() {
-    hasSnapshot = true;
+  function storeKeyboardSnapshot() {
+    if (waitingForRelease) return;
+    
+    waitingForRelease = true;
     
     const input: KeyboardInput = {};
     if (shift) input.shift = shift;
@@ -181,33 +227,52 @@
     if (keyCode) input.keyCode = keyCode;
     if (keyName) input.keyName = keyName;
     
+    pendingSnapshot = input;
     snapshot = input;
-    dispatch("input", input);
-    stopRecording();
   }
 
-  function makeGamepadSnapshot(button: number, trigger?: number) {
-    hasSnapshot = true;
+  function storeGamepadSnapshot(button: number, trigger?: number) {
+    if (waitingForRelease) return;
+    
+    waitingForRelease = true;
     
     const input: GamepadInput = { button };
     if (trigger !== undefined && trigger !== button) {
       input.trigger = trigger;
     }
     
+    pendingSnapshot = input;
     snapshot = input;
-    dispatch("input", input);
+  }
+  
+  function checkForCompleteRelease() {
+    if (!waitingForRelease || !pendingSnapshot) return;
+    
+    // Check if all keyboard/mouse inputs are released
+    if (activeKeys.size > 0) return;
+    
+    // Check if all gamepad buttons are released
+    if (pressedButtons.size > 0) return;
+    
+    // Everything is released, emit the pending snapshot
+    hasSnapshot = true;
+    dispatch("input", pendingSnapshot);
     stopRecording();
   }
 
   function startRecording() {
     recording = true;
     snapshot = undefined;
+    pendingSnapshot = undefined;
     hasSnapshot = false;
+    waitingForRelease = false;
+    activeKeys.clear();
 
     // Listen for keyboard and mouse events
     if (typeof window !== 'undefined') {
       window.addEventListener("keydown", handleKeyboardMouseEvent);
       window.addEventListener("keyup", handleKeyboardMouseEvent);
+      window.addEventListener("mousedown", handleKeyboardMouseEvent);
       window.addEventListener("mouseup", handleKeyboardMouseEvent);
       window.addEventListener("contextmenu", handleKeyboardMouseEvent);
     }
@@ -224,6 +289,7 @@
     if (typeof window !== 'undefined') {
       window.removeEventListener("keydown", handleKeyboardMouseEvent);
       window.removeEventListener("keyup", handleKeyboardMouseEvent);
+      window.removeEventListener("mousedown", handleKeyboardMouseEvent);
       window.removeEventListener("mouseup", handleKeyboardMouseEvent);
       window.removeEventListener("contextmenu", handleKeyboardMouseEvent);
     }
@@ -240,10 +306,13 @@
     mouse = undefined;
     keyCode = "";
     keyName = "";
+    activeKeys.clear();
     
     // Reset gamepad state
     pressedButtons.clear();
     firstPressedButton = null;
+    waitingForRelease = false;
+    pendingSnapshot = undefined;
     // Note: hasSnapshot and snapshot are NOT cleared here - keep them visible
   }
 </script>
