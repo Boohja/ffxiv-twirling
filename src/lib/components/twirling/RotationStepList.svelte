@@ -6,6 +6,7 @@
   import { BiX } from 'svelte-icons-pack/bi'
   import type { RotationStep } from '$lib/stores'
   import { createEventDispatcher } from 'svelte'
+  import InputRender from './InputRender.svelte'
 
   export let steps: RotationStep[] = []
   export let selectedIdx: number | null = null
@@ -76,7 +77,7 @@
         on:drop={handleDrop}
       ></div>
       <div
-        class="step border rounded border-slate-600 mb-2 relative grid hover:bg-slate-700 cursor-grab active:cursor-grabbing {selectedIdx === idx ? 'border-teal-500 ring-1 ring-teal-400/40 bg-slate-700/50' : ''}"
+        class="step border-b border-slate-700 relative grid hover:bg-slate-700 cursor-grab active:cursor-grabbing {selectedIdx === idx ? 'bg-slate-700/50' : ''}"
         class:dragging={draggingIndex === idx}
         draggable={true}
         role="listitem"
@@ -85,39 +86,34 @@
         on:drop={handleDrop}
         on:dragend={handleDragEnd}
       >
-        <div class="px-2 py-3 text-right tabular-nums text-slate-400 select-none self-center">
+        <div class="px-2 py-2 text-right tabular-nums text-slate-400 select-none self-center">
           {idx + 1}
         </div>
         <div
-          class="align-middle self-center"
+          class="align-middle self-center py-2"
           role="button"
           tabindex="0"
           on:click={() => dispatch('selectstep', { idx, step })}
           on:keypress={() => dispatch('selectstep', { idx, step })}
         >
-          <img src={step.icon?.startsWith('actions/') ? iconUrl(step.icon) : step.icon} class="w-14 h-14 object-contain" alt="" />
+          <img src={step.icon?.startsWith('actions/') ? iconUrl(step.icon) : step.icon} class="w-12 h-12 object-contain" alt="" />
         </div>
-        <div class="p-3 self-center"
+        <div class="py-2 px-3 self-center"
           on:click={() => dispatch('selectstep', { idx, step })}
           on:keypress={() => dispatch('selectstep', { idx, step })}
           role="button"
           tabindex="0"
         >
           <div class="font-medium leading-tight">{step.name}</div>
-          <div class="mt-1 flex items-center gap-2">
-            <span class="font-thin text-xs bg-opacity-40 {hasKeybind(step.input) ? 'bg-black' : 'bg-yellow-400' } px-2 py-1 inline-flex items-center gap-1 rounded-full">
-              <Icon src={CgMouse} className="inline" /> {formatKeybind(step.input)}
-            </span>
-          </div>
         </div>
-        <button
-          class="delete-btn hover:bg-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400"
-          aria-label="Delete step {step.name}"
-          title="Delete step"
-          on:click={() => dispatch('deletestep', { idx })}
+        <div class="py-2 px-3 self-center flex items-center justify-center"
+          on:click={() => dispatch('selectstep', { idx, step })}
+          on:keypress={() => dispatch('selectstep', { idx, step })}
+          role="button"
+          tabindex="0"
         >
-          <Icon src={BiX} size="1.1em" />
-        </button>
+          <InputRender input={step.input} mode="pretty" showPlus={false} />
+        </div>
       </div>
     </div>
   {/each}
@@ -132,8 +128,8 @@
 
 <style>
   .step {
-    /* Adjusted columns: index | icon | info | delete */
-    grid-template-columns: 2.25rem max-content auto 3rem;
+    /* Adjusted columns: index | icon | name | input */
+    grid-template-columns: 2.25rem max-content 1fr 12rem;
     align-items: stretch;
   }
   .step.dragging {
@@ -142,26 +138,18 @@
   /* Full-height drop zones before each step and at end */
   .drop-zone {
     position: relative;
-    height: 0.5rem; /* collapsed until active */
-    margin: 0.25rem 0;
+    height: 0.25rem; /* collapsed until active */
+    margin: 0;
     border-radius: 4px;
     transition: all 80ms ease;
     background: transparent;
     outline: 2px dashed transparent;
   }
   .drop-zone.active {
-    height: 3.5rem; /* approximate step height for easier targeting */
+    height: 3rem; /* approximate step height for easier targeting */
     background: rgba(45,212,191,0.08);
     outline-color: rgba(45,212,191,0.6);
     box-shadow: 0 0 0 1px rgba(45,212,191,0.45), 0 0 12px rgba(45,212,191,0.25) inset;
   }
-  .drop-zone.end { margin-top: 0.75rem; }
-  .delete-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-size: 1.25rem;
-  }
+  .drop-zone.end { margin-top: 0.5rem; }
 </style>

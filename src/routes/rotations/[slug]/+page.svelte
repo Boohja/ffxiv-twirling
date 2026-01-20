@@ -240,6 +240,7 @@
     <EmptySlot
       on:newentry={(e) => newEntry(e.detail.step, e.detail.propagateKeybind)}
       on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
+      on:deletestep={(e) => handleDeleteStep(e.detail)}
       bind:this={slotEditor}
       suggestions={jobActions}
       existingSteps={$stepsStore}

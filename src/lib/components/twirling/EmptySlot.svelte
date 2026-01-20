@@ -297,6 +297,15 @@
   {#if stepIdx > -1}
     <button class="py-3 px-5 border border-gray-500 rounded-full text-white font-semibold" on:click={cancel}>Cancel</button>
   {/if}
+  <div class="flex-1"></div>
+  {#if stepIdx > -1}
+    <button
+      class="py-3 px-5 border border-red-600 bg-red-900/20 rounded-full text-red-300 font-semibold hover:bg-red-900/40"
+      on:click={() => { dispatch('deletestep', { idx: stepIdx }); cancel(); }}
+    >
+      Delete
+    </button>
+  {/if}
 </div>
 
 

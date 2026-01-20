@@ -4,6 +4,7 @@
   import { createEventDispatcher, onDestroy } from "svelte";
   import { Icon } from "svelte-icons-pack";
   import { BiMouse, BiMicrophone, BiCheckCircle, BiXCircle, BiErrorCircle, BiJoystick } from "svelte-icons-pack/bi";
+  import InputRender from "./InputRender.svelte";
 
   const dispatch = createEventDispatcher();
   let opened = false;
@@ -130,13 +131,10 @@
       }
     });
     
-    // If we have new presses, handle them
     if (newPresses.length > 0) {
-      // Find non-trigger buttons (face buttons, d-pad)
       const mainButton = newPresses.find(btn => !triggerButtons.includes(btn));
       
       if (mainButton !== undefined) {
-        // We have a main button press, check if there's an active trigger
         snapshot = {
           button: mainButton,
           ...(activeTrigger !== undefined && { trigger: activeTrigger })
@@ -151,7 +149,6 @@
     if (released.length > 0 && !hasSnapshot) {
       for (const btn of released) {
         if (triggerButtons.includes(btn)) {
-          // Trigger button was released without pressing another button
           snapshot = { button: btn };
           hasSnapshot = true;
           stopRecording();
@@ -263,9 +260,9 @@
       </p>
 
       <!-- Live status panel -->
-      <div class="mb-6 rounded-lg border border-slate-700 bg-slate-800 p-4 text-center">
+      <div class="mb-6 rounded-lg border border-slate-700 bg-slate-800 p-4 min-h-[8rem] flex items-center justify-center">
         {#if !recording && !hasSnapshot}
-          <div class="text-slate-400">Nothing yet.</div>
+          <div class="text-center text-slate-400">Nothing yet.</div>
         {:else if recording && !ctrl && !shift && !alt && !keyName && mouse === undefined && pressedButtons.size === 0}
           <div class="flex items-center justify-center gap-3 text-slate-300">
             <span class="relative flex h-4 w-4">
@@ -274,27 +271,19 @@
             </span>
             <span class="font-medium">Recording… press any input</span>
           </div>
+        {:else if recording && (ctrl || shift || alt || keyName || mouse !== undefined)}
+          <div class="flex items-center justify-center">
+            <InputRender input={{...((shift && { shift })), ...((alt && { alt })), ...((ctrl && { ctrl })), ...((mouse !== undefined && { mouse })), keyCode, keyName}} mode="pretty" showPlus={true} />
+          </div>
+        {:else if recording && pressedButtons.size > 0}
+          <div class="flex items-center justify-center">
+            <InputRender input={snapshot || {button: Array.from(pressedButtons)[0]}} mode="pretty" showPlus={true} />
+          </div>
         {:else if !recording && hasSnapshot}
-          <div class="text-teal-300 font-semibold">{formatKeybind(snapshot)}</div>
+          <div class="flex items-center justify-center">
+            <InputRender input={snapshot} mode="pretty" showPlus={true} />
+          </div>
         {/if}
-
-        <!-- Visual chips -->
-        <div class="mt-3 flex flex-wrap items-center justify-center gap-2 text-sm">
-          {#if ctrl}<kbd class="rounded bg-slate-700 px-2 py-1 text-slate-200">Ctrl</kbd>{/if}
-          {#if shift}<kbd class="rounded bg-slate-700 px-2 py-1 text-slate-200">Shift</kbd>{/if}
-          {#if alt}<kbd class="rounded bg-slate-700 px-2 py-1 text-slate-200">Alt</kbd>{/if}
-          {#if keyName}<kbd class="rounded bg-slate-700 px-2 py-1 text-slate-200">{keyName}</kbd>{/if}
-          {#if mouse !== undefined}
-            <span class="inline-flex items-center gap-1 rounded bg-slate-700 px-2 py-1 text-slate-200">Mouse{mouse + 1}</span>
-          {/if}
-          {#if recording && pressedButtons.size > 0}
-            {#each Array.from(pressedButtons) as btn}
-              <kbd class="rounded bg-slate-700 px-2 py-1 text-slate-200">
-                {formatGamepadInput({button: btn})}
-              </kbd>
-            {/each}
-          {/if}
-        </div>
       </div>
 
       <!-- Actions -->
