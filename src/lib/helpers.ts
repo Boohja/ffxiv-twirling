@@ -1,4 +1,4 @@
-import type {RotationStep, RotationStepKey, GamepadInput} from "$lib/stores";
+import type {RotationStep, KeyboardInput, GamepadInput} from "$lib/stores";
 
 export function hasKeybind (step?: RotationStep) {
   return formatKeybind(step) !== 'None'

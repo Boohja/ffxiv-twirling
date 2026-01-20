@@ -126,13 +126,15 @@ export function getJobIconUrl(jobId: string): string {
  * 
  * @param layout - The gamepad layout ('ps' or 'xbox')
  * @param buttonIndex - The button index (0-3 for face buttons)
+ * @param large - Whether to use the large icon (132px). Defaults to false (44px)
  * @returns The resolved URL for the button icon, or empty string if not found
  * 
  * @example
- * const url = getGamepadButtonUrl('ps', 0) // Cross button
- * const url = getGamepadButtonUrl('xbox', 1) // B button
+ * const url = getGamepadButtonUrl('ps', 0) // Cross button (44px)
+ * const url = getGamepadButtonUrl('xbox', 1, true) // B button (132px)
  */
-export function getGamepadButtonUrl(layout: 'ps' | 'xbox', buttonIndex: number): string {
-  const key = `/src/lib/assets/gamepad/${layout}/${buttonIndex}.png`
+export function getGamepadButtonUrl(layout: 'ps' | 'xbox', buttonIndex: number, large: boolean = false): string {
+  const suffix = large ? 'XL' : ''
+  const key = `/src/lib/assets/gamepad/${layout}/${buttonIndex}${suffix}.png`
   return gamepadButtonModules[key] ?? ''
 }

@@ -67,8 +67,16 @@
 				} else if (pressedButtons.length === 1) {
 					currentInput = { button: pressedButtons[0] };
 				} else if (pressedButtons.length >= 2) {
-					// Treat first button as trigger, second as main button
-					currentInput = { trigger: pressedButtons[0], button: pressedButtons[1] };
+					// Put L/R buttons (4-7) first as triggers
+					const triggerButtons = pressedButtons.filter(btn => btn >= 4 && btn <= 7);
+					const otherButtons = pressedButtons.filter(btn => btn < 4 || btn > 7);
+					
+					if (triggerButtons.length > 0) {
+						const mainButton = otherButtons.length > 0 ? otherButtons[0] : (pressedButtons.length > 1 ? pressedButtons[1] : pressedButtons[0]);
+						currentInput = { trigger: triggerButtons[0], button: mainButton };
+					} else {
+						currentInput = { trigger: pressedButtons[0], button: pressedButtons[1] };
+					}
 				}
 			}
 		}
@@ -161,9 +169,17 @@
 						
 						<div>
 							<p class="text-sm text-slate-400 mb-1">Current Input:</p>
-							<div class="bg-slate-900 rounded px-4 py-3 font-mono text-lg">
-								{#if currentInput}
-									<span class="text-teal-400">{formatGamepadInput(currentInput)}</span>
+							<div class="bg-slate-900 rounded px-4 py-3 flex items-center justify-center min-h-[8rem]">
+								{#if currentInput && gamepadLayout}
+									<div class="flex items-center gap-3">
+										{#if currentInput.trigger !== undefined}
+											<img src={getGamepadButtonUrl(gamepadLayout, currentInput.trigger, true)} alt={formatGamepadInput({button: currentInput.trigger})} class="max-h-20 w-auto object-contain" />
+											<span class="text-slate-400 text-2xl font-bold">+</span>
+										{/if}
+										<img src={getGamepadButtonUrl(gamepadLayout, currentInput.button, true)} alt={formatGamepadInput({button: currentInput.button})} class="max-h-20 w-auto object-contain" />
+									</div>
+								{:else if currentInput && !gamepadLayout}
+									<span class="text-teal-400 font-mono text-lg">{formatGamepadInput(currentInput)}</span>
 								{:else}
 									<span class="text-slate-500">No buttons pressed</span>
 								{/if}
