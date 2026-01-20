@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores'
   import { goto } from '$app/navigation'
-  import { rotations, type Rotation, type RotationStep, type RotationStepKey } from '$lib/stores'
+  import { rotations, type Rotation, type RotationStep, type KeyboardInput, type GamepadInput } from '$lib/stores'
   import { get, writable } from 'svelte/store'
 	import EmptySlot from "$lib/components/twirling/EmptySlot.svelte";
   import RotationStepList from "$lib/components/twirling/RotationStepList.svelte";
@@ -117,13 +117,13 @@
     rotations.set(rots)
   }
 
-  $: canTwirl = $stepsStore.every(step => hasKeybind(step.key)) && $stepsStore.length > 0
+  $: canTwirl = $stepsStore.every(step => hasKeybind(step.input)) && $stepsStore.length > 0
 
   function newEntry (entry: RotationStep, propagateKeybind: boolean) {
     const newStep = {
       name: entry.name,
       icon: entry.icon,
-      key: entry.key,
+      input: entry.input,
       action: (entry as any).action
     }
     stepsStore.update(existingSteps => [...existingSteps, newStep])
@@ -132,8 +132,8 @@
     // console.log('new entry rotation: ', rotation)
     // rotation.steps = steps
     rotations.set(rots)
-    if (propagateKeybind && entry.key) {
-      copyKeybindToSteps(entry.key, entry.name)
+    if (propagateKeybind && entry.input) {
+      copyKeybindToSteps(entry.input, entry.name)
     }
   }
 
@@ -145,17 +145,17 @@
     })
     rotation.steps[idx] = entry
     rotations.set(rots)
-    if (propagateKeybind && entry.key) {
-      copyKeybindToSteps(entry.key, entry.name)
+    if (propagateKeybind && entry.input) {
+      copyKeybindToSteps(entry.input, entry.name)
     }
   }
 
-  function copyKeybindToSteps (key: RotationStepKey, name: string) {
+  function copyKeybindToSteps (input: KeyboardInput | GamepadInput, name: string) {
     stepsStore.update(existingSteps => {
       const newSteps = [...existingSteps]
       newSteps.forEach(step => {
         if (step.name === name) {
-          step.key = key
+          step.input = input
         }
       })
       return newSteps
@@ -164,7 +164,7 @@
     rotation.steps.forEach((step: RotationStep) => {
       if (step.name === name) {
         console.log('copying keybind to step: ', step.name)
-        step.key = key
+        step.input = input
         changed++
       }
     })

@@ -1,23 +1,24 @@
-import type {RotationStep, KeyboardInput, GamepadInput} from "$lib/stores";
+import type {KeyboardInput, GamepadInput} from "$lib/stores";
 
-export function hasKeybind (step?: RotationStep) {
-  return formatKeybind(step) !== 'None'
+export function hasKeybind (input?: KeyboardInput | GamepadInput) {
+  return formatKeybind(input) !== 'None'
 }
 
-export function formatKeybind (step?: RotationStep) {
+export function formatKeybind (input?: KeyboardInput | GamepadInput) {
+  if (!input) return 'None'
+  
   // Gamepad input
-  if (step?.gamepad) {
-    return formatGamepadInput(step.gamepad)
+  if ('button' in input) {
+    return formatGamepadInput(input)
   }
   
   // Keyboard/mouse input
-  const keybind = step?.key
   const keys = []
-  if (keybind?.ctrl) keys.push('Ctrl')
-  if (keybind?.shift) keys.push('Shift')
-  if (keybind?.alt) keys.push('Alt')
-  if (keybind && typeof keybind.mouse === 'number') keys.push(`Mouse${keybind.mouse + 1}`)
-  if (keybind?.keyName) keys.push(keybind.keyName)
+  if (input?.ctrl) keys.push('Ctrl')
+  if (input?.shift) keys.push('Shift')
+  if (input?.alt) keys.push('Alt')
+  if (typeof input.mouse === 'number') keys.push(`Mouse${input.mouse + 1}`)
+  if (input?.keyName) keys.push(input.keyName)
   return keys.length ? keys.join('+') : 'None'
 }
 

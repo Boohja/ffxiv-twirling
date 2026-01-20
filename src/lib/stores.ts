@@ -8,10 +8,8 @@ export interface RotationStep {
   duration?: number,
   /** For ff14 actions the corresponding `row_id` provided by xivapi */
   action?: number
-  /** The keybind to trigger this step (keyboard/mouse) */
-  key?: RotationStepKey
-  /** The gamepad input to trigger this step */
-  gamepad?: GamepadInput
+  /** The input to trigger this step (keyboard/mouse or gamepad) */
+  input?: KeyboardInput | GamepadInput
 }
 
 export type GamepadInput = {
@@ -19,11 +17,11 @@ export type GamepadInput = {
   trigger?: number // L1(4), R1(5), L2(6), R2(7)
 }
 
-export type RotationStepKey = {
-  shift: boolean
-  ctrl: boolean
-  alt: boolean
-  mouse?: false | number
+export type KeyboardInput = {
+  shift?: boolean
+  ctrl?: boolean
+  alt?: boolean
+  mouse?: number
   keyName?: string
   keyCode?: string
 }

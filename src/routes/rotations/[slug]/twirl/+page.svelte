@@ -42,7 +42,7 @@
       await goto('/rotations')
       return
     }
-    if (hit.steps.some(step => !hasKeybind(step.key))) {
+    if (hit.steps.some(step => !hasKeybind(step.input))) {
       await goto('/rotations/' + hit.name)
       return
     }
@@ -79,10 +79,12 @@
    * Whenever a key is pressed, check if it matches the current step.
    */
   function validateSnapshot () {
-    if (snapshot.alt === currentStep.key?.alt &&
-      snapshot.ctrl === currentStep.key?.ctrl &&
-      snapshot.shift === currentStep.key?.shift &&
-      snapshot.keyCode === currentStep.key?.keyCode) {
+    const input = currentStep.input
+    if (input && 'keyCode' in input &&
+      snapshot.alt === (input.alt ?? false) &&
+      snapshot.ctrl === (input.ctrl ?? false) &&
+      snapshot.shift === (input.shift ?? false) &&
+      snapshot.keyCode === input.keyCode) {
       if (settings.playSounds) {
         correctSound.play()
       }
@@ -147,7 +149,7 @@
         {/if}
         {#if settings.showKeybind}
           <div class="text-7xl drop-shadow-md text-slate-400 mt-5 {settings.showKeybind ? '' : 'invisible'}">
-            {formatKeybind(prevStep.key)}
+            [Previous Input]
           </div>
         {/if}
       {/if}
@@ -190,7 +192,7 @@
         {/if}
         {#if settings.showKeybind}
           <div class="text-7xl drop-shadow-md text-teal-400 mt-5 {settings.showKeybind ? '' : 'invisible'}">
-            {formatKeybind(currentStep.key)}
+            [Current Input]
           </div>
         {/if}
       {/if}
@@ -210,7 +212,7 @@
         {/if}
         {#if settings.showKeybind}
           <div class="text-7xl drop-shadow-md text-slate-400 mt-5 {settings.showKeybind ? '' : 'invisible'}">
-            {formatKeybind(nextStep.key)}
+            [Next Input]
           </div>
         {/if}
       {/if}

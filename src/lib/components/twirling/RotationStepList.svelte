@@ -105,8 +105,8 @@
         >
           <div class="font-medium leading-tight">{step.name}</div>
           <div class="mt-1 flex items-center gap-2">
-            <span class="font-thin text-xs bg-opacity-40 {hasKeybind(step.key) ? 'bg-black' : 'bg-yellow-400' } px-2 py-1 inline-flex items-center gap-1 rounded-full">
-              <Icon src={CgMouse} className="inline" /> {formatKeybind(step.key)}
+            <span class="font-thin text-xs bg-opacity-40 {hasKeybind(step.input) ? 'bg-black' : 'bg-yellow-400' } px-2 py-1 inline-flex items-center gap-1 rounded-full">
+              <Icon src={CgMouse} className="inline" /> {formatKeybind(step.input)}
             </span>
           </div>
         </div>

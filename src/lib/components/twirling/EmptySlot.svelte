@@ -10,14 +10,14 @@
   import InputModal from "$lib/components/twirling/InputModal.svelte";
   import { CgMouse } from "svelte-icons-pack/cg";
   import {formatKeybind, hasKeybind} from "$lib/helpers";
-  import type {RotationStep, RotationStepKey} from '$lib/stores'
+  import type {RotationStep, KeyboardInput, GamepadInput} from '$lib/stores'
 
   let opened = false
   let propagateKeybind = true
   let refInputModal: any
   let stepIdx = -1
-  let inputValue = ''
-  let keybindValue: RotationStepKey | undefined
+  let nameInputValue = ''
+  let bindingValue: KeyboardInput | GamepadInput | undefined
   const defaultImage = '/images/skills/unknown.png'
   const defaultImages = [
     '/images/skills/cogs.png',
@@ -65,7 +65,7 @@
     // Reset state when switching tabs
     selectedAction = null
     actionFilter = ''
-    inputValue = ''
+    nameInputValue = ''
     imgSrc = defaultImage
   }
 
@@ -74,7 +74,7 @@
   }
 
   // Validation
-  $: customName = inputValue.trim()
+  $: customName = nameInputValue.trim()
   $: isNameCollision = mode === 'custom' && !!customName && suggestions.some(s => s.name.toLowerCase() === customName.toLowerCase())
   $: canSubmit = mode === 'action'
     ? !!selectedAction
@@ -93,7 +93,7 @@
 
   export function editStep (idx: number, step: RotationStep) {
     stepIdx = idx
-    keybindValue = step.key
+    bindingValue = step.input
     // Infer mode from icon: XIV actions are stored as relative 'actions/...'
     if (step.icon?.startsWith('actions/')) {
       mode = 'action'
@@ -109,7 +109,7 @@
       selectedAction = null
       imgSrc = step.icon || defaultImage
     }
-    inputValue = step.name
+    nameInputValue = step.name
   }
 
   function submit () {
@@ -122,12 +122,12 @@
           // Store relative XIV icon path; consumers can resolve via iconUrl
           icon: selectedAction.icon,
           action: selectedAction.row_id,
-          key: keybindValue
+          input: bindingValue
         }
       : {
           name: customName,
           icon: imgSrc,
-          key: keybindValue
+          input: bindingValue
         }
 
     if (stepIdx > -1) {
@@ -139,9 +139,9 @@
   }
 
   function cancel () {
-    inputValue = ''
+    nameInputValue = ''
     imgSrc = defaultImage
-    keybindValue = undefined
+    bindingValue = undefined
     stepIdx = -1
     mode = 'action'
     selectedAction = null
@@ -156,7 +156,7 @@
   function selectAction(a: ActionSuggestion) {
     selectedAction = a
     imgSrc = getIconUrl(a.icon)
-    inputValue = a.name
+    nameInputValue = a.name
     // Auto-assign keybind if propagate is on and an existing step has a keybind
     maybeAdoptExistingKeybind()
   }
@@ -165,17 +165,17 @@
     if (mode !== 'action' || !selectedAction) return
     // Only auto-fill for new entries and when propagate is checked
     if (stepIdx !== -1 || !propagateKeybind) return
-    // Do not override an explicit keybind already set
-    if (keybindValue && hasKeybind(keybindValue)) return
+    // Do not override an explicit input already set
+    if (bindingValue && hasKeybind(bindingValue)) return
     const name = selectedAction.name
-    const match = existingSteps.find(s => s.name === name && s.key && hasKeybind(s.key))
-    if (match?.key) {
-      keybindValue = match.key
+    const match = existingSteps.find(s => s.name === name && s.input && hasKeybind(s.input))
+    if (match?.input) {
+      bindingValue = match.input
     }
   }
 
   // If user toggles propagate on after selecting an action, try adopting again
-  $: if (propagateKeybind && mode === 'action' && selectedAction && stepIdx === -1 && !(keybindValue && hasKeybind(keybindValue))) {
+  $: if (propagateKeybind && mode === 'action' && selectedAction && stepIdx === -1 && !(bindingValue && hasKeybind(bindingValue))) {
     maybeAdoptExistingKeybind()
   }
 </script>
@@ -237,7 +237,7 @@
         <label class="block text-sm mb-1">
           Name
           <input
-            bind:value={inputValue}
+            bind:value={nameInputValue}
             on:keyup={checkKey}
             class="w-full mt-1 rounded border border-slate-600 bg-slate-800 px-3 py-2 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50"
             placeholder="e.g. Switching hotbars"
@@ -268,14 +268,14 @@
       <span id="keybind-label" class="block text-sm mb-1">Keybind</span>
         <div class="mt-1 flex items-center gap-2">
           <button type="button" class="font-thin bg-opacity-20 bg-black px-3 py-2 inline-flex items-center gap-2 rounded-full" aria-labelledby="keybind-label" on:click={showInputModal}>
-            <Icon src={CgMouse} className="inline" /> <span>{formatKeybind(keybindValue)}</span>
+            <Icon src={CgMouse} className="inline" /> <span>{formatKeybind(bindingValue)}</span>
           </button>
-          {#if hasKeybind(keybindValue)}
+          {#if hasKeybind(bindingValue)}
             <button
               type="button"
               class="text-xs inline-flex items-center gap-1 rounded-full border border-slate-600 px-2 py-1 text-slate-200 hover:bg-slate-800"
               title="Clear keybind"
-              on:click={() => (keybindValue = undefined)}
+              on:click={() => (bindingValue = undefined)}
             >
               ✘ Clear
             </button>
@@ -289,7 +289,7 @@
     </div>
   </div>
 
-  <InputModal bind:this={refInputModal} on:keybind={(e) => keybindValue = e.detail} />
+  <InputModal bind:this={refInputModal} on:keybind={(e) => bindingValue = e.detail} />
 </div>
 
 <div class="mt-5 flex gap-2">
