@@ -7,7 +7,6 @@
   import RotationStepList from "$lib/components/twirling/RotationStepList.svelte";
   import { onMount } from 'svelte'
   import PageTitle from '$lib/components/page/PageTitle.svelte'
-  import PreferredInput from '$lib/components/page/PreferredInput.svelte'
   import { Icon } from 'svelte-icons-pack'
   import { BiChevronLeft } from 'svelte-icons-pack/bi'
   import { hasKeybind } from "$lib/helpers.js"
@@ -36,36 +35,11 @@
       console.log(rotation)
       jobActions = actions
       stepsStore.set(rotation.steps as RotationStep[])
-      
-      // Initialize input if not set
-      if (!rotation.input) {
-        rotation.input = 'keyboard'
-        rotations.set(rots)
-      }
     }
     finally {
       loading = false
     }
   })
-
-  function handleInputChange(event: CustomEvent<{ input: 'keyboard' | 'gamepad', gamepadLayout?: 'ps' | 'xbox' }>) {
-    if (!rotation) return
-    
-    rotation.input = event.detail.input
-    rotation.gamepadLayout = event.detail.gamepadLayout
-    
-    // Trigger reactivity
-    rotation = rotation
-    
-    // Update the rotation in the store
-    rotations.update(allRotations => {
-      const index = allRotations.findIndex(r => r.slug === rotation.slug)
-      if (index !== -1) {
-        allRotations[index] = rotation
-      }
-      return allRotations
-    })
-  }
 
   function selectStep (idx: number, step: RotationStep) {
     // Toggle selection: clicking the same selected step deselects and clears editor
@@ -211,15 +185,6 @@
       </div>
     </div>
   </PageTitle>
-  {#if rotation}
-    <div class="mt-4 pt-4 border-t border-slate-700">
-      <PreferredInput 
-        input={rotation.input || 'keyboard'} 
-        gamepadLayout={rotation.gamepadLayout}
-        on:change={handleInputChange}
-      />
-    </div>
-  {/if}
 </div>
 
 <div class="grid gap-4 grid-cols-2">

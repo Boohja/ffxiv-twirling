@@ -31,8 +31,6 @@ export interface Rotation {
   job: string,
   slug: string,
   steps: RotationStep[]
-  input?: 'keyboard' | 'gamepad'
-  gamepadLayout?: 'ps' | 'xbox'
 }
 
 const emptyRotations: Rotation[] = []
