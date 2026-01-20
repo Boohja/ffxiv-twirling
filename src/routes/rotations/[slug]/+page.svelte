@@ -3,7 +3,7 @@
   import { goto } from '$app/navigation'
   import { rotations, type Rotation, type RotationStep, type KeyboardInput, type GamepadInput } from '$lib/stores'
   import { get, writable } from 'svelte/store'
-	import EmptySlot from "$lib/components/twirling/EmptySlot.svelte";
+	import SlotEditor from "$lib/components/twirling/SlotEditor.svelte";
   import RotationStepList from "$lib/components/twirling/RotationStepList.svelte";
   import { onMount } from 'svelte'
   import PageTitle from '$lib/components/page/PageTitle.svelte'
@@ -15,7 +15,7 @@
   const rots = get(rotations)
   let rotation: Rotation
   let jobActions: any[] = []
-  let slotEditor: EmptySlot
+  let slotEditor: SlotEditor
   const stepsStore = writable([] as RotationStep[])
   $: steps = $stepsStore
   let loading = true
@@ -202,7 +202,7 @@
     </div>
   </div>
   <div class="p-4 border border-slate-900/60 rounded mb-8 bg-slate-900/40 sticky top-4 self-start">
-    <EmptySlot
+    <SlotEditor
       on:newentry={(e) => newEntry(e.detail.step, e.detail.propagateKeybind)}
       on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
       on:deletestep={(e) => handleDeleteStep(e.detail)}
