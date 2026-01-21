@@ -3,6 +3,8 @@
   import { formatKeybind } from "$lib/helpers";
   import { getGamepadButtonUrl } from "$lib/iconLoader";
   import { onMount } from "svelte";
+	import Keycap from "../Keycap.svelte";
+	import MouseButton from "../MouseButton.svelte";
 
   export let input: KeyboardInput | GamepadInput | undefined = undefined;
   export let mode: 'text' | 'pretty' = 'pretty';
@@ -68,33 +70,28 @@
       {/if}
     {/if}
     {#if input.shift}
-      <kbd class="inline-flex items-center justify-center min-w-[2rem] px-2 py-1.5 text-xs font-semibold text-slate-200 bg-gradient-to-b from-slate-700 to-slate-800 border border-slate-600 rounded shadow-sm">
+      <Keycap>
         Shift
-      </kbd>
+      </Keycap>
       {#if showPlus && (input.alt || input.keyName || input.mouse !== undefined)}
         <span class="text-slate-400 text-lg font-bold">+</span>
       {/if}
     {/if}
     {#if input.alt}
-      <kbd class="inline-flex items-center justify-center min-w-[2rem] px-2 py-1.5 text-xs font-semibold text-slate-200 bg-gradient-to-b from-slate-700 to-slate-800 border border-slate-600 rounded shadow-sm">
+      <Keycap>
         Alt
-      </kbd>
+      </Keycap>
       {#if showPlus && (input.keyName || input.mouse !== undefined)}
         <span class="text-slate-400 text-lg font-bold">+</span>
       {/if}
     {/if}
     {#if input.keyName}
-      <kbd class="inline-flex items-center justify-center min-w-[2rem] px-2 py-1.5 text-xs font-semibold text-slate-200 bg-gradient-to-b from-slate-700 to-slate-800 border border-slate-600 rounded shadow-sm">
+      <Keycap>
         {input.keyName}
-      </kbd>
+      </Keycap>
     {/if}
     {#if input.mouse !== undefined}
-      <kbd class="inline-flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-semibold text-slate-200 bg-gradient-to-b from-slate-700 to-slate-800 border border-slate-600 rounded shadow-sm">
-        <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 2h2v6h-2V2zm0 14h2v6h-2v-6zM7.5 4.5C6.12 4.5 5 5.62 5 7v10c0 1.38 1.12 2.5 2.5 2.5h9c1.38 0 2.5-1.12 2.5-2.5V7c0-1.38-1.12-2.5-2.5-2.5h-9zM7 7c0-.55.45-1 1-1h3v4H7V7zm6-1h3c.55 0 1 .45 1 1v3h-4V6z"/>
-        </svg>
-        <span>{input.mouse + 1}</span>
-      </kbd>
+      <MouseButton button={input.mouse} />
     {/if}
   </div>
 {/if}

@@ -3,6 +3,7 @@
   import RecordInput from './RecordInput.svelte';
   import type { KeyboardInput, GamepadInput } from '$lib/stores';
   import { getGamepadButtonUrl } from '$lib/iconLoader';
+	import Keycap from '../Keycap.svelte';
 
   const dispatch = createEventDispatcher<{
     input: KeyboardInput | GamepadInput;
@@ -46,12 +47,12 @@
 <div class="space-y-4">
   <div class="text-sm text-slate-300 flex items-center gap-2 flex-wrap">
     <span>Record each step one by one. Press</span>
-    <kbd class="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded">Escape</kbd>
+    <Keycap size="sm">Escape</Keycap>
     <span>or</span>
     {#if startButtonUrl}
       <img src={startButtonUrl} alt={gamepadLayout === 'ps' ? 'Options' : 'Start'} class="inline-block h-6 w-6" />
     {:else}
-      <kbd class="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded">{gamepadLayout === 'ps' ? 'Options' : 'Start'}</kbd>
+      <Keycap size="sm">{gamepadLayout === 'ps' ? 'Options' : 'Start'}</Keycap>
     {/if}
     <span>to cancel.</span>
   </div>
