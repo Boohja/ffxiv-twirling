@@ -14,11 +14,11 @@ export function formatKeybind (input?: KeyboardInput | GamepadInput) {
   
   // Keyboard/mouse input
   const keys = []
-  if (input?.ctrl) keys.push('Ctrl')
-  if (input?.shift) keys.push('Shift')
-  if (input?.alt) keys.push('Alt')
-  if (typeof input.mouse === 'number') keys.push(`Mouse${input.mouse + 1}`)
-  if (input?.keyName) keys.push(input.keyName)
+  if ('ctrl' in input) keys.push('Ctrl')
+  if ('shift' in input) keys.push('Shift')
+  if ('alt' in input) keys.push('Alt')
+  if ( 'mouse' in input && typeof input.mouse === 'number') keys.push(`Mouse${input.mouse + 1}`)
+  if ('keyName' in input && input.keyName) keys.push(input.keyName)
   return keys.length ? keys.join('+') : 'None'
 }
 
@@ -47,12 +47,10 @@ export function formatGamepadInput (gamepad: GamepadInput): string {
   if (gamepad.trigger !== undefined) {
     parts.push(buttonNames[gamepad.trigger] || `Btn${gamepad.trigger}`)
   }
-  parts.push(buttonNames[gamepad.button] || `Btn${gamepad.button}`)
+  if (gamepad.button !== undefined) {
+    parts.push(buttonNames[gamepad.button] || `Btn${gamepad.button}`)
+  }
   return parts.join('+')
-}
-
-export function isModifierKey (keyName: string) {
-  return ['Control', 'Shift', 'Alt', 'AltGraph'].includes(keyName)
 }
 
 export function deriveKeyName (keyName: string, keyCode: string) {
@@ -74,3 +72,8 @@ export function deriveKeyName (keyName: string, keyCode: string) {
   }
   return codes[keyCode] || keyName
 }
+
+export function isModifierKey (keyName: string) {
+  return ['Control', 'Shift', 'Alt', 'AltGraph'].includes(keyName)
+}
+

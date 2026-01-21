@@ -2,42 +2,50 @@
   import { page } from '$app/stores'
   import { goto } from '$app/navigation'
   import {rotations, type Rotation, type RotationStep} from '$lib/stores'
+  import type { TwirlSettings } from '$lib/types/twirl'
+  import { createDefaultTwirlSettings } from '$lib/types/twirl'
   import { get, writable } from 'svelte/store'
   import { onMount } from 'svelte'
-  import {formatKeybind, hasKeybind, isModifierKey} from "$lib/helpers.js"
+  import { hasKeybind } from "$lib/helpers.js"
   import { Sound } from 'svelte-sound'
   import errorMp3 from '$lib/assets/sounds/error.mp3'
   import correctMp3 from '$lib/assets/sounds/correct.mp3'
-
+	import { getJobIconUrl, getIconUrl } from '$lib/iconLoader'
+  import InputRender from '$lib/components/twirling/InputRender.svelte'
+  import TwirlConfig from '$lib/components/twirling/TwirlConfig.svelte'
+  import TwirlCountdown from '$lib/components/twirling/TwirlCountdown.svelte'
+  import { InputSnapshot } from '$lib/inputParser'
+	import Keycap from '$lib/components/Keycap.svelte';
   const rots = get(rotations)
   const errorSound = new Sound(errorMp3)
   const correctSound = new Sound(correctMp3)
   let rotation: Rotation
   let loading = true
-  const settings = {
-    showName: true,
-    showIcon: true,
-    showKeybind: true,
-    playSounds: true
-  }
-  const snapshot = {
-    alt: false,
-    ctrl: false,
-    shift: false,
-    mouse: 0,
-    keyCode: ''
-  }
+  let showConfig = false
+  let showCountdown = false
+  let settings: TwirlSettings = createDefaultTwirlSettings()
+  let inputSnapshot: InputSnapshot | null = null
   let recording = false
   let madeError = false
+  let currentInputIsCorrect = false
+  let timeoutId: number | null = null
+  let startTime: number = 0
+  let elapsedTime: number = 0
+  let timerInterval: number | null = null
+  let completedSuccessfully = false
+  
   const stepsStore = writable([] as RotationStep[])
   $: steps = $stepsStore
   $: currentIdx = 0
   $: currentStep = steps[currentIdx] as RotationStep
   $: nextStep = steps[currentIdx + 1] as RotationStep
   $: prevStep = steps[currentIdx - 1] as RotationStep
+  $: progress = steps.length > 0 ? ((currentIdx / steps.length) * 100) : 0
+
+  let gamepadAnimationFrameId: number | null = null
 
   onMount(async () => {
-    const hit = rots.find(r => r.name === $page.params?.slug)
+    const hit = rots.find(r => r.slug === $page.params?.slug)
     if (hit === undefined) {
       await goto('/rotations')
       return
@@ -51,188 +59,339 @@
     loading = false
   })
 
-  function handleEvent (e: KeyboardEvent | MouseEvent) {
-    e.stopPropagation()
-    e.preventDefault()
-    if (e.type === 'keydown') {
-      const ke = e as KeyboardEvent
-      snapshot.shift = ke.shiftKey
-      snapshot.alt = ke.altKey
-      snapshot.ctrl = ke.ctrlKey
-      if (ke.code === 'Escape') {
-        stopRecording()
-      }
-      else if (!isModifierKey(ke.key)) {
-        snapshot.keyCode = ke.code
-        validateSnapshot()
-      }
-    }
-    else if (e.type === 'mouseup') {
-      const me = e as MouseEvent
-      snapshot.mouse = me.button
-      validateSnapshot()
-    }
-    return false
-  }
-
-  /**
-   * Whenever a key is pressed, check if it matches the current step.
-   */
-  function validateSnapshot () {
-    const input = currentStep.input
-    if (input && 'keyCode' in input &&
-      snapshot.alt === (input.alt ?? false) &&
-      snapshot.ctrl === (input.ctrl ?? false) &&
-      snapshot.shift === (input.shift ?? false) &&
-      snapshot.keyCode === input.keyCode) {
-      if (settings.playSounds) {
-        correctSound.play()
-      }
-      if (currentIdx === steps.length - 1) {
-        stopRecording()
-        return
-      }
-      else {
-        currentIdx++
-        currentStep = steps[currentIdx]
-        nextStep = steps[currentIdx + 1]
-        prevStep = steps[currentIdx - 1]
-      }
-    }
-    else {
-      playError()
-    }
-  }
-
   function playError () {
     if (settings.playSounds) {
       errorSound.play()
     }
     madeError = true
-    setTimeout(() => {
-      madeError = false
-    }, 200)
+    setTimeout(() => madeError = false, 200)
+    
+    if (settings.errorBehavior === 'restart') {
+      setTimeout(() => {
+        stopRecording()
+        showCountdown = true
+      }, 300)
+    } else if (settings.errorBehavior === 'continue') {
+      // Move to next step even on error
+      setTimeout(() => {
+        if (currentIdx === steps.length - 1) {
+          completedSuccessfully = false
+          stopRecording()
+          return
+        }
+        
+        currentIdx++
+        currentInputIsCorrect = false
+        resetTimeout()
+        setupTimeout()
+        inputSnapshot?.reset()
+      }, 300)
+    }
+    // For 'stay', do nothing - just remain on the current step
+  }
+
+  function setupTimeout() {
+    if (settings.timeout > 0) {
+      resetTimeout()
+      timeoutId = window.setTimeout(() => {
+        playError()
+      }, settings.timeout * 1000)
+    }
+  }
+
+  function resetTimeout() {
+    if (timeoutId !== null) {
+      clearTimeout(timeoutId)
+      timeoutId = null
+    }
+  }
+
+  function startTimer() {
+    startTime = Date.now()
+    elapsedTime = 0
+    timerInterval = window.setInterval(() => {
+      elapsedTime = Math.floor((Date.now() - startTime) / 1000)
+    }, 100)
+  }
+
+  function stopTimer() {
+    if (timerInterval !== null) {
+      clearInterval(timerInterval)
+      timerInterval = null
+    }
   }
 
   function startRecording () {
+    showCountdown = true
+  }
+
+  function pollGamepads() {
+    if (!inputSnapshot || !recording) return
+    const gamepads = navigator.getGamepads()
+    inputSnapshot.processGamepads(gamepads)
+    gamepadAnimationFrameId = requestAnimationFrame(pollGamepads)
+  }
+
+  function beginRecording() {
     recording = true
-    window.addEventListener('keydown', handleEvent)
-    // window.addEventListener('keyup', handleEvent)
-    window.addEventListener('mouseup', handleEvent)
-    window.addEventListener('contextmenu', handleEvent)
+    completedSuccessfully = false
+    showConfig = false
+    currentIdx = 0
+    currentInputIsCorrect = false
+    setupTimeout()
+    startTimer()
+    
+    // Initialize InputSnapshot
+    inputSnapshot = new InputSnapshot()
+    
+    // Immediate feedback when a valid input is detected
+    inputSnapshot.onValidSnapshot(() => {
+      if (!recording || !currentStep.input) return
+      
+      const isMatch = inputSnapshot!.doesMatch(currentStep.input)
+      currentInputIsCorrect = isMatch
+      
+      if (isMatch) {
+        if (settings.playSounds) {
+          correctSound.play()
+        }
+        resetTimeout()
+      } else {
+        playError()
+      }
+    })
+    
+    // Progress to next step when input is released (if it was correct)
+    inputSnapshot.onRelease(() => {
+      if (!recording || !currentInputIsCorrect) return
+      
+      if (currentIdx === steps.length - 1) {
+        completedSuccessfully = true
+        stopRecording()
+        return
+      }
+      
+      // Move to next step
+      currentIdx++
+      currentInputIsCorrect = false
+      setupTimeout()
+    })
+    
+    // Handle cancel (ESC key or button 9)
+    inputSnapshot.onCancelInput(() => {
+      if (recording) {
+        stopRecording()
+      }
+    })
+    
+    // Set up event listeners
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', inputSnapshot.processKeyboardEvent)
+      window.addEventListener('keyup', inputSnapshot.processKeyboardEvent)
+      window.addEventListener('mousedown', inputSnapshot.processMouseEvent)
+      window.addEventListener('mouseup', inputSnapshot.processMouseEvent)
+      window.addEventListener('contextmenu', inputSnapshot.processMouseEvent)
+    }
+    
+    // Start gamepad polling
+    pollGamepads()
   }
 
   function stopRecording () {
     recording = false
+    resetTimeout()
+    stopTimer()
     currentIdx = 0
-    window.removeEventListener('keydown', handleEvent)
-    // window.removeEventListener('keyup', handleEvent)
-    window.removeEventListener('mouseup', handleEvent)
-    window.removeEventListener('contextmenu', handleEvent)
+    
+    // Clean up gamepad polling
+    if (gamepadAnimationFrameId !== null) {
+      cancelAnimationFrame(gamepadAnimationFrameId)
+      gamepadAnimationFrameId = null
+    }
+    
+    // Clean up event listeners
+    if (inputSnapshot && typeof window !== 'undefined') {
+      window.removeEventListener('keydown', inputSnapshot.processKeyboardEvent)
+      window.removeEventListener('keyup', inputSnapshot.processKeyboardEvent)
+      window.removeEventListener('mousedown', inputSnapshot.processMouseEvent)
+      window.removeEventListener('mouseup', inputSnapshot.processMouseEvent)
+      window.removeEventListener('contextmenu', inputSnapshot.processMouseEvent)
+    }
+    
+    inputSnapshot = null
+  }
+
+  function formatTime(seconds: number): string {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins}:${secs.toString().padStart(2, '0')}`
+  }
+
+  function getStepIcon(step: RotationStep): string {
+    if (!step.icon) return ''
+    // If it's an action icon (from xiv assets), use getIconUrl
+    if (step.action && !step.icon.startsWith('/images/')) {
+      return getIconUrl(step.icon)
+    }
+    // Otherwise, use the path as-is (for custom /images/skills paths)
+    return step.icon
   }
 </script>
 
-<div class="absolute top-1 bottom-1 left-0 right-0 overflow-clip {madeError ? 'errorAnimation' : ''}">
-  <div class="flex">
-    <!-- col 1 -->
-    <div class="flex-1 flex flex-col items-center justify-center h-screen scale-75 opacity-30">
-      {#if !loading && recording && prevStep}
-        {#if settings.showName}
-          <div class="text-5xl drop-shadow-md mb-5 text-slate-400">
-            {prevStep.name}
-          </div>
-        {/if}
-        {#if settings.showIcon}
-          <div class="w-80 h-80 {settings.showIcon ? '' : 'invisible'}">
-            <img src={prevStep.icon} class="w-full h-full" alt="icon" />
-          </div>
-        {/if}
-        {#if settings.showKeybind}
-          <div class="text-7xl drop-shadow-md text-slate-400 mt-5 {settings.showKeybind ? '' : 'invisible'}">
-            [Previous Input]
-          </div>
-        {/if}
-      {/if}
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  {#if loading}
+    <div class="flex items-center justify-center h-screen">
+      <div class="text-2xl text-slate-300">Loading...</div>
     </div>
-    <!-- col 2 -->
-    <div class="flex-1 flex flex-col items-center justify-center h-screen">
-      {#if loading}
-        LOADING...
-      {:else if !recording}
-        <div class="text-5xl drop-shadow-md mb-5 text-slate-400">
-          {rotation.name}
-        </div>
-        <div class="drop-shadow-md mb-5 text-slate-400">
-          {rotation.steps.length} steps
-        </div>
-        <div class="mb-3 text-2xl font-light text-slate-300">
-          <label><input type="checkbox" bind:checked={settings.showName}> Show name</label><br>
-          <label><input type="checkbox" bind:checked={settings.showIcon}> Show icon</label><br>
-          <label><input type="checkbox" bind:checked={settings.showKeybind}> Show keybind</label><br>
-          <label><input type="checkbox" bind:checked={settings.playSounds}> Play sounds</label>
-        </div>
-        <button class="mt-3 py-3 px-5 bg-teal-700 rounded-full text-white font-semibold" on:click={startRecording}>Begin twirling!</button><br>
-        <div class="text-slate-300 mb-3">
-          Press <kbd>ESC</kbd> to stop twirling
-        </div>
-        <a href={`/rotations/${rotation.name}`} class="mt-3 py-3 px-5 border border-teal-200 rounded-full text-white font-semibold">Go back</a>
-      {:else if currentStep}
-        <div class="absolute top-20 text-slate-500">
-          Cancel with ESC
-        </div>
-        {#if settings.showName}
-          <div class="text-5xl drop-shadow-md mb-5 text-slate-400">
-            {currentStep.name}
+  {:else if !recording}
+    <!-- Configuration Panel -->
+    <TwirlConfig 
+      {rotation}
+      bind:settings
+      bind:showConfig
+      {completedSuccessfully}
+      {elapsedTime}
+      on:click={startRecording}
+    />
+  {:else}
+    <!-- Practice Mode -->
+    <div class="absolute inset-0 {madeError ? 'errorAnimation' : ''}">
+      <!-- Header with Progress -->
+      <div class="absolute top-0 left-0 right-0 bg-slate-900/90 backdrop-blur border-b border-slate-700 z-10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-3">
+              <img src={getJobIconUrl(rotation?.job)} alt={rotation?.job} class="h-10 w-10 rounded" />
+              <div>
+                <div class="text-sm text-slate-400">Practicing</div>
+                <div class="font-semibold">{rotation.name}</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold text-teal-400">{formatTime(elapsedTime)}</div>
+              <div class="text-sm text-slate-400">Step {currentIdx + 1} / {steps.length}</div>
+            </div>
           </div>
-        {/if}
-        {#if settings.showIcon}
-          <div class="w-80 h-80 {settings.showIcon ? '' : 'invisible'}">
-            <img src={currentStep.icon} class="w-full h-full" alt="icon" />
+          <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-teal-600 to-teal-400 transition-all duration-300" style="width: {progress}%"></div>
           </div>
-        {/if}
-        {#if settings.showKeybind}
-          <div class="text-7xl drop-shadow-md text-teal-400 mt-5 {settings.showKeybind ? '' : 'invisible'}">
-            [Current Input]
+        </div>
+      </div>
+
+      <!-- Practice Area -->
+      <div class="flex items-center justify-center h-screen pt-24 pb-12">
+        <div class="w-full max-w-7xl px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            
+            <!-- Previous Step (Left) -->
+            <div class="flex flex-col items-center justify-center opacity-40 scale-90 transition-all">
+              {#if prevStep}
+                {#if settings.showIcon}
+                  <div class="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700">
+                    <img src={getStepIcon(prevStep)} class="w-full h-full object-contain" alt={prevStep.name} />
+                  </div>
+                {/if}
+                {#if settings.showName}
+                  <div class="text-xl text-slate-400 text-center mb-2">
+                    {prevStep.name || 'Previous'}
+                  </div>
+                {/if}
+                {#if settings.showKeybind && prevStep.input}
+                  <div class="flex justify-center">
+                    <InputRender input={prevStep.input} mode="pretty" size="lg" />
+                  </div>
+                {/if}
+              {:else}
+                <div class="text-slate-600">—</div>
+              {/if}
+            </div>
+
+            <!-- Current Step (Center) -->
+            <div class="flex flex-col items-center justify-center transform scale-110">
+              {#if currentStep}
+                {#if settings.showIcon}
+                  <div class="w-48 h-48 mb-6 rounded-2xl overflow-hidden bg-slate-800/80 border-4 border-teal-500 shadow-2xl shadow-teal-500/30 animate-pulse">
+                    <img src={getStepIcon(currentStep)} class="w-full h-full object-contain" alt={currentStep.name} />
+                  </div>
+                {/if}
+                {#if settings.showName}
+                  <div class="text-4xl font-bold text-white text-center mb-4 drop-shadow-lg">
+                    {currentStep.name || 'Action'}
+                  </div>
+                {/if}
+                {#if settings.showKeybind && currentStep.input}
+                  <div class="flex justify-center scale-125">
+                    <InputRender input={currentStep.input} mode="pretty" showPlus={true} size="lg" />
+                  </div>
+                {/if}
+              {/if}
+            </div>
+
+            <!-- Next Step (Right) -->
+            <div class="flex flex-col items-center justify-center opacity-40 scale-90 transition-all">
+              {#if nextStep}
+                {#if settings.showIcon}
+                  <div class="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700">
+                    <img src={getStepIcon(nextStep)} class="w-full h-full object-contain" alt={nextStep.name} />
+                  </div>
+                {/if}
+                {#if settings.showName}
+                  <div class="text-xl text-slate-400 text-center mb-2">
+                    {nextStep.name || 'Next'}
+                  </div>
+                {/if}
+                {#if settings.showKeybind && nextStep.input}
+                  <div class="flex justify-center">
+                    <InputRender input={nextStep.input} mode="pretty" size="lg" />
+                  </div>
+                {/if}
+              {:else}
+                <div class="text-slate-600">—</div>
+              {/if}
+            </div>
+
           </div>
-        {/if}
-      {/if}
+        </div>
+      </div>
+
+      <!-- Footer Instructions -->
+      <div class="absolute bottom-0 left-0 right-0 bg-slate-900/90 backdrop-blur border-t border-slate-700 py-4">
+        <div class="text-center text-slate-400">
+          Press <Keycap size="sm">ESC</Keycap> to stop practice
+        </div>
+      </div>
     </div>
-    <!-- col 3 -->
-    <div class="flex-1 flex flex-col items-center justify-center h-screen scale-75 opacity-30">
-      {#if !loading && recording && nextStep}
-        {#if settings.showName}
-          <div class="text-5xl drop-shadow-md mb-5 text-slate-400">
-            {nextStep.name}
-          </div>
-        {/if}
-        {#if settings.showIcon}
-          <div class="w-80 h-80 {settings.showIcon ? '' : 'invisible'}">
-            <img src={nextStep.icon} class="w-full h-full" alt="icon" />
-          </div>
-        {/if}
-        {#if settings.showKeybind}
-          <div class="text-7xl drop-shadow-md text-slate-400 mt-5 {settings.showKeybind ? '' : 'invisible'}">
-            [Next Input]
-          </div>
-        {/if}
-      {/if}
-    </div>
-  </div>
+  {/if}
+
+  <!-- Countdown Overlay -->
+  <TwirlCountdown bind:show={showCountdown} on:complete={beginRecording} />
 </div>
 
 <style>
   @keyframes errorFlash {
-    0% {
-      background-color: red;
+    0%, 100% {
+      background-color: rgba(239, 68, 68, 0.3);
     }
     50% {
       background-color: transparent;
     }
-    100% {
-      background-color: red;
-    }
   }
+  
+  @keyframes shake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-4px, 2px) rotate(-0.5deg); }
+    20% { transform: translate(4px, -2px) rotate(0.5deg); }
+    30% { transform: translate(-3px, -3px) rotate(-0.3deg); }
+    40% { transform: translate(3px, 3px) rotate(0.3deg); }
+    50% { transform: translate(-2px, 1px) rotate(-0.2deg); }
+    60% { transform: translate(2px, -1px) rotate(0.2deg); }
+    70% { transform: translate(-1px, -2px) rotate(-0.1deg); }
+    80% { transform: translate(1px, 2px) rotate(0.1deg); }
+    90% { transform: translate(-1px, 1px) rotate(-0.05deg); }
+  }
+  
   .errorAnimation {
-    animation: errorFlash 0.2s steps(2, end) 1;
+    animation: errorFlash 0.2s ease-in-out 2, shake 0.4s ease-in-out;
+    overflow: hidden;
   }
 </style>

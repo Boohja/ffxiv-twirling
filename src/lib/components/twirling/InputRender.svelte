@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { KeyboardInput, GamepadInput } from "$lib/stores";
+  import type { KeyboardInput, GamepadInput, MouseInput } from "$lib/stores";
   import { formatKeybind } from "$lib/helpers";
   import { getGamepadButtonUrl } from "$lib/iconLoader";
   import { onMount } from "svelte";
@@ -9,6 +9,7 @@
   export let input: KeyboardInput | GamepadInput | undefined = undefined;
   export let mode: 'text' | 'pretty' = 'pretty';
   export let showPlus: boolean = false;
+  export let size: 'sm' | 'md' | 'lg' = 'md';
 
   let gamepadLayout: 'ps' | 'xbox' = 'ps';
   let mounted = false;
@@ -24,11 +25,11 @@
   });
 
   function isGamepadInput(input: KeyboardInput | GamepadInput | undefined): input is GamepadInput {
-    return input !== undefined && 'button' in input;
+    return input !== undefined && ('button' in input || 'trigger' in input);
   }
 
-  function isKeyboardInput(input: KeyboardInput | GamepadInput | undefined): input is KeyboardInput {
-    return input !== undefined && !('button' in input);
+  function isKeyboardInput(input: KeyboardInput | GamepadInput | undefined): input is KeyboardInput & MouseInput {
+    return input !== undefined && !('button' in input) && !('trigger' in input);
   }
 </script>
 
@@ -46,13 +47,17 @@
           alt="Trigger button" 
           class="max-h-12 w-auto object-contain"
         />
-        <span class="text-slate-400 text-lg font-bold">+</span>
+        {#if input.button !== undefined}
+          <span class="text-slate-400 text-lg font-bold">+</span>
+        {/if}
       {/if}
-      <img 
-        src={getGamepadButtonUrl(gamepadLayout, input.button, true)} 
-        alt="Button" 
-        class="max-h-12 w-auto object-contain"
-      />
+      {#if input.button !== undefined}
+        <img 
+          src={getGamepadButtonUrl(gamepadLayout, input.button, true)} 
+          alt="Button" 
+          class="max-h-12 w-auto object-contain"
+        />
+      {/if}
     </div>
   {:else}
     <!-- Fallback to text if gamepad layout not configured -->
@@ -62,15 +67,15 @@
   <!-- Pretty mode for keyboard/mouse -->
   <div class="flex items-center gap-1.5">
     {#if input.ctrl}
-      <kbd class="inline-flex items-center justify-center min-w-[2rem] px-2 py-1.5 text-xs font-semibold text-slate-200 bg-gradient-to-b from-slate-700 to-slate-800 border border-slate-600 rounded shadow-sm">
+      <Keycap {size}>
         Ctrl
-      </kbd>
+      </Keycap>
       {#if showPlus && (input.shift || input.alt || input.keyName || input.mouse !== undefined)}
         <span class="text-slate-400 text-lg font-bold">+</span>
       {/if}
     {/if}
     {#if input.shift}
-      <Keycap>
+      <Keycap {size}>
         Shift
       </Keycap>
       {#if showPlus && (input.alt || input.keyName || input.mouse !== undefined)}
@@ -78,7 +83,7 @@
       {/if}
     {/if}
     {#if input.alt}
-      <Keycap>
+      <Keycap {size}>
         Alt
       </Keycap>
       {#if showPlus && (input.keyName || input.mouse !== undefined)}
@@ -86,12 +91,12 @@
       {/if}
     {/if}
     {#if input.keyName}
-      <Keycap>
+      <Keycap {size}>
         {input.keyName}
       </Keycap>
     {/if}
     {#if input.mouse !== undefined}
-      <MouseButton button={input.mouse} />
+      <MouseButton button={input.mouse} {size} />
     {/if}
   </div>
 {/if}

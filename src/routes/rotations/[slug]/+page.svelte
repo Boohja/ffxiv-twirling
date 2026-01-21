@@ -162,7 +162,7 @@
       alert('Please assign a keybind to all steps before twirling')
       return
     }
-    goto('/rotations/' + rotation.name + '/twirl')
+    goto('/rotations/' + rotation.slug + '/twirl')
   }
 
   async function startRecording() {
@@ -266,6 +266,14 @@
     </div>
   </PageTitle>
   <div class="flex justify-end mt-3">
+    <button
+      type="button"
+      class="py-2 px-4 border border-teal-600 hover:bg-teal-700 rounded-full text-white font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+      on:click={goTwirl}
+      disabled={!canTwirl}
+    >
+      Twirl
+  </button>
     {#if !isRecording}
       <button
         type="button"

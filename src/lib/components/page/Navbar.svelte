@@ -2,7 +2,7 @@
   import logo from '$lib/assets/ffxiv-twirling.svg'
 </script>
 
-<nav class="bg-slate-900 dark:bg-gray-900 mb-6">
+<nav id="navbar" class="bg-slate-900 dark:bg-gray-900 mb-6">
   <div class="container mx-auto flex flex-wrap items-center justify-between">
     <a href="/" class="flex items-center">
         <img src={logo} alt="fxiv-twirling" class="h-5 mr-3 sm:h-7" />
