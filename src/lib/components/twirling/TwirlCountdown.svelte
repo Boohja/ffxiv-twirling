@@ -1,9 +1,15 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
+  import { Sound } from 'svelte-sound'
+  import startMp3 from '$lib/assets/sounds/start.mp3'
   
   const dispatch = createEventDispatcher()
   
   export let show: boolean = false
+  export let playSounds: boolean = true
+  export let volume: number = 0.5
+  
+  $: startSound = new Sound(startMp3, { volume })
   
   let count = 3
   
@@ -13,6 +19,10 @@
   
   function startCountdown() {
     count = 3
+    
+    if (playSounds) {
+      startSound.play()
+    }
     
     const interval = setInterval(() => {
       count--

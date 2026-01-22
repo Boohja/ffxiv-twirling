@@ -20,6 +20,9 @@
           <a href="/rotations" class="block py-2 pl-3 pr-4 text-slate-400" aria-current="page">Rotations</a>
         </li>
         <li>
+          <a href="/recordings" class="block py-2 pl-3 pr-4 text-slate-400" aria-current="page">Recordings</a>
+        </li>
+        <li>
           <a href="/gamepad" class="block py-2 pl-3 pr-4 text-slate-400" aria-current="page">Gamepad</a>
         </li>
       </ul>

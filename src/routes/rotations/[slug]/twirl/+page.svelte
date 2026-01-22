@@ -1,15 +1,15 @@
 <script lang="ts">
   import { page } from '$app/stores'
   import { goto } from '$app/navigation'
-  import {rotations, type Rotation, type RotationStep} from '$lib/stores'
+  import {rotations, twirls, twirlConfig, type Rotation, type RotationStep, type CombinedInput, type TwirlRecording, type TwirlStep, type TwirlInput} from '$lib/stores'
   import type { TwirlSettings } from '$lib/types/twirl'
-  import { createDefaultTwirlSettings } from '$lib/types/twirl'
   import { get, writable } from 'svelte/store'
   import { onMount } from 'svelte'
   import { hasKeybind } from "$lib/helpers.js"
   import { Sound } from 'svelte-sound'
   import errorMp3 from '$lib/assets/sounds/error.mp3'
   import correctMp3 from '$lib/assets/sounds/correct.mp3'
+  import timeoutMp3 from '$lib/assets/sounds/timeout.mp3'
 	import { getJobIconUrl, getIconUrl } from '$lib/iconLoader'
   import InputRender from '$lib/components/twirling/InputRender.svelte'
   import TwirlConfig from '$lib/components/twirling/TwirlConfig.svelte'
@@ -17,13 +17,15 @@
   import { InputSnapshot } from '$lib/inputParser'
 	import Keycap from '$lib/components/Keycap.svelte';
   const rots = get(rotations)
-  const errorSound = new Sound(errorMp3)
-  const correctSound = new Sound(correctMp3)
+  
+  $: errorSound = new Sound(errorMp3, { volume: $twirlConfig.volume })
+  $: correctSound = new Sound(correctMp3, { volume: $twirlConfig.volume })
+  $: timeoutSound = new Sound(timeoutMp3, { volume: $twirlConfig.volume })
+  
   let rotation: Rotation
   let loading = true
   let showConfig = false
   let showCountdown = false
-  let settings: TwirlSettings = createDefaultTwirlSettings()
   let inputSnapshot: InputSnapshot | null = null
   let recording = false
   let madeError = false
@@ -33,6 +35,16 @@
   let elapsedTime: number = 0
   let timerInterval: number | null = null
   let completedSuccessfully = false
+  
+  // Twirl recording state
+  let twirlRecording: TwirlRecording | null = null
+  let currentStepRecording: TwirlStep | null = null
+  let currentStepStartTime: number = 0
+  let lastInputTime: number = 0
+  let lastTwirlIndex: number | null = null
+  let timeoutStartTime: number = 0
+  let timeoutProgress: number = 0
+  let timeoutAnimationFrame: number | null = null
   
   const stepsStore = writable([] as RotationStep[])
   $: steps = $stepsStore
@@ -60,24 +72,29 @@
   })
 
   function playError () {
-    if (settings.playSounds) {
+    if ($twirlConfig.playSounds) {
       errorSound.play()
     }
     madeError = true
     setTimeout(() => madeError = false, 200)
     
-    if (settings.errorBehavior === 'restart') {
+    if ($twirlConfig.errorBehavior === 'restart') {
       setTimeout(() => {
         stopRecording()
         showCountdown = true
       }, 300)
-    } else if (settings.errorBehavior === 'continue') {
+    } else if ($twirlConfig.errorBehavior === 'continue') {
       // Move to next step even on error
       setTimeout(() => {
         if (currentIdx === steps.length - 1) {
           completedSuccessfully = false
-          stopRecording()
+          stopRecording(true)
           return
+        }
+        
+        // Save current step recording before moving on
+        if (currentStepRecording) {
+          finishCurrentStepRecording()
         }
         
         currentIdx++
@@ -85,17 +102,79 @@
         resetTimeout()
         setupTimeout()
         inputSnapshot?.reset()
+        
+        // Start recording next step
+        startStepRecording()
+      }, 300)
+    }
+    // For 'stay', do nothing - just remain on the current step
+  }
+
+  function playTimeout () {
+    if ($twirlConfig.playSounds) {
+      timeoutSound.play()
+    }
+    madeError = true
+    setTimeout(() => madeError = false, 200)
+    
+    // Mark the current step as timed out
+    if (currentStepRecording) {
+      currentStepRecording.timeout = true
+    }
+    
+    if ($twirlConfig.errorBehavior === 'restart') {
+      setTimeout(() => {
+        stopRecording()
+        showCountdown = true
+      }, 300)
+    } else if ($twirlConfig.errorBehavior === 'continue') {
+      // Move to next step even on timeout
+      setTimeout(() => {
+        if (currentIdx === steps.length - 1) {
+          completedSuccessfully = false
+          stopRecording(true)
+          return
+        }
+        
+        // Save current step recording before moving on
+        if (currentStepRecording) {
+          finishCurrentStepRecording()
+        }
+        
+        currentIdx++
+        currentInputIsCorrect = false
+        resetTimeout()
+        setupTimeout()
+        inputSnapshot?.reset()
+        
+        // Start recording next step
+        startStepRecording()
       }, 300)
     }
     // For 'stay', do nothing - just remain on the current step
   }
 
   function setupTimeout() {
-    if (settings.timeout > 0) {
+    if ($twirlConfig.timeout > 0) {
       resetTimeout()
+      timeoutStartTime = Date.now()
+      timeoutProgress = 0
+      
+      // Start animation frame for timeout visualization
+      const updateTimeoutProgress = () => {
+        const elapsed = Date.now() - timeoutStartTime
+        const total = $twirlConfig.timeout * 1000
+        timeoutProgress = Math.min(1, elapsed / total)
+        
+        if (timeoutProgress < 1 && recording) {
+          timeoutAnimationFrame = requestAnimationFrame(updateTimeoutProgress)
+        }
+      }
+      timeoutAnimationFrame = requestAnimationFrame(updateTimeoutProgress)
+      
       timeoutId = window.setTimeout(() => {
-        playError()
-      }, settings.timeout * 1000)
+        playTimeout()
+      }, $twirlConfig.timeout * 1000)
     }
   }
 
@@ -104,6 +183,11 @@
       clearTimeout(timeoutId)
       timeoutId = null
     }
+    if (timeoutAnimationFrame !== null) {
+      cancelAnimationFrame(timeoutAnimationFrame)
+      timeoutAnimationFrame = null
+    }
+    timeoutProgress = 0
   }
 
   function startTimer() {
@@ -141,6 +225,9 @@
     setupTimeout()
     startTimer()
     
+    // Initialize twirl recording
+    initializeTwirlRecording()
+    
     // Initialize InputSnapshot
     inputSnapshot = new InputSnapshot()
     
@@ -151,8 +238,11 @@
       const isMatch = inputSnapshot!.doesMatch(currentStep.input)
       currentInputIsCorrect = isMatch
       
+      // Record the input
+      recordInput(inputSnapshot!.currentInput, isMatch)
+      
       if (isMatch) {
-        if (settings.playSounds) {
+        if ($twirlConfig.playSounds) {
           correctSound.play()
         }
         resetTimeout()
@@ -167,14 +257,22 @@
       
       if (currentIdx === steps.length - 1) {
         completedSuccessfully = true
-        stopRecording()
+        stopRecording(true)
         return
+      }
+      
+      // Save current step recording before moving on
+      if (currentStepRecording) {
+        finishCurrentStepRecording()
       }
       
       // Move to next step
       currentIdx++
       currentInputIsCorrect = false
       setupTimeout()
+      
+      // Start recording next step
+      startStepRecording()
     })
     
     // Handle cancel (ESC key or button 9)
@@ -197,10 +295,22 @@
     pollGamepads()
   }
 
-  function stopRecording () {
+  function stopRecording (finished: boolean = false) {
     recording = false
     resetTimeout()
     stopTimer()
+    
+    // Finish and save the twirl recording
+    if (twirlRecording) {
+      // Finish current step if exists
+      if (currentStepRecording) {
+        finishCurrentStepRecording()
+      }
+      
+      // Save twirl recording
+      saveTwirlRecording(finished)
+    }
+    
     currentIdx = 0
     
     // Clean up gamepad polling
@@ -219,6 +329,93 @@
     }
     
     inputSnapshot = null
+  }
+
+  // Twirl recording functions
+  function initializeTwirlRecording() {
+    const now = new Date().toISOString()
+    twirlRecording = {
+      config: { ...$twirlConfig },
+      startedAt: now,
+      endedAt: '',
+      rotation: {
+        slug: rotation.slug,
+        name: rotation.name,
+        job: rotation.job
+      },
+      steps: rotation.steps.map(step => ({
+        original: step,
+        inputs: [],
+        duration: 0,
+        correct: false
+      })),
+      duration: 0,
+      correct: false
+    }
+    
+    // Start recording the first step
+    startStepRecording()
+  }
+
+  function startStepRecording() {
+    currentStepStartTime = Date.now()
+    lastInputTime = currentStepStartTime
+    // Reference the existing step in the array
+    if (twirlRecording) {
+      currentStepRecording = twirlRecording.steps[currentIdx]
+    }
+  }
+
+  function recordInput(input: CombinedInput, correct: boolean) {
+    if (!currentStepRecording) return
+    
+    const now = Date.now()
+    const delta = now - lastInputTime
+    lastInputTime = now
+    
+    currentStepRecording.inputs.push({
+      input: { ...input },
+      delta,
+      correct
+    })
+  }
+
+  function finishCurrentStepRecording() {
+    if (!currentStepRecording || !twirlRecording) return
+    
+    currentStepRecording.duration = Date.now() - currentStepStartTime
+    // Calculate if step was completed correctly
+    // Only true if: has inputs AND all inputs are correct
+    // Note: timeout flag is informational - with "stay" behavior, user can still provide correct input after timeout
+    currentStepRecording.correct = currentStepRecording.inputs.length > 0 && 
+      currentStepRecording.inputs.every(input => input.correct)
+    // Step is already in the array, no need to push
+    currentStepRecording = null
+  }
+
+  function saveTwirlRecording(finished: boolean = false) {
+    if (!twirlRecording) return
+    
+    const now = new Date().toISOString()
+    twirlRecording.endedAt = now
+    twirlRecording.duration = Date.now() - startTime
+    twirlRecording.finished = finished
+    
+    // Calculate if the twirl was completed correctly
+    // Must have completed successfully AND all steps must be correct
+    twirlRecording.correct = completedSuccessfully && 
+      twirlRecording.steps.every(step => step.correct)
+    
+    // Save to localStorage via persisted store and get index
+    const currentTwirls = get(twirls)
+    lastTwirlIndex = currentTwirls.length
+    twirls.update(current => [...current, twirlRecording!])
+    
+    console.log('Twirl recording saved:', twirlRecording, 'at index:', lastTwirlIndex)
+    
+    // Reset recording state
+    twirlRecording = null
+    currentStepRecording = null
   }
 
   function formatTime(seconds: number): string {
@@ -247,10 +444,11 @@
     <!-- Configuration Panel -->
     <TwirlConfig 
       {rotation}
-      bind:settings
+      bind:settings={$twirlConfig}
       bind:showConfig
       {completedSuccessfully}
       {elapsedTime}
+      {lastTwirlIndex}
       on:click={startRecording}
     />
   {:else}
@@ -286,17 +484,21 @@
             <!-- Previous Step (Left) -->
             <div class="flex flex-col items-center justify-center opacity-40 scale-90 transition-all">
               {#if prevStep}
-                {#if settings.showIcon}
+                {#if $twirlConfig.showIcon}
                   <div class="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700">
                     <img src={getStepIcon(prevStep)} class="w-full h-full object-contain" alt={prevStep.name} />
                   </div>
+                {:else}
+                  <div class="w-32 h-32 mb-4 rounded-lg bg-slate-800/30 border border-slate-700 flex items-center justify-center">
+                    <span class="text-5xl text-slate-600 font-bold">?</span>
+                  </div>
                 {/if}
-                {#if settings.showName}
+                {#if $twirlConfig.showName}
                   <div class="text-xl text-slate-400 text-center mb-2">
                     {prevStep.name || 'Previous'}
                   </div>
                 {/if}
-                {#if settings.showKeybind && prevStep.input}
+                {#if $twirlConfig.showKeybind && prevStep.input}
                   <div class="flex justify-center">
                     <InputRender input={prevStep.input} mode="pretty" size="lg" />
                   </div>
@@ -309,17 +511,33 @@
             <!-- Current Step (Center) -->
             <div class="flex flex-col items-center justify-center transform scale-110">
               {#if currentStep}
-                {#if settings.showIcon}
-                  <div class="w-48 h-48 mb-6 rounded-2xl overflow-hidden bg-slate-800/80 border-4 border-teal-500 shadow-2xl shadow-teal-500/30 animate-pulse">
+                {#if $twirlConfig.showIcon}
+                  <div class="w-48 h-48 mb-6 rounded-2xl overflow-hidden bg-slate-800/80 border-4 border-teal-500 shadow-2xl shadow-teal-500/30 animate-pulse relative">
                     <img src={getStepIcon(currentStep)} class="w-full h-full object-contain" alt={currentStep.name} />
+                    {#if $twirlConfig.timeout > 0 && timeoutProgress > 0}
+                      <div 
+                        class="absolute inset-0 rounded-2xl"
+                        style="background: conic-gradient(from 0deg at 50% 50%, rgba(0, 0, 0, 0.75) 0deg, rgba(0, 0, 0, 0.75) {timeoutProgress * 360}deg, transparent {timeoutProgress * 360}deg);"
+                      ></div>
+                    {/if}
+                  </div>
+                {:else}
+                  <div class="w-48 h-48 mb-6 rounded-2xl bg-slate-800/50 border-4 border-teal-500 shadow-2xl shadow-teal-500/30 animate-pulse flex items-center justify-center relative">
+                    <span class="text-8xl text-slate-600 font-bold">?</span>
+                    {#if $twirlConfig.timeout > 0 && timeoutProgress > 0}
+                      <div 
+                        class="absolute inset-0 rounded-2xl"
+                        style="background: conic-gradient(from 0deg at 50% 50%, rgba(0, 0, 0, 0.75) 0deg, rgba(0, 0, 0, 0.75) {timeoutProgress * 360}deg, transparent {timeoutProgress * 360}deg);"
+                      ></div>
+                    {/if}
                   </div>
                 {/if}
-                {#if settings.showName}
+                {#if $twirlConfig.showName}
                   <div class="text-4xl font-bold text-white text-center mb-4 drop-shadow-lg">
                     {currentStep.name || 'Action'}
                   </div>
                 {/if}
-                {#if settings.showKeybind && currentStep.input}
+                {#if $twirlConfig.showKeybind && currentStep.input}
                   <div class="flex justify-center scale-125">
                     <InputRender input={currentStep.input} mode="pretty" showPlus={true} size="lg" />
                   </div>
@@ -330,17 +548,21 @@
             <!-- Next Step (Right) -->
             <div class="flex flex-col items-center justify-center opacity-40 scale-90 transition-all">
               {#if nextStep}
-                {#if settings.showIcon}
+                {#if $twirlConfig.showIcon}
                   <div class="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700">
                     <img src={getStepIcon(nextStep)} class="w-full h-full object-contain" alt={nextStep.name} />
                   </div>
+                {:else}
+                  <div class="w-32 h-32 mb-4 rounded-lg bg-slate-800/30 border border-slate-700 flex items-center justify-center">
+                    <span class="text-5xl text-slate-600 font-bold">?</span>
+                  </div>
                 {/if}
-                {#if settings.showName}
+                {#if $twirlConfig.showName}
                   <div class="text-xl text-slate-400 text-center mb-2">
                     {nextStep.name || 'Next'}
                   </div>
                 {/if}
-                {#if settings.showKeybind && nextStep.input}
+                {#if $twirlConfig.showKeybind && nextStep.input}
                   <div class="flex justify-center">
                     <InputRender input={nextStep.input} mode="pretty" size="lg" />
                   </div>
@@ -364,7 +586,7 @@
   {/if}
 
   <!-- Countdown Overlay -->
-  <TwirlCountdown bind:show={showCountdown} on:complete={beginRecording} />
+  <TwirlCountdown bind:show={showCountdown} playSounds={$twirlConfig.playSounds} volume={$twirlConfig.volume} on:complete={beginRecording} />
 </div>
 
 <style>

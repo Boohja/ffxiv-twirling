@@ -5,6 +5,7 @@ export interface TwirlSettings {
   showIcon: boolean
   showKeybind: boolean
   playSounds: boolean
+  volume: number
   errorBehavior: ErrorBehavior
   timeout: number
 }
@@ -15,6 +16,7 @@ export function createDefaultTwirlSettings(): TwirlSettings {
     showIcon: true,
     showKeybind: true,
     playSounds: true,
+    volume: 0.5,
     errorBehavior: 'stay',
     timeout: 0
   }

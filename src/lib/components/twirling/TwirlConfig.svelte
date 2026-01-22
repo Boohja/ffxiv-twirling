@@ -3,12 +3,23 @@
   import type { TwirlSettings } from '$lib/types/twirl'
   import { getJobIconUrl } from '$lib/iconLoader'
 	import Keycap from '../Keycap.svelte';
+  import { Sound } from 'svelte-sound'
+  import errorMp3 from '$lib/assets/sounds/error.mp3'
+  import { onMount } from 'svelte'
 
   export let rotation: Rotation
   export let settings: TwirlSettings
   export let completedSuccessfully: boolean = false
   export let elapsedTime: number = 0
   export let showConfig: boolean = false
+  export let lastTwirlIndex: number | null = null
+
+  onMount(() => {
+    // Expand config by default if it's the first time (no twirlConfig in localStorage)
+    if (typeof localStorage !== 'undefined' && !localStorage.getItem('twirlConfig')) {
+      showConfig = true
+    }
+  })
 
   function toggleConfig() {
     showConfig = !showConfig
@@ -18,6 +29,14 @@
     const mins = Math.floor(seconds / 60)
     const secs = seconds % 60
     return `${mins}:${secs.toString().padStart(2, '0')}`
+  }
+
+  $: errorSound = new Sound(errorMp3, { volume: settings.volume })
+
+  function playVolumePreview() {
+    if (settings.playSounds) {
+      errorSound.play()
+    }
   }
 </script>
 
@@ -87,6 +106,25 @@
             >
             <span class="text-slate-200 group-hover:text-white transition-colors">Play Sounds</span>
           </label>
+
+          {#if settings.playSounds}
+            <div class="space-y-2 pl-8">
+              <label for="volume-slider" class="block text-slate-200">
+                Volume: {Math.round(settings.volume * 100)}%
+              </label>
+              <input 
+                id="volume-slider"
+                type="range" 
+                bind:value={settings.volume}
+                on:mouseup={playVolumePreview}
+                on:touchend={playVolumePreview}
+                min="0"
+                max="1"
+                step="0.01"
+                class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-500"
+              >
+            </div>
+          {/if}
           
           <div class="space-y-2">
             <span class="block text-slate-200">Error Behavior</span>
@@ -194,9 +232,17 @@
   {#if completedSuccessfully}
     <div class="mt-8 p-6 bg-green-900/30 border border-green-600/50 rounded-xl text-center">
       <div class="text-3xl font-bold text-green-400 mb-2">🎉 Perfect!</div>
-      <div class="text-green-300 text-lg">
+      <div class="text-green-300 text-lg mb-4">
         Completed in {formatTime(elapsedTime)}
       </div>
+      {#if lastTwirlIndex !== null}
+        <a 
+          href={`/twirls/${lastTwirlIndex}`}
+          class="inline-block px-6 py-3 bg-teal-600 hover:bg-teal-500 rounded-lg text-white font-semibold transition-colors"
+        >
+          View Performance Details →
+        </a>
+      {/if}
     </div>
   {/if}
 </div>
