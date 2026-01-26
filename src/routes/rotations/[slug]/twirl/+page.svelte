@@ -243,20 +243,17 @@
       // Record the input
       recordInput(inputSnapshot!.currentInput, isMatch)
       
-      if (isMatch) {
-        if ($twirlConfig.playSounds) {
-          correctSound.play()
-        }
-        resetTimeout()
-      } else {
+      if (!isMatch) {
         playError()
+        return
       }
-    })
-    
-    // Progress to next step when input is released (if it was correct)
-    inputSnapshot.onRelease(() => {
-      if (!recording || !currentInputIsCorrect) return
-      
+
+      if ($twirlConfig.playSounds) {
+        correctSound.play()
+      }
+      resetTimeout()
+
+
       if (currentIdx === steps.length - 1) {
         completedSuccessfully = true
         if ($twirlConfig.playSounds) {
@@ -266,12 +263,12 @@
         stopRecording(true)
         return
       }
-      
+
       // Save current step recording before moving on
       if (currentStepRecording) {
         finishCurrentStepRecording()
       }
-      
+
       // Move to next step
       currentIdx++
       currentInputIsCorrect = false
@@ -280,6 +277,8 @@
       // Start recording next step
       startStepRecording()
     })
+    
+
     
     // Handle cancel (ESC key or button 9)
     inputSnapshot.onCancelInput(() => {

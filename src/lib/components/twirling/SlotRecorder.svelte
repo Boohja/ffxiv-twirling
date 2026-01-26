@@ -58,8 +58,8 @@
 </script>
 
 <div class="space-y-4">
-  <div class="text-sm text-slate-300 flex items-center gap-2 flex-wrap">
-    <span>{#if !once}Record each step one by one. {/if}Press</span>
+  <div class="text-slate-300 flex items-center gap-2 flex-wrap">
+    <span>{#if !once}Record each step one by one. {/if} Press</span>
     <Keycap size="sm">Escape</Keycap>
     <span>or</span>
     {#if startButtonUrl}
@@ -69,7 +69,7 @@
     {/if}
     <span>to cancel.</span>
     {#if !once}
-      <p class="my-2">
+      <p class="my-2 text-subtle">
         <Icon src={LuLightbulb} size="1.2rem" className="inline-block mr-1" />
         Just keep smashing buttons, we'll create missing steps for you!
       </p>

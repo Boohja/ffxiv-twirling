@@ -25,6 +25,10 @@
     text-shadow: 0 0 40px rgba(20, 184, 166, 0.5), 0 0 80px rgba(20, 184, 166, 0.2);
   }
 
+  .logo-glow {
+    filter: drop-shadow(0 0 6px rgba(38, 181, 247, 0.6)) drop-shadow(0 0 20px rgba(248, 254, 255, 0.1));
+  }
+
   .feature-card {
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
@@ -125,7 +129,7 @@
       <div class="mb-8" in:fly={{ y: -50, duration: 800, delay: 100 }}>
         
         <h1 class="text-5xl md:text-7xl font-bold pb-10 tracking-tight hero-glow bg-gradient-to-r from-teal-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
-          FFXIV Twirling
+          <img src="/ffxiv-twirling.svg" alt="FFXIV Twirling Logo" class="w-24 md:w-40 mx-auto mb-6 logo-glow" />
         </h1>
         <p class="text-2xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-slate-200 via-teal-200 to-slate-200 bg-clip-text text-transparent">
           Master Your Rotation,<br class="md:hidden" /> Warrior of Light
