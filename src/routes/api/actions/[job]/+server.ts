@@ -14,7 +14,6 @@ export const GET = (({ params }) => {
   const job = Jobs.find(j => j.id === params.job)
   if (job) {
     const files = fs.readdirSync('.')
-    console.log(files)
   }
   return json(actions)
 }) satisfies RequestHandler;

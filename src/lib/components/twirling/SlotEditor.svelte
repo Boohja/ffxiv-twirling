@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Icon } from 'svelte-icons-pack';
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, onMount, tick } from 'svelte';
   // Each suggestion can include XIV icon path and optional row_id
   type ActionSuggestion = {
     name: string
@@ -8,7 +8,8 @@
     row_id?: number
   }
   import InputModal from "$lib/components/twirling/InputModal.svelte";
-  import { CgMouse } from "svelte-icons-pack/cg";
+  import { BiEditAlt } from "svelte-icons-pack/bi";
+  import { FiTrash2 } from "svelte-icons-pack/fi";
   import {formatKeybind, hasKeybind} from "$lib/helpers";
   import type {RotationStep, KeyboardInput, GamepadInput} from '$lib/stores'
 
@@ -18,7 +19,8 @@
   let stepIdx = -1
   let nameInputValue = ''
   let bindingValue: KeyboardInput | GamepadInput | undefined
-  const defaultImage = '/images/skills/unknown.png'
+  let recording = false
+  const defaultImage = ''
   const defaultImages = [
     '/images/skills/cogs.png',
     '/images/skills/exclamation.png',
@@ -48,17 +50,29 @@
     '/images/skills/yellow_10.png'
   ]
   import { getIconUrl } from '$lib/iconLoader'
+	import { LuInfo } from 'svelte-icons-pack/lu';
+	import SlotRecorder from './SlotRecorder.svelte';
+	import InputRender from './InputRender.svelte';
 
-  let imgSrc = '/images/skills/unknown.png'
+  let imgSrc = ''
   export let suggestions: ActionSuggestion[]
   export let existingSteps: RotationStep[] = []
+  export let jobIcon: string = ''
   const dispatch = createEventDispatcher();
 
+  let refRecorder: SlotRecorder;
   // Mode: choose between XIV Action vs Custom step
   let mode: 'action' | 'custom' = 'action'
   let actionFilter = ''
+  let actionFilterRef: HTMLInputElement;
   let selectedAction: ActionSuggestion | null = null
   $: filteredActions = (actionFilter?.trim()?.length ? suggestions.filter(a => a.name?.toLowerCase().includes(actionFilter.trim().toLowerCase())) : suggestions)
+
+  onMount(() => {
+    tick().then(() => {
+      actionFilterRef?.focus()
+    })
+  })
 
   function setMode(newMode: 'action' | 'custom') {
     mode = newMode
@@ -66,11 +80,7 @@
     selectedAction = null
     actionFilter = ''
     nameInputValue = ''
-    imgSrc = defaultImage
-  }
-
-  async function toggleMenu () {
-    opened = !opened
+    imgSrc = ''
   }
 
   // Validation
@@ -87,8 +97,19 @@
     }
   }
 
-  function showInputModal () {
-    refInputModal.show()
+  async function startInputRecorder() {
+    recording = true
+    await tick();
+    refRecorder?.startRecording()
+  }
+
+  function handleRecorderInput(e: CustomEvent<KeyboardInput | GamepadInput | undefined>) {
+    bindingValue = e?.detail
+    recording = false
+  }
+
+  function handleRecorderCancel() {
+    recording = false
   }
 
   export function editStep (idx: number, step: RotationStep) {
@@ -134,6 +155,7 @@
       dispatch('updateentry', { idx: stepIdx, step, propagateKeybind })
     } else {
       dispatch('newentry', { step, propagateKeybind })
+      actionFilterRef.focus()
     }
     cancel()
   }
@@ -180,133 +202,229 @@
   }
 </script>
 
-<style>
-</style>
+<div class="flex flex-col">
+  <!-- Header with preview icon -->
+  <div class="flex items-start gap-3 mb-4">
+    <div class="flex-none">
+      <div class="relative group cursor-pointer">
+        {#if imgSrc}
+          <img 
+            src={imgSrc} 
+            alt="Preview" 
+            class="w-16 h-16 border-2 border-slate-600 rounded-lg object-cover transition-all group-hover:border-primary/50" 
+          />
+        {:else}
+          <div class="w-16 h-16 border-2 italic border-teal-600 border-dashed rounded-lg bg-slate-900/70 flex items-center justify-center text-slate-500">
+            Pick
+          </div>
+        {/if}
+      </div>
+    </div>
 
-<div class="flex gap-4">
-  <!-- Preview -->
-  <div class="flex-none">
-    <img src={imgSrc} alt="Preview" class="w-16 h-16 border border-slate-500 rounded-lg object-cover" />
+    <div class="flex items-center justify-between flex-1">
+      <div class="self-start">
+        <h3 class="text-lg font-semibold text-slate-100 mb-0.5">
+          {stepIdx > -1 ? 'Edit Step' : 'New Step'}
+        </h3>
+        <p class="text-xs text-slate-400">
+          {mode === 'action' ? 'Select a job action' : 'Create a custom step'}
+        </p>
+      </div>
+      <div>
+        <button
+          class="flex-1 bg-slate-900/60 rounded-lg px-3 py-2 border-2 border-slate-600 min-h-[2.5rem] {!hasKeybind(bindingValue) ? 'border-dashed border-teal-600' : ''} flex items-center cursor-pointer h-16 min-w-40 place-content-center"
+          on:click={startInputRecorder}
+          title="Set Keybind"
+        >
+          {#if hasKeybind(bindingValue)}
+            <InputRender input={bindingValue} mode="pretty" size="lg" showPlus={true} />
+          {:else}
+            <span class="text-slate-500 italic">No keybind</span>
+          {/if}
+        </button>
+        <label class="flex items-center gap-2 text-sm text-slate-300 cursor-pointer group mt-2 justify-center">
+          <input 
+            type="checkbox" 
+            class="w-3.5 h-3.5 rounded border-slate-600 bg-slate-900/60 text-primary focus:ring-2 focus:ring-primary/50 cursor-pointer" 
+            bind:checked={propagateKeybind} 
+          />
+          <span
+            class="group-hover:text-slate-200 transition-colors"
+            title="When enabled, the keybind you set here will also be applied to other steps with identical name."
+          >
+            Populate
+          </span>
+          <Icon src={LuInfo} size="1.2em" />
+        </label>
+      </div>
+    </div>
   </div>
 
-  <div class="flex-1 min-w-0">
-    <!-- Mode toggle -->
-    <div class="inline-flex rounded-full overflow-hidden border border-slate-600">
-      <button type="button" class="px-3 py-1 text-sm {mode === 'action' ? 'bg-primary/50' : 'bg-slate-800'}" on:click={() => setMode('action')}>
-        Job action
+  {#if recording}
+    <SlotRecorder
+      once={true}
+      showClear={bindingValue !== undefined}
+      bind:this={refRecorder}
+      on:input={handleRecorderInput}
+      on:cancel={handleRecorderCancel}
+    />
+  {:else}
+    <!-- Mode selection with card-style radio buttons -->
+    <div class="grid grid-cols-2 gap-3 mb-4">
+      <button 
+        type="button" 
+        class="relative px-4 py-3 rounded-lg border transition-all text-left {mode === 'action' ? 'border-teal-700 bg-teal-900/20' : 'border-slate-700 hover:border-slate-500'}" 
+        on:click={() => setMode('action')}
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">
+            {#if jobIcon}
+              <img src={jobIcon} alt="Job" class="h-9 w-9 rounded {mode !== 'action' ? 'grayscale opacity-40' : ''}" />
+            {:else}
+              <div class="h-8 w-8 shrink-0 rounded bg-slate-700"></div>
+            {/if}
+          </span>
+          <div class="flex-1">
+            <div class="font-semibold text-sm text-slate-100">Job Action</div>
+            <div class="text-[11px] text-slate-400">Select from job skills</div>
+          </div>
+        </div>
       </button>
-      <button type="button" class="px-3 py-1 text-sm {mode === 'custom' ? 'bg-primary/50' : 'bg-slate-800'}" on:click={() => setMode('custom')}>
-        Custom step
+      
+      <button 
+        type="button" 
+        class="relative px-4 py-3 rounded-lg border transition-all text-left {mode === 'custom' ? 'border-teal-600 bg-slate-700/20' : 'border-slate-700  hover:border-slate-500'}" 
+        on:click={() => setMode('custom')}
+      >
+        <div class="flex items-center gap-4">
+          <span class="text-2xl">
+            <img src="/images/skills/unknown.png" alt="Custom" class="h-7 w-7 shrink-0 rounded {mode !== 'custom' ? 'grayscale opacity-40' : ''}" />
+          </span>
+          <div class="flex-1">
+            <div class="font-semibold text-sm text-slate-100">Custom Step</div>
+            <div class="text-[11px] text-slate-400">Create your own</div>
+          </div>
+        </div>
       </button>
     </div>
 
+    <!-- Main content area -->
     {#if mode === 'action'}
       <!-- Action picker -->
-      <div class="mt-3">
-        <label class="block text-sm mb-1">
-          Search actions
+      <div class="space-y-3 mb-3">
+        <!-- Filter input standalone -->
+        <div>
+          <label for="action-search" class="block text-xs font-semibold text-slate-300 mb-2">
+            Search Actions
+          </label>
           <input
+            id="action-search"
             bind:value={actionFilter}
+            bind:this={actionFilterRef}
             type="text"
-            placeholder="Filter actions…"
-            class="w-full mt-1 rounded border border-slate-600 bg-slate-800 px-3 py-2 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            placeholder="Type to filter actions…"
+            class="w-full rounded-lg border-2 border-slate-700 bg-slate-900/40 px-3 py-2.5 text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-teal-500 transition-all"
             on:keyup={checkKey}
           />
-        </label>
-        <div class="text-xs text-slate-400 mt-1">{filteredActions.length} of {suggestions.length}</div>
-      </div>
+        </div>
 
-      <div class="mt-3 max-h-56 overflow-y-auto pr-1">
-        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
+        <!-- Scrollable grid with cleaner background -->
+        <div class="bg-slate-900/30 rounded-lg p-3 overflow-y-auto max-h-[22vh]">
+          <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
           {#each filteredActions as action (action.icon)}
             <button
               type="button"
-              class="group flex items-center gap-2 rounded border {selectedAction?.icon === action.icon ? 'border-teal-500 bg-slate-700' : 'border-slate-700 bg-slate-800/60'} hover:bg-slate-700/60 focus:outline-none focus:ring-2 focus:ring-primary/40 px-2 py-2 text-left"
+              class="group flex items-center gap-2.5 rounded-lg {selectedAction?.icon === action.icon ? 'bg-teal-600/20 ring-2 ring-teal-500' : 'bg-slate-800/60 hover:bg-slate-700/70'} focus:outline-none focus:ring-2 focus:ring-teal-500/40 px-3 py-2 text-left transition-all"
               title={action.name}
               on:click={() => selectAction(action)}
             >
-              <img src={getIconUrl(action.icon)} alt={action.name} class="h-8 w-8 shrink-0 rounded" />
-              <span class="truncate text-sm">{action.name}</span>
+              <img src={getIconUrl(action.icon)} alt={action.name} class="h-9 w-9 shrink-0 rounded" />
+              <span class="truncate text-sm text-slate-200">{action.name}</span>
             </button>
           {/each}
+          </div>
+          {#if filteredActions.length === 0}
+            <div class="text-center py-8 text-slate-400 text-xs">
+              No actions found
+            </div>
+          {/if}
         </div>
       </div>
     {:else}
       <!-- Custom step form -->
-      <div class="mt-3">
-        <label class="block text-sm mb-1">
-          Name
+      <div class="space-y-4 mb-3">
+        <!-- Step name -->
+        <div>
+          <label for="step-name" class="block text-xs font-semibold text-slate-300 mb-2">
+            Step Name
+          </label>
           <input
+            id="step-name"
             bind:value={nameInputValue}
             on:keyup={checkKey}
-            class="w-full mt-1 rounded border border-slate-600 bg-slate-800 px-3 py-2 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            class="w-full rounded-lg border-2 border-slate-700 bg-slate-900/40 px-3 py-2.5 text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-teal-500 transition-all"
             placeholder="e.g. Switching hotbars"
           />
-        </label>
-        {#if isNameCollision}
-          <div class="text-xs text-red-300 mt-1">This matches a job action name. Please choose a different name.</div>
-        {/if}
-      </div>
-      <fieldset class="mt-3">
-        <legend class="block text-sm mb-1">Icon</legend>
-        <div class="flex flex-wrap gap-2">
-          {#each defaultImages as di}
-            <button
-              type="button"
-              class="p-0 border {imgSrc === di ? 'border-teal-500' : 'border-slate-700'} rounded"
-              on:click={() => { imgSrc = di }}
-              aria-pressed={imgSrc === di}
-            >
-              <img src={di} alt="" class="w-12 h-12 rounded object-cover" />
-            </button>
-          {/each}
-        </div>
-      </fieldset>
-    {/if}
-
-    <div class="mt-4">
-      <span id="keybind-label" class="block text-sm mb-1">Keybind</span>
-        <div class="mt-1 flex items-center gap-2">
-          <button type="button" class="font-thin bg-opacity-20 bg-black px-3 py-2 inline-flex items-center gap-2 rounded-full" aria-labelledby="keybind-label" on:click={showInputModal}>
-            <Icon src={CgMouse} className="inline" /> <span>{formatKeybind(bindingValue)}</span>
-          </button>
-          {#if hasKeybind(bindingValue)}
-            <button
-              type="button"
-              class="text-xs inline-flex items-center gap-1 rounded-full border border-slate-600 px-2 py-1 text-slate-200 hover:bg-slate-800"
-              title="Clear keybind"
-              on:click={() => (bindingValue = undefined)}
-            >
-              ✘ Clear
-            </button>
+          {#if isNameCollision}
+            <div class="text-[11px] text-red-400 mt-1.5 flex items-center gap-1">
+              <span class="text-red-500">⚠</span>
+              Matches a job action name
+            </div>
           {/if}
         </div>
-      <div class="mt-2">
-        <label class="text-sm">
-          <input type="checkbox" class="mr-2 align-middle" bind:checked={propagateKeybind} /> Apply keybind to steps with same name
-        </label>
+        
+        <!-- Icon selector -->
+        <div>
+          <div class="block text-xs font-semibold text-slate-300 mb-2">Choose Icon</div>
+          <div class="bg-slate-900/30 rounded-lg p-3 overflow-y-auto max-h-[18vh]">
+            <div class="grid grid-cols-10 gap-1.5">
+              {#each defaultImages as di}
+                <button
+                  type="button"
+                  class="p-0.5 rounded-lg transition-all {imgSrc === di ? 'ring-2 ring-teal-500 shadow-lg shadow-teal-500/20' : 'hover:ring-2 hover:ring-slate-600'}"
+                  on:click={() => { imgSrc = di }}
+                  aria-pressed={imgSrc === di}
+                  title="Select icon"
+                >
+                  <img src={di} alt="" class="w-full aspect-square rounded object-cover" />
+                </button>
+              {/each}
+            </div>
+          </div>
+        </div>
       </div>
+    {/if}
+
+    <!-- Action buttons -->
+    <div class="flex gap-2 pt-2 mt-3">
+      <button 
+        class="flex-1 py-4 px-4 bg-teal-600 hover:bg-teal-700 disabled:bg-slate-700 disabled:cursor-not-allowed rounded-lg text-white font-semibold transition-all disabled:opacity-50" 
+        on:click={submit} 
+        disabled={!canSubmit}
+      >
+        {stepIdx > -1 ? 'Save' : 'Create'}
+      </button>
+      {#if stepIdx > -1}
+        <button 
+          class="px-3 border border-slate-600 hover:border-slate-500 rounded-lg text-slate-200 text-sm font-medium transition-all hover:bg-slate-800/50" 
+          on:click={cancel}
+        >
+          Cancel
+        </button>
+        <button
+          class="px-3 border border-red-600/50 bg-red-900/20 hover:bg-red-900/40 rounded-lg text-red-300 text-sm font-medium transition-all inline-flex items-center gap-1.5"
+          on:click={() => { dispatch('deletestep', { idx: stepIdx }); cancel(); }}
+          title="Delete this step"
+        >
+          <Icon src={FiTrash2} size="14" />
+          Delete
+        </button>
+      {/if}
     </div>
-  </div>
-
-  <InputModal bind:this={refInputModal} on:keybind={(e) => bindingValue = e.detail} />
-</div>
-
-<div class="mt-5 flex gap-2">
-  <button class="py-3 px-5 bg-teal-700 {canSubmit ? '' : 'opacity-40 cursor-not-allowed'} rounded-full text-white font-semibold" on:click={submit} disabled={!canSubmit}>{stepIdx > -1 ? 'Save' : 'Create'}</button>
-  {#if stepIdx > -1}
-    <button class="py-3 px-5 border border-gray-500 rounded-full text-white font-semibold" on:click={cancel}>Cancel</button>
-  {/if}
-  <div class="flex-1"></div>
-  {#if stepIdx > -1}
-    <button
-      class="py-3 px-5 border border-red-600 bg-red-900/20 rounded-full text-red-300 font-semibold hover:bg-red-900/40"
-      on:click={() => { dispatch('deletestep', { idx: stepIdx }); cancel(); }}
-    >
-      Delete
-    </button>
   {/if}
 </div>
+
+<InputModal bind:this={refInputModal} on:keybind={(e) => bindingValue = e.detail} />
 
 
 <!--  <Icon src={CgAddR} size="2em" />-->

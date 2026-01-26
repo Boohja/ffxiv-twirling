@@ -12,7 +12,8 @@
 		"test:unit": "vitest",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"update:jobs": "tsx scripts/update-jobs.ts"
+		"update:jobs": "tsx scripts/update-jobs.ts",
+		"update:action": "tsx scripts/update-action.ts"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.0",

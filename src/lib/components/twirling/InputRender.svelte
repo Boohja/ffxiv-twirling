@@ -9,7 +9,7 @@
   export let input: KeyboardInput | GamepadInput | undefined = undefined;
   export let mode: 'text' | 'pretty' = 'pretty';
   export let showPlus: boolean = false;
-  export let size: 'sm' | 'md' | 'lg' = 'md';
+  export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
 
   let gamepadLayout: 'ps' | 'xbox' = 'ps';
   let mounted = false;
@@ -23,6 +23,15 @@
     }
     mounted = true;
   });
+
+  const gamepadSizes = {
+    sm: { height: 6, large: false },
+    md: { height: 8, large: false },
+    lg: { height: 10, large: true },
+    xl: { height: 64, large: true }
+  }
+
+  $: gamepadDimension = gamepadSizes[size];
 
   function isGamepadInput(input: KeyboardInput | GamepadInput | undefined): input is GamepadInput {
     return input !== undefined && ('button' in input || 'trigger' in input);
@@ -43,9 +52,9 @@
     <div class="flex items-center gap-2">
       {#if input.trigger !== undefined}
         <img 
-          src={getGamepadButtonUrl(gamepadLayout, input.trigger, true)} 
+          src={getGamepadButtonUrl(gamepadLayout, input.trigger, gamepadDimension.large)} 
           alt="Trigger button" 
-          class="max-h-12 w-auto object-contain"
+          class="h-{gamepadDimension.height} w-auto object-contain"
         />
         {#if input.button !== undefined}
           <span class="text-slate-400 text-lg font-bold">+</span>
@@ -53,9 +62,9 @@
       {/if}
       {#if input.button !== undefined}
         <img 
-          src={getGamepadButtonUrl(gamepadLayout, input.button, true)} 
+          src={getGamepadButtonUrl(gamepadLayout, input.button, gamepadDimension.large)} 
           alt="Button" 
-          class="max-h-12 w-auto object-contain"
+          class="h-{gamepadDimension.height} w-auto object-contain"
         />
       {/if}
     </div>

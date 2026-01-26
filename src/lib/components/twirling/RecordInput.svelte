@@ -25,9 +25,12 @@
   const inputSnapshot = new InputSnapshot();
   let gamepadAnimationFrameId: number | null = null;
 
-  // Export function to start recording externally
   export function start() {
     startRecording();
+  }
+
+  export function stop() {
+    stopRecording();
   }
 
   onDestroy(() => {
@@ -111,6 +114,7 @@
       window.addEventListener("keyup", inputSnapshot.processKeyboardEvent);
       window.addEventListener("mousedown", inputSnapshot.processMouseEvent);
       window.addEventListener("mouseup", inputSnapshot.processMouseEvent);
+      window.addEventListener("pointerdown", inputSnapshot.processMouseEvent);
       window.addEventListener("contextmenu", inputSnapshot.processMouseEvent);
     }
 
@@ -137,7 +141,7 @@
   }
 </script>
 
-<div class="rounded-lg border border-slate-700 bg-slate-800 p-4 min-h-[8rem] flex items-center justify-center">
+<div class="rounded-lg border {recording ? 'border-primary-glow' : 'border-slate-700'} bg-slate-800 p-4 min-h-[8rem] flex items-center justify-center">
   {#if !recording && !hasSnapshot}
     <div class="text-center text-slate-400">Not recording</div>
   {:else if !recording && hasSnapshot && snapshot}
@@ -158,9 +162,9 @@
     </div>
   {:else if recording}
     <div class="flex items-center justify-center gap-3 text-slate-300">
-      <span class="relative flex h-4 w-4">
+      <span class="relative flex h-6 w-6">
         <span class="absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-70 animate-ping"></span>
-        <span class="relative inline-flex h-4 w-4 rounded-full bg-teal-500"></span>
+        <span class="relative inline-flex h-6 w-6 rounded-full bg-teal-500"></span>
       </span>
       <span class="font-medium">Press any input</span>
     </div>

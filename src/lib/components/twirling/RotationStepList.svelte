@@ -4,6 +4,7 @@
   import { Icon } from 'svelte-icons-pack'
   import { CgMouse } from 'svelte-icons-pack/cg'
   import { BiX } from 'svelte-icons-pack/bi'
+  import { RiEditorDraggable } from 'svelte-icons-pack/ri'
   import type { RotationStep } from '$lib/stores'
   import { createEventDispatcher } from 'svelte'
   import InputRender from './InputRender.svelte'
@@ -11,14 +12,20 @@
   export let steps: RotationStep[] = []
   export let selectedIdx: number | null = null
   export let iconUrl: (path: string) => string
+  export let readonly: boolean = false
 
   const dispatch = createEventDispatcher()
 
   // Internal drag & drop state
   let draggingIndex: number | null = null
   let dropIndex: number | null = null
+  let hoveredIndex: number | null = null
 
   function handleDragStart(e: DragEvent, index: number) {
+    if (readonly) {
+      e.preventDefault()
+      return
+    }
     draggingIndex = index
     dropIndex = index
     if (e.dataTransfer) {
@@ -29,18 +36,27 @@
 
   function handleDragOver(e: DragEvent, index: number) {
     e.preventDefault()
+    if (readonly) {
+      return
+    }
     if (e.dataTransfer) e.dataTransfer.dropEffect = 'move'
     dropIndex = index
   }
 
   function handleDragOverAfter(e: DragEvent, index: number) {
     e.preventDefault()
+    if (readonly) {
+      return
+    }
     if (e.dataTransfer) e.dataTransfer.dropEffect = 'move'
     dropIndex = index + 1
   }
 
   function handleDrop(e: DragEvent) {
     e.preventDefault()
+    if (readonly) {
+      return
+    }
     const fromStr = e.dataTransfer?.getData('text/plain') ?? ''
     const from = fromStr ? parseInt(fromStr, 10) : draggingIndex
     
@@ -77,44 +93,72 @@
         on:drop={handleDrop}
       ></div>
       <div
-        class="step border-b border-slate-700 relative grid hover:bg-slate-700 cursor-grab active:cursor-grabbing {selectedIdx === idx ? 'bg-slate-700/50' : ''}"
+        class="step border-b border-slate-700 relative grid hover2:bg-slate-700/20 {selectedIdx === idx ? 'bg-teal-700/20 active' : ''}"
         class:dragging={draggingIndex === idx}
-        draggable={true}
         role="listitem"
         data-step-index={idx}
-        on:dragstart={(e) => handleDragStart(e, idx)}
         on:dragover={(e) => handleDragOverAfter(e, idx)}
         on:drop={handleDrop}
-        on:dragend={handleDragEnd}
+        on:mouseenter={() => (hoveredIndex = idx)}
+        on:mouseleave={() => (hoveredIndex = null)}
       >
-        <div class="px-2 py-2 text-right tabular-nums text-slate-400 select-none self-center">
-          {idx + 1}
-        </div>
+        <!-- Drag Index -->
         <div
-          class="align-middle self-center py-2"
+          class="px-2 py-2 text-right tabular-nums select-none self-center relative {readonly ? 'text-slate-400' : 'grab-handle-container'}"
+          draggable={!readonly}
           role="button"
           tabindex="0"
-          on:click={() => dispatch('selectstep', { idx, step })}
-          on:keypress={() => dispatch('selectstep', { idx, step })}
+          on:dragstart={(e) => handleDragStart(e, idx)}
+          on:dragend={handleDragEnd}
         >
-          <img src={step.icon?.startsWith('actions/') ? iconUrl(step.icon) : step.icon} class="w-12 h-12 object-contain" alt="" />
+          {#if hoveredIndex === idx && !readonly}
+            <div class="grab-handle cursor-grab active:cursor-grabbing text-slate-400">
+              <Icon src={RiEditorDraggable} size="20" />
+            </div>
+          {:else}
+            <span class="text-slate-400">{idx + 1}</span>
+          {/if}
         </div>
-        <div class="py-2 px-3 self-center"
-          on:click={() => dispatch('selectstep', { idx, step })}
-          on:keypress={() => dispatch('selectstep', { idx, step })}
-          role="button"
-          tabindex="0"
-        >
-          <div class="font-medium leading-tight">{step.name}</div>
+        <!-- Step Action -->
+        <div class="step-action m-1 rounded-md pl-1">
+          <div
+            class="align-middle self-center py-1 px-1"
+            role="button"
+            tabindex="0"
+            on:click={() => dispatch('selectstep', { idx, step })}
+            on:keypress={() => dispatch('selectstep', { idx, step })}
+          >
+            <img src={step.icon?.startsWith('actions/') ? iconUrl(step.icon) : step.icon} class="{readonly ? 'w-8 h-8' : 'w-12 h-12'} object-contain" alt="" />
+          </div>
+          <div class="px-3 self-center {readonly ? 'py-2' : 'py-4'}"
+            on:click={() => dispatch('selectstep', { idx, step })}
+            on:keypress={() => dispatch('selectstep', { idx, step })}
+            role="button"
+            tabindex="0"
+          >
+            <div class="font-medium leading-tight">{step.name}</div>
+          </div>
         </div>
-        <div class="py-2 px-3 self-center flex items-center justify-center"
-          on:click={() => dispatch('selectstep', { idx, step })}
-          on:keypress={() => dispatch('selectstep', { idx, step })}
-          role="button"
-          tabindex="0"
-        >
-          <InputRender input={step.input} mode="pretty" showPlus={false} />
-        </div>
+        {#if !readonly}
+          <div class="step-keybind self-center flex p-1 border-l border-slate-700/20">
+            <button
+              class="flex-1 rounded-lg px-3 py-2 border border-transparent min-h-[2.5rem] flex items-center cursor-pointer h-14 min-w-40 place-content-center"
+              title="Set Keybind"
+              on:click={() => dispatch('recordstep', { idx, step })}
+              on:keypress={() => dispatch('recordstep', { idx, step })}
+            >
+              <InputRender input={step.input} mode="pretty" size="sm" showPlus={false} />
+            </button>
+            <!-- <div class="py-2 px-3 self-center flex items-center justify-center step-keybind"
+              on:click={() => dispatch('selectstep', { idx, step })}
+              on:keypress={() => dispatch('selectstep', { idx, step })}
+              role="button"
+              tabindex="0"
+            >
+              <InputRender input={step.input} mode="pretty" showPlus={false} />
+            </div> -->
+          </div>
+        {/if}
       </div>
     </div>
   {/each}
@@ -130,8 +174,25 @@
 <style>
   .step {
     /* Adjusted columns: index | icon | name | input */
-    grid-template-columns: 2.25rem max-content 1fr 12rem;
+    /* grid-template-columns: 2.25rem max-content 1fr 12rem; */
+    grid-template-columns: 2rem 1fr 12rem;
     align-items: stretch;
+  }
+  .step-action {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: stretch;
+  }
+  .step-action:hover {
+    /* background-color: rgba(100, 255, 218, 0.05); */
+    cursor: pointer;
+  }
+  .step-keybind {
+    min-width: 6rem;
+    text-align: center;
+    font-family: 'Fira Code', monospace, monospace;
+    font-size: 0.875rem;
+    color: #81e6d9;
   }
   .step.dragging {
     opacity: 0.6;
@@ -139,12 +200,22 @@
   /* Full-height drop zones before each step and at end */
   .drop-zone {
     position: relative;
-    height: 0.25rem; /* collapsed until active */
+    height: 0;
     margin: 0;
     border-radius: 4px;
     transition: all 80ms ease;
     background: transparent;
     outline: 2px dashed transparent;
+  }
+  .grab-handle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grab-handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .drop-zone.active {
     height: 3rem; /* approximate step height for easier targeting */

@@ -40,6 +40,11 @@
     "icon": "actions/36944.png"
   },
   {
+    "row_id": 36948,
+    "name": "Elixir Burst",
+    "icon": "actions/36948.png"
+  },
+  {
     "row_id": 36943,
     "name": "Enlightened Meditation",
     "icon": "actions/36943.png"
@@ -128,6 +133,11 @@
     "row_id": 25766,
     "name": "Riddle of Wind",
     "icon": "actions/25766.png"
+  },
+  {
+    "row_id": 25768,
+    "name": "Rising Phoenix",
+    "icon": "actions/25768.png"
   },
   {
     "row_id": 36946,

@@ -25,6 +25,11 @@
     "icon": "actions/3643.png"
   },
   {
+    "row_id": 36929,
+    "name": "Comeuppance",
+    "icon": "actions/36929.png"
+  },
+  {
     "row_id": 3634,
     "name": "Dark Mind",
     "icon": "actions/3634.png"
@@ -130,6 +135,11 @@
     "icon": "actions/3639.png"
   },
   {
+    "row_id": 36928,
+    "name": "Scarlet Delirium",
+    "icon": "actions/36928.png"
+  },
+  {
     "row_id": 3636,
     "name": "Shadow Wall",
     "icon": "actions/3636.png"
@@ -173,6 +183,11 @@
     "row_id": 7393,
     "name": "The Blackest Night",
     "icon": "actions/7393.png"
+  },
+  {
+    "row_id": 36930,
+    "name": "Torcleaver",
+    "icon": "actions/36930.png"
   },
   {
     "row_id": 3621,

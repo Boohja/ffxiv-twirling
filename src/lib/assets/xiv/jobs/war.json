@@ -60,6 +60,11 @@
     "icon": "actions/49.png"
   },
   {
+    "row_id": 16465,
+    "name": "Inner Chaos",
+    "icon": "actions/16465.png"
+  },
+  {
     "row_id": 7389,
     "name": "Inner Release",
     "icon": "actions/7389.png"
@@ -108,6 +113,16 @@
     "row_id": 25753,
     "name": "Primal Rend",
     "icon": "actions/25753.png"
+  },
+  {
+    "row_id": 36925,
+    "name": "Primal Ruination",
+    "icon": "actions/36925.png"
+  },
+  {
+    "row_id": 36924,
+    "name": "Primal Wrath",
+    "icon": "actions/36924.png"
   },
   {
     "row_id": 7533,

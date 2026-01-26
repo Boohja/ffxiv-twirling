@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Standard 2nd GCD AC (The Balance)",
+    "job": "rpr",
+    "slug": "rpr-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/melee/reaper/openers/",
+    "updated": "2025-12-17",
+      "steps": [
+          {
+              "name": "Shadow of Death",
+              "icon": "actions/24378.png",
+              "action": 24378
+          },
+          {
+              "name": "Soul Slice",
+              "icon": "actions/24380.png",
+              "action": 24380
+          },
+          {
+              "name": "Arcane Circle",
+              "icon": "actions/24405.png",
+              "action": 24405
+          },
+          {
+              "name": "Gluttony",
+              "icon": "actions/24393.png",
+              "action": 24393
+          },
+          {
+              "name": "Executioner's Gibbet",
+              "icon": "actions/36970.png",
+              "action": 36970
+          },
+          {
+              "name": "Executioner's Gallows",
+              "icon": "actions/36971.png",
+              "action": 36971
+          },
+          {
+              "name": "Soul Slice",
+              "icon": "actions/24380.png",
+              "action": 24380
+          },
+          {
+              "name": "Plentiful Harvest",
+              "icon": "actions/24385.png",
+              "action": 24385
+          },
+          {
+              "name": "Enshroud",
+              "icon": "actions/24394.png",
+              "action": 24394
+          },
+          {
+              "name": "Void Reaping",
+              "icon": "actions/24395.png",
+              "action": 24395
+          },
+          {
+              "name": "Sacrificium",
+              "icon": "actions/36969.png",
+              "action": 36969
+          },
+          {
+              "name": "Cross Reaping",
+              "icon": "actions/24396.png",
+              "action": 24396
+          },
+          {
+              "name": "Lemure's Slice",
+              "icon": "actions/24399.png",
+              "action": 24399
+          },
+          {
+              "name": "Void Reaping",
+              "icon": "actions/24395.png",
+              "action": 24395
+          },
+          {
+              "name": "Cross Reaping",
+              "icon": "actions/24396.png",
+              "action": 24396
+          },
+          {
+              "name": "Lemure's Slice",
+              "icon": "actions/24399.png",
+              "action": 24399
+          },
+          {
+              "name": "Communio",
+              "icon": "actions/24398.png",
+              "action": 24398
+          },
+          {
+              "name": "Perfectio",
+              "icon": "actions/36973.png",
+              "action": 36973
+          },
+          {
+              "name": "Unveiled Gibbet",
+              "icon": "actions/24390.png",
+              "action": 24390
+          },
+          {
+              "name": "Gibbet",
+              "icon": "actions/24382.png",
+              "action": 24382
+          },
+          {
+              "name": "Shadow of Death",
+              "icon": "actions/24378.png",
+              "action": 24378
+          },
+          {
+              "name": "Slice",
+              "icon": "actions/24373.png",
+              "action": 24373
+          }
+      ],
+      "createdAt": "2026-01-25T16:25:18.541Z",
+      "updatedAt": "2026-01-25T16:32:44.422Z"
+  }
+]

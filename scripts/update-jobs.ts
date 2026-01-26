@@ -7,14 +7,22 @@
  * - Download the icon once to src/lib/assets/xiv/actions/<row_id>.png using the v2 asset endpoint
  */
 
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { Jobs } from '../src/lib/jobs.ts';
-
-const ROOT = process.cwd();
-const JOBS_DIR = path.join(ROOT, 'src', 'lib', 'assets', 'xiv', 'jobs');
-const ACTIONS_DIR = path.join(ROOT, 'src', 'lib', 'assets', 'xiv', 'actions');
-const V2 = 'https://v2.xivapi.com';
+import {
+	ensureDir,
+	fileExists,
+	getJSON,
+	readJobJson,
+	writeJobJson,
+	hasRowId,
+	jobsListToFileMap,
+	extractEligibleJobs,
+	iconPathForRow,
+	fetchAndStoreIconOnce,
+	JOBS_DIR,
+	ACTIONS_DIR,
+	V2,
+	type JobEntry
+} from './utils.ts';
 
 type V2SearchResponse = {
 	next?: string | null;
@@ -34,115 +42,18 @@ type V2SearchResponse = {
 	}>;
 };
 
-type JobEntry = { row_id: number; name: string; icon: string };
-
-async function ensureDir(dir: string) {
-	await fs.mkdir(dir, { recursive: true });
-}
-
-async function fileExists(p: string): Promise<boolean> {
-	try {
-		await fs.access(p);
-		return true;
-	} catch {
-		return false;
-	}
-}
-
-async function getJSON<T>(url: string): Promise<T> {
-	const res = await fetch(url, { headers: { 'user-agent': 'ffxiv-twirling/0.0.1 (+github.com/Boohja/ffxiv-twirling)' } });
-	if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
-	return (await res.json()) as T;
-}
-
-async function getBinary(url: string): Promise<Uint8Array> {
-	const res = await fetch(url, { headers: { 'user-agent': 'ffxiv-twirling/0.0.1 (+github.com/Boohja/ffxiv-twirling)' } });
-	if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
-	const ab = await res.arrayBuffer();
-	return new Uint8Array(ab);
-}
-function sleep(ms: number): Promise<void> {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function readJobJson(filePath: string): Promise<JobEntry[]> {
-	try {
-		const txt = await fs.readFile(filePath, 'utf8');
-		const data = txt.trim() ? (JSON.parse(txt) as JobEntry[]) : [];
-		return Array.isArray(data) ? data : [];
-	} catch (e) {
-		const err = e as NodeJS.ErrnoException;
-		if (err && err.code === 'ENOENT') return [];
-		console.warn(`Failed to read ${filePath}: ${err?.message}`);
-		throw e;
-	}
-}
-
-async function writeJobJson(filePath: string, entries: JobEntry[]): Promise<void> {
-	const txt = JSON.stringify(entries, null, 2) + '\n';
-	await fs.writeFile(filePath, txt, 'utf8');
-}
-
-function hasRowId(entries: JobEntry[], id: number): boolean {
-	return entries.some((e) => e.row_id === id);
-}
-
-// Build a map of job ABBR (uppercase) -> json file path using exported Jobs list
-function jobsListToFileMap(): Map<string, string> {
-	const map = new Map<string, string>();
-	for (const j of Jobs) {
-		const abbr = j.id.toUpperCase();
-		const filePath = path.join(JOBS_DIR, `${j.id}.json`);
-		map.set(abbr, filePath);
-	}
-	return map;
-}
-
-function extractEligibleJobs(fields?: Record<string, unknown>): string[] {
-	if (!fields) return [];
-	const jobs: string[] = [];
-	for (const [key, val] of Object.entries(fields)) {
-		if (key === 'Name') continue;
-		if (typeof val === 'boolean' && val && /^[A-Z]{3}$/.test(key)) {
-			jobs.push(key);
-		}
-	}
-	return jobs;
-}
-
-function iconPathForRow(rowId: number): string {
-	return `actions/${rowId}.png`;
-}
-
-async function fetchAndStoreIconOnce(rowId: number, iconPath: string | undefined, iconPathHr1: string | undefined) {
-	const outPath = path.join(ACTIONS_DIR, `${rowId}.png`);
-	try {
-		await fs.access(outPath);
-		return; // already exists
-	} catch {
-		// proceed
-	}
-  console.log(`  Fetching icon for action ${rowId}`);
-	const src = iconPathHr1 || iconPath;
-	if (!src) return;
-	const url = `${V2}/api/asset?path=${encodeURIComponent(src)}&format=png`;
-	const bin = await getBinary(url);
-	await fs.writeFile(outPath, bin);
-	await sleep(1500);
-}
-
-export async function updateJobFiles(): Promise<void> {
+async function updateJobFiles(): Promise<void> {
 	await ensureDir(ACTIONS_DIR);
-  await ensureDir(JOBS_DIR);
-  const jobMap = jobsListToFileMap(); // e.g., WHM -> <path>/whm.json
+	await ensureDir(JOBS_DIR);
+	const jobMap = jobsListToFileMap(); // e.g., WHM -> <path>/whm.json
 
 	// Load all job files once into memory
 	const jobCache = new Map<string, JobEntry[]>(); // ABBR -> entries
 	for (const [abbr, filePath] of jobMap.entries()) {
-    // Ensure file exists; create empty if missing
-    if (!(await fileExists(filePath))) {
-      await writeJobJson(filePath, []);
-    }
+		// Ensure file exists; create empty if missing
+		if (!(await fileExists(filePath))) {
+			await writeJobJson(filePath, []);
+		}
 		const entries = await readJobJson(filePath);
 		jobCache.set(abbr, entries);
 	}
@@ -163,23 +74,23 @@ export async function updateJobFiles(): Promise<void> {
 		'+IsPlayerAction=true +IsPvP=false -ClassJobCategory=0'
 	)}`;
 
-  while (url && pagesProcessed <= maxPages) {
+	while (url && pagesProcessed <= maxPages) {
 		const res = await getJSON<V2SearchResponse>(url);
 		console.log(`Processing v2 page ${pagesProcessed + 1}, results: ${res.results.length}`);
 		await processV2PageIntoCache(res, jobMap, jobCache);
-    url = res.next ? `${V2}/api/search?cursor=${encodeURIComponent(res.next)}&fields=${requestedFields}` : '';
+		url = res.next ? `${V2}/api/search?cursor=${encodeURIComponent(res.next)}&fields=${requestedFields}` : '';
 		pagesProcessed++;
 	}
 
 	// Sort and write back once
-  for (const [abbr, entries] of jobCache.entries()) {
-    entries.sort((a, b) => a.name.localeCompare(b.name));
-    const filePath = jobMap.get(abbr);
-    if (!filePath) {
-      continue;
-    }
-    await writeJobJson(filePath, entries);
-  }
+	for (const [abbr, entries] of jobCache.entries()) {
+		entries.sort((a, b) => a.name.localeCompare(b.name));
+		const filePath = jobMap.get(abbr);
+		if (!filePath) {
+			continue;
+		}
+		await writeJobJson(filePath, entries);
+	}
 }
 
 async function processV2PageIntoCache(
@@ -204,12 +115,12 @@ async function processV2PageIntoCache(
 			const list = jobCache.get(abbr);
 			if (!list) continue;
 			if (!hasRowId(list, rowId)) {
-        console.log(`  Adding ${name} (${rowId}) to ${abbr}`);
+				console.log(`  Adding ${name} (${rowId}) to ${abbr}`);
 				list.push({ row_id: rowId, name, icon: iconPathForRow(rowId) });
 			}
-      else {
-        console.log(`  Skipping ${name} (${rowId}) for ${abbr}, already present`);
-      }
+			else {
+				console.log(`  Skipping ${name} (${rowId}) for ${abbr}, already present`);
+			}
 		}
 	}
 }

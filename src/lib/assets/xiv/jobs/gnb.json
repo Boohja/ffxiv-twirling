@@ -1,5 +1,10 @@
 [
   {
+    "row_id": 16157,
+    "name": "Abdomen Tear",
+    "icon": "actions/16157.png"
+  },
+  {
     "row_id": 7548,
     "name": "Arm's Length",
     "icon": "actions/7548.png"
@@ -65,6 +70,11 @@
     "icon": "actions/25760.png"
   },
   {
+    "row_id": 16158,
+    "name": "Eye Gouge",
+    "icon": "actions/16158.png"
+  },
+  {
     "row_id": 16163,
     "name": "Fated Circle",
     "icon": "actions/16163.png"
@@ -100,6 +110,11 @@
     "icon": "actions/7538.png"
   },
   {
+    "row_id": 16156,
+    "name": "Jugular Rip",
+    "icon": "actions/16156.png"
+  },
+  {
     "row_id": 16137,
     "name": "Keen Edge",
     "icon": "actions/16137.png"
@@ -108,6 +123,11 @@
     "row_id": 16143,
     "name": "Lightning Shot",
     "icon": "actions/16143.png"
+  },
+  {
+    "row_id": 36939,
+    "name": "Lion Heart",
+    "icon": "actions/36939.png"
   },
   {
     "row_id": 7540,
@@ -123,6 +143,11 @@
     "row_id": 16138,
     "name": "No Mercy",
     "icon": "actions/16138.png"
+  },
+  {
+    "row_id": 36938,
+    "name": "Noble Blood",
+    "icon": "actions/36938.png"
   },
   {
     "row_id": 7533,
@@ -150,6 +175,11 @@
     "icon": "actions/16142.png"
   },
   {
+    "row_id": 16147,
+    "name": "Savage Claw",
+    "icon": "actions/16147.png"
+  },
+  {
     "row_id": 7537,
     "name": "Shirk",
     "icon": "actions/7537.png"
@@ -173,5 +203,10 @@
     "row_id": 36934,
     "name": "Trajectory",
     "icon": "actions/36934.png"
+  },
+  {
+    "row_id": 16150,
+    "name": "Wicked Talon",
+    "icon": "actions/16150.png"
   }
 ]

@@ -42,7 +42,7 @@
 
 <div class="max-w-4xl mx-auto px-6 py-12">
   <!-- Header -->
-  <div class="text-center mb-12">
+  <div class="text-center mb-8">
     <div class="flex items-center justify-center gap-4 mb-6">
       <img src={getJobIconUrl(rotation?.job)} alt={rotation?.job || 'Job'} class="h-24 w-24 rounded-lg shadow-lg" />
       <div class="text-left">
@@ -50,6 +50,10 @@
         <p class="text-slate-400 text-lg">{rotation.steps.length} steps · {rotation.job.toUpperCase()}</p>
       </div>
     </div>
+  </div>
+
+  <div class="text-center text-slate-400 mb-5">
+    <p>Press the correct key/button sequence to progress through the rotation.</p>
   </div>
 
   <!-- Configuration Card -->
@@ -225,7 +229,6 @@
 
   <!-- Instructions -->
   <div class="text-center text-slate-400 text-sm">
-    <p>Press the correct key/button sequence to progress through the rotation.</p>
     <p class="mt-1">Press <Keycap size="sm">ESC</Keycap> during practice to stop.</p>
   </div>
 
@@ -237,7 +240,7 @@
       </div>
       {#if lastTwirlIndex !== null}
         <a 
-          href={`/twirls/${lastTwirlIndex}`}
+          href={`/recordings/${lastTwirlIndex}`}
           class="inline-block px-6 py-3 bg-teal-600 hover:bg-teal-500 rounded-lg text-white font-semibold transition-colors"
         >
           View Performance Details →

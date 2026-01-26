@@ -1,3 +1,102 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-subtle {
+  @apply text-slate-400;
+}
+
+.border-primary-glow {
+  border-color: teal;
+  box-shadow: 0 0 8px teal;
+}
+
+
+.container-drk, .container-pld, .container-war, .container-gnb {
+  --xiv-job-background: 26, 46, 79;
+}
+.container-drk::before {
+  background-image: url('/images/ornate/drk.webp');
+}
+.container-pld::before {
+  background-image: url('/images/ornate/pld.webp');
+}
+.container-war::before {
+  background-image: url('/images/ornate/war.webp');
+}
+.container-gnb::before {
+  background-image: url('/images/ornate/gnb.webp');
+}
+
+.container-whm, .container-ast, .container-sge, .container-sch {
+  --xiv-job-background: 26, 72, 79;
+}
+.container-whm::before {
+  background-image: url('/images/ornate/whm.webp');
+}
+
+
+.container-drg, .container-mnk, .container-nin, .container-rpr, .container-sam, .container-blm,
+.container-pct, .container-rdm, .container-smn, .container-brd, .container-dnc, .container-mch {
+  --xiv-job-background: 75, 26, 26;
+}
+.container-drg::before {
+  background-image: url('/images/ornate/drg.webp');
+}
+.container-mnk::before {
+  background-image: url('/images/ornate/mnk.webp');
+}
+.container-nin::before {
+  background-image: url('/images/ornate/nin.webp');
+}
+.container-rpr::before {
+  background-image: url('/images/ornate/rpr.webp');
+}
+.container-sam::before {
+  background-image: url('/images/ornate/sam.webp');
+}
+.container-blm::before {
+  background-image: url('/images/ornate/blm.webp');
+}
+.container-pct::before {
+  background-image: url('/images/ornate/pct.webp');
+}
+.container-rdm::before {
+  background-image: url('/images/ornate/rdm.webp');
+}
+.container-smn::before {
+  background-image: url('/images/ornate/smn.webp');
+}
+.container-brd::before {
+  background-image: url('/images/ornate/brd.webp');
+}
+.container-dnc::before {
+  background-image: url('/images/ornate/dnc.webp');
+}
+.container-mch::before {
+  background-image: url('/images/ornate/mch.webp');
+}
+
+.container-job .step.active {
+  background-color: rgba(var(--xiv-job-background), 0.6);
+}
+.container-job .step-action:hover, .container-job .step-keybind:hover button {
+  background-color: rgba(var(--xiv-job-background), 0.4);
+}
+
+.container-job {
+  position: relative;
+}
+.container-job::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  filter: brightness(0.5);
+  border-radius: 0.75rem;
+  background-color: rgb(var(--xiv-job-background));
+}

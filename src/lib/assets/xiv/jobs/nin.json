@@ -70,6 +70,11 @@
     "icon": "actions/25777.png"
   },
   {
+    "row_id": 2265,
+    "name": "Fuma Shuriken",
+    "icon": "actions/2265.png"
+  },
+  {
     "row_id": 2242,
     "name": "Gust Slash",
     "icon": "actions/2242.png"
@@ -88,6 +93,11 @@
     "row_id": 2245,
     "name": "Hide",
     "icon": "actions/2245.png"
+  },
+  {
+    "row_id": 16492,
+    "name": "Hyosho Ranryu",
+    "icon": "actions/16492.png"
   },
   {
     "row_id": 2263,
@@ -130,6 +140,11 @@
     "icon": "actions/25774.png"
   },
   {
+    "row_id": 18877,
+    "name": "Raiton",
+    "icon": "actions/18877.png"
+  },
+  {
     "row_id": 7541,
     "name": "Second Wind",
     "icon": "actions/7541.png"
@@ -150,6 +165,11 @@
     "icon": "actions/2240.png"
   },
   {
+    "row_id": 18881,
+    "name": "Suiton",
+    "icon": "actions/18881.png"
+  },
+  {
     "row_id": 2259,
     "name": "Ten",
     "icon": "actions/2259.png"
@@ -158,6 +178,11 @@
     "row_id": 7403,
     "name": "Ten Chi Jin",
     "icon": "actions/7403.png"
+  },
+  {
+    "row_id": 36961,
+    "name": "Tenri Jindo",
+    "icon": "actions/36961.png"
   },
   {
     "row_id": 2247,
@@ -173,5 +198,10 @@
     "row_id": 7546,
     "name": "True North",
     "icon": "actions/7546.png"
+  },
+  {
+    "row_id": 36960,
+    "name": "Zesho Meppo",
+    "icon": "actions/36960.png"
   }
 ]

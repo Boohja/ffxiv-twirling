@@ -67,10 +67,6 @@ export function getJobLoaders(): Record<string, () => Promise<{ default: any }>>
  * 
  * @param jobId - The job identifier (e.g., 'drk', 'ast', 'sam')
  * @returns Promise resolving to array of job actions, or empty array if not found
- * 
- * @example
- * const actions = await loadJobActions('drk')
- * console.log(actions) // [{ name: 'Bloodspiller', ... }, ...]
  */
 export async function loadJobActions(jobId: string): Promise<any[]> {
   const loaders = getJobLoaders()

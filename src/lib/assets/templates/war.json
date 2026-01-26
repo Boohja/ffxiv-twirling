@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "war",
+    "slug": "war-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/tank/warrior/openers/",
+    "updated": "2025-12-27",
+    "steps": [
+      {
+        "name": "Infuriate",
+        "icon": "actions/52.png",
+        "action": 52
+      },
+      {
+        "name": "Heavy Swing",
+        "icon": "actions/31.png",
+        "action": 31
+      },
+      {
+        "name": "Maim",
+        "icon": "actions/37.png",
+        "action": 37
+      },
+      {
+        "name": "Storm's Eye",
+        "icon": "actions/45.png",
+        "action": 45
+      },
+      {
+        "name": "Inner Release",
+        "icon": "actions/7389.png",
+        "action": 7389
+      },
+      {
+        "name": "Inner Chaos",
+        "icon": "actions/16465.png",
+        "action": 16465
+      },
+      {
+        "name": "Upheaval",
+        "icon": "actions/7387.png",
+        "action": 7387
+      },
+      {
+        "name": "Onslaught",
+        "icon": "actions/7386.png",
+        "action": 7386
+      },
+      {
+        "name": "Fell Cleave",
+        "icon": "actions/3549.png",
+        "action": 3549
+      },
+      {
+        "name": "Onslaught",
+        "icon": "actions/7386.png",
+        "action": 7386
+      },
+      {
+        "name": "Fell Cleave",
+        "icon": "actions/3549.png",
+        "action": 3549
+      },
+      {
+        "name": "Onslaught",
+        "icon": "actions/7386.png",
+        "action": 7386
+      },
+      {
+        "name": "Fell Cleave",
+        "icon": "actions/3549.png",
+        "action": 3549
+      },
+      {
+        "name": "Primal Wrath",
+        "icon": "actions/36924.png",
+        "action": 36924
+      },
+      {
+        "name": "Infuriate",
+        "icon": "actions/52.png",
+        "action": 52
+      },
+      {
+        "name": "Primal Rend",
+        "icon": "actions/25753.png",
+        "action": 25753
+      },
+      {
+        "name": "Primal Ruination",
+        "icon": "actions/36925.png",
+        "action": 36925
+      },
+      {
+        "name": "Inner Chaos",
+        "icon": "actions/16465.png",
+        "action": 16465
+      },
+      {
+        "name": "Heavy Swing",
+        "icon": "actions/31.png",
+        "action": 31
+      },
+      {
+        "name": "Maim",
+        "icon": "actions/37.png",
+        "action": 37
+      },
+      {
+        "name": "Storm's Path",
+        "icon": "actions/42.png",
+        "action": 42
+      },
+      {
+        "name": "Fell Cleave",
+        "icon": "actions/3549.png",
+        "action": 3549
+      },
+      {
+        "name": "Infuriate",
+        "icon": "actions/52.png",
+        "action": 52
+      },
+      {
+        "name": "Inner Chaos",
+        "icon": "actions/16465.png",
+        "action": 16465
+      }
+    ]
+  }
+]

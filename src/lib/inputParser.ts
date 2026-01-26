@@ -150,7 +150,6 @@ export class InputSnapshot {
       this.eventHandlers['released']?.(this.currentInput);
       return;
     }
-    console.log(JSON.stringify(this.currentInput));
     if (this.shouldCancel()) {
       this.eventHandlers['cancelInput']?.(this.currentInput);
       return;
@@ -175,10 +174,6 @@ function parseKeyboardEvent(event: KeyboardEvent): KeyboardInput {
   if (event.shiftKey) input.shift = true;
   if (event.altKey) input.alt = true;
 
-  // if (blacklistedKeyboardCodes.includes(event.code)) {
-  //   return input;
-  // }
-
   if (!isModifierKey(event.key) && event.type === 'keydown') {
     input.keyCode = event.code;
     input.keyName = deriveKeyName(event.key, event.code);
@@ -189,6 +184,7 @@ function parseKeyboardEvent(event: KeyboardEvent): KeyboardInput {
 
 function parseMouseEvent(event: MouseEvent): MouseInput {
   event.preventDefault();
+  event.stopPropagation();
   const input: MouseInput = {};
   if (blacklistedMouseButtons.includes(event.button)) {
     return input;

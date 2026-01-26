@@ -38,6 +38,14 @@ export interface Rotation {
   job: string,
   slug: string,
   steps: RotationStep[]
+  createdAt: string,
+  updatedAt: string,
+  lastTwirlAt?: string
+}
+
+export interface RotationTemplate extends Rotation {
+  url: string,
+  updated: string
 }
 
 const emptyRotations: Rotation[] = []

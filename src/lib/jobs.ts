@@ -2,6 +2,7 @@ export type Job = {
   id: string
   name: string
   role: string
+  hasTemplates?: boolean
 }
 
 type Role = {
@@ -27,22 +28,22 @@ export const Jobs: Job[] = [
   { id: 'blm', name: 'Black Mage', role: 'rangedMagic' },
   { id: 'brd', name: 'Bard', role: 'rangedPhysical' },
   { id: 'dnc', name: 'Dancer', role: 'rangedPhysical' },
-  { id: 'drg', name: 'Dragoon', role: 'melee' },
-  { id: 'drk', name: 'Dark Knight', role: 'tank' },
-  { id: 'gnb', name: 'Gunbreaker', role: 'tank' },
+  { id: 'drg', name: 'Dragoon', role: 'melee', hasTemplates: true },
+  { id: 'drk', name: 'Dark Knight', role: 'tank', hasTemplates: true },
+  { id: 'gnb', name: 'Gunbreaker', role: 'tank', hasTemplates: true },
   { id: 'mch', name: 'Machinist', role: 'rangedPhysical' },
-  { id: 'mnk', name: 'Monk', role: 'melee' },
-  { id: 'nin', name: 'Ninja', role: 'melee' },
+  { id: 'mnk', name: 'Monk', role: 'melee', hasTemplates: true },
+  { id: 'nin', name: 'Ninja', role: 'melee', hasTemplates: true },
   { id: 'pct', name: 'Pictomancer', role: 'rangedMagic' },
-  { id: 'pld', name: 'Paladin', role: 'tank' },
+  { id: 'pld', name: 'Paladin', role: 'tank', hasTemplates: true },
   { id: 'rdm', name: 'Red Mage', role: 'rangedMagic' },
-  { id: 'rpr', name: 'Reaper', role: 'melee' },
+  { id: 'rpr', name: 'Reaper', role: 'melee', hasTemplates: true },
   { id: 'sam', name: 'Samurai', role: 'melee' },
   { id: 'sch', name: 'Scholar', role: 'heal' },
   { id: 'sge', name: 'Sage', role: 'heal' },
   { id: 'smn', name: 'Summoner', role: 'rangedMagic' },
-  { id: 'war', name: 'Warrior', role: 'tank' },
-  { id: 'whm', name: 'White Mage', role: 'heal' }
+  { id: 'war', name: 'Warrior', role: 'tank', hasTemplates: true },
+  { id: 'whm', name: 'White Mage', role: 'heal', hasTemplates: true }
 ]
 
 export const JobsByRole: RoleWithJobs[] = Roles.reduce((list, role) => {

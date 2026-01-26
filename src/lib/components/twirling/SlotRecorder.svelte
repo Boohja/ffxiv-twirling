@@ -4,9 +4,14 @@
   import type { KeyboardInput, GamepadInput } from '$lib/stores';
   import { getGamepadButtonUrl } from '$lib/iconLoader';
 	import Keycap from '../Keycap.svelte';
+	import { Icon } from 'svelte-icons-pack';
+	import { LuLightbulb } from 'svelte-icons-pack/lu';
+
+  export let once: boolean = false;
+  export let showClear: boolean = false;
 
   const dispatch = createEventDispatcher<{
-    input: KeyboardInput | GamepadInput;
+    input: KeyboardInput | GamepadInput | undefined;
     cancel: void;
   }>();
 
@@ -29,8 +34,8 @@
     }
   }
 
-  function handleInput(e: CustomEvent<KeyboardInput | GamepadInput>) {
-    dispatch('input', e.detail);
+  function handleInput(e?: CustomEvent<KeyboardInput | GamepadInput>) {
+    dispatch('input', e?.detail);
   }
 
   function handleCancel() {
@@ -40,13 +45,21 @@
   function handleCancelButton(e: MouseEvent) {
     e.stopPropagation();
     e.preventDefault();
+    recordInputRef.stop();
     dispatch('cancel');
+  }
+
+  function handleClearButton(e: MouseEvent) {
+    e.stopPropagation();
+    e.preventDefault();
+    recordInputRef.stop();
+    dispatch('input', undefined);
   }
 </script>
 
 <div class="space-y-4">
   <div class="text-sm text-slate-300 flex items-center gap-2 flex-wrap">
-    <span>Record each step one by one. Press</span>
+    <span>{#if !once}Record each step one by one. {/if}Press</span>
     <Keycap size="sm">Escape</Keycap>
     <span>or</span>
     {#if startButtonUrl}
@@ -55,6 +68,12 @@
       <Keycap size="sm">{gamepadLayout === 'ps' ? 'Options' : 'Start'}</Keycap>
     {/if}
     <span>to cancel.</span>
+    {#if !once}
+      <p class="my-2">
+        <Icon src={LuLightbulb} size="1.2rem" className="inline-block mr-1" />
+        Just keep smashing buttons, we'll create missing steps for you!
+      </p>
+    {/if}
   </div>
 
   <RecordInput
@@ -75,5 +94,14 @@
     >
       Cancel Recording
     </button>
+    {#if showClear}
+      <button
+        type="button"
+        class="ml-4 py-2 px-6 border border-red-600 rounded-full text-red-400 font-semibold hover:bg-red-700/30 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+        on:click={handleClearButton}
+      >
+        Clear Input
+      </button>
+    {/if}
   </div>
 </div>

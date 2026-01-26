@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "whm",
+    "slug": "whm-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/heal/white-mage/openers/",
+    "updated": "2025-12-27",
+    "steps": [
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Dia",
+        "icon": "actions/16532.png",
+        "action": 16532
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Presence of Mind",
+        "icon": "actions/136.png",
+        "action": 136
+      },
+      {
+        "name": "Glare IV",
+        "icon": "actions/37009.png",
+        "action": 37009
+      },
+      {
+        "name": "Assize",
+        "icon": "actions/3571.png",
+        "action": 3571
+      },
+      {
+        "name": "Afflatus Misery",
+        "icon": "actions/16535.png",
+        "action": 16535
+      },
+      {
+        "name": "Glare IV",
+        "icon": "actions/37009.png",
+        "action": 37009
+      },
+      {
+        "name": "Glare IV",
+        "icon": "actions/37009.png",
+        "action": 37009
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Glare III",
+        "icon": "actions/25859.png",
+        "action": 25859
+      },
+      {
+        "name": "Dia",
+        "icon": "actions/16532.png",
+        "action": 16532
+      }
+    ]
+  }
+]

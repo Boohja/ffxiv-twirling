@@ -51,7 +51,8 @@
 </script>
 
 <div
-  class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 {opened ? '' : 'hidden'}"
+  class="fixed inset-0 z-50 flex items-center rounded-xl justify-center p-4 {opened ? '' : 'hidden'}"
+  id="dialog-wrapper"
   role="dialog"
   aria-modal="true"
   aria-labelledby="keybind-title"
@@ -114,3 +115,15 @@
     </div>
   </div>
 </div>
+
+<style scoped>
+  #dialog-wrapper::before {
+    content: '';
+    border-radius: 0.75rem;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+</style>

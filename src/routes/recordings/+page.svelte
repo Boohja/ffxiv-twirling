@@ -4,6 +4,10 @@
   import { Icon } from 'svelte-icons-pack'
   import { BiTask, BiTrash } from 'svelte-icons-pack/bi'
   import { getJobIconUrls } from '$lib/iconLoader'
+	import Container from '$lib/components/form/Container.svelte';
+	import { LuClipboardCheck } from 'svelte-icons-pack/lu';
+	import { getLocalDateTimeString, getRelativeAge } from '$lib/helpers';
+	import RelativeAge from '$lib/components/RelativeAge.svelte';
 
   const jobIconUrl = getJobIconUrls()
 
@@ -37,10 +41,10 @@
   }
 </script>
 
-<div class="p-4">
+<Container>
   <PageTitle>
     <div class="flex items-center gap-3">
-      <Icon src={BiTask} size="1.5em" /> Twirl Recordings
+      <Icon src={LuClipboardCheck} size="1.5em" color="#57c5b7" /> Twirl Recordings
     </div>
   </PageTitle>
 
@@ -63,7 +67,7 @@
             <th class="p-3 font-semibold">Rotation</th>
             <th class="p-3 font-semibold">Date</th>
             <th class="p-3 font-semibold">Duration</th>
-            <th class="p-3 font-semibold">Steps</th>
+            <th class="p-3 font-semibold">Inputs</th>
             <th class="p-3 font-semibold">Accuracy</th>
             <th class="p-3 font-semibold">Status</th>
             <th class="p-3 font-semibold"></th>
@@ -72,7 +76,11 @@
         <tbody>
           {#each $twirls as twirl, i}
             <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
-              <td class="p-3 text-slate-400">#{i + 1}</td>
+              <td class="p-3 text-slate-400">
+                <a href="/recordings/{i}" class="hover:text-teal-400 transition-colors">
+                  #{i + 1}
+                </a>
+              </td>
               <td class="p-3 text-slate-200">
                 <a href="/rotations/{twirl.rotation.slug}" class="hover:text-teal-400 transition-colors inline-flex items-center gap-2">
                   {#if jobIconUrl[twirl.rotation.job]}
@@ -83,7 +91,7 @@
                   {twirl.rotation.name}
                 </a>
               </td>
-              <td class="p-3 text-slate-400 text-xs">{formatDate(twirl.startedAt)}</td>
+              <td class="p-3 text-slate-400 text-xs"><RelativeAge date={new Date(twirl.startedAt)} /></td>
               <td class="p-3 text-slate-300 font-mono">{formatDuration(twirl.duration)}</td>
               <td class="p-3 text-slate-300 text-center">{getTotalAttempts(twirl)} / {twirl.steps.length}</td>
               <td class="p-3">
@@ -145,4 +153,4 @@
       </p>
     </div>
   {/if}
-</div>
+  </Container>

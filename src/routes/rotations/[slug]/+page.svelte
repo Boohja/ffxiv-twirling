@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import { goto } from '$app/navigation'
+  import { goto, invalidate } from '$app/navigation'
   import { rotations, type Rotation, type RotationStep, type KeyboardInput, type GamepadInput } from '$lib/stores'
   import { get, writable } from 'svelte/store'
 	import SlotEditor from "$lib/components/twirling/SlotEditor.svelte";
@@ -10,8 +10,11 @@
   import PageTitle from '$lib/components/page/PageTitle.svelte'
   import { Icon } from 'svelte-icons-pack'
   import { BiChevronLeft } from 'svelte-icons-pack/bi'
-  import { hasKeybind } from "$lib/helpers.js"
+  import { createSlug, hasKeybind, isValidRotationName } from "$lib/helpers.js"
   import { getIconUrl, loadJobActions, getJobIconUrl } from '$lib/iconLoader'
+	import { LuChevronLeft } from 'svelte-icons-pack/lu';
+	import Button from '$lib/components/form/Button.svelte';
+	import Container from '$lib/components/form/Container.svelte';
 
   const rots = get(rotations)
   let rotation: Rotation
@@ -23,6 +26,7 @@
   let loading = true
   let selectedIdx: number | null = null
   let isRecording = false
+  let recordSingle = false
 
   $: jobIconUrl = rotation?.job ? getJobIconUrl(rotation.job) : ''
 
@@ -35,7 +39,6 @@
       }
       rotation = rot
       const actions = await loadJobActions(rotation.job)
-      console.log(rotation)
       jobActions = actions
       stepsStore.set(rotation.steps as RotationStep[])
     }
@@ -81,6 +84,7 @@
     }
     
     rotation.steps = updated
+    rotation.updatedAt = new Date().toISOString()
     rotations.set(rots)
   }
 
@@ -88,9 +92,20 @@
     selectStep(detail.idx, detail.step)
   }
 
+  async function handleRecordStep (detail: { idx: number, step: RotationStep }) {
+    isRecording = true
+    selectedIdx = detail.idx
+    recordSingle = true
+    await tick()
+    if (slotRecorder) {
+      slotRecorder.startRecording()
+    }
+  }
+
   function handleDeleteStep (detail: { idx: number }) {
     stepsStore.update(existingSteps => existingSteps.filter((_, i) => i !== detail.idx))
     rotation.steps = $stepsStore
+    rotation.updatedAt = new Date().toISOString()
     rotations.set(rots)
   }
 
@@ -105,13 +120,12 @@
     }
     stepsStore.update(existingSteps => [...existingSteps, newStep])
     rotation.steps.push(newStep)
-    // console.log('new entry steps: ', steps)
-    // console.log('new entry rotation: ', rotation)
-    // rotation.steps = steps
+    rotation.updatedAt = new Date().toISOString()
     rotations.set(rots)
     if (propagateKeybind && entry.input) {
       copyKeybindToSteps(entry.input, entry.name)
     }
+    scrollToStep(rotation.steps.length - 1)
   }
 
   function updateEntry (idx: number, entry: RotationStep, propagateKeybind: boolean) {
@@ -121,10 +135,13 @@
       return newSteps
     })
     rotation.steps[idx] = entry
+    rotation.updatedAt = new Date().toISOString()
     rotations.set(rots)
     if (propagateKeybind && entry.input) {
       copyKeybindToSteps(entry.input, entry.name)
     }
+    selectedIdx = null
+    slotEditor.reset()
   }
 
   function copyKeybindToSteps (input: KeyboardInput | GamepadInput, name: string) {
@@ -140,7 +157,6 @@
     let changed = 0
     rotation.steps.forEach((step: RotationStep) => {
       if (step.name === name) {
-        console.log('copying keybind to step: ', step.name)
         step.input = input
         changed++
       }
@@ -148,13 +164,6 @@
     if (changed > 1) {
       rotations.set(rots)
     }
-
-    // const hits: {[key: number]: RotationStep} = rotation.steps.reduce((acc, step: RotationStep, idx: number) => {
-    //   if (step.name === name) {
-    //     acc[idx] = step
-    //   }
-    //   return acc
-    // }, {} as {[key: number]: RotationStep})
   }
 
   function goTwirl () {
@@ -167,6 +176,7 @@
 
   async function startRecording() {
     isRecording = true
+    recordSingle = false
     const startIdx = selectedIdx !== null ? selectedIdx : 0
     selectedIdx = null
     await tick()
@@ -193,8 +203,8 @@
     slotEditor?.reset()
   }
 
-  async function handleRecordInput(e: CustomEvent<KeyboardInput | GamepadInput>) {
-    const input = e.detail
+  async function handleRecordInput(e: CustomEvent<KeyboardInput | GamepadInput | undefined>) {
+    const input = e?.detail
     
     if (selectedIdx === null) {
       // Create new step
@@ -205,6 +215,7 @@
       }
       stepsStore.update(existingSteps => [...existingSteps, newStep])
       rotation.steps.push(newStep)
+      rotation.updatedAt = new Date().toISOString()
       rotations.set(rots)
       selectedIdx = $stepsStore.length - 1
       await scrollToStep(selectedIdx)
@@ -216,7 +227,17 @@
         return newSteps
       })
       rotation.steps[selectedIdx].input = input
+      rotation.updatedAt = new Date().toISOString()
       rotations.set(rots)
+    }
+
+    if (recordSingle) {
+      // Stop recording after single input
+      isRecording = false
+      selectedIdx = null
+      slotEditor?.reset()
+      recordSingle = false
+      return
     }
     
     // Move to next step
@@ -241,6 +262,36 @@
       stepElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
   }
+
+  async function duplicateRotation() {
+    let name = prompt('Enter name for duplicated rotation', rotation.name + ' Copy') ?? ''
+    if (!isValidRotationName(name)) {
+      return
+    }
+    if (rots.some(r => r.name === name)) {
+      alert('Name already in use')
+      return
+    }
+    const newSlug = createSlug(name)
+    const newRotation = { name, job: rotation.job, slug: newSlug, steps: $stepsStore, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(), lastTwirlAt: undefined }
+    rots.push(newRotation)
+    rotations.set(rots)
+    rotation = newRotation
+    await goto(`/rotations/${newSlug}`, { invalidateAll: true })
+  }
+
+  async function deleteRotation() {
+    const confirmDelete = confirm(`Are you sure you want to delete the rotation "${rotation.name}"? This action cannot be undone.`)
+    if (!confirmDelete) {
+      return
+    }
+    const index = rots.findIndex(r => r.slug === rotation.slug)
+    if (index !== -1) {
+      rots.splice(index, 1)
+      rotations.set(rots)
+    }
+    await goto('/rotations', { invalidateAll: true })
+  }
 </script>
 
 {#if loading}
@@ -249,15 +300,15 @@
   </div>
 {/if}
 
-<div class="p-4 border border-slate-900/60 rounded mb-8 bg-slate-900/40">
+<Container>
   <PageTitle>
     <div class="flex items-center gap-3">
       <a href="/rotations" class="inline-flex items-center justify-center rounded hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/50">
-        <Icon src={BiChevronLeft} size="1.5em" />
+        <Icon src={LuChevronLeft} color="#57c5b7" size="1.5em" />
       </a>
       <div class="flex items-center gap-3">
         {#if jobIconUrl}
-          <img src={jobIconUrl} alt={rotation?.job || 'Job'} class="h-8 w-8 shrink-0 rounded" />
+          <img src={jobIconUrl} alt={rotation?.job || 'Job'} class="h-12 w-12 shrink-0 rounded" />
         {:else}
           <div class="h-8 w-8 shrink-0 rounded bg-slate-700"></div>
         {/if}
@@ -266,51 +317,67 @@
     </div>
   </PageTitle>
   <div class="flex justify-end mt-3">
-    <button
-      type="button"
-      class="py-2 px-4 border border-teal-600 hover:bg-teal-700 rounded-full text-white font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-      on:click={goTwirl}
-      disabled={!canTwirl}
+    <Button
+      variant="primary"
+      onclick={goTwirl}
+      class="{!canTwirl ? 'opacity-50' : ''}"
     >
       Twirl
-  </button>
-    {#if !isRecording}
-      <button
-        type="button"
-        class="py-2 px-4 border border-teal-600 hover:bg-teal-700 rounded-full text-white font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-        on:click={startRecording}
+    </Button>
+    {#if !isRecording || recordSingle}
+      <Button
+        variant="outline-secondary"
+        class="ml-3"
+        onclick={startRecording}
       >
         Record Rotation
-      </button>
+      </Button>
     {:else}
-      <button
-        type="button"
-        class="py-2 px-4 border border-red-600 bg-red-900/20 hover:bg-red-900/40 rounded-full text-red-300 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-        on:click={stopRecording}
+      <Button
+        variant="outline-danger"
+        class="ml-3"
+        onclick={stopRecording}
       >
         Stop Recording
-      </button>
+      </Button>
     {/if}
+    <Button
+      variant="outline-secondary"
+      class="ml-3"
+      onclick={duplicateRotation}
+    >
+      Duplicate
+    </Button>
+    <Button
+      variant="outline-danger"
+      class="ml-3 opacity-40 hover:opacity-100"
+      onclick={deleteRotation}
+    >
+      Delete
+    </Button>
   </div>
-</div>
+</Container>
 
 <div class="grid gap-4 grid-cols-2">
-  <div class="border border-slate-500 p-3 mb-5">
+  <div class="border border-slate-600 p-3 rounded-xl mb-8 bg-slate-900/40 container-job container-{rotation?.job}">
     <RotationStepList
       steps={$stepsStore}
       {selectedIdx}
       iconUrl={getIconUrl}
       on:reorder={(e) => handleReorder(e.detail)}
       on:selectstep={(e) => handleSelectStep(e.detail)}
+      on:recordstep={(e) => handleRecordStep(e.detail)}
       on:deletestep={(e) => handleDeleteStep(e.detail)}
     />
-    <div class="pt-3 mt-3 border-t border-slate-700">
-      <button class="py-3 w-full px-5 border border-teal-700 hover:bg-teal-700 {canTwirl ? '' : 'opacity-40'} rounded-full text-white font-semibold" on:click={goTwirl}>Twirl</button>
+    <div class="pt-3 mt-3">
+      <Button variant="outline-primary" class="block w-full {canTwirl ? '' : 'opacity-50'}" onclick={goTwirl}>Start Twirling</Button>
     </div>
   </div>
-  <div class="p-4 border border-slate-900/60 rounded mb-8 bg-slate-900/40 sticky top-4 self-start">
+  <Container class="sticky top-20 self-start">
     {#if isRecording}
       <SlotRecorder
+        once={recordSingle}
+        showClear={recordSingle}
         bind:this={slotRecorder}
         on:input={handleRecordInput}
         on:cancel={stopRecording}
@@ -321,10 +388,11 @@
         on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
         on:deletestep={(e) => handleDeleteStep(e.detail)}
         bind:this={slotEditor}
+        jobIcon={jobIconUrl}
         suggestions={jobActions}
         existingSteps={$stepsStore}
       />
     {/if}
-  </div>
+  </Container>
 
 </div>

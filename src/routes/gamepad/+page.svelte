@@ -6,6 +6,8 @@
 	import { getGamepadButtonUrl } from "$lib/iconLoader";
 	import { formatGamepadInput } from "$lib/helpers";
 	import type { GamepadInput } from "$lib/stores";
+	import Container from "$lib/components/form/Container.svelte";
+	import { LuGamepad2 } from "svelte-icons-pack/lu";
 
 	let gamepadLayout: 'ps' | 'xbox' | null = null;
 	let mounted = false;
@@ -85,10 +87,10 @@
 	}
 </script>
 
-<div class="p-4 border border-slate-900/60 rounded mb-8 bg-slate-900/40">
+<Container>
 	<PageTitle>
 		<div class="flex items-center gap-2">
-			<Icon src={BiJoystick} size="1.3em" className="text-teal-400" />
+			<Icon src={LuGamepad2} size="1.3em" color="#57c5b7" />
 			<span>Gamepad Configuration</span>
 		</div>
 	</PageTitle>
@@ -176,7 +178,7 @@
 											<img src={getGamepadButtonUrl(gamepadLayout, currentInput.trigger, true)} alt={formatGamepadInput({button: currentInput.trigger})} class="max-h-20 w-auto object-contain" />
 											<span class="text-slate-400 text-2xl font-bold">+</span>
 										{/if}
-										<img src={getGamepadButtonUrl(gamepadLayout, currentInput.button, true)} alt={formatGamepadInput({button: currentInput.button})} class="max-h-20 w-auto object-contain" />
+										<img src={getGamepadButtonUrl(gamepadLayout, currentInput.button!, true)} alt={formatGamepadInput({button: currentInput.button})} class="max-h-20 w-auto object-contain" />
 									</div>
 								{:else if currentInput && !gamepadLayout}
 									<span class="text-teal-400 font-mono text-lg">{formatGamepadInput(currentInput)}</span>
@@ -190,4 +192,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</Container>

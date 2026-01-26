@@ -10,6 +10,7 @@
   import errorMp3 from '$lib/assets/sounds/error.mp3'
   import correctMp3 from '$lib/assets/sounds/correct.mp3'
   import timeoutMp3 from '$lib/assets/sounds/timeout.mp3'
+  import endMp3 from '$lib/assets/sounds/end.mp3'
 	import { getJobIconUrl, getIconUrl } from '$lib/iconLoader'
   import InputRender from '$lib/components/twirling/InputRender.svelte'
   import TwirlConfig from '$lib/components/twirling/TwirlConfig.svelte'
@@ -21,6 +22,7 @@
   $: errorSound = new Sound(errorMp3, { volume: $twirlConfig.volume })
   $: correctSound = new Sound(correctMp3, { volume: $twirlConfig.volume })
   $: timeoutSound = new Sound(timeoutMp3, { volume: $twirlConfig.volume })
+  $: endSound = new Sound(endMp3, { volume: $twirlConfig.volume })
   
   let rotation: Rotation
   let loading = true
@@ -257,6 +259,10 @@
       
       if (currentIdx === steps.length - 1) {
         completedSuccessfully = true
+        if ($twirlConfig.playSounds) {
+          endSound.play()
+        }
+
         stopRecording(true)
         return
       }
@@ -299,6 +305,9 @@
     recording = false
     resetTimeout()
     stopTimer()
+
+    rotation.lastTwirlAt = new Date().toISOString()
+    rotations.set(rots)
     
     // Finish and save the twirl recording
     if (twirlRecording) {
@@ -306,8 +315,6 @@
       if (currentStepRecording) {
         finishCurrentStepRecording()
       }
-      
-      // Save twirl recording
       saveTwirlRecording(finished)
     }
     
@@ -384,12 +391,8 @@
     if (!currentStepRecording || !twirlRecording) return
     
     currentStepRecording.duration = Date.now() - currentStepStartTime
-    // Calculate if step was completed correctly
-    // Only true if: has inputs AND all inputs are correct
-    // Note: timeout flag is informational - with "stay" behavior, user can still provide correct input after timeout
     currentStepRecording.correct = currentStepRecording.inputs.length > 0 && 
       currentStepRecording.inputs.every(input => input.correct)
-    // Step is already in the array, no need to push
     currentStepRecording = null
   }
 
@@ -400,20 +403,13 @@
     twirlRecording.endedAt = now
     twirlRecording.duration = Date.now() - startTime
     twirlRecording.finished = finished
-    
-    // Calculate if the twirl was completed correctly
-    // Must have completed successfully AND all steps must be correct
+
     twirlRecording.correct = completedSuccessfully && 
       twirlRecording.steps.every(step => step.correct)
     
-    // Save to localStorage via persisted store and get index
     const currentTwirls = get(twirls)
     lastTwirlIndex = currentTwirls.length
-    twirls.update(current => [...current, twirlRecording!])
-    
-    console.log('Twirl recording saved:', twirlRecording, 'at index:', lastTwirlIndex)
-    
-    // Reset recording state
+    twirls.update(current => [...current, twirlRecording!])    
     twirlRecording = null
     currentStepRecording = null
   }
@@ -426,11 +422,9 @@
 
   function getStepIcon(step: RotationStep): string {
     if (!step.icon) return ''
-    // If it's an action icon (from xiv assets), use getIconUrl
     if (step.action && !step.icon.startsWith('/images/')) {
       return getIconUrl(step.icon)
     }
-    // Otherwise, use the path as-is (for custom /images/skills paths)
     return step.icon
   }
 </script>

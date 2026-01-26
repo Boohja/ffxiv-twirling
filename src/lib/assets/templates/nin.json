@@ -1,0 +1,294 @@
+[
+  {
+    "name": "Standard 4th GCD (The Balance)",
+    "job": "nin",
+    "slug": "nin-opener-4gcd",
+    "url": "https://www.thebalanceffxiv.com/jobs/melee/ninja/openers/",
+    "updated": "2025-02-25",
+      "steps": [
+          {
+              "name": "Ten",
+              "icon": "actions/2259.png",
+              "action": 2259
+          },
+          {
+              "name": "Chi",
+              "icon": "actions/2261.png",
+              "action": 2261
+          },
+          {
+              "name": "Jin",
+              "icon": "actions/2263.png",
+              "action": 2263
+          },
+          {
+              "name": "Suiton",
+              "icon": "actions/18881.png",
+              "action": 18881
+          },
+          {
+              "name": "Kassatsu",
+              "icon": "actions/2264.png",
+              "action": 2264
+          },
+          {
+              "name": "Spinning Edge",
+              "icon": "actions/2240.png",
+              "action": 2240
+          },
+          {
+              "name": "Gust Slash",
+              "icon": "actions/2242.png",
+              "action": 2242
+          },
+          {
+              "name": "Dokumori",
+              "icon": "actions/36957.png",
+              "action": 36957
+          },
+          {
+              "name": "Bunshin",
+              "icon": "actions/16493.png",
+              "action": 16493
+          },
+          {
+              "name": "Phantom Kamaitachi",
+              "icon": "actions/25774.png",
+              "action": 25774
+          },
+          {
+              "name": "Armor Crush",
+              "icon": "actions/3563.png",
+              "action": 3563
+          },
+          {
+              "name": "Kunai's Bane",
+              "icon": "actions/36958.png",
+              "action": 36958
+          },
+          {
+              "name": "Hyosho Ranryu",
+              "icon": "actions/16492.png",
+              "action": 16492
+          },
+          {
+              "name": "Dream Within a Dream",
+              "icon": "actions/3566.png",
+              "action": 3566
+          },
+          {
+              "name": "Raiton",
+              "icon": "actions/18877.png",
+              "action": 18877
+          },
+          {
+              "name": "Ten Chi Jin",
+              "icon": "actions/7403.png",
+              "action": 7403
+          },
+          {
+              "name": "Fuma Shuriken",
+              "icon": "actions/2265.png",
+              "action": 2265
+          },
+          {
+              "name": "Raiton",
+              "icon": "actions/18877.png",
+              "action": 18877
+          },
+          {
+              "name": "Suiton",
+              "icon": "actions/18881.png",
+              "action": 18881
+          },
+          {
+              "name": "Meisui",
+              "icon": "actions/16489.png",
+              "action": 16489
+          },
+          {
+              "name": "Fleeting Raiju",
+              "icon": "actions/25778.png",
+              "action": 25778
+          },
+          {
+              "name": "Zesho Meppo",
+              "icon": "actions/36960.png",
+              "action": 36960
+          },
+          {
+              "name": "Tenri Jindo",
+              "icon": "actions/36961.png",
+              "action": 36961
+          },
+          {
+              "name": "Fleeting Raiju",
+              "icon": "actions/25778.png",
+              "action": 25778
+          },
+          {
+              "name": "Bhavacakra",
+              "icon": "actions/7402.png",
+              "action": 7402
+          },
+          {
+              "name": "Raiton",
+              "icon": "actions/18877.png",
+              "action": 18877
+          },
+          {
+              "name": "Fleeting Raiju",
+              "icon": "actions/25778.png",
+              "action": 25778
+          }
+      ],
+      "createdAt": "2026-01-25T16:01:51.755Z",
+      "updatedAt": "2026-01-25T16:14:43.396Z"
+  },
+  {
+    "name": "Standard 3rd GCD (The Balance)",
+    "job": "nin",
+    "slug": "nin-opener-3gcd",
+    "url": "https://www.thebalanceffxiv.com/jobs/melee/ninja/openers/",
+    "updated": "2025-02-25",
+      "steps": [
+          {
+              "name": "Ten",
+              "icon": "actions/2259.png",
+              "action": 2259
+          },
+          {
+              "name": "Chi",
+              "icon": "actions/2261.png",
+              "action": 2261
+          },
+          {
+              "name": "Jin",
+              "icon": "actions/2263.png",
+              "action": 2263
+          },
+          {
+              "name": "Suiton",
+              "icon": "actions/18881.png",
+              "action": 18881
+          },
+          {
+              "name": "Kassatsu",
+              "icon": "actions/2264.png",
+              "action": 2264
+          },
+          {
+              "name": "Spinning Edge",
+              "icon": "actions/2240.png",
+              "action": 2240
+          },
+          {
+              "name": "Gust Slash",
+              "icon": "actions/2242.png",
+              "action": 2242
+          },
+          {
+              "name": "Dokumori",
+              "icon": "actions/36957.png",
+              "action": 36957
+          },
+          {
+              "name": "Bunshin",
+              "icon": "actions/16493.png",
+              "action": 16493
+          },
+          {
+              "name": "Phantom Kamaitachi",
+              "icon": "actions/25774.png",
+              "action": 25774
+          },
+          {
+              "name": "Kunai's Bane",
+              "icon": "actions/36958.png",
+              "action": 36958
+          },
+          {
+              "name": "Hyosho Ranryu",
+              "icon": "actions/16492.png",
+              "action": 16492
+          },
+          {
+              "name": "Dream Within a Dream",
+              "icon": "actions/3566.png",
+              "action": 3566
+          },
+          {
+              "name": "Raiton",
+              "icon": "actions/18877.png",
+              "action": 18877
+          },
+          {
+              "name": "Ten Chi Jin",
+              "icon": "actions/7403.png",
+              "action": 7403
+          },
+          {
+              "name": "Fuma Shuriken",
+              "icon": "actions/2265.png",
+              "action": 2265
+          },
+          {
+              "name": "Raiton",
+              "icon": "actions/18877.png",
+              "action": 18877
+          },
+          {
+              "name": "Suiton",
+              "icon": "actions/18881.png",
+              "action": 18881
+          },
+          {
+              "name": "Meisui",
+              "icon": "actions/16489.png",
+              "action": 16489
+          },
+          {
+              "name": "Fleeting Raiju",
+              "icon": "actions/25778.png",
+              "action": 25778
+          },
+          {
+              "name": "Zesho Meppo",
+              "icon": "actions/36960.png",
+              "action": 36960
+          },
+          {
+              "name": "Tenri Jindo",
+              "icon": "actions/36961.png",
+              "action": 36961
+          },
+          {
+              "name": "Fleeting Raiju",
+              "icon": "actions/25778.png",
+              "action": 25778
+          },
+          {
+              "name": "Armor Crush",
+              "icon": "actions/3563.png",
+              "action": 3563
+          },
+          {
+              "name": "Bhavacakra",
+              "icon": "actions/7402.png",
+              "action": 7402
+          },
+          {
+              "name": "Raiton",
+              "icon": "actions/18877.png",
+              "action": 18877
+          },
+          {
+              "name": "Fleeting Raiju",
+              "icon": "actions/25778.png",
+              "action": 25778
+          }
+      ],
+      "createdAt": "2026-01-25T16:15:49.066Z",
+      "updatedAt": "2026-01-25T16:17:44.672Z"
+  }
+]

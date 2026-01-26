@@ -30,9 +30,24 @@
     "icon": "actions/24398.png"
   },
   {
+    "row_id": 24396,
+    "name": "Cross Reaping",
+    "icon": "actions/24396.png"
+  },
+  {
     "row_id": 24394,
     "name": "Enshroud",
     "icon": "actions/24394.png"
+  },
+  {
+    "row_id": 36971,
+    "name": "Executioner's Gallows",
+    "icon": "actions/36971.png"
+  },
+  {
+    "row_id": 36970,
+    "name": "Executioner's Gibbet",
+    "icon": "actions/36970.png"
   },
   {
     "row_id": 7549,
@@ -90,14 +105,29 @@
     "icon": "actions/7863.png"
   },
   {
+    "row_id": 24399,
+    "name": "Lemure's Slice",
+    "icon": "actions/24399.png"
+  },
+  {
     "row_id": 24377,
     "name": "Nightmare Scythe",
     "icon": "actions/24377.png"
   },
   {
+    "row_id": 36973,
+    "name": "Perfectio",
+    "icon": "actions/36973.png"
+  },
+  {
     "row_id": 24385,
     "name": "Plentiful Harvest",
     "icon": "actions/24385.png"
+  },
+  {
+    "row_id": 36969,
+    "name": "Sacrificium",
+    "icon": "actions/36969.png"
   },
   {
     "row_id": 7541,
@@ -138,6 +168,16 @@
     "row_id": 7546,
     "name": "True North",
     "icon": "actions/7546.png"
+  },
+  {
+    "row_id": 24390,
+    "name": "Unveiled Gibbet",
+    "icon": "actions/24390.png"
+  },
+  {
+    "row_id": 24395,
+    "name": "Void Reaping",
+    "icon": "actions/24395.png"
   },
   {
     "row_id": 24374,

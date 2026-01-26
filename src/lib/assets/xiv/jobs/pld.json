@@ -10,6 +10,26 @@
     "icon": "actions/16460.png"
   },
   {
+    "row_id": 25748,
+    "name": "Blade of Faith",
+    "icon": "actions/25748.png"
+  },
+  {
+    "row_id": 36922,
+    "name": "Blade of Honor",
+    "icon": "actions/36922.png"
+  },
+  {
+    "row_id": 25749,
+    "name": "Blade of Truth",
+    "icon": "actions/25749.png"
+  },
+  {
+    "row_id": 25750,
+    "name": "Blade of Valor",
+    "icon": "actions/25750.png"
+  },
+  {
     "row_id": 22,
     "name": "Bulwark",
     "icon": "actions/22.png"
@@ -165,6 +185,11 @@
     "icon": "actions/17.png"
   },
   {
+    "row_id": 36919,
+    "name": "Sepulchre",
+    "icon": "actions/36919.png"
+  },
+  {
     "row_id": 3542,
     "name": "Sheltron",
     "icon": "actions/3542.png"
@@ -188,6 +213,11 @@
     "row_id": 29,
     "name": "Spirits Within",
     "icon": "actions/29.png"
+  },
+  {
+    "row_id": 36918,
+    "name": "Supplication",
+    "icon": "actions/36918.png"
   },
   {
     "row_id": 7381,
