@@ -8,6 +8,14 @@
   let isLanding = $derived(page.url.pathname === '/')
 </script>
 
+<svelte:head>
+  <meta content="FFXIV Twirling" property="og:site_name">
+  <meta content="FFXIV Twirling - Practice Rotation Keybinds in the Browser" property="og:title">
+  <meta content="Pick your job, build your rotation from scratch or copy a template, assign keybinds and practice your rotations in the browser." property="og:description">
+  <meta content="https://ffxiv-twirling.vercel.app/embed_logo.png" property="og:image">
+  <meta content="FFXIV Twirling" name="twitter:title">
+</svelte:head>
+
 {#if !isLanding}
   <div class="block md:hidden absolute top-0 left-0 right-0 bottom-0 z-50 bg-gradient-to-tr from-teal-800 to-slate-800">
     <div class="flex flex-col items-center justify-center h-full">
