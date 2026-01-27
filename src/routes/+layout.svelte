@@ -3,9 +3,13 @@
   import Navbar from '$lib/components/page/Navbar.svelte'
 	import Footer from "$lib/components/page/Footer.svelte"
   import { page } from '$app/state'
+  import { dev } from '$app/environment';
+  import { injectAnalytics } from '@vercel/analytics/sveltekit';
 
   let hideNav = $derived(page.url.pathname.includes('/twirl'))
   let isLanding = $derived(page.url.pathname === '/')
+
+  injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 <svelte:head>
@@ -15,6 +19,7 @@
   <meta content="https://ffxiv-twirling.vercel.app/embed_logo.png" property="og:image">
   <meta content="FFXIV Twirling" name="twitter:title">
 </svelte:head>
+
 
 {#if !isLanding}
   <div class="block md:hidden absolute top-0 left-0 right-0 bottom-0 z-50 bg-gradient-to-tr from-teal-800 to-slate-800">
