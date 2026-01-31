@@ -4,7 +4,7 @@
   import { Icon } from 'svelte-icons-pack'
   import { LuSprout, LuCircle, LuCircleFadingPlus, LuChevronLeft } from "svelte-icons-pack/lu";
   import PageTitle from '$lib/components/page/PageTitle.svelte'
-  import { JobsByRole, Jobs } from '$lib/jobs';
+  import { JobsByRole, Jobs } from '$lib/types/jobs';
   import { crossfade, fade } from 'svelte/transition'
   import { onMount, tick } from 'svelte'
   import { goto } from '$app/navigation'

@@ -4,7 +4,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { Jobs } from '../src/lib/jobs.ts';
+import { Jobs } from '../src/lib/types/jobs.ts';
 
 const ROOT = process.cwd();
 export const JOBS_DIR = path.join(ROOT, 'src', 'lib', 'assets', 'xiv', 'jobs');

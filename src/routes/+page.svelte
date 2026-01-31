@@ -3,7 +3,7 @@
   import { Icon } from 'svelte-icons-pack'
   import { LuKeyboard, LuBrain, LuShield, LuDatabase, LuClock, LuDownload, LuSparkles, LuZap, LuSprout, LuGamepad2 } from 'svelte-icons-pack/lu'
   import Button from '$lib/components/form/Button.svelte'
-  import { Jobs, JobsByRole } from '$lib/jobs'
+  import { Jobs, JobsByRole } from '$lib/types/jobs'
   import { getJobIconUrls } from '$lib/iconLoader'
   import { fade, fly, scale } from 'svelte/transition'
   import { onMount } from 'svelte'

@@ -7,7 +7,7 @@
 	import RotationStepList from "$lib/components/twirling/RotationStepList.svelte";
 	import { createSlug, isValidRotationName } from "$lib/helpers";
 	import { getIconUrl, getJobIconUrl } from "$lib/iconLoader";
-  import { Jobs, type Job } from '$lib/jobs';
+  import { Jobs, type Job } from '$lib/types/jobs';
 	import { rotations, type RotationTemplate } from "$lib/stores";
   import { onMount } from 'svelte'
 	import { Icon } from "svelte-icons-pack";
