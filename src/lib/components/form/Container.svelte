@@ -12,7 +12,7 @@
 </script>
 
 <div
-  class="{classes}"
+  class="relative {classes}"
   {...props}
 >
   {#if children}

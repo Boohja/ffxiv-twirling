@@ -1,11 +1,10 @@
 <script lang="ts">
   import { flip } from 'svelte/animate'
-  import { formatKeybind, hasKeybind } from '$lib/helpers.js'
+  import { getStepName } from '$lib/helpers.js'
   import { Icon } from 'svelte-icons-pack'
-  import { CgMouse } from 'svelte-icons-pack/cg'
-  import { BiX } from 'svelte-icons-pack/bi'
   import { RiEditorDraggable } from 'svelte-icons-pack/ri'
   import type { RotationStep } from '$lib/stores'
+  import type { ActionLanguage, JobAction } from '$lib/types/jobActions'
   import { createEventDispatcher } from 'svelte'
   import InputRender from './InputRender.svelte'
 
@@ -13,6 +12,8 @@
   export let selectedIdx: number | null = null
   export let iconUrl: (path: string) => string
   export let readonly: boolean = false
+  export let jobActions: JobAction[] = []
+  export let language: ActionLanguage = 'en'
 
   const dispatch = createEventDispatcher()
 
@@ -136,7 +137,7 @@
             role="button"
             tabindex="0"
           >
-            <div class="font-medium leading-tight">{step.name}</div>
+            <div class="font-medium leading-tight">{getStepName(jobActions, step, language)}</div>
           </div>
         </div>
         {#if !readonly}
@@ -149,14 +150,6 @@
             >
               <InputRender input={step.input} mode="pretty" size="sm" showPlus={false} />
             </button>
-            <!-- <div class="py-2 px-3 self-center flex items-center justify-center step-keybind"
-              on:click={() => dispatch('selectstep', { idx, step })}
-              on:keypress={() => dispatch('selectstep', { idx, step })}
-              role="button"
-              tabindex="0"
-            >
-              <InputRender input={step.input} mode="pretty" showPlus={false} />
-            </div> -->
           </div>
         {/if}
       </div>
@@ -173,8 +166,6 @@
 
 <style>
   .step {
-    /* Adjusted columns: index | icon | name | input */
-    /* grid-template-columns: 2.25rem max-content 1fr 12rem; */
     grid-template-columns: 2rem 1fr 12rem;
     align-items: stretch;
   }
@@ -184,7 +175,6 @@
     align-items: stretch;
   }
   .step-action:hover {
-    /* background-color: rgba(100, 255, 218, 0.05); */
     cursor: pointer;
   }
   .step-keybind {
@@ -197,7 +187,6 @@
   .step.dragging {
     opacity: 0.6;
   }
-  /* Full-height drop zones before each step and at end */
   .drop-zone {
     position: relative;
     height: 0;
@@ -218,7 +207,7 @@
     justify-content: center;
   }
   .drop-zone.active {
-    height: 3rem; /* approximate step height for easier targeting */
+    height: 3rem;
     background: rgba(45,212,191,0.08);
     outline-color: rgba(45,212,191,0.6);
     box-shadow: 0 0 0 1px rgba(45,212,191,0.45), 0 0 12px rgba(45,212,191,0.25) inset;

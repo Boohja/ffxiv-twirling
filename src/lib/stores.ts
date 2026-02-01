@@ -1,12 +1,13 @@
 import { persisted } from 'svelte-persisted-store'
 import type { TwirlSettings } from './types/twirl';
 import { createDefaultTwirlSettings } from './types/twirl';
+import type { ActionLanguage } from './types/jobActions';
 
 export type CombinedInput = KeyboardInput & GamepadInput & MouseInput;
 
 export interface RotationStep {
   /** Name shown in the rotation (either custom name or action name) */
-  name: string,
+  name?: string,
   /** if `action` is present, path relative to `$lib/assets/xiv`, otherwise `/images/skills/` */
   icon: string,
   duration?: number,
@@ -34,12 +35,13 @@ export type KeyboardInput = {
 }
 
 export interface Rotation {
-  name: string,
-  job: string,
-  slug: string,
+  name: string
+  job: string
+  slug: string
+  language?: ActionLanguage
   steps: RotationStep[]
-  createdAt: string,
-  updatedAt: string,
+  createdAt: string
+  updatedAt: string
   lastTwirlAt?: string
 }
 
@@ -65,6 +67,7 @@ export type TwirlRecording = {
     slug: string
     name: string
     job: string
+    language?: ActionLanguage
   }
   // the recorded steps
   steps: TwirlStep[]

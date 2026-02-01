@@ -47,7 +47,7 @@
       <img src={getJobIconUrl(rotation?.job)} alt={rotation?.job || 'Job'} class="h-24 w-24 rounded-lg shadow-lg" />
       <div class="text-left">
         <h1 class="text-4xl font-bold text-white mb-2">{rotation.name}</h1>
-        <p class="text-slate-400 text-lg">{rotation.steps.length} steps · {rotation.job.toUpperCase()}</p>
+        <p class="text-slate-400 text-lg">{rotation.steps.length} steps · {rotation.job.toUpperCase()} · <img src="/images/language/{rotation.language}.webp" alt={rotation.language} class="inline align-baseline h-5 w-5 rounded" /></p>
       </div>
     </div>
   </div>

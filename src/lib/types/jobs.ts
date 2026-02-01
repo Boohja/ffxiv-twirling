@@ -42,6 +42,7 @@ export const Jobs: Job[] = [
   { id: 'sch', name: 'Scholar', role: 'heal' },
   { id: 'sge', name: 'Sage', role: 'heal' },
   { id: 'smn', name: 'Summoner', role: 'rangedMagic' },
+  { id: 'vpr', name: 'Viper', role: 'melee' },
   { id: 'war', name: 'Warrior', role: 'tank', hasTemplates: true },
   { id: 'whm', name: 'White Mage', role: 'heal', hasTemplates: true }
 ]

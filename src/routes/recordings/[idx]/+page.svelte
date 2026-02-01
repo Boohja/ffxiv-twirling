@@ -6,21 +6,28 @@
   import InputRender from '$lib/components/twirling/InputRender.svelte'
   import { Icon } from 'svelte-icons-pack'
   import { BiChevronLeft } from 'svelte-icons-pack/bi'
-  import { getIconUrl, getJobIconUrls } from '$lib/iconLoader'
+  import { getIconUrl, getJobIconUrls, loadJobActions } from '$lib/iconLoader'
   import { onMount } from 'svelte'
+	import { getStepName } from '$lib/helpers';
+	import type { ActionLanguage, JobAction } from '$lib/types/jobActions';
+	import LanguageSelector from '$lib/components/LanguageSelector.svelte';
 
   const jobIconUrl = getJobIconUrls()
   
   $: idx = parseInt($page.params.idx || '')
   $: twirl = $twirls[idx]
   
+  let jobActions: JobAction[] = []
   let imageError: Record<number, boolean> = {}
-
+  let language: ActionLanguage = 'en'
+  
   // Redirect if invalid index
-  onMount(() => {
+  onMount(async () => {
     if (isNaN(idx) || idx < 0 || idx >= $twirls.length) {
       goto('/recordings')
     }
+    language = twirl?.rotation?.language || 'en'
+    jobActions = await loadJobActions(twirl.rotation.job)
   })
 
   function formatDate(isoString: string): string {
@@ -205,8 +212,15 @@
     <!-- Steps Detail -->
     <div class="rounded-lg border border-slate-700 bg-slate-800/50 overflow-hidden">
       <div class="p-4 border-b border-slate-700 bg-slate-900/50">
-        <h3 class="text-lg font-semibold text-slate-200">Step-by-Step Analysis</h3>
-        <p class="text-xs text-slate-400 mt-1">Original expected inputs vs. your inputs</p>
+        <div class="flex items-center gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-200">Step-by-Step Analysis</h3>
+            <p class="text-xs text-slate-400 mt-1">Original expected inputs vs. your inputs</p>
+          </div>
+          <div class="ml-auto">
+            <LanguageSelector bind:language={language} />
+          </div>
+        </div>
       </div>
 
       <div class="overflow-x-auto">
@@ -253,7 +267,7 @@
                     {/if}
                     
                     <div>
-                      <div class="font-semibold text-slate-200">{step.original.name}</div>
+                      <div class="font-semibold text-slate-200">{getStepName(jobActions, step.original, language)}</div>
                       <div class="text-xs mt-0.5">
                         <span class="text-slate-400">{step.inputs.length} input{step.inputs.length !== 1 ? 's' : ''} • </span>
                         <span class="{getDurationColor(step, stepState)}">{formatDuration(step.duration)}</span>

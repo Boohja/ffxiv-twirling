@@ -5,13 +5,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { Jobs } from '../src/lib/types/jobs.ts';
+import { actionLanguages, type JobAction } from '../src/lib/types/jobActions.ts';
+import { V2ActionFields } from './update-jobs.ts';
 
 const ROOT = process.cwd();
 export const JOBS_DIR = path.join(ROOT, 'src', 'lib', 'assets', 'xiv', 'jobs');
 export const ACTIONS_DIR = path.join(ROOT, 'src', 'lib', 'assets', 'xiv', 'actions');
 export const V2 = 'https://v2.xivapi.com';
 
-export type JobEntry = { row_id: number; name: string; icon: string };
 
 export async function ensureDir(dir: string): Promise<void> {
 	await fs.mkdir(dir, { recursive: true });
@@ -75,10 +76,10 @@ export function sleep(ms: number): Promise<void> {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function readJobJson(filePath: string): Promise<JobEntry[]> {
+export async function readJobJson(filePath: string): Promise<JobAction[]> {
 	try {
 		const txt = await fs.readFile(filePath, 'utf8');
-		const data = txt.trim() ? (JSON.parse(txt) as JobEntry[]) : [];
+		const data = txt.trim() ? (JSON.parse(txt) as JobAction[]) : [];
 		return Array.isArray(data) ? data : [];
 	} catch (e) {
 		const err = e as NodeJS.ErrnoException;
@@ -88,17 +89,53 @@ export async function readJobJson(filePath: string): Promise<JobEntry[]> {
 	}
 }
 
-export async function writeJobJson(filePath: string, entries: JobEntry[]): Promise<void> {
+export async function writeJobJson(filePath: string, entries: JobAction[]): Promise<void> {
 	const txt = JSON.stringify(entries, null, 2) + '\n';
 	await fs.writeFile(filePath, txt, 'utf8');
 }
 
-export function hasRowId(entries: JobEntry[], id: number): boolean {
-	return entries.some((e) => e.row_id === id);
+export function hasRowId(entries: JobAction[], id: number): boolean {
+	return entries.some((e) => e.id === id);
 }
 
-export function hasActionName(entries: JobEntry[], name: string): boolean {
-	return entries.some((e) => e.name.toLowerCase() === name.toLowerCase());
+export function hasActionName(entries: JobAction[], name: string): boolean {
+	return entries.some((e) => e.name.en.toLowerCase() === name.toLowerCase());
+}
+
+/**
+ * Adds new or updates existing entries based on `rowId` in the given job's entries.
+ * @returns true if an entry was added/updated.
+ */
+export function handleActionRow(entries: JobAction[], rowId: number, fields: V2ActionFields, job: string): boolean {
+	const entry = entries.find((e) => e.id === rowId);
+	if (!entry) {
+		console.log(`  Adding ${fields.Name} (${rowId}) to ${job}`);
+		entries.push({
+			id: rowId,
+			name: {
+				en: fields.Name!.trim(),
+				fr: fields['Name@lang(fr)']!.trim(),
+				de: fields['Name@lang(de)']!.trim(),
+				ja: fields['Name@lang(ja)']!.trim()
+			},
+			icon: iconPathForRow(rowId)
+		});
+		return true;
+	}
+	else if (Object.keys(entry.name).length !== actionLanguages.length || Object.values(entry.name).some((n) => !n.trim())) {
+		console.log(`  Updating names for ${fields.Name} (${rowId}) in ${job}`);
+		entry.name = {
+			en: fields.Name!.trim(),
+			fr: fields['Name@lang(fr)']!.trim(),
+			de: fields['Name@lang(de)']!.trim(),
+			ja: fields['Name@lang(ja)']!.trim()
+		};
+		return true;
+	}
+	else {
+		console.log(`  Skipping ${fields.Name} (${rowId}) for ${job}, already present`);
+	}
+	return false;
 }
 
 // Build a map of job ABBR (uppercase) -> json file path using exported Jobs list

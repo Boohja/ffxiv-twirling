@@ -7,38 +7,42 @@
  * - Download the icon once to src/lib/assets/xiv/actions/<row_id>.png using the v2 asset endpoint
  */
 
+import { JobAction } from '../src/lib/types/jobActions.ts';
 import {
 	ensureDir,
 	fileExists,
 	getJSON,
 	readJobJson,
 	writeJobJson,
-	hasRowId,
 	jobsListToFileMap,
 	extractEligibleJobs,
-	iconPathForRow,
 	fetchAndStoreIconOnce,
 	JOBS_DIR,
 	ACTIONS_DIR,
 	V2,
-	type JobEntry
+	handleActionRow
 } from './utils.ts';
+
+export type V2ActionFields = {
+	Name?: string
+	'Name@lang(fr)'?: string
+	'Name@lang(de)'?: string
+	'Name@lang(ja)'?: string
+	Icon?: { id?: number; path?: string; path_hr1?: string };
+	ClassJobCategory?: {
+		value: number;
+		sheet: string;
+		row_id: number;
+		fields?: Record<string, unknown>;
+	}
+}
 
 type V2SearchResponse = {
 	next?: string | null;
 	results: Array<{
 		sheet: 'Action';
 		row_id: number;
-		fields: {
-			Name?: string;
-			Icon?: { id?: number; path?: string; path_hr1?: string };
-			ClassJobCategory?: {
-				value: number;
-				sheet: string;
-				row_id: number;
-				fields?: Record<string, unknown>;
-			};
-		};
+		fields: V2ActionFields;
 	}>;
 };
 
@@ -48,7 +52,7 @@ async function updateJobFiles(): Promise<void> {
 	const jobMap = jobsListToFileMap(); // e.g., WHM -> <path>/whm.json
 
 	// Load all job files once into memory
-	const jobCache = new Map<string, JobEntry[]>(); // ABBR -> entries
+	const jobCache = new Map<string, JobAction[]>(); // ABBR -> entries
 	for (const [abbr, filePath] of jobMap.entries()) {
 		// Ensure file exists; create empty if missing
 		if (!(await fileExists(filePath))) {
@@ -68,7 +72,7 @@ async function updateJobFiles(): Promise<void> {
 		if (Number.isFinite(n) && n > 0) maxPages = n;
 	}
 
-  const requestedFields = 'Name,Icon,ClassJobCategory';
+  const requestedFields = 'Name,Name@lang(fr),Name@lang(de),Name@lang(ja),Icon,ClassJobCategory';
 	let pagesProcessed = 0;
 	let url = `${V2}/api/search?sheets=Action&fields=${requestedFields}&query=${encodeURIComponent(
 		'+IsPlayerAction=true +IsPvP=false -ClassJobCategory=0'
@@ -84,7 +88,7 @@ async function updateJobFiles(): Promise<void> {
 
 	// Sort and write back once
 	for (const [abbr, entries] of jobCache.entries()) {
-		entries.sort((a, b) => a.name.localeCompare(b.name));
+		entries.sort((a, b) => a.name.en.localeCompare(b.name.en));
 		const filePath = jobMap.get(abbr);
 		if (!filePath) {
 			continue;
@@ -96,14 +100,15 @@ async function updateJobFiles(): Promise<void> {
 async function processV2PageIntoCache(
 	res: V2SearchResponse,
 	jobMap: Map<string, string>,
-	jobCache: Map<string, JobEntry[]>
+	jobCache: Map<string, JobAction[]>
 ): Promise<void> {
 	for (const item of res.results) {
 		const rowId = item.row_id;
-		const name = item.fields.Name?.trim();
+		const fields: V2ActionFields = item.fields;
+		const name = fields.Name?.trim();
 		if (!name) continue;
-		const icon = item.fields.Icon;
-		const cjcFields = item.fields.ClassJobCategory?.fields as Record<string, unknown> | undefined;
+		const icon = fields.Icon;
+		const cjcFields = fields.ClassJobCategory?.fields as Record<string, unknown> | undefined;
 		const eligible = extractEligibleJobs(cjcFields);
 		const eligiblePresent = eligible.filter((abbr) => jobMap.has(abbr));
 		if (eligiblePresent.length === 0) continue; // no job files in our folder -> skip entirely (and do not store icon)
@@ -114,13 +119,7 @@ async function processV2PageIntoCache(
 		for (const abbr of eligiblePresent) {
 			const list = jobCache.get(abbr);
 			if (!list) continue;
-			if (!hasRowId(list, rowId)) {
-				console.log(`  Adding ${name} (${rowId}) to ${abbr}`);
-				list.push({ row_id: rowId, name, icon: iconPathForRow(rowId) });
-			}
-			else {
-				console.log(`  Skipping ${name} (${rowId}) for ${abbr}, already present`);
-			}
+			handleActionRow(list, rowId, fields, abbr);
 		}
 	}
 }

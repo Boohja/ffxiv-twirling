@@ -2,21 +2,21 @@
   import { page } from '$app/stores'
   import { goto } from '$app/navigation'
   import {rotations, twirls, twirlConfig, type Rotation, type RotationStep, type CombinedInput, type TwirlRecording, type TwirlStep, type TwirlInput} from '$lib/stores'
-  import type { TwirlSettings } from '$lib/types/twirl'
   import { get, writable } from 'svelte/store'
   import { onMount } from 'svelte'
-  import { hasKeybind } from "$lib/helpers.js"
+  import { getStepName, hasKeybind } from "$lib/helpers.js"
   import { Sound } from 'svelte-sound'
   import errorMp3 from '$lib/assets/sounds/error.mp3'
   import correctMp3 from '$lib/assets/sounds/correct.mp3'
   import timeoutMp3 from '$lib/assets/sounds/timeout.mp3'
   import endMp3 from '$lib/assets/sounds/end.mp3'
-	import { getJobIconUrl, getIconUrl } from '$lib/iconLoader'
+	import { getJobIconUrl, getIconUrl, loadJobActions } from '$lib/iconLoader'
   import InputRender from '$lib/components/twirling/InputRender.svelte'
   import TwirlConfig from '$lib/components/twirling/TwirlConfig.svelte'
   import TwirlCountdown from '$lib/components/twirling/TwirlCountdown.svelte'
   import { InputSnapshot } from '$lib/inputParser'
 	import Keycap from '$lib/components/Keycap.svelte';
+	import type { JobAction } from '$lib/types/jobActions';
   const rots = get(rotations)
   
   $: errorSound = new Sound(errorMp3, { volume: $twirlConfig.volume })
@@ -57,6 +57,7 @@
   $: progress = steps.length > 0 ? ((currentIdx / steps.length) * 100) : 0
 
   let gamepadAnimationFrameId: number | null = null
+  let jobActions: JobAction[] = []
 
   onMount(async () => {
     const hit = rots.find(r => r.slug === $page.params?.slug)
@@ -71,6 +72,7 @@
     rotation = hit
     stepsStore.set(rotation.steps as RotationStep[])
     loading = false
+    jobActions = await loadJobActions(rotation.job)
   })
 
   function playError () {
@@ -347,7 +349,8 @@
       rotation: {
         slug: rotation.slug,
         name: rotation.name,
-        job: rotation.job
+        job: rotation.job,
+        language: rotation.language || 'en'
       },
       steps: rotation.steps.map(step => ({
         original: step,
@@ -479,7 +482,7 @@
               {#if prevStep}
                 {#if $twirlConfig.showIcon}
                   <div class="w-32 h-32 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700">
-                    <img src={getStepIcon(prevStep)} class="w-full h-full object-contain" alt={prevStep.name} />
+                    <img src={getStepIcon(prevStep)} class="w-full h-full object-contain" alt={getStepName(jobActions, prevStep, rotation.language)} />
                   </div>
                 {:else}
                   <div class="w-32 h-32 mb-4 rounded-lg bg-slate-800/30 border border-slate-700 flex items-center justify-center">
@@ -488,7 +491,7 @@
                 {/if}
                 {#if $twirlConfig.showName}
                   <div class="text-xl text-slate-400 text-center mb-2">
-                    {prevStep.name || 'Previous'}
+                    {getStepName(jobActions, prevStep, rotation.language) || 'Previous'}
                   </div>
                 {/if}
                 {#if $twirlConfig.showKeybind && prevStep.input}
@@ -506,7 +509,7 @@
               {#if currentStep}
                 {#if $twirlConfig.showIcon}
                   <div class="w-48 h-48 mb-6 rounded-2xl overflow-hidden bg-slate-800/80 border-4 border-teal-500 shadow-2xl shadow-teal-500/30 animate-pulse relative">
-                    <img src={getStepIcon(currentStep)} class="w-full h-full object-contain" alt={currentStep.name} />
+                    <img src={getStepIcon(currentStep)} class="w-full h-full object-contain" alt={getStepName(jobActions, currentStep, rotation.language)} />
                     {#if $twirlConfig.timeout > 0 && timeoutProgress > 0}
                       <div 
                         class="absolute inset-0 rounded-2xl"
@@ -527,7 +530,7 @@
                 {/if}
                 {#if $twirlConfig.showName}
                   <div class="text-4xl font-bold text-white text-center mb-4 drop-shadow-lg">
-                    {currentStep.name || 'Action'}
+                    {getStepName(jobActions, currentStep, rotation.language) || 'Action'}
                   </div>
                 {/if}
                 {#if $twirlConfig.showKeybind && currentStep.input}

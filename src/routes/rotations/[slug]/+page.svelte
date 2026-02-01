@@ -15,10 +15,12 @@
 	import { LuChevronLeft } from 'svelte-icons-pack/lu';
 	import Button from '$lib/components/form/Button.svelte';
 	import Container from '$lib/components/form/Container.svelte';
+	import LanguageSelector from '$lib/components/LanguageSelector.svelte';
+	import type { ActionLanguage, JobAction } from '$lib/types/jobActions';
 
   const rots = get(rotations)
   let rotation: Rotation
-  let jobActions: any[] = []
+  let jobActions: JobAction[] = []
   let slotEditor: SlotEditor
   let slotRecorder: SlotRecorder
   const stepsStore = writable([] as RotationStep[])
@@ -29,6 +31,7 @@
   let recordSingle = false
 
   $: jobIconUrl = rotation?.job ? getJobIconUrl(rotation.job) : ''
+  let language: ActionLanguage = 'en'
 
   onMount(async () => {
     try {
@@ -40,6 +43,7 @@
       rotation = rot
       const actions = await loadJobActions(rotation.job)
       jobActions = actions
+      language = rotation.language ?? 'en'
       stepsStore.set(rotation.steps as RotationStep[])
     }
     finally {
@@ -106,6 +110,12 @@
     stepsStore.update(existingSteps => existingSteps.filter((_, i) => i !== detail.idx))
     rotation.steps = $stepsStore
     rotation.updatedAt = new Date().toISOString()
+    rotations.set(rots)
+  }
+
+  function handleLanguageChange(lang: ActionLanguage) {
+    rotation.language = lang as ActionLanguage
+    language = lang
     rotations.set(rots)
   }
 
@@ -300,7 +310,7 @@
   </div>
 {/if}
 
-<Container>
+<Container style="z-index: 1;">
   <PageTitle>
     <div class="flex items-center gap-3">
       <a href="/rotations" class="inline-flex items-center justify-center rounded hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/50">
@@ -348,6 +358,7 @@
     >
       Duplicate
     </Button>
+    <LanguageSelector bind:language={language} onchange={handleLanguageChange} class="ml-3" />
     <Button
       variant="outline-danger"
       class="ml-3 opacity-40 hover:opacity-100"
@@ -363,6 +374,8 @@
     <RotationStepList
       steps={$stepsStore}
       {selectedIdx}
+      {jobActions}
+      {language}
       iconUrl={getIconUrl}
       on:reorder={(e) => handleReorder(e.detail)}
       on:selectstep={(e) => handleSelectStep(e.detail)}
@@ -388,6 +401,7 @@
         on:updateentry={(e) => updateEntry(e.detail.idx, e.detail.step, e.detail.propagateKeybind)}
         on:deletestep={(e) => handleDeleteStep(e.detail)}
         bind:this={slotEditor}
+        bind:language={language}
         jobIcon={jobIconUrl}
         suggestions={jobActions}
         existingSteps={$stepsStore}

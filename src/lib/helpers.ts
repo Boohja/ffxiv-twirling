@@ -1,4 +1,5 @@
-import type {KeyboardInput, GamepadInput} from "$lib/stores";
+import type {KeyboardInput, GamepadInput, RotationStep} from "$lib/stores";
+import type { ActionLanguage, JobAction } from "./types/jobActions";
 
 export function hasKeybind (input?: KeyboardInput | GamepadInput) {
   return formatKeybind(input) !== 'None'
@@ -92,6 +93,21 @@ export function isValidRotationName (name: string) {
 
 export function createSlug (name: string) {
   return name.toLowerCase().replaceAll(' ', '-').replace(/[^a-z0-9-]+/g, '').replace(/^-+|-+$/g, '').substring(0, 50)
+}
+
+export function getStepName (jobActions: JobAction[], step: RotationStep, language?: ActionLanguage): string {
+  if (step.action) {
+    return getActionName(jobActions, step.action, language)
+  }
+  return step.name || ''
+}
+
+export function getActionName (jobActions: JobAction[], id: number, language?: ActionLanguage): string {
+  return jobActions.find(a => a.id === id)?.name[language || 'en'] || 'Unknown Action'
+}
+
+export function getAction (jobActions: JobAction[], id: number): JobAction | undefined {
+  return jobActions.find(a => a.id === id)
 }
 
 // export const STORAGE_MAX = 5024 // 5MB

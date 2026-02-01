@@ -4,6 +4,8 @@
  * Provides centralized functionality for loading XIV asset icons and job data.
  */
 
+import type { JobAction } from "./types/jobActions"
+
 const iconModules = import.meta.glob<string>('/src/lib/assets/xiv/**/*.png', { 
   eager: true, 
   as: 'url' 
@@ -68,7 +70,7 @@ export function getJobLoaders(): Record<string, () => Promise<{ default: any }>>
  * @param jobId - The job identifier (e.g., 'drk', 'ast', 'sam')
  * @returns Promise resolving to array of job actions, or empty array if not found
  */
-export async function loadJobActions(jobId: string): Promise<any[]> {
+export async function loadJobActions(jobId: string): Promise<JobAction[]> {
   const loaders = getJobLoaders()
   const loader = loaders[jobId]
   if (!loader) return []

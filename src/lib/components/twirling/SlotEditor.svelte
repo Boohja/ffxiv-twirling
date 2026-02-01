@@ -1,19 +1,11 @@
 <script lang="ts">
   import { Icon } from 'svelte-icons-pack';
   import { createEventDispatcher, onMount, tick } from 'svelte';
-  // Each suggestion can include XIV icon path and optional row_id
-  type ActionSuggestion = {
-    name: string
-    icon: string // e.g. "actions/123.png"
-    row_id?: number
-  }
   import InputModal from "$lib/components/twirling/InputModal.svelte";
-  import { BiEditAlt } from "svelte-icons-pack/bi";
   import { FiTrash2 } from "svelte-icons-pack/fi";
-  import {formatKeybind, hasKeybind} from "$lib/helpers";
+  import { getAction, getActionName, hasKeybind} from "$lib/helpers";
   import type {RotationStep, KeyboardInput, GamepadInput} from '$lib/stores'
 
-  let opened = false
   let propagateKeybind = true
   let refInputModal: any
   let stepIdx = -1
@@ -53,20 +45,22 @@
 	import { LuInfo } from 'svelte-icons-pack/lu';
 	import SlotRecorder from './SlotRecorder.svelte';
 	import InputRender from './InputRender.svelte';
+	import type { ActionLanguage, JobAction } from '$lib/types/jobActions';
 
   let imgSrc = ''
-  export let suggestions: ActionSuggestion[]
+  export let suggestions: JobAction[]
   export let existingSteps: RotationStep[] = []
   export let jobIcon: string = ''
+  export let language: ActionLanguage = 'en';
+  
   const dispatch = createEventDispatcher();
 
   let refRecorder: SlotRecorder;
-  // Mode: choose between XIV Action vs Custom step
   let mode: 'action' | 'custom' = 'action'
   let actionFilter = ''
   let actionFilterRef: HTMLInputElement;
-  let selectedAction: ActionSuggestion | null = null
-  $: filteredActions = (actionFilter?.trim()?.length ? suggestions.filter(a => a.name?.toLowerCase().includes(actionFilter.trim().toLowerCase())) : suggestions)
+  let selectedAction: JobAction | null = null
+  $: filteredActions = (actionFilter?.trim()?.length ? suggestions.filter(a => a.name[language]?.toLowerCase().includes(actionFilter.trim().toLowerCase())) : suggestions)
 
   onMount(() => {
     tick().then(() => {
@@ -76,7 +70,6 @@
 
   function setMode(newMode: 'action' | 'custom') {
     mode = newMode
-    // Reset state when switching tabs
     selectedAction = null
     actionFilter = ''
     nameInputValue = ''
@@ -85,10 +78,7 @@
 
   // Validation
   $: customName = nameInputValue.trim()
-  $: isNameCollision = mode === 'custom' && !!customName && suggestions.some(s => s.name.toLowerCase() === customName.toLowerCase())
-  $: canSubmit = mode === 'action'
-    ? !!selectedAction
-    : (customName.length > 0 && !isNameCollision)
+  $: canSubmit = mode === 'action' ? !!selectedAction : customName.length > 0
 
   function checkKey (e: KeyboardEvent) {
     // Enter submits when valid
@@ -118,19 +108,15 @@
     // Infer mode from icon: XIV actions are stored as relative 'actions/...'
     if (step.icon?.startsWith('actions/')) {
       mode = 'action'
-      selectedAction = {
-        name: step.name,
-        icon: step.icon,
-        row_id: step.action
-      }
+      selectedAction = getAction(suggestions, step.action!)!
       imgSrc = getIconUrl(step.icon)
       actionFilter = ''
     } else {
       mode = 'custom'
       selectedAction = null
       imgSrc = step.icon || defaultImage
+      nameInputValue = step.name!
     }
-    nameInputValue = step.name
   }
 
   function submit () {
@@ -139,10 +125,8 @@
     }
     const step: RotationStep = mode === 'action' && selectedAction
       ? {
-          name: selectedAction.name,
-          // Store relative XIV icon path; consumers can resolve via iconUrl
           icon: selectedAction.icon,
-          action: selectedAction.row_id,
+          action: selectedAction.id,
           input: bindingValue
         }
       : {
@@ -155,7 +139,7 @@
       dispatch('updateentry', { idx: stepIdx, step, propagateKeybind })
     } else {
       dispatch('newentry', { step, propagateKeybind })
-      actionFilterRef.focus()
+      mode === 'action' ? actionFilterRef.focus() : nameInputValue = ''
     }
     cancel()
   }
@@ -175,10 +159,10 @@
     cancel()
   }
 
-  function selectAction(a: ActionSuggestion) {
+  function selectAction(a: JobAction) {
     selectedAction = a
     imgSrc = getIconUrl(a.icon)
-    nameInputValue = a.name
+    nameInputValue = getActionName(suggestions, a.id, language)
     // Auto-assign keybind if propagate is on and an existing step has a keybind
     maybeAdoptExistingKeybind()
   }
@@ -190,7 +174,7 @@
     // Do not override an explicit input already set
     if (bindingValue && hasKeybind(bindingValue)) return
     const name = selectedAction.name
-    const match = existingSteps.find(s => s.name === name && s.input && hasKeybind(s.input))
+    const match = existingSteps.find(s => s.action && s.action === selectedAction?.id && s.input && hasKeybind(s.input))
     if (match?.input) {
       bindingValue = match.input
     }
@@ -335,11 +319,11 @@
             <button
               type="button"
               class="group flex items-center gap-2.5 rounded-lg {selectedAction?.icon === action.icon ? 'bg-teal-600/20 ring-2 ring-teal-500' : 'bg-slate-800/60 hover:bg-slate-700/70'} focus:outline-none focus:ring-2 focus:ring-teal-500/40 px-3 py-2 text-left transition-all"
-              title={action.name}
+              title={getActionName(suggestions, action.id, language)}
               on:click={() => selectAction(action)}
             >
-              <img src={getIconUrl(action.icon)} alt={action.name} class="h-9 w-9 shrink-0 rounded" />
-              <span class="truncate text-sm text-slate-200">{action.name}</span>
+              <img src={getIconUrl(action.icon)} alt={action.id.toString()} class="h-9 w-9 shrink-0 rounded" />
+              <span class="truncate text-sm text-slate-200">{getActionName(suggestions, action.id, language)}</span>
             </button>
           {/each}
           </div>
@@ -365,12 +349,6 @@
             class="w-full rounded-lg border-2 border-slate-700 bg-slate-900/40 px-3 py-2.5 text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-teal-500 transition-all"
             placeholder="e.g. Switching hotbars"
           />
-          {#if isNameCollision}
-            <div class="text-[11px] text-red-400 mt-1.5 flex items-center gap-1">
-              <span class="text-red-500">⚠</span>
-              Matches a job action name
-            </div>
-          {/if}
         </div>
         
         <!-- Icon selector -->
@@ -425,6 +403,3 @@
 </div>
 
 <InputModal bind:this={refInputModal} on:keybind={(e) => bindingValue = e.detail} />
-
-
-<!--  <Icon src={CgAddR} size="2em" />-->

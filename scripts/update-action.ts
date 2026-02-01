@@ -6,43 +6,35 @@
  * Check https://github.com/xivanalysis/xivanalysis/tree/dawntrail/src/data/ACTIONS/root for the correct id.
  */
 
+import { V2ActionFields } from './update-jobs.ts';
 import {
 	ensureDir,
 	fileExists,
 	getJSON,
 	readJobJson,
 	writeJobJson,
-	hasActionName,
 	jobsListToFileMap,
 	extractEligibleJobs,
-	iconPathForRow,
 	fetchAndStoreIconOnce,
 	ACTIONS_DIR,
-	V2
-} from './utils.ts';
+	V2,
+	handleActionRow
+} from './utils.ts'
 
 type V2ActionResponse = {
-	row_id: number;
-	fields: {
-		Name?: string;
-		Icon?: { id?: number; path?: string; path_hr1?: string };
-		ClassJobCategory?: {
-			value: number;
-			sheet: string;
-			row_id: number;
-			fields?: Record<string, unknown>;
-		};
-	};
-};
+	row_id: number
+	fields: V2ActionFields
+}
 
 async function updateAction(rowId: number): Promise<void> {
 	await ensureDir(ACTIONS_DIR);
 
-	const url = `${V2}/api/sheet/Action/${rowId}?fields=Name,Icon,ClassJobCategory`;
+	const url = `${V2}/api/sheet/Action/${rowId}?fields=Name,Name@lang(fr),Name@lang(de),Name@lang(ja),Icon,ClassJobCategory`;
 	console.log(`Fetching action ${rowId}...`);
 	const action = await getJSON<V2ActionResponse>(url);
 
-	const name = action.fields.Name?.trim();
+	const fields: V2ActionFields = action.fields;
+	const name = fields.Name?.trim();
 	if (!name) {
 		console.error(`Error: Action ${rowId} has no name`);
 		process.exit(1);
@@ -50,7 +42,7 @@ async function updateAction(rowId: number): Promise<void> {
 
 	console.log(`Action: ${name} (${rowId})`);
 
-	const cjcFields = action.fields.ClassJobCategory?.fields as Record<string, unknown> | undefined;
+	const cjcFields = fields.ClassJobCategory?.fields as Record<string, unknown> | undefined;
 	const eligible = extractEligibleJobs(cjcFields);
 
 	if (eligible.length === 0) {
@@ -78,20 +70,15 @@ async function updateAction(rowId: number): Promise<void> {
 			await writeJobJson(filePath, []);
 		}
 
-		const entries = await readJobJson(filePath);
-		if (hasActionName(entries, name)) {
-			console.log(`✓ Action "${name}" already exists in ${abbr}`);
-			continue;
-		}
-
 		// Download icon once (shared across all jobs)
-		await fetchAndStoreIconOnce(rowId, action.fields.Icon?.path, action.fields.Icon?.path_hr1);
+		await fetchAndStoreIconOnce(rowId, fields.Icon?.path, fields.Icon?.path_hr1);
 
-		// Add action to job file
-		entries.push({ row_id: rowId, name, icon: iconPathForRow(rowId) });
-		entries.sort((a, b) => a.name.localeCompare(b.name));
+		const entries = await readJobJson(filePath);
+		const added = handleActionRow(entries, rowId, fields, abbr);
+
+		if (!added) continue;
+		entries.sort((a, b) => a.name.en.localeCompare(b.name.en));
 		await writeJobJson(filePath, entries);
-		console.log(`✓ Added "${name}" to ${abbr}`);
 	}
 
 	console.log('Done!');

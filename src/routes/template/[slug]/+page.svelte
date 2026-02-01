@@ -6,15 +6,16 @@
 	import PageTitle from "$lib/components/page/PageTitle.svelte";
 	import RotationStepList from "$lib/components/twirling/RotationStepList.svelte";
 	import { createSlug, isValidRotationName } from "$lib/helpers";
-	import { getIconUrl, getJobIconUrl } from "$lib/iconLoader";
+  import { getIconUrl, getJobIconUrl, loadJobActions } from "$lib/iconLoader";
   import { Jobs, type Job } from '$lib/types/jobs';
-	import { rotations, type RotationTemplate } from "$lib/stores";
+  import { rotations, type RotationTemplate } from "$lib/stores";
+  import type { ActionLanguage, JobAction } from "$lib/types/jobActions";
   import { onMount } from 'svelte'
 	import { Icon } from "svelte-icons-pack";
-	import { BiChevronLeft } from "svelte-icons-pack/bi";
 	import { LuChevronLeft, LuSprout } from "svelte-icons-pack/lu";
 	import { get } from "svelte/store";
-	import type { J } from "vitest/dist/chunks/environment.LoooBwUu.js";
+	import LanguageSelector from "$lib/components/LanguageSelector.svelte";
+	import Container from "$lib/components/form/Container.svelte";
 
   let templates: RotationTemplate[] = []
   let rotation: RotationTemplate | null = null
@@ -23,6 +24,8 @@
   let name = ''
   let job: Job | undefined = undefined
   let fromRotation = false
+  let jobActions: JobAction[] = []
+  let language: ActionLanguage = 'en'
 
   onMount(async () => {
     fromRotation = page.state?.fromRotation || false
@@ -33,6 +36,7 @@
       await goto('/rotations')
       return
     }
+    jobActions = await loadJobActions(job.id)
     const module = await import(`$lib/assets/templates/${job.id}.json`)
     templates = module.default || []
     rotation = templates.find(t => t.slug === slug) || null
@@ -73,7 +77,7 @@
 {/if}
 
 
-<div class="p-6 border border-slate-700/50 rounded-xl mb-8 bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm shadow-xl">
+<Container style="z-index: 1;">
   <PageTitle>
     <div class="flex items-center gap-3">
       <a href="{fromRotation ? `/rotations?job=${job?.id}` : '/template'}">
@@ -89,23 +93,30 @@
       </div>
     </div>
   </PageTitle>
-  <div class="mt-4 space-y-2 text-sm text-slate-300">
-    <div class="flex items-center gap-2">
-      <span class="text-slate-400 font-medium">Source:</span>
-      <a href="{rotation?.url}" class="text-teal-400 hover:text-teal-300 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">{rotation?.url}</a>
+  <div class="mt-4 space-y-2 text-sm text-slate-300 flex">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="text-slate-400 font-medium">Source:</span>
+        <a href="{rotation?.url}" class="text-teal-400 hover:text-teal-300 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">{rotation?.url}</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-slate-400 font-medium">Last Updated:</span>
+        <span class="text-slate-200">{rotation?.updated}</span>
+      </div>
     </div>
-    <div class="flex items-center gap-2">
-      <span class="text-slate-400 font-medium">Last Updated:</span>
-      <span class="text-slate-200">{rotation?.updated}</span>
+    <div class="self-end ml-auto">
+      <LanguageSelector bind:language={language} />
     </div>
   </div>
-</div>
+</Container>
 
 
 <div class="grid gap-6 grid-cols-2">
   <div class="border border-slate-600 p-3 rounded mb-8 bg-slate-600/10 container-job container-{job?.id}">
     <RotationStepList
       steps={rotation?.steps}
+      {language}
+      {jobActions}
       iconUrl={getIconUrl}
       readonly={true}
     />
