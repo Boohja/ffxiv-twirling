@@ -5,11 +5,15 @@
   import { page } from '$app/state'
   import { dev } from '$app/environment';
   import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { runMigrations } from "$lib/storeMigrations";
 
   let hideNav = $derived(page.url.pathname.includes('/twirl'))
   let isLanding = $derived(page.url.pathname === '/')
 
   injectAnalytics({ mode: dev ? 'development' : 'production' });
+
+  const APP_VERSION = 1;
+  runMigrations(APP_VERSION);
 </script>
 
 <svelte:head>
