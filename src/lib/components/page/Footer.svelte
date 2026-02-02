@@ -1,6 +1,6 @@
 <div class="bg-gray-900 text-slate-600 py-4">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
-    <div>
+    <div class="text-sm leading-relaxed">
       © SQUARE ENIX CO., LTD. All Rights Reserved.<br>
       FINAL FANTASY® and FINAL FANTASY XIV® are registered trademarks of Square Enix Holdings Co., Ltd.<br>
       This site is a fan project and is not affiliated with or endorsed by Square Enix.

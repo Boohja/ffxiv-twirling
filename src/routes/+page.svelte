@@ -27,6 +27,47 @@
 
   .logo-glow {
     filter: drop-shadow(0 0 6px rgba(38, 181, 247, 0.6)) drop-shadow(0 0 20px rgba(248, 254, 255, 0.1));
+    transition: all 0.1s ease;
+    cursor: pointer;
+  }
+
+  .logo-glow:hover {
+    animation: twirl 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes twirl {
+    0% { 
+      transform: rotateY(0deg) rotate(0deg) scale(1);
+      filter: drop-shadow(0 0 6px rgba(38, 181, 247, 0.6)) drop-shadow(0 0 20px rgba(248, 254, 255, 0.1));
+    }
+    15% { 
+      transform: rotateY(90deg) rotate(-15deg) scale(1.1);
+      filter: drop-shadow(0 0 15px rgba(20, 184, 166, 0.8)) drop-shadow(0 0 30px rgba(248, 254, 255, 0.3));
+    }
+    30% { 
+      transform: rotateY(180deg) rotate(10deg) scale(1.05);
+      filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 40px rgba(248, 254, 255, 0.4));
+    }
+    45% { 
+      transform: rotateY(270deg) rotate(-10deg) scale(1.15);
+      filter: drop-shadow(0 0 25px rgba(59, 130, 246, 0.9)) drop-shadow(0 0 50px rgba(248, 254, 255, 0.5));
+    }
+    60% { 
+      transform: rotateY(360deg) rotate(20deg) scale(1.1);
+      filter: drop-shadow(0 0 20px rgba(236, 72, 153, 0.8)) drop-shadow(0 0 40px rgba(248, 254, 255, 0.4));
+    }
+    75% { 
+      transform: rotateY(405deg) rotate(-5deg) scale(1.05);
+      filter: drop-shadow(0 0 15px rgba(20, 184, 166, 0.7)) drop-shadow(0 0 30px rgba(248, 254, 255, 0.3));
+    }
+    90% { 
+      transform: rotateY(360deg) rotate(3deg) scale(1.02);
+      filter: drop-shadow(0 0 10px rgba(38, 181, 247, 0.7)) drop-shadow(0 0 25px rgba(248, 254, 255, 0.2));
+    }
+    100% { 
+      transform: rotateY(360deg) rotate(0deg) scale(1);
+      filter: drop-shadow(0 0 6px rgba(38, 181, 247, 0.6)) drop-shadow(0 0 20px rgba(248, 254, 255, 0.1));
+    }
   }
 
   .feature-card {
@@ -140,7 +181,7 @@
         </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" in:scale={{ duration: 600, delay: 400 }}>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-12" in:scale={{ duration: 600, delay: 400 }}>
         <Button href="/rotations" variant="primary" class="text-lg px-8 py-3 pulse-glow">
           <Icon src={LuZap} size="20" className="inline mr-2" />
           Start Practicing
@@ -148,7 +189,7 @@
       </div>
 
       <!-- Screenshot Placeholder -->
-      <div class="max-w-4xl mx-auto mt-12 rounded-xl overflow-hidden gradient-border shadow-2xl float-animation" in:fade={{ duration: 800, delay: 600 }}>
+      <div class="max-w-4xl mx-auto mt-20 rounded-xl overflow-hidden gradient-border shadow-2xl float-animation" in:fade={{ duration: 800, delay: 600 }}>
         <div class="aspect-video flex items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
           <img src="/images/landing/editor.png" alt="FFXIV Twirling Editor Screenshot" class="w-full h-full object-fill" />
         </div>

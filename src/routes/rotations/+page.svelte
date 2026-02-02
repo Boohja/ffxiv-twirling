@@ -206,11 +206,6 @@
                     {/if}
                     <span class="text-sm">{j.name}</span>
                   </span>
-                  {#if j.hasTemplates}
-                    <span class="text-lime-500 ml-auto">
-                      <Icon src={LuSprout} size="1.2em" className="text-green-400 opacity-40 group-hover:opacity-80" title="This job has rotation templates available" />
-                    </span>
-                  {/if}
                   </a>
               {/each}
             </div>
