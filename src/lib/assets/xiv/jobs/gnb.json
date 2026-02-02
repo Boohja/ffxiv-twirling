@@ -1,212 +1,431 @@
 [
   {
-    "row_id": 16157,
-    "name": "Abdomen Tear",
+    "id": 16157,
+    "name": {
+      "en": "Abdomen Tear"
+    },
     "icon": "actions/16157.png"
   },
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 16151,
-    "name": "Aurora",
+    "id": 16151,
+    "name": {
+      "en": "Aurora",
+      "fr": "Aurore",
+      "de": "Aurora",
+      "ja": "オーロラ"
+    },
     "icon": "actions/16151.png"
   },
   {
-    "row_id": 16165,
-    "name": "Blasting Zone",
+    "id": 16165,
+    "name": {
+      "en": "Blasting Zone",
+      "fr": "Zone de destruction",
+      "de": "Erda-Detonation",
+      "ja": "ブラスティングゾーン"
+    },
     "icon": "actions/16165.png"
   },
   {
-    "row_id": 16164,
-    "name": "Bloodfest",
+    "id": 16164,
+    "name": {
+      "en": "Bloodfest",
+      "fr": "Cartouche de sang",
+      "de": "Blutpatronen",
+      "ja": "ブラッドソイル"
+    },
     "icon": "actions/16164.png"
   },
   {
-    "row_id": 16159,
-    "name": "Bow Shock",
+    "id": 16159,
+    "name": {
+      "en": "Bow Shock",
+      "fr": "Arc de choc",
+      "de": "Schockpatrone",
+      "ja": "バウショック"
+    },
     "icon": "actions/16159.png"
   },
   {
-    "row_id": 16139,
-    "name": "Brutal Shell",
+    "id": 16139,
+    "name": {
+      "en": "Brutal Shell",
+      "fr": "Impact brutal",
+      "de": "Brutaler Einschlag",
+      "ja": "ブルータルシェル"
+    },
     "icon": "actions/16139.png"
   },
   {
-    "row_id": 16162,
-    "name": "Burst Strike",
+    "id": 16162,
+    "name": {
+      "en": "Burst Strike",
+      "fr": "Frappe explosive",
+      "de": "Explosiver Stoß",
+      "ja": "バーストストライク"
+    },
     "icon": "actions/16162.png"
   },
   {
-    "row_id": 16140,
-    "name": "Camouflage",
+    "id": 16140,
+    "name": {
+      "en": "Camouflage",
+      "fr": "Camouflage",
+      "de": "Camouflage",
+      "ja": "カモフラージュ"
+    },
     "icon": "actions/16140.png"
   },
   {
-    "row_id": 16155,
-    "name": "Continuation",
+    "id": 16155,
+    "name": {
+      "en": "Continuation",
+      "fr": "Consécution",
+      "de": "Triggerfolge",
+      "ja": "コンティニュエーション"
+    },
     "icon": "actions/16155.png"
   },
   {
-    "row_id": 16144,
-    "name": "Danger Zone",
+    "id": 16144,
+    "name": {
+      "en": "Danger Zone",
+      "fr": "Zone de danger",
+      "de": "Sprengzone",
+      "ja": "デンジャーゾーン"
+    },
     "icon": "actions/16144.png"
   },
   {
-    "row_id": 16149,
-    "name": "Demon Slaughter",
+    "id": 16149,
+    "name": {
+      "en": "Demon Slaughter",
+      "fr": "Massacre démoniaque",
+      "de": "Dämonenschlachter",
+      "ja": "デーモンスローター"
+    },
     "icon": "actions/16149.png"
   },
   {
-    "row_id": 16141,
-    "name": "Demon Slice",
+    "id": 16141,
+    "name": {
+      "en": "Demon Slice",
+      "fr": "Tranchage démoniaque",
+      "de": "Dämonenschnitter",
+      "ja": "デーモンスライス"
+    },
     "icon": "actions/16141.png"
   },
   {
-    "row_id": 25760,
-    "name": "Double Down",
+    "id": 25760,
+    "name": {
+      "en": "Double Down",
+      "fr": "Acharnement",
+      "de": "Doppelpack",
+      "ja": "ダブルダウン"
+    },
     "icon": "actions/25760.png"
   },
   {
-    "row_id": 16158,
-    "name": "Eye Gouge",
+    "id": 16158,
+    "name": {
+      "en": "Eye Gouge"
+    },
     "icon": "actions/16158.png"
   },
   {
-    "row_id": 16163,
-    "name": "Fated Circle",
+    "id": 36936,
+    "name": {
+      "en": "Fated Brand",
+      "fr": "Insigne fatidique",
+      "de": "Schicksalszeichen",
+      "ja": "フェイテッドブランド"
+    },
+    "icon": "actions/36936.png"
+  },
+  {
+    "id": 16163,
+    "name": {
+      "en": "Fated Circle",
+      "fr": "Tourbillon fatidique",
+      "de": "Schicksalszirkel",
+      "ja": "フェイテッドサークル"
+    },
     "icon": "actions/16163.png"
   },
   {
-    "row_id": 16146,
-    "name": "Gnashing Fang",
+    "id": 16146,
+    "name": {
+      "en": "Gnashing Fang",
+      "fr": "Croc pugnace",
+      "de": "Schlagfänge",
+      "ja": "ビートファング"
+    },
     "icon": "actions/16146.png"
   },
   {
-    "row_id": 36935,
-    "name": "Great Nebula",
+    "id": 36935,
+    "name": {
+      "en": "Great Nebula",
+      "fr": "Grande nébuleuse",
+      "de": "Große Nebula",
+      "ja": "グレートネビュラ"
+    },
     "icon": "actions/36935.png"
   },
   {
-    "row_id": 25758,
-    "name": "Heart of Corundum",
+    "id": 25758,
+    "name": {
+      "en": "Heart of Corundum",
+      "fr": "Cœur de corindon",
+      "de": "Herz des Korunds",
+      "ja": "ハート・オブ・コランダム"
+    },
     "icon": "actions/25758.png"
   },
   {
-    "row_id": 16160,
-    "name": "Heart of Light",
+    "id": 16160,
+    "name": {
+      "en": "Heart of Light",
+      "fr": "Cœur de Lumière",
+      "de": "Wackeres Herz",
+      "ja": "ハート・オブ・ライト"
+    },
     "icon": "actions/16160.png"
   },
   {
-    "row_id": 16161,
-    "name": "Heart of Stone",
+    "id": 16161,
+    "name": {
+      "en": "Heart of Stone",
+      "fr": "Cœur de pierre",
+      "de": "Steinernes Herz",
+      "ja": "ハート・オブ・ストーン"
+    },
     "icon": "actions/16161.png"
   },
   {
-    "row_id": 7538,
-    "name": "Interject",
+    "id": 25759,
+    "name": {
+      "en": "Hypervelocity",
+      "fr": "Hypervitesse",
+      "de": "Überschall",
+      "ja": "ハイパーヴェロシティ"
+    },
+    "icon": "actions/25759.png"
+  },
+  {
+    "id": 7538,
+    "name": {
+      "en": "Interject",
+      "fr": "Interjection",
+      "de": "Zwischenruf",
+      "ja": "インタージェクト"
+    },
     "icon": "actions/7538.png"
   },
   {
-    "row_id": 16156,
-    "name": "Jugular Rip",
+    "id": 16156,
+    "name": {
+      "en": "Jugular Rip"
+    },
     "icon": "actions/16156.png"
   },
   {
-    "row_id": 16137,
-    "name": "Keen Edge",
+    "id": 16137,
+    "name": {
+      "en": "Keen Edge",
+      "fr": "Tranchant acéré",
+      "de": "Zerfetzer",
+      "ja": "キーンエッジ"
+    },
     "icon": "actions/16137.png"
   },
   {
-    "row_id": 16143,
-    "name": "Lightning Shot",
+    "id": 16143,
+    "name": {
+      "en": "Lightning Shot",
+      "fr": "Barillet tonnerre",
+      "de": "Donnerkugel",
+      "ja": "サンダーバレット"
+    },
     "icon": "actions/16143.png"
   },
   {
-    "row_id": 36939,
-    "name": "Lion Heart",
+    "id": 36939,
+    "name": {
+      "en": "Lion Heart"
+    },
     "icon": "actions/36939.png"
   },
   {
-    "row_id": 7540,
-    "name": "Low Blow",
+    "id": 7540,
+    "name": {
+      "en": "Low Blow",
+      "fr": "Coup bas",
+      "de": "Tiefschlag",
+      "ja": "ロウブロウ"
+    },
     "icon": "actions/7540.png"
   },
   {
-    "row_id": 16148,
-    "name": "Nebula",
+    "id": 16148,
+    "name": {
+      "en": "Nebula",
+      "fr": "Nébuleuse",
+      "de": "Nebula",
+      "ja": "ネビュラ"
+    },
     "icon": "actions/16148.png"
   },
   {
-    "row_id": 16138,
-    "name": "No Mercy",
+    "id": 16138,
+    "name": {
+      "en": "No Mercy",
+      "fr": "Sans pitié",
+      "de": "Ohne Gnade",
+      "ja": "ノー・マーシー"
+    },
     "icon": "actions/16138.png"
   },
   {
-    "row_id": 36938,
-    "name": "Noble Blood",
+    "id": 36938,
+    "name": {
+      "en": "Noble Blood"
+    },
     "icon": "actions/36938.png"
   },
   {
-    "row_id": 7533,
-    "name": "Provoke",
+    "id": 7533,
+    "name": {
+      "en": "Provoke",
+      "fr": "Provocation",
+      "de": "Herausforderung",
+      "ja": "挑発"
+    },
     "icon": "actions/7533.png"
   },
   {
-    "row_id": 7531,
-    "name": "Rampart",
+    "id": 7531,
+    "name": {
+      "en": "Rampart",
+      "fr": "Rempart",
+      "de": "Schutzwall",
+      "ja": "ランパート"
+    },
     "icon": "actions/7531.png"
   },
   {
-    "row_id": 36937,
-    "name": "Reign of Beasts",
+    "id": 36937,
+    "name": {
+      "en": "Reign of Beasts",
+      "fr": "Règne animal",
+      "de": "Lautere Wut",
+      "ja": "ライズ・オブ・ハート"
+    },
     "icon": "actions/36937.png"
   },
   {
-    "row_id": 7535,
-    "name": "Reprisal",
+    "id": 32068,
+    "name": {
+      "en": "Release Royal Guard",
+      "fr": "Dissipe Garde royale",
+      "de": "Bruch des Leibgardisten",
+      "ja": "ロイヤルガード解除"
+    },
+    "icon": "actions/32068.png"
+  },
+  {
+    "id": 7535,
+    "name": {
+      "en": "Reprisal",
+      "fr": "Rétorsion",
+      "de": "Reflexion",
+      "ja": "リプライザル"
+    },
     "icon": "actions/7535.png"
   },
   {
-    "row_id": 16142,
-    "name": "Royal Guard",
+    "id": 16142,
+    "name": {
+      "en": "Royal Guard",
+      "fr": "Garde royale",
+      "de": "Eid der Leibgardisten",
+      "ja": "ロイヤルガード"
+    },
     "icon": "actions/16142.png"
   },
   {
-    "row_id": 16147,
-    "name": "Savage Claw",
+    "id": 16147,
+    "name": {
+      "en": "Savage Claw"
+    },
     "icon": "actions/16147.png"
   },
   {
-    "row_id": 7537,
-    "name": "Shirk",
+    "id": 7537,
+    "name": {
+      "en": "Shirk",
+      "fr": "Dérobade",
+      "de": "Geteiltes Leid",
+      "ja": "シャーク"
+    },
     "icon": "actions/7537.png"
   },
   {
-    "row_id": 16145,
-    "name": "Solid Barrel",
+    "id": 16145,
+    "name": {
+      "en": "Solid Barrel",
+      "fr": "Salve tranchante",
+      "de": "Stahlwalze",
+      "ja": "ソリッドバレル"
+    },
     "icon": "actions/16145.png"
   },
   {
-    "row_id": 16153,
-    "name": "Sonic Break",
+    "id": 16153,
+    "name": {
+      "en": "Sonic Break",
+      "fr": "Rupture sonique",
+      "de": "Schallbrecher",
+      "ja": "ソニックブレイク"
+    },
     "icon": "actions/16153.png"
   },
   {
-    "row_id": 16152,
-    "name": "Superbolide",
+    "id": 16152,
+    "name": {
+      "en": "Superbolide",
+      "fr": "Bolide",
+      "de": "Meteoritenfall",
+      "ja": "ボーライド"
+    },
     "icon": "actions/16152.png"
   },
   {
-    "row_id": 36934,
-    "name": "Trajectory",
+    "id": 36934,
+    "name": {
+      "en": "Trajectory",
+      "fr": "Trajectoire optimale",
+      "de": "Flugbahn",
+      "ja": "トラジェクトリー"
+    },
     "icon": "actions/36934.png"
   },
   {
-    "row_id": 16150,
-    "name": "Wicked Talon",
+    "id": 16150,
+    "name": {
+      "en": "Wicked Talon"
+    },
     "icon": "actions/16150.png"
   }
 ]

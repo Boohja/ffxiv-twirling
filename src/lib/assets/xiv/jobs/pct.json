@@ -1,127 +1,492 @@
 [
   {
-    "row_id": 7560,
-    "name": "Addle",
+    "id": 7560,
+    "name": {
+      "en": "Addle",
+      "fr": "Embrouillement",
+      "de": "Stumpfsinn",
+      "ja": "アドル"
+    },
     "icon": "actions/7560.png"
   },
   {
-    "row_id": 34659,
-    "name": "Blizzard II in Cyan",
+    "id": 34657,
+    "name": {
+      "en": "Aero II in Green",
+      "fr": "Extra Vent en vert",
+      "de": "Windra in Grün",
+      "ja": "グリーンエアロラ"
+    },
+    "icon": "actions/34657.png"
+  },
+  {
+    "id": 34651,
+    "name": {
+      "en": "Aero in Green",
+      "fr": "Vent en vert",
+      "de": "Wind in Grün",
+      "ja": "グリーンエアロ"
+    },
+    "icon": "actions/34651.png"
+  },
+  {
+    "id": 34659,
+    "name": {
+      "en": "Blizzard II in Cyan",
+      "fr": "Extra Glace en cyan",
+      "de": "Eisra in Cyan",
+      "ja": "シアンブリザラ"
+    },
     "icon": "actions/34659.png"
   },
   {
-    "row_id": 34653,
-    "name": "Blizzard in Cyan",
+    "id": 34653,
+    "name": {
+      "en": "Blizzard in Cyan",
+      "fr": "Glace en cyan",
+      "de": "Eis in Cyan",
+      "ja": "シアンブリザド"
+    },
     "icon": "actions/34653.png"
   },
   {
-    "row_id": 34663,
-    "name": "Comet in Black",
+    "id": 34666,
+    "name": {
+      "en": "Claw Motif",
+      "fr": "Picto Griffes",
+      "de": "Pikto-Klaue",
+      "ja": "ピクトクロー"
+    },
+    "icon": "actions/34666.png"
+  },
+  {
+    "id": 34672,
+    "name": {
+      "en": "Clawed Muse",
+      "fr": "Imagi Griffes",
+      "de": "Kratzende Muse",
+      "ja": "イマジンクロー"
+    },
+    "icon": "actions/34672.png"
+  },
+  {
+    "id": 34663,
+    "name": {
+      "en": "Comet in Black",
+      "fr": "Comète en noir",
+      "de": "Komet in Schwarz",
+      "ja": "ブラックコメット"
+    },
     "icon": "actions/34663.png"
   },
   {
-    "row_id": 34689,
-    "name": "Creature Motif",
+    "id": 34689,
+    "name": {
+      "en": "Creature Motif",
+      "fr": "Picto Animal",
+      "de": "Pikto-Kreatur",
+      "ja": "ピクトアニマル"
+    },
     "icon": "actions/34689.png"
   },
   {
-    "row_id": 34656,
-    "name": "Fire II in Red",
+    "id": 34673,
+    "name": {
+      "en": "Fanged Muse",
+      "fr": "Imagi Crocs",
+      "de": "Beißende Muse",
+      "ja": "イマジンファング"
+    },
+    "icon": "actions/34673.png"
+  },
+  {
+    "id": 34656,
+    "name": {
+      "en": "Fire II in Red",
+      "fr": "Extra Feu en rouge",
+      "de": "Feura in Rot",
+      "ja": "レッドファイラ"
+    },
     "icon": "actions/34656.png"
   },
   {
-    "row_id": 34650,
-    "name": "Fire in Red",
+    "id": 34650,
+    "name": {
+      "en": "Fire in Red",
+      "fr": "Feu en rouge",
+      "de": "Feuer in Rot",
+      "ja": "レッドファイア"
+    },
     "icon": "actions/34650.png"
   },
   {
-    "row_id": 34678,
-    "name": "Hammer Stamp",
+    "id": 34679,
+    "name": {
+      "en": "Hammer Brush",
+      "fr": "Brossage Marteau",
+      "de": "Hammerpinsel",
+      "ja": "ハンマーブラッシュ"
+    },
+    "icon": "actions/34679.png"
+  },
+  {
+    "id": 34668,
+    "name": {
+      "en": "Hammer Motif",
+      "fr": "Picto Marteau",
+      "de": "Pikto-Hammer",
+      "ja": "ピクトハンマー"
+    },
+    "icon": "actions/34668.png"
+  },
+  {
+    "id": 34678,
+    "name": {
+      "en": "Hammer Stamp",
+      "fr": "Tamponnage Marteau",
+      "de": "Hammerstempel",
+      "ja": "ハンマースタンプ"
+    },
     "icon": "actions/34678.png"
   },
   {
-    "row_id": 34662,
-    "name": "Holy in White",
+    "id": 34662,
+    "name": {
+      "en": "Holy in White",
+      "fr": "Miracle en blanc",
+      "de": "Sanctus in Weiß",
+      "ja": "ホワイトホーリー"
+    },
     "icon": "actions/34662.png"
   },
   {
-    "row_id": 34691,
-    "name": "Landscape Motif",
+    "id": 34691,
+    "name": {
+      "en": "Landscape Motif",
+      "fr": "Picto Paysage",
+      "de": "Pikto-Landschaft",
+      "ja": "ピクトスケープ"
+    },
     "icon": "actions/34691.png"
   },
   {
-    "row_id": 35347,
-    "name": "Living Muse",
+    "id": 35347,
+    "name": {
+      "en": "Living Muse",
+      "fr": "Imagi Animal",
+      "de": "Lebende Muse",
+      "ja": "イマジンアニマル"
+    },
     "icon": "actions/35347.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 34676,
-    "name": "Mog of the Ages",
+    "id": 34667,
+    "name": {
+      "en": "Maw Motif",
+      "fr": "Picto Crocs",
+      "de": "Pikto-Hauer",
+      "ja": "ピクトファング"
+    },
+    "icon": "actions/34667.png"
+  },
+  {
+    "id": 34676,
+    "name": {
+      "en": "Mog of the Ages",
+      "fr": "Mognum opus",
+      "de": "Opus Mognum",
+      "ja": "モーグリストリーム"
+    },
     "icon": "actions/34676.png"
   },
   {
-    "row_id": 34688,
-    "name": "Rainbow Drip",
+    "id": 34680,
+    "name": {
+      "en": "Polishing Hammer",
+      "fr": "Finition Marteau",
+      "de": "Hammerglanz",
+      "ja": "ハンマーポリッシュ"
+    },
+    "icon": "actions/34680.png"
+  },
+  {
+    "id": 34664,
+    "name": {
+      "en": "Pom Motif",
+      "fr": "Picto Pompon",
+      "de": "Pikto-Bommel",
+      "ja": "ピクトポンポン"
+    },
+    "icon": "actions/34664.png"
+  },
+  {
+    "id": 34670,
+    "name": {
+      "en": "Pom Muse",
+      "fr": "Imagi Pompon",
+      "de": "Muse mit Bommel",
+      "ja": "イマジンポンポン"
+    },
+    "icon": "actions/34670.png"
+  },
+  {
+    "id": 34688,
+    "name": {
+      "en": "Rainbow Drip",
+      "fr": "Gouttes arc-en-ciel",
+      "de": "Prismatische Oszillation",
+      "ja": "レインボードリップ"
+    },
     "icon": "actions/34688.png"
   },
   {
-    "row_id": 35349,
-    "name": "Scenic Muse",
+    "id": 34677,
+    "name": {
+      "en": "Retribution of the Madeen",
+      "fr": "Rétribution de Marthym",
+      "de": "Vergeltung der Madhin",
+      "ja": "マディーンレトリビューション"
+    },
+    "icon": "actions/34677.png"
+  },
+  {
+    "id": 35349,
+    "name": {
+      "en": "Scenic Muse",
+      "fr": "Imagi Paysage",
+      "de": "Malerische Muse",
+      "ja": "イマジンスケープ"
+    },
     "icon": "actions/35349.png"
   },
   {
-    "row_id": 25880,
-    "name": "Sleep",
+    "id": 25880,
+    "name": {
+      "en": "Sleep",
+      "fr": "Sommeil",
+      "de": "Schlaf",
+      "ja": "スリプル"
+    },
     "icon": "actions/25880.png"
   },
   {
-    "row_id": 34684,
-    "name": "Smudge",
+    "id": 34684,
+    "name": {
+      "en": "Smudge",
+      "fr": "Barbouillage",
+      "de": "Schmierschritt",
+      "ja": "スマッジ"
+    },
     "icon": "actions/34684.png"
   },
   {
-    "row_id": 34681,
-    "name": "Star Prism",
+    "id": 34681,
+    "name": {
+      "en": "Star Prism",
+      "fr": "Prisme d'étoiles",
+      "de": "Sternenprisma",
+      "ja": "スタープリズム"
+    },
     "icon": "actions/34681.png"
   },
   {
-    "row_id": 35348,
-    "name": "Steel Muse",
+    "id": 34682,
+    "name": {
+      "en": "Star Prism",
+      "fr": "Prisme d'étoiles",
+      "de": "Sternenprisma",
+      "ja": "スタープリズム"
+    },
+    "icon": "actions/34682.png"
+  },
+  {
+    "id": 34675,
+    "name": {
+      "en": "Starry Muse",
+      "fr": "Imagi Ciel",
+      "de": "Sternenmuse",
+      "ja": "イマジンスカイ"
+    },
+    "icon": "actions/34675.png"
+  },
+  {
+    "id": 34669,
+    "name": {
+      "en": "Starry Sky Motif",
+      "fr": "Picto Ciel",
+      "de": "Pikto-Sternennacht",
+      "ja": "ピクトスカイ"
+    },
+    "icon": "actions/34669.png"
+  },
+  {
+    "id": 35348,
+    "name": {
+      "en": "Steel Muse",
+      "fr": "Imagi Arme",
+      "de": "Stählerne Muse",
+      "ja": "イマジンウェポン"
+    },
     "icon": "actions/35348.png"
   },
   {
-    "row_id": 34683,
-    "name": "Subtractive Palette",
+    "id": 34660,
+    "name": {
+      "en": "Stone II in Yellow",
+      "fr": "Extra Terre en jaune",
+      "de": "Steinra in Gelb",
+      "ja": "イエローストンラ"
+    },
+    "icon": "actions/34660.png"
+  },
+  {
+    "id": 34654,
+    "name": {
+      "en": "Stone in Yellow",
+      "fr": "Terre en jaune",
+      "de": "Stein in Gelb",
+      "ja": "イエローストーン"
+    },
+    "icon": "actions/34654.png"
+  },
+  {
+    "id": 34674,
+    "name": {
+      "en": "Striking Muse",
+      "fr": "Imagi Marteau",
+      "de": "Rabiate Muse",
+      "ja": "イマジンハンマー"
+    },
+    "icon": "actions/34674.png"
+  },
+  {
+    "id": 34683,
+    "name": {
+      "en": "Subtractive Palette",
+      "fr": "Palette soustractive",
+      "de": "Subtraktive Palette",
+      "ja": "サブトラクティブパレット"
+    },
     "icon": "actions/34683.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 34685,
-    "name": "Tempera Coat",
+    "id": 34685,
+    "name": {
+      "en": "Tempera Coat",
+      "fr": "Enduit a tempera",
+      "de": "Tempera-Schicht",
+      "ja": "テンペラコート"
+    },
     "icon": "actions/34685.png"
   },
   {
-    "row_id": 34686,
-    "name": "Tempera Grassa",
+    "id": 34686,
+    "name": {
+      "en": "Tempera Grassa",
+      "fr": "Tempera grassa",
+      "de": "Fette Tempera",
+      "ja": "テンペラグラッサ"
+    },
     "icon": "actions/34686.png"
   },
   {
-    "row_id": 34690,
-    "name": "Weapon Motif",
+    "id": 34661,
+    "name": {
+      "en": "Thunder II in Magenta",
+      "fr": "Extra Foudre en magenta",
+      "de": "Blitzra in Magenta",
+      "ja": "マゼンタサンダラ"
+    },
+    "icon": "actions/34661.png"
+  },
+  {
+    "id": 34655,
+    "name": {
+      "en": "Thunder in Magenta",
+      "fr": "Foudre en magenta",
+      "de": "Blitz in Magenta",
+      "ja": "マゼンタサンダー"
+    },
+    "icon": "actions/34655.png"
+  },
+  {
+    "id": 34658,
+    "name": {
+      "en": "Water II in Blue",
+      "fr": "Extra Eau en bleu",
+      "de": "Aquara in Blau",
+      "ja": "ブルーウォタラ"
+    },
+    "icon": "actions/34658.png"
+  },
+  {
+    "id": 34652,
+    "name": {
+      "en": "Water in Blue",
+      "fr": "Eau en bleu",
+      "de": "Aqua in Blau",
+      "ja": "ブルーウォータ"
+    },
+    "icon": "actions/34652.png"
+  },
+  {
+    "id": 34690,
+    "name": {
+      "en": "Weapon Motif",
+      "fr": "Picto Arme",
+      "de": "Pikto-Waffe",
+      "ja": "ピクトウェポン"
+    },
     "icon": "actions/34690.png"
+  },
+  {
+    "id": 34665,
+    "name": {
+      "en": "Wing Motif",
+      "fr": "Picto Ailes",
+      "de": "Pikto-Schwingen",
+      "ja": "ピクトウィング"
+    },
+    "icon": "actions/34665.png"
+  },
+  {
+    "id": 34671,
+    "name": {
+      "en": "Winged Muse",
+      "fr": "Imagi Ailes",
+      "de": "Beschwingte Muse",
+      "ja": "イマジンウィング"
+    },
+    "icon": "actions/34671.png"
   }
 ]

@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "sch",
+    "slug": "sch-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/healers/scholar/openers/",
+    "updated": "2025-12-27",
+    "steps": [
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/16540.png",
+            "action": 16540
+        },
+        {
+            "icon": "actions/3587.png",
+            "action": 3587
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/7436.png",
+            "action": 7436
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/167.png",
+            "action": 167
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/167.png",
+            "action": 167
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/167.png",
+            "action": 167
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/3587.png",
+            "action": 3587
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/37012.png",
+            "action": 37012
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/167.png",
+            "action": 167
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/167.png",
+            "action": 167
+        },
+        {
+            "icon": "actions/25865.png",
+            "action": 25865
+        },
+        {
+            "icon": "actions/167.png",
+            "action": 167
+        },
+        {
+            "icon": "actions/16540.png",
+            "action": 16540
+        }
+    ]
+  }
+]

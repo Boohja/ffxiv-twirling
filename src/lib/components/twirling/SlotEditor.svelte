@@ -5,6 +5,7 @@
   import { FiTrash2 } from "svelte-icons-pack/fi";
   import { getAction, getActionName, hasKeybind} from "$lib/helpers";
   import type {RotationStep, KeyboardInput, GamepadInput} from '$lib/stores'
+  import { dev } from '$app/environment';
 
   let propagateKeybind = true
   let refInputModal: any
@@ -323,7 +324,12 @@
               on:click={() => selectAction(action)}
             >
               <img src={getIconUrl(action.icon)} alt={action.id.toString()} class="h-9 w-9 shrink-0 rounded" />
-              <span class="truncate text-sm text-slate-200">{getActionName(suggestions, action.id, language)}</span>
+              <div>
+                <span class="truncate text-sm text-slate-200">{getActionName(suggestions, action.id, language)}</span>
+                {#if dev}
+                  <div class="text-xs text-slate-400">ID: {action.id}</div>
+                {/if}
+              </div>
             </button>
           {/each}
           </div>

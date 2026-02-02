@@ -1,202 +1,482 @@
 [
   {
-    "row_id": 24284,
-    "name": "Diagnosis",
+    "id": 24284,
+    "name": {
+      "en": "Diagnosis",
+      "fr": "Diagnosis",
+      "de": "Diagnose",
+      "ja": "ディアグノシス"
+    },
     "icon": "actions/24284.png"
   },
   {
-    "row_id": 24283,
-    "name": "Dosis",
+    "id": 24283,
+    "name": {
+      "en": "Dosis",
+      "fr": "Dosis",
+      "de": "Dosis",
+      "ja": "ドシス"
+    },
     "icon": "actions/24283.png"
   },
   {
-    "row_id": 24306,
-    "name": "Dosis II",
+    "id": 24306,
+    "name": {
+      "en": "Dosis II",
+      "fr": "Dosis II",
+      "de": "Dosis II",
+      "ja": "ドシスII"
+    },
     "icon": "actions/24306.png"
   },
   {
-    "row_id": 24312,
-    "name": "Dosis III",
+    "id": 24312,
+    "name": {
+      "en": "Dosis III",
+      "fr": "Dosis III",
+      "de": "Dosis III",
+      "ja": "ドシスIII"
+    },
     "icon": "actions/24312.png"
   },
   {
-    "row_id": 24296,
-    "name": "Druochole",
+    "id": 24296,
+    "name": {
+      "en": "Druochole",
+      "fr": "Druochole",
+      "de": "Druochole",
+      "ja": "ドルオコレ"
+    },
     "icon": "actions/24296.png"
   },
   {
-    "row_id": 24297,
-    "name": "Dyskrasia",
+    "id": 24297,
+    "name": {
+      "en": "Dyskrasia",
+      "fr": "Dyskrasia",
+      "de": "Dyskrasie",
+      "ja": "ディスクラシア"
+    },
     "icon": "actions/24297.png"
   },
   {
-    "row_id": 24315,
-    "name": "Dyskrasia II",
+    "id": 24315,
+    "name": {
+      "en": "Dyskrasia II",
+      "fr": "Dyskrasia II",
+      "de": "Dyskrasie II",
+      "ja": "ディスクラシアII"
+    },
     "icon": "actions/24315.png"
   },
   {
-    "row_id": 24287,
-    "name": "Egeiro",
+    "id": 24287,
+    "name": {
+      "en": "Egeiro",
+      "fr": "Egeiro",
+      "de": "Egeiro",
+      "ja": "エゲイロー"
+    },
     "icon": "actions/24287.png"
   },
   {
-    "row_id": 7568,
-    "name": "Esuna",
+    "id": 7568,
+    "name": {
+      "en": "Esuna",
+      "fr": "Guérison",
+      "de": "Medica",
+      "ja": "エスナ"
+    },
     "icon": "actions/7568.png"
   },
   {
-    "row_id": 24290,
-    "name": "Eukrasia",
+    "id": 37036,
+    "name": {
+      "en": "Eudaimonia",
+      "fr": "Eudémonisme",
+      "de": "Eudaimonie",
+      "ja": "エウダイモニア"
+    },
+    "icon": "actions/37036.png"
+  },
+  {
+    "id": 24290,
+    "name": {
+      "en": "Eukrasia",
+      "fr": "Eukrasia",
+      "de": "Eukrasie",
+      "ja": "エウクラシア"
+    },
     "icon": "actions/24290.png"
   },
   {
-    "row_id": 24305,
-    "name": "Haima",
+    "id": 24291,
+    "name": {
+      "en": "Eukrasian Diagnosis",
+      "fr": "Diagnosis eucrasique",
+      "de": "Eukratische Diagnose",
+      "ja": "エウクラシア・ディアグノシス"
+    },
+    "icon": "actions/24291.png"
+  },
+  {
+    "id": 24293,
+    "name": {
+      "en": "Eukrasian Dosis",
+      "fr": "Dosis eucrasique",
+      "de": "Eukratische Dosis",
+      "ja": "エウクラシア・ドシス"
+    },
+    "icon": "actions/24293.png"
+  },
+  {
+    "id": 24308,
+    "name": {
+      "en": "Eukrasian Dosis II",
+      "fr": "Dosis eucrasique II",
+      "de": "Eukratische Dosis II",
+      "ja": "エウクラシア・ドシスII"
+    },
+    "icon": "actions/24308.png"
+  },
+  {
+    "id": 24314,
+    "name": {
+      "en": "Eukrasian Dosis III",
+      "fr": "Dosis eucrasique III",
+      "de": "Eukratische Dosis III",
+      "ja": "エウクラシア・ドシスIII"
+    },
+    "icon": "actions/24314.png"
+  },
+  {
+    "id": 37032,
+    "name": {
+      "en": "Eukrasian Dyskrasia",
+      "fr": "Dyskrasia eucrasique",
+      "de": "Eukratische Dyskrasie",
+      "ja": "エウクラシア・ディスクラシア"
+    },
+    "icon": "actions/37032.png"
+  },
+  {
+    "id": 24292,
+    "name": {
+      "en": "Eukrasian Prognosis",
+      "fr": "Prognosis eucrasique",
+      "de": "Eukratische Prognose",
+      "ja": "エウクラシア・プログノシス"
+    },
+    "icon": "actions/24292.png"
+  },
+  {
+    "id": 37034,
+    "name": {
+      "en": "Eukrasian Prognosis II",
+      "fr": "Prognosis eucrasique II",
+      "de": "Eukratische Prognose II",
+      "ja": "エウクラシア・プログノシスII"
+    },
+    "icon": "actions/37034.png"
+  },
+  {
+    "id": 24305,
+    "name": {
+      "en": "Haima",
+      "fr": "Haima",
+      "de": "Haima",
+      "ja": "ハイマ"
+    },
     "icon": "actions/24305.png"
   },
   {
-    "row_id": 24310,
-    "name": "Holos",
+    "id": 24310,
+    "name": {
+      "en": "Holos",
+      "fr": "Holos",
+      "de": "Holos",
+      "ja": "ホーリズム"
+    },
     "icon": "actions/24310.png"
   },
   {
-    "row_id": 24295,
-    "name": "Icarus",
+    "id": 24295,
+    "name": {
+      "en": "Icarus",
+      "fr": "Ikaros",
+      "de": "Ikarus",
+      "ja": "イカロス"
+    },
     "icon": "actions/24295.png"
   },
   {
-    "row_id": 24299,
-    "name": "Ixochole",
+    "id": 24299,
+    "name": {
+      "en": "Ixochole",
+      "fr": "Ixochole",
+      "de": "Ixochole",
+      "ja": "イックソコレ"
+    },
     "icon": "actions/24299.png"
   },
   {
-    "row_id": 24285,
-    "name": "Kardia",
+    "id": 24285,
+    "name": {
+      "en": "Kardia",
+      "fr": "Kardia",
+      "de": "Kardia",
+      "ja": "カルディア"
+    },
     "icon": "actions/24285.png"
   },
   {
-    "row_id": 24298,
-    "name": "Kerachole",
+    "id": 24298,
+    "name": {
+      "en": "Kerachole",
+      "fr": "Kerachole",
+      "de": "Kerachole",
+      "ja": "ケーラコレ"
+    },
     "icon": "actions/24298.png"
   },
   {
-    "row_id": 24317,
-    "name": "Krasis",
+    "id": 24317,
+    "name": {
+      "en": "Krasis",
+      "fr": "Krasis",
+      "de": "Krasis",
+      "ja": "クラーシス"
+    },
     "icon": "actions/24317.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 24311,
-    "name": "Panhaima",
+    "id": 24311,
+    "name": {
+      "en": "Panhaima",
+      "fr": "Panhaima",
+      "de": "Panhaima",
+      "ja": "パンハイマ"
+    },
     "icon": "actions/24311.png"
   },
   {
-    "row_id": 24301,
-    "name": "Pepsis",
+    "id": 24301,
+    "name": {
+      "en": "Pepsis",
+      "fr": "Pepsis",
+      "de": "Pepsis",
+      "ja": "ペプシス"
+    },
     "icon": "actions/24301.png"
   },
   {
-    "row_id": 37035,
-    "name": "Philosophia",
+    "id": 37035,
+    "name": {
+      "en": "Philosophia",
+      "fr": "Philosophia",
+      "de": "Philosophia",
+      "ja": "フィロソフィア"
+    },
     "icon": "actions/37035.png"
   },
   {
-    "row_id": 24289,
-    "name": "Phlegma",
+    "id": 24289,
+    "name": {
+      "en": "Phlegma",
+      "fr": "Phlegma",
+      "de": "Phlegma",
+      "ja": "フレグマ"
+    },
     "icon": "actions/24289.png"
   },
   {
-    "row_id": 24307,
-    "name": "Phlegma II",
+    "id": 24307,
+    "name": {
+      "en": "Phlegma II",
+      "fr": "Phlegma II",
+      "de": "Phlegma II",
+      "ja": "フレグマII"
+    },
     "icon": "actions/24307.png"
   },
   {
-    "row_id": 24313,
-    "name": "Phlegma III",
+    "id": 24313,
+    "name": {
+      "en": "Phlegma III",
+      "fr": "Phlegma III",
+      "de": "Phlegma III",
+      "ja": "フレグマIII"
+    },
     "icon": "actions/24313.png"
   },
   {
-    "row_id": 24288,
-    "name": "Physis",
+    "id": 24288,
+    "name": {
+      "en": "Physis",
+      "fr": "Physis",
+      "de": "Physis",
+      "ja": "ピュシス"
+    },
     "icon": "actions/24288.png"
   },
   {
-    "row_id": 24302,
-    "name": "Physis II",
+    "id": 24302,
+    "name": {
+      "en": "Physis II",
+      "fr": "Physis II",
+      "de": "Physis II",
+      "ja": "ピュシスII"
+    },
     "icon": "actions/24302.png"
   },
   {
-    "row_id": 24318,
-    "name": "Pneuma",
+    "id": 24318,
+    "name": {
+      "en": "Pneuma",
+      "fr": "Pneuma",
+      "de": "Pneuma",
+      "ja": "プネウマ"
+    },
     "icon": "actions/24318.png"
   },
   {
-    "row_id": 24286,
-    "name": "Prognosis",
+    "id": 27524,
+    "name": {
+      "en": "Pneuma",
+      "fr": "Pneuma",
+      "de": "Pneuma",
+      "ja": "プネウマ"
+    },
+    "icon": "actions/27524.png"
+  },
+  {
+    "id": 24286,
+    "name": {
+      "en": "Prognosis",
+      "fr": "Prognosis",
+      "de": "Prognose",
+      "ja": "プログノシス"
+    },
     "icon": "actions/24286.png"
   },
   {
-    "row_id": 37033,
-    "name": "Psyche",
+    "id": 37033,
+    "name": {
+      "en": "Psyche",
+      "fr": "Psyché",
+      "de": "Psyche",
+      "ja": "プシュケー"
+    },
     "icon": "actions/37033.png"
   },
   {
-    "row_id": 1584,
-    "name": "Purify",
-    "icon": "actions/1584.png"
-  },
-  {
-    "row_id": 16560,
-    "name": "Repose",
+    "id": 16560,
+    "name": {
+      "en": "Repose",
+      "fr": "Sérénité",
+      "de": "Schlummer",
+      "ja": "リポーズ"
+    },
     "icon": "actions/16560.png"
   },
   {
-    "row_id": 7571,
-    "name": "Rescue",
+    "id": 7571,
+    "name": {
+      "en": "Rescue",
+      "fr": "Secours",
+      "de": "Rettung",
+      "ja": "救出"
+    },
     "icon": "actions/7571.png"
   },
   {
-    "row_id": 24309,
-    "name": "Rhizomata",
+    "id": 24309,
+    "name": {
+      "en": "Rhizomata",
+      "fr": "Rizomata",
+      "de": "Rizomata",
+      "ja": "リゾーマタ"
+    },
     "icon": "actions/24309.png"
   },
   {
-    "row_id": 24294,
-    "name": "Soteria",
+    "id": 24294,
+    "name": {
+      "en": "Soteria",
+      "fr": "Soteria",
+      "de": "Soteria",
+      "ja": "ソーテリア"
+    },
     "icon": "actions/24294.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 24303,
-    "name": "Taurochole",
+    "id": 24303,
+    "name": {
+      "en": "Taurochole",
+      "fr": "Taurochole",
+      "de": "Taurochole",
+      "ja": "タウロコレ"
+    },
     "icon": "actions/24303.png"
   },
   {
-    "row_id": 24304,
-    "name": "Toxikon",
+    "id": 24304,
+    "name": {
+      "en": "Toxikon",
+      "fr": "Toxikon",
+      "de": "Toxikon",
+      "ja": "トキシコン"
+    },
     "icon": "actions/24304.png"
   },
   {
-    "row_id": 24316,
-    "name": "Toxikon II",
+    "id": 24316,
+    "name": {
+      "en": "Toxikon II",
+      "fr": "Toxikon II",
+      "de": "Toxikon II",
+      "ja": "トキシコンII"
+    },
     "icon": "actions/24316.png"
   },
   {
-    "row_id": 24300,
-    "name": "Zoe",
+    "id": 24300,
+    "name": {
+      "en": "Zoe",
+      "fr": "Zoe",
+      "de": "Zoe",
+      "ja": "ゾーエ"
+    },
     "icon": "actions/24300.png"
   }
 ]

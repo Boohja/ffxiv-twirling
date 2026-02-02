@@ -184,3 +184,55 @@ export async function fetchAndStoreIconOnce(
 	await fs.writeFile(outPath, bin);
 	await sleep(1500);
 }
+
+/**
+ * Extract action IDs from TypeScript file content
+ * Looks for patterns like: id: 12345,
+ */
+export function extractActionIdsFromTS(tsContent: string): number[] {
+	const idRegex = /id:\s*(\d+)/g;
+	const ids = new Set<number>();
+	let match;
+	while ((match = idRegex.exec(tsContent)) !== null) {
+		ids.add(parseInt(match[1], 10));
+	}
+	return Array.from(ids).sort((a, b) => a - b);
+}
+
+/**
+ * Fetch TypeScript file from GitHub raw content
+ */
+export async function fetchGitHubFile(url: string): Promise<string> {
+	// Convert github.com URL to raw.githubusercontent.com if needed
+	const rawUrl = url.replace(
+		'github.com',
+		'raw.githubusercontent.com'
+	).replace(
+		'/blob/',
+		'/'
+	);
+	
+	const res = await fetch(rawUrl, {
+		headers: { 'user-agent': 'ffxiv-twirling/0.0.1 (+github.com/Boohja/ffxiv-twirling)' }
+	});
+	if (!res.ok) throw new Error(`Failed to fetch ${rawUrl}: ${res.status}`);
+	return res.text();
+}
+
+/**
+ * Compare local job JSON against remote action IDs
+ * @returns array of missing action IDs
+ */
+export async function findMissingActions(
+	jobFilePath: string,
+	githubUrl: string
+): Promise<number[]> {
+	const localEntries = await readJobJson(jobFilePath);
+	const localIds = new Set(localEntries.map(e => e.id));
+
+	const tsContent = await fetchGitHubFile(githubUrl);
+	const remoteIds = extractActionIdsFromTS(tsContent);
+
+	const missing = remoteIds.filter(id => !localIds.has(id));
+	return missing;
+}

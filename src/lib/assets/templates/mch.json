@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "mch",
+    "slug": "mch-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/ranged/machinist/openers/",
+    "updated": "2025-12-17",
+    "steps": [
+        {
+            "icon": "actions/2876.png",
+            "action": 2876
+        },
+        {
+            "icon": "actions/16500.png",
+            "action": 16500
+        },
+        {
+            "icon": "actions/36980.png",
+            "action": 36980
+        },
+        {
+            "icon": "actions/36979.png",
+            "action": 36979
+        },
+        {
+            "icon": "actions/16498.png",
+            "action": 16498
+        },
+        {
+            "icon": "actions/7414.png",
+            "action": 7414
+        },
+        {
+            "icon": "actions/25788.png",
+            "action": 25788
+        },
+        {
+            "icon": "actions/36981.png",
+            "action": 36981
+        },
+        {
+            "icon": "actions/16501.png",
+            "action": 16501
+        },
+        {
+            "icon": "actions/2876.png",
+            "action": 2876
+        },
+        {
+            "icon": "actions/16498.png",
+            "action": 16498
+        },
+        {
+            "icon": "actions/36980.png",
+            "action": 36980
+        },
+        {
+            "icon": "actions/2878.png",
+            "action": 2878
+        },
+        {
+            "icon": "actions/36982.png",
+            "action": 36982
+        },
+        {
+            "icon": "actions/36979.png",
+            "action": 36979
+        },
+        {
+            "icon": "actions/17209.png",
+            "action": 17209
+        },
+        {
+            "icon": "actions/36978.png",
+            "action": 36978
+        },
+        {
+            "icon": "actions/36980.png",
+            "action": 36980
+        },
+        {
+            "icon": "actions/36978.png",
+            "action": 36978
+        },
+        {
+            "icon": "actions/36979.png",
+            "action": 36979
+        },
+        {
+            "icon": "actions/36978.png",
+            "action": 36978
+        },
+        {
+            "icon": "actions/36980.png",
+            "action": 36980
+        },
+        {
+            "icon": "actions/36978.png",
+            "action": 36978
+        },
+        {
+            "icon": "actions/36979.png",
+            "action": 36979
+        },
+        {
+            "icon": "actions/36978.png",
+            "action": 36978
+        },
+        {
+            "icon": "actions/36980.png",
+            "action": 36980
+        },
+        {
+            "icon": "actions/16498.png",
+            "action": 16498
+        },
+        {
+            "icon": "actions/36979.png",
+            "action": 36979
+        },
+        {
+            "icon": "actions/36980.png",
+            "action": 36980
+        },
+        {
+            "icon": "actions/7411.png",
+            "action": 7411
+        },
+        {
+            "icon": "actions/36979.png",
+            "action": 36979
+        },
+        {
+            "icon": "actions/7412.png",
+            "action": 7412
+        },
+        {
+            "icon": "actions/7413.png",
+            "action": 7413
+        }
+    ]
+  }
+]

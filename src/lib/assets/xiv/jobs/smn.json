@@ -1,197 +1,762 @@
 [
   {
-    "row_id": 7560,
-    "name": "Addle",
+    "id": 7560,
+    "name": {
+      "en": "Addle",
+      "fr": "Embrouillement",
+      "de": "Stumpfsinn",
+      "ja": "アドル"
+    },
     "icon": "actions/7560.png"
   },
   {
-    "row_id": 25800,
-    "name": "Aethercharge",
+    "id": 25800,
+    "name": {
+      "en": "Aethercharge",
+      "fr": "Infusion d'éther",
+      "de": "Ätherinfusion",
+      "ja": "エーテルチャージ"
+    },
     "icon": "actions/25800.png"
   },
   {
-    "row_id": 25822,
-    "name": "Astral Flow",
+    "id": 7449,
+    "name": {
+      "en": "Akh Morn",
+      "fr": "Akh Morn",
+      "de": "Akh Morn",
+      "ja": "アク・モーン"
+    },
+    "icon": "actions/7449.png"
+  },
+  {
+    "id": 25821,
+    "name": {
+      "en": "Astral Flare",
+      "fr": "Brasier astral",
+      "de": "Lichtflare",
+      "ja": "アストラルフレア"
+    },
+    "icon": "actions/25821.png"
+  },
+  {
+    "id": 25822,
+    "name": {
+      "en": "Astral Flow",
+      "fr": "Flux astral",
+      "de": "Lichtstrom",
+      "ja": "アストラルフロウ"
+    },
     "icon": "actions/25822.png"
   },
   {
-    "row_id": 3581,
-    "name": "Dreadwyrm Trance",
+    "id": 25820,
+    "name": {
+      "en": "Astral Impulse",
+      "fr": "Pulsar astral",
+      "de": "Lichtimpuls",
+      "ja": "アストラルインパルス"
+    },
+    "icon": "actions/25820.png"
+  },
+  {
+    "id": 16515,
+    "name": {
+      "en": "Brand of Purgatory",
+      "fr": "Tison du purgatoire",
+      "de": "Zeichen der Läuterung",
+      "ja": "煉獄の炎"
+    },
+    "icon": "actions/16515.png"
+  },
+  {
+    "id": 25835,
+    "name": {
+      "en": "Crimson Cyclone",
+      "fr": "Cyclone écarlate",
+      "de": "Zinnober-Zyklon",
+      "ja": "クリムゾンサイクロン"
+    },
+    "icon": "actions/25835.png"
+  },
+  {
+    "id": 25885,
+    "name": {
+      "en": "Crimson Strike",
+      "fr": "Assaut écarlate",
+      "de": "Zinnober-Schlag",
+      "ja": "クリムゾンストライク"
+    },
+    "icon": "actions/25885.png"
+  },
+  {
+    "id": 3582,
+    "name": {
+      "en": "Deathflare",
+      "fr": "Brasier de mort",
+      "de": "Todesflamme",
+      "ja": "デスフレア"
+    },
+    "icon": "actions/3582.png"
+  },
+  {
+    "id": 3581,
+    "name": {
+      "en": "Dreadwyrm Trance",
+      "fr": "Transe-Bahamut",
+      "de": "Bahamut-Trance",
+      "ja": "トランス・バハムート"
+    },
     "icon": "actions/3581.png"
   },
   {
-    "row_id": 16508,
-    "name": "Energy Drain",
+    "id": 25834,
+    "name": {
+      "en": "Emerald Catastrophe",
+      "fr": "Cataclysme d'émeraude",
+      "de": "Smaragd-Verderben",
+      "ja": "エメラルド・カタストロフィ"
+    },
+    "icon": "actions/25834.png"
+  },
+  {
+    "id": 25816,
+    "name": {
+      "en": "Emerald Outburst",
+      "fr": "Fracas émeraude",
+      "de": "Smaragd-Korona",
+      "ja": "エメラルド・アウトバースト"
+    },
+    "icon": "actions/25816.png"
+  },
+  {
+    "id": 25825,
+    "name": {
+      "en": "Emerald Rite",
+      "fr": "Rite d'émeraude",
+      "de": "Smaragd-Ritus",
+      "ja": "エメラルド・リチュアル"
+    },
+    "icon": "actions/25825.png"
+  },
+  {
+    "id": 25819,
+    "name": {
+      "en": "Emerald Ruin III",
+      "fr": "Méga Ruine émeraude",
+      "de": "Smaragd-Ruinga",
+      "ja": "エメラルド・ルインガ"
+    },
+    "icon": "actions/25819.png"
+  },
+  {
+    "id": 16508,
+    "name": {
+      "en": "Energy Drain",
+      "fr": "Aspiration d'énergie",
+      "de": "Energieentzug",
+      "ja": "エナジードレイン"
+    },
     "icon": "actions/16508.png"
   },
   {
-    "row_id": 16510,
-    "name": "Energy Siphon",
+    "id": 16510,
+    "name": {
+      "en": "Energy Siphon",
+      "fr": "Siphon d'énergie",
+      "de": "Energiesiphon",
+      "ja": "エナジーサイフォン"
+    },
     "icon": "actions/16510.png"
   },
   {
-    "row_id": 7429,
-    "name": "Enkindle Bahamut",
+    "id": 7429,
+    "name": {
+      "en": "Enkindle Bahamut",
+      "fr": "Galvanisation Bahamut",
+      "de": "Bahamut-Entflammung",
+      "ja": "エンキンドル・バハムート"
+    },
     "icon": "actions/7429.png"
   },
   {
-    "row_id": 181,
-    "name": "Fester",
+    "id": 16516,
+    "name": {
+      "en": "Enkindle Phoenix",
+      "fr": "Galvanisation Phénix",
+      "de": "Phönix-Entflammung",
+      "ja": "エンキンドル・フェニックス"
+    },
+    "icon": "actions/16516.png"
+  },
+  {
+    "id": 36998,
+    "name": {
+      "en": "Enkindle Solar Bahamut",
+      "fr": "Galvanisation Sol Bahamut",
+      "de": "Sol-Bahamut-Entflammung",
+      "ja": "エンキンドル・ソルバハムート"
+    },
+    "icon": "actions/36998.png"
+  },
+  {
+    "id": 16517,
+    "name": {
+      "en": "Everlasting Flight",
+      "fr": "Vol éternel",
+      "de": "Schwingen der Unsterblichkeit",
+      "ja": "不死鳥の翼"
+    },
+    "icon": "actions/16517.png"
+  },
+  {
+    "id": 36999,
+    "name": {
+      "en": "Exodus",
+      "fr": "Exode",
+      "de": "Exodus",
+      "ja": "エクソダス"
+    },
+    "icon": "actions/36999.png"
+  },
+  {
+    "id": 181,
+    "name": {
+      "en": "Fester",
+      "fr": "Suppuration",
+      "de": "Schwäre",
+      "ja": "ミアズマバースト"
+    },
     "icon": "actions/181.png"
   },
   {
-    "row_id": 25883,
-    "name": "Gemshine",
+    "id": 16514,
+    "name": {
+      "en": "Fountain of Fire",
+      "fr": "Flamme de la vie",
+      "de": "Quell des Feuers",
+      "ja": "霊泉の炎"
+    },
+    "icon": "actions/16514.png"
+  },
+  {
+    "id": 25883,
+    "name": {
+      "en": "Gemshine",
+      "fr": "Éclat des gemmes",
+      "de": "Juwelenschein",
+      "ja": "ジェムシャイン"
+    },
     "icon": "actions/25883.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 36997,
-    "name": "Lux Solaris",
+    "id": 36997,
+    "name": {
+      "en": "Lux Solaris",
+      "fr": "Lux solaris",
+      "de": "Lux Solaris",
+      "ja": "ルクス・ソラリス"
+    },
     "icon": "actions/36997.png"
   },
   {
-    "row_id": 36990,
-    "name": "Necrotize",
+    "id": 36993,
+    "name": {
+      "en": "Luxwave",
+      "fr": "Onde radieuse",
+      "de": "Lichtschein",
+      "ja": "光芒"
+    },
+    "icon": "actions/36993.png"
+  },
+  {
+    "id": 25836,
+    "name": {
+      "en": "Mountain Buster",
+      "fr": "Casse-montagnes",
+      "de": "Bergsprenger",
+      "ja": "マウンテンバスター"
+    },
+    "icon": "actions/25836.png"
+  },
+  {
+    "id": 36990,
+    "name": {
+      "en": "Necrotize",
+      "fr": "Nécrose",
+      "de": "Miasma-Nova",
+      "ja": "ミアズマノヴァ"
+    },
     "icon": "actions/36990.png"
   },
   {
-    "row_id": 16511,
-    "name": "Outburst",
+    "id": 16511,
+    "name": {
+      "en": "Outburst",
+      "fr": "Fracas élémentaire",
+      "de": "Elementarkorona",
+      "ja": "アウトバースト"
+    },
     "icon": "actions/16511.png"
   },
   {
-    "row_id": 3578,
-    "name": "Painflare",
+    "id": 3578,
+    "name": {
+      "en": "Painflare",
+      "fr": "Brasier de peine",
+      "de": "Schmerzensflare",
+      "ja": "ペインフレア"
+    },
     "icon": "actions/3578.png"
   },
   {
-    "row_id": 16230,
-    "name": "Physick",
+    "id": 16230,
+    "name": {
+      "en": "Physick",
+      "fr": "Médecine",
+      "de": "Physick",
+      "ja": "フィジク"
+    },
     "icon": "actions/16230.png"
   },
   {
-    "row_id": 25884,
-    "name": "Precious Brilliance",
+    "id": 25884,
+    "name": {
+      "en": "Precious Brilliance",
+      "fr": "Resplendissement des gemmes",
+      "de": "Edelglanz",
+      "ja": "ジェムブリリアンス"
+    },
     "icon": "actions/25884.png"
   },
   {
-    "row_id": 25799,
-    "name": "Radiant Aegis",
+    "id": 25799,
+    "name": {
+      "en": "Radiant Aegis",
+      "fr": "Égide rayonnante",
+      "de": "Schimmerschild",
+      "ja": "守りの光"
+    },
     "icon": "actions/25799.png"
   },
   {
-    "row_id": 173,
-    "name": "Resurrection",
+    "id": 25841,
+    "name": {
+      "en": "Radiant Aegis",
+      "fr": "Égide rayonnante",
+      "de": "Schimmerschild",
+      "ja": "守りの光"
+    },
+    "icon": "actions/25841.png"
+  },
+  {
+    "id": 25830,
+    "name": {
+      "en": "Rekindle",
+      "fr": "Ravivement",
+      "de": "Wiederaufleben",
+      "ja": "再生の炎"
+    },
+    "icon": "actions/25830.png"
+  },
+  {
+    "id": 173,
+    "name": {
+      "en": "Resurrection",
+      "fr": "Résurrection",
+      "de": "Resuszitation",
+      "ja": "リザレク"
+    },
     "icon": "actions/173.png"
   },
   {
-    "row_id": 163,
-    "name": "Ruin",
+    "id": 16518,
+    "name": {
+      "en": "Revelation",
+      "fr": "Révélation",
+      "de": "Offenbarung",
+      "ja": "リヴァレーション"
+    },
+    "icon": "actions/16518.png"
+  },
+  {
+    "id": 25832,
+    "name": {
+      "en": "Ruby Catastrophe",
+      "fr": "Cataclysme de rubis",
+      "de": "Rubin-Verderben",
+      "ja": "ルビー・カタストロフィ"
+    },
+    "icon": "actions/25832.png"
+  },
+  {
+    "id": 25814,
+    "name": {
+      "en": "Ruby Outburst",
+      "fr": "Fracas rubis",
+      "de": "Rubin-Korona",
+      "ja": "ルビー・アウトバースト"
+    },
+    "icon": "actions/25814.png"
+  },
+  {
+    "id": 25823,
+    "name": {
+      "en": "Ruby Rite",
+      "fr": "Rite de rubis",
+      "de": "Rubin-Ritus",
+      "ja": "ルビー・リチュアル"
+    },
+    "icon": "actions/25823.png"
+  },
+  {
+    "id": 25817,
+    "name": {
+      "en": "Ruby Ruin III",
+      "fr": "Méga Ruine rubis",
+      "de": "Rubin-Ruinga",
+      "ja": "ルビー・ルインガ"
+    },
+    "icon": "actions/25817.png"
+  },
+  {
+    "id": 163,
+    "name": {
+      "en": "Ruin",
+      "fr": "Ruine",
+      "de": "Ruin",
+      "ja": "ルイン"
+    },
     "icon": "actions/163.png"
   },
   {
-    "row_id": 172,
-    "name": "Ruin II",
+    "id": 172,
+    "name": {
+      "en": "Ruin II",
+      "fr": "Extra Ruine",
+      "de": "Ruinra",
+      "ja": "ルインラ"
+    },
     "icon": "actions/172.png"
   },
   {
-    "row_id": 3579,
-    "name": "Ruin III",
+    "id": 3579,
+    "name": {
+      "en": "Ruin III",
+      "fr": "Méga Ruine",
+      "de": "Ruinga",
+      "ja": "ルインガ"
+    },
     "icon": "actions/3579.png"
   },
   {
-    "row_id": 7426,
-    "name": "Ruin IV",
+    "id": 7426,
+    "name": {
+      "en": "Ruin IV",
+      "fr": "Giga Ruine",
+      "de": "Ruinka",
+      "ja": "ルインジャ"
+    },
     "icon": "actions/7426.png"
   },
   {
-    "row_id": 36991,
-    "name": "Searing Flash",
+    "id": 16519,
+    "name": {
+      "en": "Scarlet Flame",
+      "fr": "Flamme écarlate",
+      "de": "Scharlachflamme",
+      "ja": "火焔"
+    },
+    "icon": "actions/16519.png"
+  },
+  {
+    "id": 36991,
+    "name": {
+      "en": "Searing Flash",
+      "fr": "Étoile ardente",
+      "de": "Gleißender Funke",
+      "ja": "シアリングスパーク"
+    },
     "icon": "actions/36991.png"
   },
   {
-    "row_id": 25801,
-    "name": "Searing Light",
+    "id": 25801,
+    "name": {
+      "en": "Searing Light",
+      "fr": "Éclat ardent",
+      "de": "Gleißender Schein",
+      "ja": "シアリングライト"
+    },
     "icon": "actions/25801.png"
   },
   {
-    "row_id": 25880,
-    "name": "Sleep",
+    "id": 25880,
+    "name": {
+      "en": "Sleep",
+      "fr": "Sommeil",
+      "de": "Schlaf",
+      "ja": "スリプル"
+    },
     "icon": "actions/25880.png"
   },
   {
-    "row_id": 7427,
-    "name": "Summon Bahamut",
+    "id": 25837,
+    "name": {
+      "en": "Slipstream",
+      "fr": "Sillage",
+      "de": "Wirbelströmung",
+      "ja": "スリップストリーム"
+    },
+    "icon": "actions/25837.png"
+  },
+  {
+    "id": 7427,
+    "name": {
+      "en": "Summon Bahamut",
+      "fr": "Invocation Bahamut",
+      "de": "Bahamut-Beschwörung",
+      "ja": "サモン・バハムート"
+    },
     "icon": "actions/7427.png"
   },
   {
-    "row_id": 25798,
-    "name": "Summon Carbuncle",
+    "id": 25798,
+    "name": {
+      "en": "Summon Carbuncle",
+      "fr": "Invocation Carbuncle",
+      "de": "Karfunkel-Beschwörung",
+      "ja": "サモン・カーバンクル"
+    },
     "icon": "actions/25798.png"
   },
   {
-    "row_id": 25804,
-    "name": "Summon Emerald",
+    "id": 25804,
+    "name": {
+      "en": "Summon Emerald",
+      "fr": "Invocation Émeraude",
+      "de": "Smaragd-Beschwörung",
+      "ja": "サモン・エメラルド"
+    },
     "icon": "actions/25804.png"
   },
   {
-    "row_id": 25807,
-    "name": "Summon Garuda",
+    "id": 25807,
+    "name": {
+      "en": "Summon Garuda",
+      "fr": "Invocation Garuda",
+      "de": "Garuda-Beschwörung",
+      "ja": "サモン・ガルーダ"
+    },
     "icon": "actions/25807.png"
   },
   {
-    "row_id": 25840,
-    "name": "Summon Garuda II",
+    "id": 25840,
+    "name": {
+      "en": "Summon Garuda II",
+      "fr": "Invocation Garuda II",
+      "de": "Smaragd-Garuda-Beschwörung",
+      "ja": "サモン・ガルーダII"
+    },
     "icon": "actions/25840.png"
   },
   {
-    "row_id": 25805,
-    "name": "Summon Ifrit",
+    "id": 25805,
+    "name": {
+      "en": "Summon Ifrit",
+      "fr": "Invocation Ifrit",
+      "de": "Ifrit-Beschwörung",
+      "ja": "サモン・イフリート"
+    },
     "icon": "actions/25805.png"
   },
   {
-    "row_id": 25838,
-    "name": "Summon Ifrit II",
+    "id": 25838,
+    "name": {
+      "en": "Summon Ifrit II",
+      "fr": "Invocation Ifrit II",
+      "de": "Rubin-Ifrit-Beschwörung",
+      "ja": "サモン・イフリートII"
+    },
     "icon": "actions/25838.png"
   },
   {
-    "row_id": 25802,
-    "name": "Summon Ruby",
+    "id": 25831,
+    "name": {
+      "en": "Summon Phoenix",
+      "fr": "Invocation Phénix",
+      "de": "Phönix-Beschwörung",
+      "ja": "サモン・フェニックス"
+    },
+    "icon": "actions/25831.png"
+  },
+  {
+    "id": 25802,
+    "name": {
+      "en": "Summon Ruby",
+      "fr": "Invocation Rubis",
+      "de": "Rubin-Beschwörung",
+      "ja": "サモン・ルビー"
+    },
     "icon": "actions/25802.png"
   },
   {
-    "row_id": 25806,
-    "name": "Summon Titan",
+    "id": 36992,
+    "name": {
+      "en": "Summon Solar Bahamut",
+      "fr": "Invocation Sol-Bahamut",
+      "de": "Sol-Bahamut-Beschwörung",
+      "ja": "サモン・ソルバハムート"
+    },
+    "icon": "actions/36992.png"
+  },
+  {
+    "id": 25806,
+    "name": {
+      "en": "Summon Titan",
+      "fr": "Invocation Titan",
+      "de": "Titan-Beschwörung",
+      "ja": "サモン・タイタン"
+    },
     "icon": "actions/25806.png"
   },
   {
-    "row_id": 25839,
-    "name": "Summon Titan II",
+    "id": 25839,
+    "name": {
+      "en": "Summon Titan II",
+      "fr": "Invocation Titan II",
+      "de": "Topas-Titan-Beschwörung",
+      "ja": "サモン・タイタンII"
+    },
     "icon": "actions/25839.png"
   },
   {
-    "row_id": 25803,
-    "name": "Summon Topaz",
+    "id": 25803,
+    "name": {
+      "en": "Summon Topaz",
+      "fr": "Invocation Topaze",
+      "de": "Topas-Beschwörung",
+      "ja": "サモン・トパーズ"
+    },
     "icon": "actions/25803.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 36996,
+    "name": {
+      "en": "Sunflare",
+      "fr": "Brasier solaire",
+      "de": "Sol-Flare",
+      "ja": "ソルフレア"
+    },
+    "icon": "actions/36996.png"
+  },
+  {
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 25826,
-    "name": "Tri-disaster",
+    "id": 25833,
+    "name": {
+      "en": "Topaz Catastrophe",
+      "fr": "Cataclysme de topaze",
+      "de": "Topas-Verderben",
+      "ja": "トパーズ・カタストロフィ"
+    },
+    "icon": "actions/25833.png"
+  },
+  {
+    "id": 25815,
+    "name": {
+      "en": "Topaz Outburst",
+      "fr": "Fracas topaze",
+      "de": "Topas-Korona",
+      "ja": "トパーズ・アウトバースト"
+    },
+    "icon": "actions/25815.png"
+  },
+  {
+    "id": 25824,
+    "name": {
+      "en": "Topaz Rite",
+      "fr": "Rite de topaze",
+      "de": "Topas-Ritus",
+      "ja": "トパーズ・リチュアル"
+    },
+    "icon": "actions/25824.png"
+  },
+  {
+    "id": 25818,
+    "name": {
+      "en": "Topaz Ruin III",
+      "fr": "Méga Ruine topaze",
+      "de": "Topas-Ruinga",
+      "ja": "トパーズ・ルインガ"
+    },
+    "icon": "actions/25818.png"
+  },
+  {
+    "id": 25826,
+    "name": {
+      "en": "Tri-disaster",
+      "fr": "Tri-désastre",
+      "de": "Trisaster",
+      "ja": "トライディザスター"
+    },
     "icon": "actions/25826.png"
+  },
+  {
+    "id": 36995,
+    "name": {
+      "en": "Umbral Flare",
+      "fr": "Brasier ombral",
+      "de": "Schattenflare",
+      "ja": "アンブラルフレア"
+    },
+    "icon": "actions/36995.png"
+  },
+  {
+    "id": 36994,
+    "name": {
+      "en": "Umbral Impulse",
+      "fr": "Pulsar ombral",
+      "de": "Schattenimpuls",
+      "ja": "アンブラルインパルス"
+    },
+    "icon": "actions/36994.png"
+  },
+  {
+    "id": 7428,
+    "name": {
+      "en": "Wyrmwave",
+      "fr": "Onde draconique",
+      "de": "Drachenwelle",
+      "ja": "ウィルムウェーブ"
+    },
+    "icon": "actions/7428.png"
   }
 ]

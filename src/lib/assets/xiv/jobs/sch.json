@@ -1,232 +1,532 @@
 [
   {
-    "row_id": 185,
-    "name": "Adloquium",
+    "id": 37016,
+    "name": {
+      "en": "Accession",
+      "fr": "Accession",
+      "de": "Höchstes Gut",
+      "ja": "アクセッション"
+    },
+    "icon": "actions/37016.png"
+  },
+  {
+    "id": 185,
+    "name": {
+      "en": "Adloquium",
+      "fr": "Traité du réconfort",
+      "de": "Adloquium",
+      "ja": "鼓舞激励の策"
+    },
     "icon": "actions/185.png"
   },
   {
-    "row_id": 166,
-    "name": "Aetherflow",
+    "id": 166,
+    "name": {
+      "en": "Aetherflow",
+      "fr": "Flux d'éther",
+      "de": "Ätherfluss",
+      "ja": "エーテルフロー"
+    },
     "icon": "actions/166.png"
   },
   {
-    "row_id": 7437,
-    "name": "Aetherpact",
+    "id": 7437,
+    "name": {
+      "en": "Aetherpact",
+      "fr": "Pacte d'éther",
+      "de": "Ätherpakt",
+      "ja": "エーテルパクト"
+    },
     "icon": "actions/7437.png"
   },
   {
-    "row_id": 16539,
-    "name": "Art of War",
+    "id": 16550,
+    "name": {
+      "en": "Angel's Whisper",
+      "fr": "Murmure des anges",
+      "de": "Hauch der Seraphim",
+      "ja": "光輝の囁き"
+    },
+    "icon": "actions/16550.png"
+  },
+  {
+    "id": 16539,
+    "name": {
+      "en": "Art of War",
+      "fr": "Loi de la guerre",
+      "de": "Kunst des Krieges",
+      "ja": "破陣法"
+    },
     "icon": "actions/16539.png"
   },
   {
-    "row_id": 25866,
-    "name": "Art of War II",
+    "id": 25866,
+    "name": {
+      "en": "Art of War II",
+      "fr": "Loi de la guerre II",
+      "de": "Kunst des Krieges II",
+      "ja": "裂陣法"
+    },
     "icon": "actions/25866.png"
   },
   {
-    "row_id": 37012,
-    "name": "Baneful Impaction",
+    "id": 37012,
+    "name": {
+      "en": "Baneful Impaction",
+      "fr": "Impaction venimeuse",
+      "de": "Gift und Galle",
+      "ja": "埋伏の毒"
+    },
     "icon": "actions/37012.png"
   },
   {
-    "row_id": 17864,
-    "name": "Bio",
+    "id": 17864,
+    "name": {
+      "en": "Bio",
+      "fr": "Bactérie",
+      "de": "Bio",
+      "ja": "バイオ"
+    },
     "icon": "actions/17864.png"
   },
   {
-    "row_id": 17865,
-    "name": "Bio II",
+    "id": 17865,
+    "name": {
+      "en": "Bio II",
+      "fr": "Extra Bactérie",
+      "de": "Biora",
+      "ja": "バイオラ"
+    },
     "icon": "actions/17865.png"
   },
   {
-    "row_id": 16540,
-    "name": "Biolysis",
+    "id": 16540,
+    "name": {
+      "en": "Biolysis",
+      "fr": "Loi de l'infection",
+      "de": "Causae et Curae",
+      "ja": "蠱毒法"
+    },
     "icon": "actions/16540.png"
   },
   {
-    "row_id": 3584,
-    "name": "Broil",
+    "id": 3584,
+    "name": {
+      "en": "Broil",
+      "fr": "Loi de l'ébullition",
+      "de": "Bravade",
+      "ja": "気炎法"
+    },
     "icon": "actions/3584.png"
   },
   {
-    "row_id": 7435,
-    "name": "Broil II",
+    "id": 7435,
+    "name": {
+      "en": "Broil II",
+      "fr": "Loi de l'ébullition II",
+      "de": "Hitzige Bravade",
+      "ja": "魔炎法"
+    },
     "icon": "actions/7435.png"
   },
   {
-    "row_id": 16541,
-    "name": "Broil III",
+    "id": 16541,
+    "name": {
+      "en": "Broil III",
+      "fr": "Loi de l'ébullition III",
+      "de": "Vernichtende Bravade",
+      "ja": "死炎法"
+    },
     "icon": "actions/16541.png"
   },
   {
-    "row_id": 25865,
-    "name": "Broil IV",
+    "id": 25865,
+    "name": {
+      "en": "Broil IV",
+      "fr": "Loi de l'ébullition IV",
+      "de": "Rabiate Bravade",
+      "ja": "極炎法"
+    },
     "icon": "actions/25865.png"
   },
   {
-    "row_id": 7436,
-    "name": "Chain Stratagem",
+    "id": 7436,
+    "name": {
+      "en": "Chain Stratagem",
+      "fr": "Stratagèmes entrelacés",
+      "de": "Kritische Strategie",
+      "ja": "連環計"
+    },
     "icon": "actions/7436.png"
   },
   {
-    "row_id": 37013,
-    "name": "Concitation",
+    "id": 37013,
+    "name": {
+      "en": "Concitation",
+      "fr": "Traité de l'exultation",
+      "de": "Übermut",
+      "ja": "意気軒昂の策"
+    },
     "icon": "actions/37013.png"
   },
   {
-    "row_id": 16546,
-    "name": "Consolation",
+    "id": 16546,
+    "name": {
+      "en": "Consolation",
+      "fr": "Dictame",
+      "de": "Seelentrost",
+      "ja": "コンソレイション"
+    },
     "icon": "actions/16546.png"
   },
   {
-    "row_id": 3585,
-    "name": "Deployment Tactics",
+    "id": 16547,
+    "name": {
+      "en": "Consolation",
+      "fr": "Dictame",
+      "de": "Seelentrost",
+      "ja": "コンソレイション"
+    },
+    "icon": "actions/16547.png"
+  },
+  {
+    "id": 3585,
+    "name": {
+      "en": "Deployment Tactics",
+      "fr": "Stratagème du déploiement",
+      "de": "Dislokation",
+      "ja": "展開戦術"
+    },
     "icon": "actions/3585.png"
   },
   {
-    "row_id": 3587,
-    "name": "Dissipation",
+    "id": 3587,
+    "name": {
+      "en": "Dissipation",
+      "fr": "Dissipation",
+      "de": "Dissipation",
+      "ja": "転化"
+    },
     "icon": "actions/3587.png"
   },
   {
-    "row_id": 3586,
-    "name": "Emergency Tactics",
+    "id": 7869,
+    "name": {
+      "en": "Dissolve Union",
+      "fr": "Défait union",
+      "de": "Bundauflösung",
+      "ja": "フェイユニオン解除"
+    },
+    "icon": "actions/7869.png"
+  },
+  {
+    "id": 802,
+    "name": {
+      "en": "Embrace",
+      "fr": "Embrassement",
+      "de": "Sanfte Umarmung",
+      "ja": "光の癒し"
+    },
+    "icon": "actions/802.png"
+  },
+  {
+    "id": 3586,
+    "name": {
+      "en": "Emergency Tactics",
+      "fr": "Stratagème de l'urgence",
+      "de": "Apotropaion",
+      "ja": "応急戦術"
+    },
     "icon": "actions/3586.png"
   },
   {
-    "row_id": 37037,
-    "name": "Emergency Tactics",
-    "icon": "actions/37037.png"
-  },
-  {
-    "row_id": 167,
-    "name": "Energy Drain",
+    "id": 167,
+    "name": {
+      "en": "Energy Drain",
+      "fr": "Aspiration d'énergie",
+      "de": "Energieentzug",
+      "ja": "エナジードレイン"
+    },
     "icon": "actions/167.png"
   },
   {
-    "row_id": 7568,
-    "name": "Esuna",
+    "id": 7568,
+    "name": {
+      "en": "Esuna",
+      "fr": "Guérison",
+      "de": "Medica",
+      "ja": "エスナ"
+    },
     "icon": "actions/7568.png"
   },
   {
-    "row_id": 7434,
-    "name": "Excogitation",
+    "id": 7434,
+    "name": {
+      "en": "Excogitation",
+      "fr": "Traité de l'excogitation",
+      "de": "Weise Voraussicht",
+      "ja": "深謀遠慮の策"
+    },
     "icon": "actions/7434.png"
   },
   {
-    "row_id": 25868,
-    "name": "Expedient",
+    "id": 25868,
+    "name": {
+      "en": "Expedient",
+      "fr": "Thèse fluidique",
+      "de": "Sturm und Drang",
+      "ja": "疾風怒濤の計"
+    },
     "icon": "actions/25868.png"
   },
   {
-    "row_id": 16543,
-    "name": "Fey Blessing",
+    "id": 16543,
+    "name": {
+      "en": "Fey Blessing",
+      "fr": "Bénédiction féérique",
+      "de": "Gunst der Feen",
+      "ja": "フェイブレッシング"
+    },
     "icon": "actions/16543.png"
   },
   {
-    "row_id": 16538,
-    "name": "Fey Illumination",
+    "id": 16538,
+    "name": {
+      "en": "Fey Illumination",
+      "fr": "Illumination féérique",
+      "de": "Illumination",
+      "ja": "フェイイルミネーション"
+    },
     "icon": "actions/16538.png"
   },
   {
-    "row_id": 3583,
-    "name": "Indomitability",
+    "id": 7438,
+    "name": {
+      "en": "Fey Union",
+      "fr": "Union féerique",
+      "de": "Feenbund",
+      "ja": "フェイユニオン"
+    },
+    "icon": "actions/7438.png"
+  },
+  {
+    "id": 3583,
+    "name": {
+      "en": "Indomitability",
+      "fr": "Traité de la persévérance",
+      "de": "Unbezwingbarkeit",
+      "ja": "不撓不屈の策"
+    },
     "icon": "actions/3583.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 189,
-    "name": "Lustrate",
+    "id": 189,
+    "name": {
+      "en": "Lustrate",
+      "fr": "Loi de revivification",
+      "de": "Revitalisierung",
+      "ja": "生命活性法"
+    },
     "icon": "actions/189.png"
   },
   {
-    "row_id": 190,
-    "name": "Physick",
+    "id": 37015,
+    "name": {
+      "en": "Manifestation",
+      "fr": "Manifestation",
+      "de": "Manifestation",
+      "ja": "マニフェステーション"
+    },
+    "icon": "actions/37015.png"
+  },
+  {
+    "id": 190,
+    "name": {
+      "en": "Physick",
+      "fr": "Médecine",
+      "de": "Physick",
+      "ja": "フィジク"
+    },
     "icon": "actions/190.png"
   },
   {
-    "row_id": 25867,
-    "name": "Protraction",
+    "id": 25867,
+    "name": {
+      "en": "Protraction",
+      "fr": "Loi de la protraction",
+      "de": "Protraktion",
+      "ja": "生命回生法"
+    },
     "icon": "actions/25867.png"
   },
   {
-    "row_id": 1584,
-    "name": "Purify",
-    "icon": "actions/1584.png"
-  },
-  {
-    "row_id": 16542,
-    "name": "Recitation",
+    "id": 16542,
+    "name": {
+      "en": "Recitation",
+      "fr": "Récitation",
+      "de": "Raffinesse",
+      "ja": "秘策"
+    },
     "icon": "actions/16542.png"
   },
   {
-    "row_id": 16560,
-    "name": "Repose",
+    "id": 16560,
+    "name": {
+      "en": "Repose",
+      "fr": "Sérénité",
+      "de": "Schlummer",
+      "ja": "リポーズ"
+    },
     "icon": "actions/16560.png"
   },
   {
-    "row_id": 7571,
-    "name": "Rescue",
+    "id": 7571,
+    "name": {
+      "en": "Rescue",
+      "fr": "Secours",
+      "de": "Rettung",
+      "ja": "救出"
+    },
     "icon": "actions/7571.png"
   },
   {
-    "row_id": 173,
-    "name": "Resurrection",
+    "id": 173,
+    "name": {
+      "en": "Resurrection",
+      "fr": "Résurrection",
+      "de": "Resuszitation",
+      "ja": "リザレク"
+    },
     "icon": "actions/173.png"
   },
   {
-    "row_id": 17869,
-    "name": "Ruin",
+    "id": 17869,
+    "name": {
+      "en": "Ruin",
+      "fr": "Ruine",
+      "de": "Ruin",
+      "ja": "ルイン"
+    },
     "icon": "actions/17869.png"
   },
   {
-    "row_id": 17870,
-    "name": "Ruin II",
+    "id": 17870,
+    "name": {
+      "en": "Ruin II",
+      "fr": "Extra Ruine",
+      "de": "Ruinra",
+      "ja": "ルインラ"
+    },
     "icon": "actions/17870.png"
   },
   {
-    "row_id": 188,
-    "name": "Sacred Soil",
+    "id": 188,
+    "name": {
+      "en": "Sacred Soil",
+      "fr": "Dogme de survie",
+      "de": "Geweihte Erde",
+      "ja": "野戦治療の陣"
+    },
     "icon": "actions/188.png"
   },
   {
-    "row_id": 37014,
-    "name": "Seraphism",
+    "id": 16551,
+    "name": {
+      "en": "Seraphic Illumination",
+      "fr": "Illumination séraphique",
+      "de": "Seraphische Illumination",
+      "ja": "セラフィックイルミネーション"
+    },
+    "icon": "actions/16551.png"
+  },
+  {
+    "id": 16548,
+    "name": {
+      "en": "Seraphic Veil",
+      "fr": "Voile séraphique",
+      "de": "Schleier der Seraphim",
+      "ja": "セラフィックヴェール"
+    },
+    "icon": "actions/16548.png"
+  },
+  {
+    "id": 37014,
+    "name": {
+      "en": "Seraphism",
+      "fr": "Séraphisme",
+      "de": "Seraphenlehre",
+      "ja": "セラフィズム"
+    },
     "icon": "actions/37014.png"
   },
   {
-    "row_id": 186,
-    "name": "Succor",
+    "id": 186,
+    "name": {
+      "en": "Succor",
+      "fr": "Traité du soulagement",
+      "de": "Kurieren",
+      "ja": "士気高揚の策"
+    },
     "icon": "actions/186.png"
   },
   {
-    "row_id": 17215,
-    "name": "Summon Eos",
+    "id": 17215,
+    "name": {
+      "en": "Summon Eos",
+      "fr": "Invocation Eos",
+      "de": "Eos-Beschwörung",
+      "ja": "サモン・エオス"
+    },
     "icon": "actions/17215.png"
   },
   {
-    "row_id": 16545,
-    "name": "Summon Seraph",
+    "id": 16545,
+    "name": {
+      "en": "Summon Seraph",
+      "fr": "Invocation Séraphin",
+      "de": "Seraph-Beschwörung",
+      "ja": "サモン・セラフィム"
+    },
     "icon": "actions/16545.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 16537,
-    "name": "Whispering Dawn",
+    "id": 16537,
+    "name": {
+      "en": "Whispering Dawn",
+      "fr": "Murmure de l'aurore",
+      "de": "Erhebendes Flüstern",
+      "ja": "光の囁き"
+    },
     "icon": "actions/16537.png"
   }
 ]

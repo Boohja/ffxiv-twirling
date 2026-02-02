@@ -13,7 +13,9 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"update:jobs": "tsx scripts/update-jobs.ts",
-		"update:action": "tsx scripts/update-action.ts"
+		"update:action": "tsx scripts/update-action.ts",
+		"sync:actions": "tsx scripts/sync-job-actions.ts",
+		"remove:action": "tsx scripts/remove-action.ts"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.49.0",

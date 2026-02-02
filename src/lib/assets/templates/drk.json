@@ -7,102 +7,82 @@
     "updated": "2026-01-03",
   "steps": [
     {
-      "name": "Edge of Shadow",
       "icon": "actions/16470.png",
       "action": 16470
     },
     {
-      "name": "Hard Slash",
       "icon": "actions/3617.png",
       "action": 3617
     },
     {
-      "name": "Living Shadow",
       "icon": "actions/16472.png",
       "action": 16472
     },
     {
-      "name": "Syphon Strike",
       "icon": "actions/3623.png",
       "action": 3623
     },
     {
-      "name": "Souleater",
       "icon": "actions/3632.png",
       "action": 3632
     },
     {
-      "name": "Delirium",
       "icon": "actions/7390.png",
       "action": 7390
     },
     {
-      "name": "Disesteem",
       "icon": "actions/36932.png",
       "action": 36932
     },
     {
-      "name": "Salted Earth",
       "icon": "actions/3639.png",
       "action": 3639
     },
     {
-      "name": "Edge of Shadow",
       "icon": "actions/16470.png",
       "action": 16470
     },
     {
-      "name": "Scarlet Delirium",
       "icon": "actions/36928.png",
       "action": 36928
     },
     {
-      "name": "Shadowbringer",
       "icon": "actions/25757.png",
       "action": 25757
     },
     {
-      "name": "Edge of Shadow",
       "icon": "actions/16470.png",
       "action": 16470
     },
     {
-      "name": "Comeuppance",
       "icon": "actions/36929.png",
       "action": 36929
     },
     {
-      "name": "Carve and Spit",
       "icon": "actions/3643.png",
       "action": 3643
     },
     {
-      "name": "Edge of Shadow",
       "icon": "actions/16470.png",
       "action": 16470
     },
     {
-      "name": "Torcleaver",
       "icon": "actions/36930.png",
       "action": 36930
     },
     {
-      "name": "Shadowbringer",
       "icon": "actions/25757.png",
       "action": 25757
     },
     {
-      "name": "Edge of Shadow",
       "icon": "actions/16470.png",
       "action": 16470
     },
     {
-      "name": "Bloodspiller",
       "icon": "actions/7392.png",
       "action": 7392
     },
     {
-      "name": "Salt and Darkness",
       "icon": "actions/25755.png",
       "action": 25755
     }

@@ -1,212 +1,412 @@
 [
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 15994,
-    "name": "Bladeshower",
+    "id": 15994,
+    "name": {
+      "en": "Bladeshower",
+      "fr": "Averse de lames",
+      "de": "Klingenflut",
+      "ja": "ブレードシャワー"
+    },
     "icon": "actions/15994.png"
   },
   {
-    "row_id": 15996,
-    "name": "Bloodshower",
+    "id": 15996,
+    "name": {
+      "en": "Bloodshower",
+      "fr": "Averse de sang",
+      "de": "Blutklingen",
+      "ja": "ブラッドシャワー"
+    },
     "icon": "actions/15996.png"
   },
   {
-    "row_id": 15989,
-    "name": "Cascade",
+    "id": 15989,
+    "name": {
+      "en": "Cascade",
+      "fr": "Cascade",
+      "de": "Cascade",
+      "ja": "カスケード"
+    },
     "icon": "actions/15989.png"
   },
   {
-    "row_id": 16006,
-    "name": "Closed Position",
+    "id": 16006,
+    "name": {
+      "en": "Closed Position",
+      "fr": "Position rapprochée",
+      "de": "Tanzpartner",
+      "ja": "クローズドポジション"
+    },
     "icon": "actions/16006.png"
   },
   {
-    "row_id": 29431,
-    "name": "Closed Position",
-    "icon": "actions/29431.png"
-  },
-  {
-    "row_id": 29432,
-    "name": "Contradance",
-    "icon": "actions/29432.png"
-  },
-  {
-    "row_id": 16015,
-    "name": "Curing Waltz",
+    "id": 16015,
+    "name": {
+      "en": "Curing Waltz",
+      "fr": "Valse revigorante",
+      "de": "Heilender Walzer",
+      "ja": "癒やしのワルツ"
+    },
     "icon": "actions/16015.png"
   },
   {
-    "row_id": 29429,
-    "name": "Curing Waltz",
-    "icon": "actions/29429.png"
+    "id": 36985,
+    "name": {
+      "en": "Dance of the Dawn",
+      "fr": "Danse de l'aurore",
+      "de": "Dämmertanz",
+      "ja": "暁の舞い"
+    },
+    "icon": "actions/36985.png"
   },
   {
-    "row_id": 16011,
-    "name": "Devilment",
+    "id": 16011,
+    "name": {
+      "en": "Devilment",
+      "fr": "Tango endiablé",
+      "de": "Todestango",
+      "ja": "攻めのタンゴ"
+    },
     "icon": "actions/16011.png"
   },
   {
-    "row_id": 16010,
-    "name": "En Avant",
+    "id": 15999,
+    "name": {
+      "en": "Emboite",
+      "fr": "Emboîté carmin",
+      "de": "Pas Emboite der Rose",
+      "ja": "薔薇のアンボワテ"
+    },
+    "icon": "actions/15999.png"
+  },
+  {
+    "id": 16010,
+    "name": {
+      "en": "En Avant",
+      "fr": "En avant",
+      "de": "En Avant",
+      "ja": "アン・アヴァン"
+    },
     "icon": "actions/16010.png"
   },
   {
-    "row_id": 29430,
-    "name": "En Avant",
-    "icon": "actions/29430.png"
+    "id": 18073,
+    "name": {
+      "en": "Ending",
+      "fr": "Abandon de position rapprochée",
+      "de": "Vom Tanzpartner lösen",
+      "ja": "クローズドポジション解除"
+    },
+    "icon": "actions/18073.png"
   },
   {
-    "row_id": 16007,
-    "name": "Fan Dance",
+    "id": 16000,
+    "name": {
+      "en": "Entrechat",
+      "fr": "Entrechat outremer",
+      "de": "Entrechat der Schwalbe",
+      "ja": "小鳥のアントルシャ"
+    },
+    "icon": "actions/16000.png"
+  },
+  {
+    "id": 16007,
+    "name": {
+      "en": "Fan Dance",
+      "fr": "Danse de l'éventail I",
+      "de": "Fächertanz I",
+      "ja": "扇の舞い【序】"
+    },
     "icon": "actions/16007.png"
   },
   {
-    "row_id": 29428,
-    "name": "Fan Dance",
-    "icon": "actions/29428.png"
-  },
-  {
-    "row_id": 16008,
-    "name": "Fan Dance II",
+    "id": 16008,
+    "name": {
+      "en": "Fan Dance II",
+      "fr": "Danse de l'éventail II",
+      "de": "Fächertanz II",
+      "ja": "扇の舞い【破】"
+    },
     "icon": "actions/16008.png"
   },
   {
-    "row_id": 16009,
-    "name": "Fan Dance III",
+    "id": 16009,
+    "name": {
+      "en": "Fan Dance III",
+      "fr": "Danse de l'éventail III",
+      "de": "Fächertanz III",
+      "ja": "扇の舞い【急】"
+    },
     "icon": "actions/16009.png"
   },
   {
-    "row_id": 25791,
-    "name": "Fan Dance IV",
+    "id": 25791,
+    "name": {
+      "en": "Fan Dance IV",
+      "fr": "Danse de l'éventail IV",
+      "de": "Fächertanz IV",
+      "ja": "扇の舞い【終】"
+    },
     "icon": "actions/25791.png"
   },
   {
-    "row_id": 16013,
-    "name": "Flourish",
+    "id": 36984,
+    "name": {
+      "en": "Finishing Move",
+      "fr": "Mouvement final",
+      "de": "Finalschritt",
+      "ja": "フィニシングムーブ"
+    },
+    "icon": "actions/36984.png"
+  },
+  {
+    "id": 16013,
+    "name": {
+      "en": "Flourish",
+      "fr": "Apothéose",
+      "de": "Trance",
+      "ja": "フラリッシュ"
+    },
     "icon": "actions/16013.png"
   },
   {
-    "row_id": 7553,
-    "name": "Foot Graze",
+    "id": 7553,
+    "name": {
+      "en": "Foot Graze",
+      "fr": "Écorche-pied",
+      "de": "Stolperschuss",
+      "ja": "フットグレイズ"
+    },
     "icon": "actions/7553.png"
   },
   {
-    "row_id": 15990,
-    "name": "Fountain",
+    "id": 15990,
+    "name": {
+      "en": "Fountain",
+      "fr": "Fontaine",
+      "de": "Fontäne",
+      "ja": "ファウンテン"
+    },
     "icon": "actions/15990.png"
   },
   {
-    "row_id": 15992,
-    "name": "Fountainfall",
+    "id": 15992,
+    "name": {
+      "en": "Fountainfall",
+      "fr": "Fontaine en cascade",
+      "de": "Fallende Fontäne",
+      "ja": "ファウンテンフォール"
+    },
     "icon": "actions/15992.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
-    "row_id": 7551,
-    "name": "Head Graze",
+    "id": 7551,
+    "name": {
+      "en": "Head Graze",
+      "fr": "Écorche-tête",
+      "de": "Haarscharfer Schuss",
+      "ja": "ヘッドグレイズ"
+    },
     "icon": "actions/7551.png"
   },
   {
-    "row_id": 29422,
-    "name": "Honing Dance",
-    "icon": "actions/29422.png"
-  },
-  {
-    "row_id": 16014,
-    "name": "Improvisation",
+    "id": 16014,
+    "name": {
+      "en": "Improvisation",
+      "fr": "Improvisation",
+      "de": "Tanzimprovisation",
+      "ja": "インプロビゼーション"
+    },
     "icon": "actions/16014.png"
   },
   {
-    "row_id": 36983,
-    "name": "Last Dance",
+    "id": 25789,
+    "name": {
+      "en": "Improvised Finish",
+      "fr": "Final improvisé",
+      "de": "Improvisiertes Finale",
+      "ja": "インプロビゼーション・フィニッシュ"
+    },
+    "icon": "actions/25789.png"
+  },
+  {
+    "id": 16001,
+    "name": {
+      "en": "Jete",
+      "fr": "Jeté verdoyant",
+      "de": "Jete des Laubs",
+      "ja": "緑葉のジュテ"
+    },
+    "icon": "actions/16001.png"
+  },
+  {
+    "id": 36983,
+    "name": {
+      "en": "Last Dance",
+      "fr": "Ultime danse",
+      "de": "Letzter Tanz",
+      "ja": "ラストダンス"
+    },
     "icon": "actions/36983.png"
   },
   {
-    "row_id": 7554,
-    "name": "Leg Graze",
+    "id": 7554,
+    "name": {
+      "en": "Leg Graze",
+      "fr": "Écorche-jambe",
+      "de": "Beinschuss",
+      "ja": "レッググレイズ"
+    },
     "icon": "actions/7554.png"
   },
   {
-    "row_id": 7557,
-    "name": "Peloton",
+    "id": 7557,
+    "name": {
+      "en": "Peloton",
+      "fr": "Peloton",
+      "de": "Peloton",
+      "ja": "プロトン"
+    },
     "icon": "actions/7557.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
+    "id": 16002,
+    "name": {
+      "en": "Pirouette",
+      "fr": "Pirouette dorée",
+      "de": "Pirouette der Krone",
+      "ja": "金冠のピルエッテ"
+    },
+    "icon": "actions/16002.png"
   },
   {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
-    "row_id": 15991,
-    "name": "Reverse Cascade",
+    "id": 15991,
+    "name": {
+      "en": "Reverse Cascade",
+      "fr": "Cascade inversée",
+      "de": "Invertierte Cascade",
+      "ja": "リバースカスケード"
+    },
     "icon": "actions/15991.png"
   },
   {
-    "row_id": 15995,
-    "name": "Rising Windmill",
+    "id": 15995,
+    "name": {
+      "en": "Rising Windmill",
+      "fr": "Moulin à vent ascendant",
+      "de": "Steigende Windmühle",
+      "ja": "ライジングウィンドミル"
+    },
     "icon": "actions/15995.png"
   },
   {
-    "row_id": 16005,
-    "name": "Saber Dance",
+    "id": 16005,
+    "name": {
+      "en": "Saber Dance",
+      "fr": "Danse du sabre",
+      "de": "Schwerttanz",
+      "ja": "剣の舞い"
+    },
     "icon": "actions/16005.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 16012,
-    "name": "Shield Samba",
+    "id": 16012,
+    "name": {
+      "en": "Shield Samba",
+      "fr": "Samba protectrice",
+      "de": "Schildsamba",
+      "ja": "守りのサンバ"
+    },
     "icon": "actions/16012.png"
   },
   {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
+    "id": 16003,
+    "name": {
+      "en": "Standard Finish",
+      "fr": "Final classique",
+      "de": "Einfaches Finale",
+      "ja": "スタンダードフィニッシュ"
+    },
+    "icon": "actions/16003.png"
   },
   {
-    "row_id": 15997,
-    "name": "Standard Step",
+    "id": 15997,
+    "name": {
+      "en": "Standard Step",
+      "fr": "Pas classique",
+      "de": "Einfache Choreographie",
+      "ja": "スタンダードステップ"
+    },
     "icon": "actions/15997.png"
   },
   {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
-    "row_id": 25792,
-    "name": "Starfall Dance",
+    "id": 25792,
+    "name": {
+      "en": "Starfall Dance",
+      "fr": "Danse de la pluie étoilée",
+      "de": "Sternenfalltanz",
+      "ja": "流星の舞い"
+    },
     "icon": "actions/25792.png"
   },
   {
-    "row_id": 29421,
-    "name": "Starfall Dance",
-    "icon": "actions/29421.png"
+    "id": 16004,
+    "name": {
+      "en": "Technical Finish",
+      "fr": "Final technique",
+      "de": "Komplexes Finale",
+      "ja": "テクニカルフィニッシュ"
+    },
+    "icon": "actions/16004.png"
   },
   {
-    "row_id": 15998,
-    "name": "Technical Step",
+    "id": 15998,
+    "name": {
+      "en": "Technical Step",
+      "fr": "Pas technique",
+      "de": "Komplexe Choreographie",
+      "ja": "テクニカルステップ"
+    },
     "icon": "actions/15998.png"
   },
   {
-    "row_id": 15993,
-    "name": "Windmill",
+    "id": 25790,
+    "name": {
+      "en": "Tillana",
+      "fr": "Tillana",
+      "de": "Tillana",
+      "ja": "ティラナ"
+    },
+    "icon": "actions/25790.png"
+  },
+  {
+    "id": 15993,
+    "name": {
+      "en": "Windmill",
+      "fr": "Moulin à vent",
+      "de": "Windmühle",
+      "ja": "ウィンドミル"
+    },
     "icon": "actions/15993.png"
   }
 ]

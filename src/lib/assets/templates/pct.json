@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Second GCD Opener (The Balance)",
+    "job": "pct",
+    "slug": "pct-2nd-gcd-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/casters/pictomancer/openers/",
+    "updated": "2025-08-10",
+    "steps": [
+        {
+            "icon": "actions/34688.png",
+            "action": 34688
+        },
+        {
+            "icon": "actions/34670.png",
+            "action": 34670
+        },
+        {
+            "icon": "actions/34674.png",
+            "action": 34674
+        },
+        {
+            "icon": "actions/34665.png",
+            "action": 34665
+        },
+        {
+            "icon": "actions/34675.png",
+            "action": 34675
+        },
+        {
+            "icon": "actions/34678.png",
+            "action": 34678
+        },
+        {
+            "icon": "actions/34683.png",
+            "action": 34683
+        },
+        {
+            "icon": "actions/34653.png",
+            "action": 34653
+        },
+        {
+            "icon": "actions/34654.png",
+            "action": 34654
+        },
+        {
+            "icon": "actions/34655.png",
+            "action": 34655
+        },
+        {
+            "icon": "actions/34663.png",
+            "action": 34663
+        },
+        {
+            "icon": "actions/34671.png",
+            "action": 34671
+        },
+        {
+            "icon": "actions/34676.png",
+            "action": 34676
+        },
+        {
+            "icon": "actions/34681.png",
+            "action": 34681
+        },
+        {
+            "icon": "actions/34679.png",
+            "action": 34679
+        },
+        {
+            "icon": "actions/34680.png",
+            "action": 34680
+        },
+        {
+            "icon": "actions/34688.png",
+            "action": 34688
+        },
+        {
+            "icon": "actions/34650.png",
+            "action": 34650
+        },
+        {
+            "icon": "actions/7561.png",
+            "action": 7561
+        },
+        {
+            "icon": "actions/34651.png",
+            "action": 34651
+        }
+    ]
+  }
+]

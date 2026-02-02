@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "smn",
+    "slug": "smn-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/casters/summoner/openers/",
+    "updated": "2025-12-27",
+    "steps": [
+        {
+            "icon": "actions/3579.png",
+            "action": 3579
+        },
+        {
+            "icon": "actions/36992.png",
+            "action": 36992
+        },
+        {
+            "icon": "actions/36994.png",
+            "action": 36994
+        },
+        {
+            "icon": "actions/25801.png",
+            "action": 25801
+        },
+        {
+            "icon": "actions/36994.png",
+            "action": 36994
+        },
+        {
+            "icon": "actions/36994.png",
+            "action": 36994
+        },
+        {
+            "icon": "actions/16508.png",
+            "action": 16508
+        },
+        {
+            "icon": "actions/36994.png",
+            "action": 36994
+        },
+        {
+            "icon": "actions/36999.png",
+            "action": 36999
+        },
+        {
+            "icon": "actions/36990.png",
+            "action": 36990
+        },
+        {
+            "icon": "actions/36994.png",
+            "action": 36994
+        },
+        {
+            "icon": "actions/36996.png",
+            "action": 36996
+        },
+        {
+            "icon": "actions/36990.png",
+            "action": 36990
+        },
+        {
+            "icon": "actions/36994.png",
+            "action": 36994
+        },
+        {
+            "icon": "actions/36991.png",
+            "action": 36991
+        },
+        {
+            "icon": "actions/25839.png",
+            "action": 25839
+        },
+        {
+            "icon": "actions/25824.png",
+            "action": 25824
+        }
+    ]
+  }
+]

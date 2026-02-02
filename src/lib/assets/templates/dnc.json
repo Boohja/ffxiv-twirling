@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "dnc",
+    "slug": "dnc-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/ranged/dancer/openers/",
+    "updated": "2025-12-16",
+    "steps": [
+        {
+            "icon": "actions/15997.png",
+            "action": 15997
+        },
+        {
+            "name": "Step 1",
+            "icon": "/images/skills/blue_1.png"
+        },
+        {
+            "name": "Step 2",
+            "icon": "/images/skills/blue_2.png"
+        },
+        {
+            "icon": "actions/16003.png",
+            "action": 16003
+        },
+        {
+            "icon": "actions/15998.png",
+            "action": 15998
+        },
+        {
+            "name": "Step 1",
+            "icon": "/images/skills/blue_1.png"
+        },
+        {
+            "name": "Step 2",
+            "icon": "/images/skills/blue_2.png"
+        },
+        {
+            "name": "Step 3",
+            "icon": "/images/skills/blue_3.png"
+        },
+        {
+            "name": "Step 4",
+            "icon": "/images/skills/blue_4.png"
+        },
+        {
+            "icon": "actions/16004.png",
+            "action": 16004
+        },
+        {
+            "icon": "actions/16011.png",
+            "action": 16011
+        },
+        {
+            "icon": "actions/25790.png",
+            "action": 25790
+        },
+        {
+            "icon": "actions/16013.png",
+            "action": 16013
+        },
+        {
+            "icon": "actions/36985.png",
+            "action": 36985
+        },
+        {
+            "icon": "actions/25791.png",
+            "action": 25791
+        },
+        {
+            "icon": "actions/36983.png",
+            "action": 36983
+        },
+        {
+            "icon": "actions/36984.png",
+            "action": 36984
+        },
+        {
+            "icon": "actions/16005.png",
+            "action": 16005
+        }
+    ]
+  }
+]

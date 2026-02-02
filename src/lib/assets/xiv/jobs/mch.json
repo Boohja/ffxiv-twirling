@@ -1,192 +1,462 @@
 [
   {
-    "row_id": 16500,
-    "name": "Air Anchor",
+    "id": 16500,
+    "name": {
+      "en": "Air Anchor",
+      "fr": "Ancre aérienne",
+      "de": "Luftanker",
+      "ja": "エアアンカー"
+    },
     "icon": "actions/16500.png"
   },
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 16504,
+    "name": {
+      "en": "Arm Punch",
+      "fr": "Coup de poing",
+      "de": "Eiserne Faust",
+      "ja": "クイーン・アームパンチ"
+    },
+    "icon": "actions/16504.png"
+  },
+  {
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 16497,
-    "name": "Auto Crossbow",
+    "id": 16497,
+    "name": {
+      "en": "Auto Crossbow",
+      "fr": "Arbalète automatique",
+      "de": "Armbrust",
+      "ja": "オートボウガン"
+    },
     "icon": "actions/16497.png"
   },
   {
-    "row_id": 16501,
-    "name": "Automaton Queen",
+    "id": 16501,
+    "name": {
+      "en": "Automaton Queen",
+      "fr": "Automate Reine",
+      "de": "Automaton DAME",
+      "ja": "オートマトン・クイーン"
+    },
     "icon": "actions/16501.png"
   },
   {
-    "row_id": 7414,
-    "name": "Barrel Stabilizer",
+    "id": 7414,
+    "name": {
+      "en": "Barrel Stabilizer",
+      "fr": "Stabilisateur de canon",
+      "de": "Laufstabilisator",
+      "ja": "バレルヒーター"
+    },
     "icon": "actions/7414.png"
   },
   {
-    "row_id": 16499,
-    "name": "Bioblaster",
+    "id": 16499,
+    "name": {
+      "en": "Bioblaster",
+      "fr": "Lance-toxine",
+      "de": "Bioblaster",
+      "ja": "バイオブラスト"
+    },
     "icon": "actions/16499.png"
   },
   {
-    "row_id": 36978,
-    "name": "Blazing Shot",
+    "id": 36978,
+    "name": {
+      "en": "Blazing Shot",
+      "fr": "Tir ardent",
+      "de": "Brandschuss",
+      "ja": "ブレイズショット"
+    },
     "icon": "actions/36978.png"
   },
   {
-    "row_id": 25788,
-    "name": "Chain Saw",
+    "id": 25788,
+    "name": {
+      "en": "Chain Saw",
+      "fr": "Tronçonneuses rotatives",
+      "de": "Kreissäge",
+      "ja": "回転のこぎり"
+    },
     "icon": "actions/25788.png"
   },
   {
-    "row_id": 36980,
-    "name": "Checkmate",
+    "id": 3588,
+    "name": {
+      "en": "Charged Volley Fire",
+      "fr": "Tir de volée chargé",
+      "de": "Geladene Salve",
+      "ja": "チャージドファイア"
+    },
+    "icon": "actions/3588.png"
+  },
+  {
+    "id": 36980,
+    "name": {
+      "en": "Checkmate",
+      "fr": "Échec et mat",
+      "de": "Schachmatt",
+      "ja": "チェックメイト"
+    },
     "icon": "actions/36980.png"
   },
   {
-    "row_id": 2873,
-    "name": "Clean Shot",
+    "id": 2873,
+    "name": {
+      "en": "Clean Shot",
+      "fr": "Tir net",
+      "de": "Sauberer Schuss",
+      "ja": "クリーンショット"
+    },
     "icon": "actions/2873.png"
   },
   {
-    "row_id": 2887,
-    "name": "Dismantle",
+    "id": 25787,
+    "name": {
+      "en": "Crowned Collider",
+      "fr": "Collisionneur royal",
+      "de": "DAME-Dynamitron",
+      "ja": "クイーン・コレダー"
+    },
+    "icon": "actions/25787.png"
+  },
+  {
+    "id": 16766,
+    "name": {
+      "en": "Detonator",
+      "fr": "Détonateur",
+      "de": "Detonator",
+      "ja": "デトネーター"
+    },
+    "icon": "actions/16766.png"
+  },
+  {
+    "id": 2887,
+    "name": {
+      "en": "Dismantle",
+      "fr": "Brise-arme",
+      "de": "Zerlegen",
+      "ja": "ウェポンブレイク"
+    },
     "icon": "actions/2887.png"
   },
   {
-    "row_id": 36979,
-    "name": "Double Check",
+    "id": 36979,
+    "name": {
+      "en": "Double Check",
+      "fr": "Double échec",
+      "de": "Doppelschach",
+      "ja": "ダブルチェック"
+    },
     "icon": "actions/36979.png"
   },
   {
-    "row_id": 16498,
-    "name": "Drill",
+    "id": 16498,
+    "name": {
+      "en": "Drill",
+      "fr": "Foreuse",
+      "de": "Bohrer",
+      "ja": "ドリル"
+    },
     "icon": "actions/16498.png"
   },
   {
-    "row_id": 7418,
-    "name": "Flamethrower",
+    "id": 36981,
+    "name": {
+      "en": "Excavator",
+      "fr": "Excavation",
+      "de": "Exkavator",
+      "ja": "エクスカベーター"
+    },
+    "icon": "actions/36981.png"
+  },
+  {
+    "id": 7418,
+    "name": {
+      "en": "Flamethrower",
+      "fr": "Lance-flammes",
+      "de": "Flammenwerfer",
+      "ja": "フレイムスロアー"
+    },
     "icon": "actions/7418.png"
   },
   {
-    "row_id": 7553,
-    "name": "Foot Graze",
+    "id": 7553,
+    "name": {
+      "en": "Foot Graze",
+      "fr": "Écorche-pied",
+      "de": "Stolperschuss",
+      "ja": "フットグレイズ"
+    },
     "icon": "actions/7553.png"
   },
   {
-    "row_id": 36982,
-    "name": "Full Metal Field",
+    "id": 36982,
+    "name": {
+      "en": "Full Metal Field",
+      "fr": "Rafale de métal",
+      "de": "Aus allen Rohren",
+      "ja": "フルメタルバースト"
+    },
     "icon": "actions/36982.png"
   },
   {
-    "row_id": 2874,
-    "name": "Gauss Round",
+    "id": 2874,
+    "name": {
+      "en": "Gauss Round",
+      "fr": "Décharge Gauss",
+      "de": "Gauß-Geschoss",
+      "ja": "ガウスラウンド"
+    },
     "icon": "actions/2874.png"
   },
   {
-    "row_id": 7551,
-    "name": "Head Graze",
+    "id": 7551,
+    "name": {
+      "en": "Head Graze",
+      "fr": "Écorche-tête",
+      "de": "Haarscharfer Schuss",
+      "ja": "ヘッドグレイズ"
+    },
     "icon": "actions/7551.png"
   },
   {
-    "row_id": 7410,
-    "name": "Heat Blast",
+    "id": 7410,
+    "name": {
+      "en": "Heat Blast",
+      "fr": "Pyro-explosion",
+      "de": "Hitzeschuss",
+      "ja": "ヒートブラスト"
+    },
     "icon": "actions/7410.png"
   },
   {
-    "row_id": 7413,
-    "name": "Heated Clean Shot",
+    "id": 7413,
+    "name": {
+      "en": "Heated Clean Shot",
+      "fr": "Tir net chauffé",
+      "de": "Sauberer Höllenschuss",
+      "ja": "ヒートクリーンショット"
+    },
     "icon": "actions/7413.png"
   },
   {
-    "row_id": 7412,
-    "name": "Heated Slug Shot",
+    "id": 7412,
+    "name": {
+      "en": "Heated Slug Shot",
+      "fr": "Tir de balle chauffé",
+      "de": "Höllen-Flintenlaufgeschoss",
+      "ja": "ヒートスラッグショット"
+    },
     "icon": "actions/7412.png"
   },
   {
-    "row_id": 7411,
-    "name": "Heated Split Shot",
+    "id": 7411,
+    "name": {
+      "en": "Heated Split Shot",
+      "fr": "Tir scindé chauffé",
+      "de": "Höllenfeuer frei",
+      "ja": "ヒートスプリットショット"
+    },
     "icon": "actions/7411.png"
   },
   {
-    "row_id": 2872,
-    "name": "Hot Shot",
+    "id": 2872,
+    "name": {
+      "en": "Hot Shot",
+      "fr": "Tir déchaîné",
+      "de": "Explosivgeschoss",
+      "ja": "ホットショット"
+    },
     "icon": "actions/2872.png"
   },
   {
-    "row_id": 17209,
-    "name": "Hypercharge",
+    "id": 17209,
+    "name": {
+      "en": "Hypercharge",
+      "fr": "Hypercharge",
+      "de": "Hyperladung",
+      "ja": "ハイパーチャージ"
+    },
     "icon": "actions/17209.png"
   },
   {
-    "row_id": 7554,
-    "name": "Leg Graze",
+    "id": 7554,
+    "name": {
+      "en": "Leg Graze",
+      "fr": "Écorche-jambe",
+      "de": "Beinschuss",
+      "ja": "レッググレイズ"
+    },
     "icon": "actions/7554.png"
   },
   {
-    "row_id": 7557,
-    "name": "Peloton",
+    "id": 7557,
+    "name": {
+      "en": "Peloton",
+      "fr": "Peloton",
+      "de": "Peloton",
+      "ja": "プロトン"
+    },
     "icon": "actions/7557.png"
   },
   {
-    "row_id": 16502,
-    "name": "Queen Overdrive",
+    "id": 16503,
+    "name": {
+      "en": "Pile Bunker",
+      "fr": "Marteau piqueur",
+      "de": "Pressluftramme",
+      "ja": "クイーン・パイルバンカー"
+    },
+    "icon": "actions/16503.png"
+  },
+  {
+    "id": 16502,
+    "name": {
+      "en": "Queen Overdrive",
+      "fr": "Surmultiplication de Reine",
+      "de": "DAME-Überhitzung",
+      "ja": "オーバードライブ・クイーン"
+    },
     "icon": "actions/16502.png"
   },
   {
-    "row_id": 2876,
-    "name": "Reassemble",
+    "id": 2876,
+    "name": {
+      "en": "Reassemble",
+      "fr": "Réassemblage",
+      "de": "Justieren",
+      "ja": "整備"
+    },
     "icon": "actions/2876.png"
   },
   {
-    "row_id": 2890,
-    "name": "Ricochet",
+    "id": 2890,
+    "name": {
+      "en": "Ricochet",
+      "fr": "Ricochet",
+      "de": "Rikoschettschuss",
+      "ja": "リコシェット"
+    },
     "icon": "actions/2890.png"
   },
   {
-    "row_id": 2864,
-    "name": "Rook Autoturret",
+    "id": 17206,
+    "name": {
+      "en": "Roller Dash",
+      "fr": "Roues véloces",
+      "de": "Rollender Ansturm",
+      "ja": "クイーン・ローラーダッシュ"
+    },
+    "icon": "actions/17206.png"
+  },
+  {
+    "id": 2864,
+    "name": {
+      "en": "Rook Autoturret",
+      "fr": "Auto-tourelle Tour",
+      "de": "Selbstschuss-Gyrocopter TURM",
+      "ja": "オートタレット・ルーク"
+    },
     "icon": "actions/2864.png"
   },
   {
-    "row_id": 7415,
-    "name": "Rook Overdrive",
+    "id": 7415,
+    "name": {
+      "en": "Rook Overdrive",
+      "fr": "Surmultiplication de Tour",
+      "de": "TURM-Überhitzung",
+      "ja": "オーバードライブ・ルーク"
+    },
     "icon": "actions/7415.png"
   },
   {
-    "row_id": 25786,
-    "name": "Scattergun",
+    "id": 25786,
+    "name": {
+      "en": "Scattergun",
+      "fr": "Fusil à pompe",
+      "de": "Schrotflinte",
+      "ja": "スキャッターガン"
+    },
     "icon": "actions/25786.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 2868,
-    "name": "Slug Shot",
+    "id": 2868,
+    "name": {
+      "en": "Slug Shot",
+      "fr": "Tir de balle",
+      "de": "Flintenlaufgeschoss",
+      "ja": "スラッグショット"
+    },
     "icon": "actions/2868.png"
   },
   {
-    "row_id": 2866,
-    "name": "Split Shot",
+    "id": 2866,
+    "name": {
+      "en": "Split Shot",
+      "fr": "Tir scindé",
+      "de": "Feuer frei",
+      "ja": "スプリットショット"
+    },
     "icon": "actions/2866.png"
   },
   {
-    "row_id": 2870,
-    "name": "Spread Shot",
+    "id": 2870,
+    "name": {
+      "en": "Spread Shot",
+      "fr": "Tir dispersé",
+      "de": "Splitterschuss",
+      "ja": "スプレッドショット"
+    },
     "icon": "actions/2870.png"
   },
   {
-    "row_id": 16889,
-    "name": "Tactician",
+    "id": 16889,
+    "name": {
+      "en": "Tactician",
+      "fr": "Tacticien",
+      "de": "Taktiker",
+      "ja": "タクティシャン"
+    },
     "icon": "actions/16889.png"
   },
   {
-    "row_id": 2878,
-    "name": "Wildfire",
+    "id": 2891,
+    "name": {
+      "en": "Volley Fire",
+      "fr": "Tir de volée",
+      "de": "Salve",
+      "ja": "ボレーファイア"
+    },
+    "icon": "actions/2891.png"
+  },
+  {
+    "id": 2878,
+    "name": {
+      "en": "Wildfire",
+      "fr": "Flambée",
+      "de": "Wildfeuer",
+      "ja": "ワイルドファイア"
+    },
     "icon": "actions/2878.png"
   }
 ]

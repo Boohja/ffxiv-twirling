@@ -1,192 +1,418 @@
 [
   {
-    "row_id": 24405,
-    "name": "Arcane Circle",
+    "id": 24405,
+    "name": {
+      "en": "Arcane Circle",
+      "fr": "Cercle arcanique",
+      "de": "Arkaner Kreis",
+      "ja": "アルケインサークル"
+    },
     "icon": "actions/24405.png"
   },
   {
-    "row_id": 24404,
-    "name": "Arcane Crest",
+    "id": 24404,
+    "name": {
+      "en": "Arcane Crest",
+      "fr": "Blason arcanique",
+      "de": "Arkanes Wappen",
+      "ja": "アルケインクレスト"
+    },
     "icon": "actions/24404.png"
   },
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 24389,
-    "name": "Blood Stalk",
+    "id": 24389,
+    "name": {
+      "en": "Blood Stalk",
+      "fr": "Fétu ensanglanté",
+      "de": "Knochengarbe",
+      "ja": "ストークスウェーズ"
+    },
     "icon": "actions/24389.png"
   },
   {
-    "row_id": 7542,
-    "name": "Bloodbath",
+    "id": 7542,
+    "name": {
+      "en": "Bloodbath",
+      "fr": "Bain de sang",
+      "de": "Blutbad",
+      "ja": "ブラッドバス"
+    },
     "icon": "actions/7542.png"
   },
   {
-    "row_id": 24398,
-    "name": "Communio",
+    "id": 24398,
+    "name": {
+      "en": "Communio",
+      "fr": "Communio",
+      "de": "Communio",
+      "ja": "コムニオ"
+    },
     "icon": "actions/24398.png"
   },
   {
-    "row_id": 24396,
-    "name": "Cross Reaping",
+    "id": 24396,
+    "name": {
+      "en": "Cross Reaping"
+    },
     "icon": "actions/24396.png"
   },
   {
-    "row_id": 24394,
-    "name": "Enshroud",
+    "id": 24394,
+    "name": {
+      "en": "Enshroud",
+      "fr": "Linceul du lémure",
+      "de": "Lemurenschleier",
+      "ja": "レムールシュラウド"
+    },
     "icon": "actions/24394.png"
   },
   {
-    "row_id": 36971,
-    "name": "Executioner's Gallows",
+    "id": 36971,
+    "name": {
+      "en": "Executioner's Gallows"
+    },
     "icon": "actions/36971.png"
   },
   {
-    "row_id": 36970,
-    "name": "Executioner's Gibbet",
+    "id": 36970,
+    "name": {
+      "en": "Executioner's Gibbet"
+    },
     "icon": "actions/36970.png"
   },
   {
-    "row_id": 7549,
-    "name": "Feint",
+    "id": 36972,
+    "name": {
+      "en": "Executioner's Guillotine",
+      "fr": "Guillotine tortionnaire",
+      "de": "Henkersguillotine",
+      "ja": "エクスギロティン"
+    },
+    "icon": "actions/36972.png"
+  },
+  {
+    "id": 7549,
+    "name": {
+      "en": "Feint",
+      "fr": "Restreinte",
+      "de": "Zermürben",
+      "ja": "牽制"
+    },
     "icon": "actions/7549.png"
   },
   {
-    "row_id": 24383,
-    "name": "Gallows",
+    "id": 24383,
+    "name": {
+      "en": "Gallows",
+      "fr": "Potence",
+      "de": "Galgen",
+      "ja": "ギャロウズ"
+    },
     "icon": "actions/24383.png"
   },
   {
-    "row_id": 24382,
-    "name": "Gibbet",
+    "id": 24382,
+    "name": {
+      "en": "Gibbet",
+      "fr": "Gibet",
+      "de": "Richtpfahl",
+      "ja": "ジビトゥ"
+    },
     "icon": "actions/24382.png"
   },
   {
-    "row_id": 24393,
-    "name": "Gluttony",
+    "id": 24393,
+    "name": {
+      "en": "Gluttony",
+      "fr": "Gloutonnerie",
+      "de": "Völlerei",
+      "ja": "グラトニー"
+    },
     "icon": "actions/24393.png"
   },
   {
-    "row_id": 24392,
-    "name": "Grim Swathe",
+    "id": 24397,
+    "name": {
+      "en": "Grim Reaping",
+      "fr": "Fauchage sinistre",
+      "de": "Gevatters Schnitt",
+      "ja": "グリムリーパー"
+    },
+    "icon": "actions/24397.png"
+  },
+  {
+    "id": 24392,
+    "name": {
+      "en": "Grim Swathe",
+      "fr": "Andain sinistre",
+      "de": "Nachtschwad",
+      "ja": "シーフスウェーズ"
+    },
     "icon": "actions/24392.png"
   },
   {
-    "row_id": 24384,
-    "name": "Guillotine",
+    "id": 24384,
+    "name": {
+      "en": "Guillotine",
+      "fr": "Guillotine",
+      "de": "Guillotine",
+      "ja": "ギロティン"
+    },
     "icon": "actions/24384.png"
   },
   {
-    "row_id": 24386,
-    "name": "Harpe",
+    "id": 24386,
+    "name": {
+      "en": "Harpe",
+      "fr": "Harpé",
+      "de": "Harpe",
+      "ja": "ハルパー"
+    },
     "icon": "actions/24386.png"
   },
   {
-    "row_id": 24402,
-    "name": "Hell's Egress",
+    "id": 24388,
+    "name": {
+      "en": "Harvest Moon",
+      "fr": "Lune des moissons",
+      "de": "Erntemond",
+      "ja": "ハーベストムーン"
+    },
+    "icon": "actions/24388.png"
+  },
+  {
+    "id": 24402,
+    "name": {
+      "en": "Hell's Egress",
+      "fr": "Retraite de l'enfer",
+      "de": "Höllischer Abgang",
+      "ja": "ヘルズイーグレス"
+    },
     "icon": "actions/24402.png"
   },
   {
-    "row_id": 24401,
-    "name": "Hell's Ingress",
+    "id": 24401,
+    "name": {
+      "en": "Hell's Ingress",
+      "fr": "Intrusion de l'enfer",
+      "de": "Höllischer Auftritt",
+      "ja": "ヘルズイングレス"
+    },
     "icon": "actions/24401.png"
   },
   {
-    "row_id": 24375,
-    "name": "Infernal Slice",
+    "id": 24375,
+    "name": {
+      "en": "Infernal Slice",
+      "fr": "Tranchage infernal",
+      "de": "Infernalischer Schlitzer",
+      "ja": "インファナルスライス"
+    },
     "icon": "actions/24375.png"
   },
   {
-    "row_id": 7863,
-    "name": "Leg Sweep",
+    "id": 7863,
+    "name": {
+      "en": "Leg Sweep",
+      "fr": "Fauchage de jambe",
+      "de": "Stolperfalle",
+      "ja": "レッグスウィープ"
+    },
     "icon": "actions/7863.png"
   },
   {
-    "row_id": 24399,
-    "name": "Lemure's Slice",
+    "id": 24400,
+    "name": {
+      "en": "Lemure's Scythe",
+      "fr": "Faux du lémure",
+      "de": "Lemurensense",
+      "ja": "レムールサイズ"
+    },
+    "icon": "actions/24400.png"
+  },
+  {
+    "id": 24399,
+    "name": {
+      "en": "Lemure's Slice"
+    },
     "icon": "actions/24399.png"
   },
   {
-    "row_id": 24377,
-    "name": "Nightmare Scythe",
+    "id": 24377,
+    "name": {
+      "en": "Nightmare Scythe",
+      "fr": "Faux cauchemardesque",
+      "de": "Schneidender Albtraum",
+      "ja": "ナイトメアサイズ"
+    },
     "icon": "actions/24377.png"
   },
   {
-    "row_id": 36973,
-    "name": "Perfectio",
+    "id": 36973,
+    "name": {
+      "en": "Perfectio"
+    },
     "icon": "actions/36973.png"
   },
   {
-    "row_id": 24385,
-    "name": "Plentiful Harvest",
+    "id": 24385,
+    "name": {
+      "en": "Plentiful Harvest",
+      "fr": "Moisson abondante",
+      "de": "Große Mahd",
+      "ja": "プレンティフルハーベスト"
+    },
     "icon": "actions/24385.png"
   },
   {
-    "row_id": 36969,
-    "name": "Sacrificium",
+    "id": 24403,
+    "name": {
+      "en": "Regress",
+      "fr": "Repli",
+      "de": "Rückkehr",
+      "ja": "リターン"
+    },
+    "icon": "actions/24403.png"
+  },
+  {
+    "id": 36969,
+    "name": {
+      "en": "Sacrificium"
+    },
     "icon": "actions/36969.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 24378,
-    "name": "Shadow of Death",
+    "id": 24378,
+    "name": {
+      "en": "Shadow of Death",
+      "fr": "Ombre de la mort",
+      "de": "Schatten des Todes",
+      "ja": "シャドウ・オブ・デス"
+    },
     "icon": "actions/24378.png"
   },
   {
-    "row_id": 24373,
-    "name": "Slice",
+    "id": 24373,
+    "name": {
+      "en": "Slice",
+      "fr": "Tranchage",
+      "de": "Schlitzer",
+      "ja": "スライス"
+    },
     "icon": "actions/24373.png"
   },
   {
-    "row_id": 24381,
-    "name": "Soul Scythe",
+    "id": 24381,
+    "name": {
+      "en": "Soul Scythe",
+      "fr": "Faux animique",
+      "de": "Seelensense",
+      "ja": "ソウルサイズ"
+    },
     "icon": "actions/24381.png"
   },
   {
-    "row_id": 24380,
-    "name": "Soul Slice",
+    "id": 24380,
+    "name": {
+      "en": "Soul Slice",
+      "fr": "Tranchage animique",
+      "de": "Seelenschlitzer",
+      "ja": "ソウルスライス"
+    },
     "icon": "actions/24380.png"
   },
   {
-    "row_id": 24387,
-    "name": "Soulsow",
+    "id": 24387,
+    "name": {
+      "en": "Soulsow",
+      "fr": "Semence d'âmes",
+      "de": "Seelensaat",
+      "ja": "ソウルソウ"
+    },
     "icon": "actions/24387.png"
   },
   {
-    "row_id": 24376,
-    "name": "Spinning Scythe",
+    "id": 24376,
+    "name": {
+      "en": "Spinning Scythe",
+      "fr": "Faux tournoyante",
+      "de": "Sichelwirbel",
+      "ja": "スピニングサイズ"
+    },
     "icon": "actions/24376.png"
   },
   {
-    "row_id": 7546,
-    "name": "True North",
+    "id": 7546,
+    "name": {
+      "en": "True North",
+      "fr": "Vrai Nord",
+      "de": "Neuausrichtung",
+      "ja": "トゥルーノース"
+    },
     "icon": "actions/7546.png"
   },
   {
-    "row_id": 24390,
-    "name": "Unveiled Gibbet",
+    "id": 24391,
+    "name": {
+      "en": "Unveiled Gallows",
+      "fr": "Potence suppliciante",
+      "de": "Galgengriff",
+      "ja": "ギャロウズクロウ"
+    },
+    "icon": "actions/24391.png"
+  },
+  {
+    "id": 24390,
+    "name": {
+      "en": "Unveiled Gibbet"
+    },
     "icon": "actions/24390.png"
   },
   {
-    "row_id": 24395,
-    "name": "Void Reaping",
+    "id": 24395,
+    "name": {
+      "en": "Void Reaping"
+    },
     "icon": "actions/24395.png"
   },
   {
-    "row_id": 24374,
-    "name": "Waxing Slice",
+    "id": 24374,
+    "name": {
+      "en": "Waxing Slice",
+      "fr": "Tranchage blafard",
+      "de": "Neulicht-Schlitzer",
+      "ja": "ワクシングスライス"
+    },
     "icon": "actions/24374.png"
   },
   {
-    "row_id": 24379,
-    "name": "Whorl of Death",
+    "id": 24379,
+    "name": {
+      "en": "Whorl of Death",
+      "fr": "Tourbillon de la mort",
+      "de": "Sog des Todes",
+      "ja": "ワーラル・オブ・デス"
+    },
     "icon": "actions/24379.png"
   }
 ]

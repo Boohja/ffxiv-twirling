@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Second Opener (The Balance)",
+    "job": "rdm",
+    "slug": "rdm-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/casters/red-mage/openers/",
+    "updated": "2025-12-25",
+    "steps": [
+        {
+            "icon": "actions/25856.png",
+            "action": 25856
+        },
+        {
+            "icon": "actions/25855.png",
+            "action": 25855
+        },
+        {
+            "icon": "actions/7561.png",
+            "action": 7561
+        },
+        {
+            "icon": "actions/25855.png",
+            "action": 25855
+        },
+        {
+            "icon": "actions/7517.png",
+            "action": 7517
+        },
+        {
+            "icon": "actions/7518.png",
+            "action": 7518
+        },
+        {
+            "icon": "actions/25855.png",
+            "action": 25855
+        },
+        {
+            "icon": "actions/7520.png",
+            "action": 7520
+        },
+        {
+            "icon": "actions/7521.png",
+            "action": 7521
+        },
+        {
+            "icon": "actions/7527.png",
+            "action": 7527
+        },
+        {
+            "icon": "actions/7519.png",
+            "action": 7519
+        },
+        {
+            "icon": "actions/7528.png",
+            "action": 7528
+        },
+        {
+            "icon": "actions/16527.png",
+            "action": 16527
+        },
+        {
+            "icon": "actions/7529.png",
+            "action": 7529
+        },
+        {
+            "icon": "actions/7506.png",
+            "action": 7506
+        },
+        {
+            "icon": "actions/7526.png",
+            "action": 7526
+        },
+        {
+            "icon": "actions/37005.png",
+            "action": 37005
+        },
+        {
+            "icon": "actions/16530.png",
+            "action": 16530
+        },
+        {
+            "icon": "actions/16527.png",
+            "action": 16527
+        },
+        {
+            "icon": "actions/7506.png",
+            "action": 7506
+        },
+        {
+            "icon": "actions/25858.png",
+            "action": 25858
+        },
+        {
+            "icon": "actions/37007.png",
+            "action": 37007
+        },
+        {
+            "icon": "actions/37006.png",
+            "action": 37006
+        },
+        {
+            "icon": "actions/25855.png",
+            "action": 25855
+        },
+        {
+            "icon": "actions/7517.png",
+            "action": 7517
+        },
+        {
+            "icon": "actions/25856.png",
+            "action": 25856
+        },
+        {
+            "icon": "actions/7510.png",
+            "action": 7510
+        },
+        {
+            "icon": "actions/25855.png",
+            "action": 25855
+        },
+        {
+            "icon": "actions/7511.png",
+            "action": 7511
+        },
+        {
+            "icon": "actions/25856.png",
+            "action": 25856
+        },
+        {
+            "icon": "actions/7561.png",
+            "action": 7561
+        },
+        {
+            "icon": "actions/25856.png",
+            "action": 25856
+        },
+        {
+            "icon": "actions/7519.png",
+            "action": 7519
+        }
+    ]
+  }
+]

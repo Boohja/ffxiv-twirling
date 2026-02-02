@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "sge",
+    "slug": "sge-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/healers/sage/openers/",
+    "updated": "2025-08-07",
+    "steps": [
+        {
+            "icon": "actions/24290.png",
+            "action": 24290
+        },
+        {
+            "icon": "actions/24316.png",
+            "action": 24316
+        },
+        {
+            "icon": "actions/24314.png",
+            "action": 24314
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24313.png",
+            "action": 24313
+        },
+        {
+            "icon": "actions/37033.png",
+            "action": 37033
+        },
+        {
+            "icon": "actions/24313.png",
+            "action": 24313
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24290.png",
+            "action": 24290
+        },
+        {
+            "icon": "actions/24314.png",
+            "action": 24314
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        },
+        {
+            "icon": "actions/24312.png",
+            "action": 24312
+        }
+    ]
+  }
+]

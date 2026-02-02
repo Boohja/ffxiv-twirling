@@ -7,102 +7,82 @@
     "updated": "2025-12-26",
     "steps": [
       {
-        "name": "Dragon Kick",
         "icon": "actions/74.png",
         "action": 74
       },
       {
-        "name": "Perfect Balance",
         "icon": "actions/69.png",
         "action": 69
       },
       {
-        "name": "Twin Snakes",
         "icon": "actions/61.png",
         "action": 61
       },
       {
-        "name": "Demolish",
         "icon": "actions/66.png",
         "action": 66
       },
       {
-        "name": "Brotherhood",
         "icon": "actions/7396.png",
         "action": 7396
       },
       {
-        "name": "Riddle of Fire",
         "icon": "actions/7395.png",
         "action": 7395
       },
       {
-        "name": "Leaping Opo",
         "icon": "actions/36945.png",
         "action": 36945
       },
       {
-        "name": "the Forbidden Chakra",
         "icon": "actions/3547.png",
         "action": 3547
       },
       {
-        "name": "Riddle of Wind",
         "icon": "actions/25766.png",
         "action": 25766
       },
       {
-        "name": "Rising Phoenix",
         "icon": "actions/25768.png",
         "action": 25768
       },
       {
-        "name": "Dragon Kick",
         "icon": "actions/74.png",
         "action": 74
       },
       {
-        "name": "Wind's Reply",
         "icon": "actions/36949.png",
         "action": 36949
       },
       {
-        "name": "Fire's Reply",
         "icon": "actions/36950.png",
         "action": 36950
       },
       {
-        "name": "Leaping Opo",
         "icon": "actions/36945.png",
         "action": 36945
       },
       {
-        "name": "Perfect Balance",
         "icon": "actions/69.png",
         "action": 69
       },
       {
-        "name": "Dragon Kick",
         "icon": "actions/74.png",
         "action": 74
       },
       {
-        "name": "Leaping Opo",
         "icon": "actions/36945.png",
         "action": 36945
       },
       {
-        "name": "Dragon Kick",
         "icon": "actions/74.png",
         "action": 74
       },
       {
-        "name": "Elixir Burst",
         "icon": "actions/36948.png",
         "action": 36948
       },
       {
-        "name": "Leaping Opo",
         "icon": "actions/36945.png",
         "action": 36945
       }

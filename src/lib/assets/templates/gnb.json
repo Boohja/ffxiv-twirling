@@ -7,102 +7,82 @@
     "updated": "2025-12-17",
     "steps": [
       {
-        "name": "Bloodfest",
         "icon": "actions/16164.png",
         "action": 16164
       },
       {
-        "name": "Keen Edge",
         "icon": "actions/16137.png",
         "action": 16137
       },
       {
-        "name": "Brutal Shell",
         "icon": "actions/16139.png",
         "action": 16139
       },
       {
-        "name": "No Mercy",
         "icon": "actions/16138.png",
         "action": 16138
       },
       {
-        "name": "Gnashing Fang",
         "icon": "actions/16146.png",
         "action": 16146
       },
       {
-        "name": "Jugular Rip",
         "icon": "actions/16156.png",
         "action": 16156
       },
       {
-        "name": "Bow Shock",
         "icon": "actions/16159.png",
         "action": 16159
       },
       {
-        "name": "Double Down",
         "icon": "actions/25760.png",
         "action": 25760
       },
       {
-        "name": "Blasting Zone",
         "icon": "actions/16165.png",
         "action": 16165
       },
       {
-        "name": "Sonic Break",
         "icon": "actions/16153.png",
         "action": 16153
       },
       {
-        "name": "Savage Claw",
         "icon": "actions/16147.png",
         "action": 16147
       },
       {
-        "name": "Abdomen Tear",
         "icon": "actions/16157.png",
         "action": 16157
       },
       {
-        "name": "Wicked Talon",
         "icon": "actions/16150.png",
         "action": 16150
       },
       {
-        "name": "Eye Gouge",
         "icon": "actions/16158.png",
         "action": 16158
       },
       {
-        "name": "Reign of Beasts",
         "icon": "actions/36937.png",
         "action": 36937
       },
       {
-        "name": "Noble Blood",
         "icon": "actions/36938.png",
         "action": 36938
       },
       {
-        "name": "Lion Heart",
         "icon": "actions/36939.png",
         "action": 36939
       },
       {
-        "name": "Solid Barrel",
         "icon": "actions/16145.png",
         "action": 16145
       },
       {
-        "name": "Gnashing Fang",
         "icon": "actions/16146.png",
         "action": 16146
       },
       {
-        "name": "Jugular Rip",
         "icon": "actions/16156.png",
         "action": 16156
       }

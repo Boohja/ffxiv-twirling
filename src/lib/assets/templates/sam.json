@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "sam",
+    "slug": "sam-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/melee/samurai/openers/",
+    "updated": "2025-08-06",
+    "steps": [
+        {
+            "icon": "actions/7499.png",
+            "action": 7499
+        },
+        {
+            "icon": "actions/7481.png",
+            "action": 7481
+        },
+        {
+            "icon": "actions/7482.png",
+            "action": 7482
+        },
+        {
+            "icon": "actions/16482.png",
+            "action": 16482
+        },
+        {
+            "icon": "actions/7480.png",
+            "action": 7480
+        },
+        {
+            "icon": "actions/36966.png",
+            "action": 36966
+        },
+        {
+            "icon": "actions/16481.png",
+            "action": 16481
+        },
+        {
+            "icon": "actions/36968.png",
+            "action": 36968
+        },
+        {
+            "icon": "actions/7499.png",
+            "action": 7499
+        },
+        {
+            "icon": "actions/7481.png",
+            "action": 7481
+        },
+        {
+            "icon": "actions/36964.png",
+            "action": 36964
+        },
+        {
+            "icon": "actions/7489.png",
+            "action": 7489
+        },
+        {
+            "icon": "actions/25781.png",
+            "action": 25781
+        },
+        {
+            "icon": "actions/16487.png",
+            "action": 16487
+        },
+        {
+            "icon": "actions/25782.png",
+            "action": 25782
+        },
+        {
+            "icon": "actions/7482.png",
+            "action": 7482
+        },
+        {
+            "icon": "actions/7490.png",
+            "action": 7490
+        },
+        {
+            "icon": "actions/7481.png",
+            "action": 7481
+        },
+        {
+            "icon": "actions/7492.png",
+            "action": 7492
+        },
+        {
+            "icon": "actions/36963.png",
+            "action": 36963
+        },
+        {
+            "icon": "actions/7480.png",
+            "action": 7480
+        },
+        {
+            "icon": "actions/7490.png",
+            "action": 7490
+        },
+        {
+            "icon": "actions/36966.png",
+            "action": 36966
+        },
+        {
+            "icon": "actions/36968.png",
+            "action": 36968
+        }
+    ]
+  }
+]

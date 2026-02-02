@@ -1,207 +1,467 @@
 [
   {
-    "row_id": 2255,
-    "name": "Aeolian Edge",
+    "id": 2255,
+    "name": {
+      "en": "Aeolian Edge",
+      "fr": "Lame éolienne",
+      "de": "Äolusklinge",
+      "ja": "旋風刃"
+    },
     "icon": "actions/2255.png"
   },
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 3563,
-    "name": "Armor Crush",
+    "id": 3563,
+    "name": {
+      "en": "Armor Crush",
+      "fr": "Perce-armure",
+      "de": "Harnischbrecher",
+      "ja": "強甲破点突"
+    },
     "icon": "actions/3563.png"
   },
   {
-    "row_id": 2246,
-    "name": "Assassinate",
+    "id": 2246,
+    "name": {
+      "en": "Assassinate",
+      "fr": "Assassinement",
+      "de": "Meuchelsprung",
+      "ja": "終撃"
+    },
     "icon": "actions/2246.png"
   },
   {
-    "row_id": 7402,
-    "name": "Bhavacakra",
+    "id": 7402,
+    "name": {
+      "en": "Bhavacakra",
+      "fr": "Bhavacakra",
+      "de": "Rad des Werdens",
+      "ja": "六道輪廻"
+    },
     "icon": "actions/7402.png"
   },
   {
-    "row_id": 7542,
-    "name": "Bloodbath",
+    "id": 7542,
+    "name": {
+      "en": "Bloodbath",
+      "fr": "Bain de sang",
+      "de": "Blutbad",
+      "ja": "ブラッドバス"
+    },
     "icon": "actions/7542.png"
   },
   {
-    "row_id": 16493,
-    "name": "Bunshin",
+    "id": 16493,
+    "name": {
+      "en": "Bunshin",
+      "fr": "Bunshin",
+      "de": "Doppeltes Ich",
+      "ja": "分身の術"
+    },
     "icon": "actions/16493.png"
   },
   {
-    "row_id": 2261,
-    "name": "Chi",
+    "id": 2261,
+    "name": {
+      "en": "Chi",
+      "fr": "Chi",
+      "de": "Chi",
+      "ja": "地の印"
+    },
     "icon": "actions/2261.png"
   },
   {
-    "row_id": 2254,
-    "name": "Death Blossom",
+    "id": 2254,
+    "name": {
+      "en": "Death Blossom",
+      "fr": "Roseraie fatale",
+      "de": "Todesblüte",
+      "ja": "血花五月雨"
+    },
     "icon": "actions/2254.png"
   },
   {
-    "row_id": 36957,
-    "name": "Dokumori",
+    "id": 36959,
+    "name": {
+      "en": "Deathfrog Medium",
+      "fr": "Kuchiyose Gamasen",
+      "de": "Weg der Kröte",
+      "ja": "口寄せの術・蝦蟇仙"
+    },
+    "icon": "actions/36959.png"
+  },
+  {
+    "id": 36957,
+    "name": {
+      "en": "Dokumori",
+      "fr": "Dokumori",
+      "de": "Dokumori",
+      "ja": "毒盛の術"
+    },
     "icon": "actions/36957.png"
   },
   {
-    "row_id": 3566,
-    "name": "Dream Within a Dream",
+    "id": 2270,
+    "name": {
+      "en": "Doton",
+      "fr": "Doton",
+      "de": "Doton",
+      "ja": "土遁の術"
+    },
+    "icon": "actions/2270.png"
+  },
+  {
+    "id": 3566,
+    "name": {
+      "en": "Dream Within a Dream",
+      "fr": "Rêve dans un rêve",
+      "de": "Ternäre Trance",
+      "ja": "夢幻三段"
+    },
     "icon": "actions/3566.png"
   },
   {
-    "row_id": 7549,
-    "name": "Feint",
+    "id": 7549,
+    "name": {
+      "en": "Feint",
+      "fr": "Restreinte",
+      "de": "Zermürben",
+      "ja": "牽制"
+    },
     "icon": "actions/7549.png"
   },
   {
-    "row_id": 25778,
-    "name": "Fleeting Raiju",
+    "id": 25778,
+    "name": {
+      "en": "Fleeting Raiju",
+      "fr": "Croc de Raijû",
+      "de": "Brüllendes Raiju",
+      "ja": "月影雷獣牙"
+    },
     "icon": "actions/25778.png"
   },
   {
-    "row_id": 25777,
-    "name": "Forked Raiju",
+    "id": 25777,
+    "name": {
+      "en": "Forked Raiju",
+      "fr": "Griffe de Raijû",
+      "de": "Tanzendes Raiju",
+      "ja": "月影雷獣爪"
+    },
     "icon": "actions/25777.png"
   },
   {
-    "row_id": 2265,
-    "name": "Fuma Shuriken",
-    "icon": "actions/2265.png"
+    "id": 18875,
+    "name": {
+      "en": "Fuma Shuriken",
+      "fr": "Fûma Shuriken",
+      "de": "Fuma Shuriken",
+      "ja": "風魔手裏剣"
+    },
+    "icon": "actions/18875.png"
   },
   {
-    "row_id": 2242,
-    "name": "Gust Slash",
+    "id": 16491,
+    "name": {
+      "en": "Goka Mekkyaku",
+      "fr": "Gôka Mekkyaku",
+      "de": "Goka Mekkyaku",
+      "ja": "劫火滅却の術"
+    },
+    "icon": "actions/16491.png"
+  },
+  {
+    "id": 2242,
+    "name": {
+      "en": "Gust Slash",
+      "fr": "Tourbillon tailladant",
+      "de": "Windschlitzer",
+      "ja": "風断ち"
+    },
     "icon": "actions/2242.png"
   },
   {
-    "row_id": 16488,
-    "name": "Hakke Mujinsatsu",
+    "id": 16488,
+    "name": {
+      "en": "Hakke Mujinsatsu",
+      "fr": "Hakke Mujinsatsu",
+      "de": "Hakke Mujinsatsu",
+      "ja": "八卦無刃殺"
+    },
     "icon": "actions/16488.png"
   },
   {
-    "row_id": 7401,
-    "name": "Hellfrog Medium",
+    "id": 7401,
+    "name": {
+      "en": "Hellfrog Medium",
+      "fr": "Kuchiyose Ogama",
+      "de": "Krötenmedium",
+      "ja": "口寄せの術・大蝦蟇"
+    },
     "icon": "actions/7401.png"
   },
   {
-    "row_id": 2245,
-    "name": "Hide",
+    "id": 2245,
+    "name": {
+      "en": "Hide",
+      "fr": "Dissimulation",
+      "de": "Verstecken",
+      "ja": "かくれる"
+    },
     "icon": "actions/2245.png"
   },
   {
-    "row_id": 16492,
-    "name": "Hyosho Ranryu",
+    "id": 18879,
+    "name": {
+      "en": "Huton",
+      "fr": "Fûton",
+      "de": "Huton",
+      "ja": "風遁の術"
+    },
+    "icon": "actions/18879.png"
+  },
+  {
+    "id": 16492,
+    "name": {
+      "en": "Hyosho Ranryu"
+    },
     "icon": "actions/16492.png"
   },
   {
-    "row_id": 2263,
-    "name": "Jin",
-    "icon": "actions/2263.png"
+    "id": 18878,
+    "name": {
+      "en": "Hyoton",
+      "fr": "Hyôton",
+      "de": "Hyoton",
+      "ja": "氷遁の術"
+    },
+    "icon": "actions/18878.png"
   },
   {
-    "row_id": 2264,
-    "name": "Kassatsu",
+    "id": 18807,
+    "name": {
+      "en": "Jin",
+      "fr": "Jin",
+      "de": "Jin",
+      "ja": "人の印"
+    },
+    "icon": "actions/18807.png"
+  },
+  {
+    "id": 2264,
+    "name": {
+      "en": "Kassatsu",
+      "fr": "Kassatsu",
+      "de": "Kassatsu",
+      "ja": "活殺自在"
+    },
     "icon": "actions/2264.png"
   },
   {
-    "row_id": 36958,
-    "name": "Kunai's Bane",
+    "id": 18876,
+    "name": {
+      "en": "Katon",
+      "fr": "Katon",
+      "de": "Katon",
+      "ja": "火遁の術"
+    },
+    "icon": "actions/18876.png"
+  },
+  {
+    "id": 36958,
+    "name": {
+      "en": "Kunai's Bane",
+      "fr": "Kunai explosifs",
+      "de": "Blendendes Raiju",
+      "ja": "百雷銃"
+    },
     "icon": "actions/36958.png"
   },
   {
-    "row_id": 7863,
-    "name": "Leg Sweep",
+    "id": 7863,
+    "name": {
+      "en": "Leg Sweep",
+      "fr": "Fauchage de jambe",
+      "de": "Stolperfalle",
+      "ja": "レッグスウィープ"
+    },
     "icon": "actions/7863.png"
   },
   {
-    "row_id": 16489,
-    "name": "Meisui",
+    "id": 16489,
+    "name": {
+      "en": "Meisui",
+      "fr": "Meisui",
+      "de": "Meisui",
+      "ja": "命水"
+    },
     "icon": "actions/16489.png"
   },
   {
-    "row_id": 2248,
-    "name": "Mug",
+    "id": 2248,
+    "name": {
+      "en": "Mug",
+      "fr": "Rapine",
+      "de": "Ausrauben",
+      "ja": "ぶんどる"
+    },
     "icon": "actions/2248.png"
   },
   {
-    "row_id": 2260,
-    "name": "Ninjutsu",
+    "id": 2260,
+    "name": {
+      "en": "Ninjutsu",
+      "fr": "Ninjutsu",
+      "de": "Ninjutsu",
+      "ja": "忍術"
+    },
     "icon": "actions/2260.png"
   },
   {
-    "row_id": 25774,
-    "name": "Phantom Kamaitachi",
+    "id": 25774,
+    "name": {
+      "en": "Phantom Kamaitachi",
+      "fr": "Kamaitachi fantôme",
+      "de": "Phantom-Kamaitachi",
+      "ja": "残影鎌鼬"
+    },
     "icon": "actions/25774.png"
   },
   {
-    "row_id": 18877,
-    "name": "Raiton",
+    "id": 2272,
+    "name": {
+      "en": "Rabbit Medium",
+      "fr": "Kuchiyose",
+      "de": "Hasenmedium",
+      "ja": "口寄せの術"
+    },
+    "icon": "actions/2272.png"
+  },
+  {
+    "id": 18877,
+    "name": {
+      "en": "Raiton"
+    },
     "icon": "actions/18877.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 2241,
-    "name": "Shade Shift",
+    "id": 2241,
+    "name": {
+      "en": "Shade Shift",
+      "fr": "Décalage d'ombre",
+      "de": "Superkniff",
+      "ja": "残影"
+    },
     "icon": "actions/2241.png"
   },
   {
-    "row_id": 2262,
-    "name": "Shukuchi",
+    "id": 2262,
+    "name": {
+      "en": "Shukuchi",
+      "fr": "Shukuchi",
+      "de": "Shukuchi",
+      "ja": "縮地"
+    },
     "icon": "actions/2262.png"
   },
   {
-    "row_id": 2240,
-    "name": "Spinning Edge",
+    "id": 2240,
+    "name": {
+      "en": "Spinning Edge",
+      "fr": "Lame tournoyante",
+      "de": "Wirbelklinge",
+      "ja": "双刃旋"
+    },
     "icon": "actions/2240.png"
   },
   {
-    "row_id": 18881,
-    "name": "Suiton",
+    "id": 18881,
+    "name": {
+      "en": "Suiton"
+    },
     "icon": "actions/18881.png"
   },
   {
-    "row_id": 2259,
-    "name": "Ten",
-    "icon": "actions/2259.png"
+    "id": 18805,
+    "name": {
+      "en": "Ten",
+      "fr": "Ten",
+      "de": "Ten",
+      "ja": "天の印"
+    },
+    "icon": "actions/18805.png"
   },
   {
-    "row_id": 7403,
-    "name": "Ten Chi Jin",
+    "id": 7403,
+    "name": {
+      "en": "Ten Chi Jin",
+      "fr": "Ten Chi Jin",
+      "de": "Ten Chi Jin",
+      "ja": "天地人"
+    },
     "icon": "actions/7403.png"
   },
   {
-    "row_id": 36961,
-    "name": "Tenri Jindo",
+    "id": 36961,
+    "name": {
+      "en": "Tenri Jindo"
+    },
     "icon": "actions/36961.png"
   },
   {
-    "row_id": 2247,
-    "name": "Throwing Dagger",
+    "id": 2247,
+    "name": {
+      "en": "Throwing Dagger",
+      "fr": "Dagues de jet",
+      "de": "Wurfmesser",
+      "ja": "投刃"
+    },
     "icon": "actions/2247.png"
   },
   {
-    "row_id": 2258,
-    "name": "Trick Attack",
+    "id": 2258,
+    "name": {
+      "en": "Trick Attack",
+      "fr": "Attaque sournoise",
+      "de": "Trickattacke",
+      "ja": "だまし討ち"
+    },
     "icon": "actions/2258.png"
   },
   {
-    "row_id": 7546,
-    "name": "True North",
+    "id": 7546,
+    "name": {
+      "en": "True North",
+      "fr": "Vrai Nord",
+      "de": "Neuausrichtung",
+      "ja": "トゥルーノース"
+    },
     "icon": "actions/7546.png"
   },
   {
-    "row_id": 36960,
-    "name": "Zesho Meppo",
+    "id": 36960,
+    "name": {
+      "en": "Zesho Meppo"
+    },
     "icon": "actions/36960.png"
   }
 ]

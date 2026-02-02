@@ -1,262 +1,392 @@
 [
   {
-    "row_id": 7560,
-    "name": "Addle",
+    "id": 7560,
+    "name": {
+      "en": "Addle",
+      "fr": "Embrouillement",
+      "de": "Stumpfsinn",
+      "ja": "アドル"
+    },
     "icon": "actions/7560.png"
   },
   {
-    "row_id": 155,
-    "name": "Aetherial Manipulation",
+    "id": 155,
+    "name": {
+      "en": "Aetherial Manipulation",
+      "fr": "Manipulation de l'éther",
+      "de": "Äthermanipulation",
+      "ja": "エーテリアルステップ"
+    },
     "icon": "actions/155.png"
   },
   {
-    "row_id": 29660,
-    "name": "Aetherial Manipulation",
-    "icon": "actions/29660.png"
-  },
-  {
-    "row_id": 25796,
-    "name": "Amplifier",
+    "id": 25796,
+    "name": {
+      "en": "Amplifier",
+      "fr": "Amplificateur",
+      "de": "Verstärker",
+      "ja": "アンプリファイア"
+    },
     "icon": "actions/25796.png"
   },
   {
-    "row_id": 7419,
-    "name": "Between the Lines",
+    "id": 7419,
+    "name": {
+      "en": "Between the Lines",
+      "fr": "Entre les lignes",
+      "de": "Leitlinie",
+      "ja": "ラインズステップ"
+    },
     "icon": "actions/7419.png"
   },
   {
-    "row_id": 142,
-    "name": "Blizzard",
+    "id": 142,
+    "name": {
+      "en": "Blizzard",
+      "fr": "Glace",
+      "de": "Eis",
+      "ja": "ブリザド"
+    },
     "icon": "actions/142.png"
   },
   {
-    "row_id": 29653,
-    "name": "Blizzard",
-    "icon": "actions/29653.png"
-  },
-  {
-    "row_id": 25793,
-    "name": "Blizzard II",
+    "id": 25793,
+    "name": {
+      "en": "Blizzard II",
+      "fr": "Extra Glace",
+      "de": "Eisra",
+      "ja": "ブリザラ"
+    },
     "icon": "actions/25793.png"
   },
   {
-    "row_id": 154,
-    "name": "Blizzard III",
+    "id": 154,
+    "name": {
+      "en": "Blizzard III",
+      "fr": "Méga Glace",
+      "de": "Eisga",
+      "ja": "ブリザガ"
+    },
     "icon": "actions/154.png"
   },
   {
-    "row_id": 3576,
-    "name": "Blizzard IV",
+    "id": 3576,
+    "name": {
+      "en": "Blizzard IV",
+      "fr": "Giga Glace",
+      "de": "Eiska",
+      "ja": "ブリザジャ"
+    },
     "icon": "actions/3576.png"
   },
   {
-    "row_id": 29657,
-    "name": "Burst",
-    "icon": "actions/29657.png"
-  },
-  {
-    "row_id": 16505,
-    "name": "Despair",
+    "id": 16505,
+    "name": {
+      "en": "Despair",
+      "fr": "Feu du désespoir",
+      "de": "Verzweiflung",
+      "ja": "デスペア"
+    },
     "icon": "actions/16505.png"
   },
   {
-    "row_id": 41475,
-    "name": "Elemental Weave",
-    "icon": "actions/41475.png"
-  },
-  {
-    "row_id": 141,
-    "name": "Fire",
+    "id": 141,
+    "name": {
+      "en": "Fire",
+      "fr": "Feu",
+      "de": "Feuer",
+      "ja": "ファイア"
+    },
     "icon": "actions/141.png"
   },
   {
-    "row_id": 29649,
-    "name": "Fire",
-    "icon": "actions/29649.png"
-  },
-  {
-    "row_id": 147,
-    "name": "Fire II",
+    "id": 147,
+    "name": {
+      "en": "Fire II",
+      "fr": "Extra Feu",
+      "de": "Feura",
+      "ja": "ファイラ"
+    },
     "icon": "actions/147.png"
   },
   {
-    "row_id": 152,
-    "name": "Fire III",
+    "id": 152,
+    "name": {
+      "en": "Fire III",
+      "fr": "Méga Feu",
+      "de": "Feuga",
+      "ja": "ファイガ"
+    },
     "icon": "actions/152.png"
   },
   {
-    "row_id": 3577,
-    "name": "Fire IV",
+    "id": 3577,
+    "name": {
+      "en": "Fire IV",
+      "fr": "Giga Feu",
+      "de": "Feuka",
+      "ja": "ファイジャ"
+    },
     "icon": "actions/3577.png"
   },
   {
-    "row_id": 162,
-    "name": "Flare",
+    "id": 162,
+    "name": {
+      "en": "Flare",
+      "fr": "Brasier",
+      "de": "Flare",
+      "ja": "フレア"
+    },
     "icon": "actions/162.png"
   },
   {
-    "row_id": 36989,
-    "name": "Flare Star",
+    "id": 36989,
+    "name": {
+      "en": "Flare Star",
+      "fr": "Astre flamboyant",
+      "de": "Flare-Stern",
+      "ja": "フレアスター"
+    },
     "icon": "actions/36989.png"
   },
   {
-    "row_id": 7422,
-    "name": "Foul",
+    "id": 7422,
+    "name": {
+      "en": "Foul",
+      "fr": "Infect",
+      "de": "Moder",
+      "ja": "ファウル"
+    },
     "icon": "actions/7422.png"
   },
   {
-    "row_id": 159,
-    "name": "Freeze",
+    "id": 159,
+    "name": {
+      "en": "Freeze",
+      "fr": "Gel",
+      "de": "Einfrieren",
+      "ja": "フリーズ"
+    },
     "icon": "actions/159.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
-    "row_id": 25795,
-    "name": "High Blizzard II",
+    "id": 25795,
+    "name": {
+      "en": "High Blizzard II",
+      "fr": "Extra Glace majeure",
+      "de": "Hohes Eisra",
+      "ja": "ハイブリザラ"
+    },
     "icon": "actions/25795.png"
   },
   {
-    "row_id": 25794,
-    "name": "High Fire II",
+    "id": 25794,
+    "name": {
+      "en": "High Fire II",
+      "fr": "Extra Feu majeur",
+      "de": "Hohes Feura",
+      "ja": "ハイファイラ"
+    },
     "icon": "actions/25794.png"
   },
   {
-    "row_id": 36986,
-    "name": "High Thunder",
+    "id": 36986,
+    "name": {
+      "en": "High Thunder",
+      "fr": "Foudre majeure",
+      "de": "Hoher Blitz",
+      "ja": "ハイサンダー"
+    },
     "icon": "actions/36986.png"
   },
   {
-    "row_id": 36987,
-    "name": "High Thunder II",
+    "id": 36987,
+    "name": {
+      "en": "High Thunder II",
+      "fr": "Extra Foudre majeure",
+      "de": "Hohes Blitzra",
+      "ja": "ハイサンダラ"
+    },
     "icon": "actions/36987.png"
   },
   {
-    "row_id": 41510,
-    "name": "Lethargy",
-    "icon": "actions/41510.png"
-  },
-  {
-    "row_id": 3573,
-    "name": "Ley Lines",
+    "id": 3573,
+    "name": {
+      "en": "Ley Lines",
+      "fr": "Manalignements",
+      "de": "Ley-Linien",
+      "ja": "黒魔紋"
+    },
     "icon": "actions/3573.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 158,
-    "name": "Manafont",
+    "id": 158,
+    "name": {
+      "en": "Manafont",
+      "fr": "Vasque de mana",
+      "de": "Mana-Brunnen",
+      "ja": "マナフォント"
+    },
     "icon": "actions/158.png"
   },
   {
-    "row_id": 157,
-    "name": "Manaward",
+    "id": 157,
+    "name": {
+      "en": "Manaward",
+      "fr": "Barrière de mana",
+      "de": "Mana-Schild",
+      "ja": "マバリア"
+    },
     "icon": "actions/157.png"
   },
   {
-    "row_id": 29663,
-    "name": "Paradox",
-    "icon": "actions/29663.png"
+    "id": 25797,
+    "name": {
+      "en": "Paradox",
+      "fr": "Paradoxe",
+      "de": "Paradox",
+      "ja": "パラドックス"
+    },
+    "icon": "actions/25797.png"
   },
   {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
-    "row_id": 36988,
-    "name": "Retrace",
+    "id": 36988,
+    "name": {
+      "en": "Retrace",
+      "fr": "Réalignement",
+      "de": "Ley-Erneuerung",
+      "ja": "魔紋再設置"
+    },
     "icon": "actions/36988.png"
   },
   {
-    "row_id": 156,
-    "name": "Scathe",
+    "id": 156,
+    "name": {
+      "en": "Scathe",
+      "fr": "Blessure",
+      "de": "Kollaps",
+      "ja": "コラプス"
+    },
     "icon": "actions/156.png"
   },
   {
-    "row_id": 25880,
-    "name": "Sleep",
+    "id": 25880,
+    "name": {
+      "en": "Sleep",
+      "fr": "Sommeil",
+      "de": "Schlaf",
+      "ja": "スリプル"
+    },
     "icon": "actions/25880.png"
   },
   {
-    "row_id": 29662,
-    "name": "Soul Resonance",
-    "icon": "actions/29662.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 144,
-    "name": "Thunder",
+    "id": 144,
+    "name": {
+      "en": "Thunder",
+      "fr": "Foudre",
+      "de": "Blitz",
+      "ja": "サンダー"
+    },
     "icon": "actions/144.png"
   },
   {
-    "row_id": 7447,
-    "name": "Thunder II",
+    "id": 7447,
+    "name": {
+      "en": "Thunder II",
+      "fr": "Extra Foudre",
+      "de": "Blitzra",
+      "ja": "サンダラ"
+    },
     "icon": "actions/7447.png"
   },
   {
-    "row_id": 153,
-    "name": "Thunder III",
+    "id": 153,
+    "name": {
+      "en": "Thunder III",
+      "fr": "Méga Foudre",
+      "de": "Blitzga",
+      "ja": "サンダガ"
+    },
     "icon": "actions/153.png"
   },
   {
-    "row_id": 7420,
-    "name": "Thunder IV",
+    "id": 7420,
+    "name": {
+      "en": "Thunder IV",
+      "fr": "Giga Foudre",
+      "de": "Blitzka",
+      "ja": "サンダジャ"
+    },
     "icon": "actions/7420.png"
   },
   {
-    "row_id": 149,
-    "name": "Transpose",
+    "id": 149,
+    "name": {
+      "en": "Transpose",
+      "fr": "Transposition",
+      "de": "Transposition",
+      "ja": "トランス"
+    },
     "icon": "actions/149.png"
   },
   {
-    "row_id": 7421,
-    "name": "Triplecast",
+    "id": 7421,
+    "name": {
+      "en": "Triplecast",
+      "fr": "Triple sort",
+      "de": "Tripelzauber",
+      "ja": "三連魔"
+    },
     "icon": "actions/7421.png"
   },
   {
-    "row_id": 16506,
-    "name": "Umbral Soul",
+    "id": 16506,
+    "name": {
+      "en": "Umbral Soul",
+      "fr": "Âme ombrale",
+      "de": "Schattenseele",
+      "ja": "アンブラルソウル"
+    },
     "icon": "actions/16506.png"
   },
   {
-    "row_id": 16507,
-    "name": "Xenoglossy",
+    "id": 16507,
+    "name": {
+      "en": "Xenoglossy",
+      "fr": "Xénoglossie",
+      "de": "Xenoglossie",
+      "ja": "ゼノグロシー"
+    },
     "icon": "actions/16507.png"
-  },
-  {
-    "row_id": 29658,
-    "name": "Xenoglossy",
-    "icon": "actions/29658.png"
   }
 ]

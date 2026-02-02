@@ -1,0 +1,512 @@
+[
+  {
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
+    "icon": "actions/7548.png"
+  },
+  {
+    "id": 7542,
+    "name": {
+      "en": "Bloodbath",
+      "fr": "Bain de sang",
+      "de": "Blutbad",
+      "ja": "ブラッドバス"
+    },
+    "icon": "actions/7542.png"
+  },
+  {
+    "id": 34619,
+    "name": {
+      "en": "Bloodied Maw",
+      "fr": "Déchiquetage sanglant",
+      "de": "Schlingende Kiefer",
+      "ja": "参の大牙【乱裂】"
+    },
+    "icon": "actions/34619.png"
+  },
+  {
+    "id": 34634,
+    "name": {
+      "en": "Death Rattle",
+      "fr": "Cascabelle mortelle",
+      "de": "Todesrasseln",
+      "ja": "蛇尾撃"
+    },
+    "icon": "actions/34634.png"
+  },
+  {
+    "id": 7549,
+    "name": {
+      "en": "Feint",
+      "fr": "Restreinte",
+      "de": "Zermürben",
+      "ja": "牽制"
+    },
+    "icon": "actions/7549.png"
+  },
+  {
+    "id": 34627,
+    "name": {
+      "en": "First Generation",
+      "fr": "Première ère",
+      "de": "Erstes Blut",
+      "ja": "祖霊の牙【壱】"
+    },
+    "icon": "actions/34627.png"
+  },
+  {
+    "id": 34640,
+    "name": {
+      "en": "First Legacy",
+      "fr": "Premier cycle",
+      "de": "Erstes Erbe",
+      "ja": "祖霊の蛇【壱】"
+    },
+    "icon": "actions/34640.png"
+  },
+  {
+    "id": 34611,
+    "name": {
+      "en": "Flanksbane Fang",
+      "fr": "Déchirement du flanc",
+      "de": "Flankenreißer",
+      "ja": "参の牙【側裂】"
+    },
+    "icon": "actions/34611.png"
+  },
+  {
+    "id": 34610,
+    "name": {
+      "en": "Flanksting Strike",
+      "fr": "Saignée du flanc",
+      "de": "Flankenbiss",
+      "ja": "参の牙【側撃】"
+    },
+    "icon": "actions/34610.png"
+  },
+  {
+    "id": 34630,
+    "name": {
+      "en": "Fourth Generation",
+      "fr": "Quatrième ère",
+      "de": "Viertes Blut",
+      "ja": "祖霊の牙【肆】"
+    },
+    "icon": "actions/34630.png"
+  },
+  {
+    "id": 34643,
+    "name": {
+      "en": "Fourth Legacy",
+      "fr": "Quatrième cycle",
+      "de": "Viertes Erbe",
+      "ja": "祖霊の蛇【肆】"
+    },
+    "icon": "actions/34643.png"
+  },
+  {
+    "id": 34613,
+    "name": {
+      "en": "Hindsbane Fang",
+      "fr": "Déchirement de l'échine",
+      "de": "Nackenreißer",
+      "ja": "参の牙【背裂】"
+    },
+    "icon": "actions/34613.png"
+  },
+  {
+    "id": 34612,
+    "name": {
+      "en": "Hindsting Strike",
+      "fr": "Saignée de l'échine",
+      "de": "Nackenbiss",
+      "ja": "参の牙【背撃】"
+    },
+    "icon": "actions/34612.png"
+  },
+  {
+    "id": 34616,
+    "name": {
+      "en": "Hunter's Bite",
+      "fr": "Morsure prédatrice",
+      "de": "Blutige Kiefer",
+      "ja": "弐の大牙【猛襲】"
+    },
+    "icon": "actions/34616.png"
+  },
+  {
+    "id": 34621,
+    "name": {
+      "en": "Hunter's Coil",
+      "fr": "Anneaux du prédateur",
+      "de": "Blutiger Otterngriff",
+      "ja": "弐の蛇【猛襲】"
+    },
+    "icon": "actions/34621.png"
+  },
+  {
+    "id": 34624,
+    "name": {
+      "en": "Hunter's Den",
+      "fr": "Tanière du prédateur",
+      "de": "Blutige Otterngrube",
+      "ja": "弐の大蛇【猛襲】"
+    },
+    "icon": "actions/34624.png"
+  },
+  {
+    "id": 34608,
+    "name": {
+      "en": "Hunter's Sting",
+      "fr": "Ponction prédatrice",
+      "de": "Blutige Fänge",
+      "ja": "弐の牙【猛襲】"
+    },
+    "icon": "actions/34608.png"
+  },
+  {
+    "id": 34618,
+    "name": {
+      "en": "Jagged Maw",
+      "fr": "Déchiquetage vorace",
+      "de": "Hungernde Kiefer",
+      "ja": "参の大牙【乱撃】"
+    },
+    "icon": "actions/34618.png"
+  },
+  {
+    "id": 34635,
+    "name": {
+      "en": "Last Lash",
+      "fr": "Spirale finale",
+      "de": "Scharfe Peitsche",
+      "ja": "蛇尾閃"
+    },
+    "icon": "actions/34635.png"
+  },
+  {
+    "id": 7863,
+    "name": {
+      "en": "Leg Sweep",
+      "fr": "Fauchage de jambe",
+      "de": "Stolperfalle",
+      "ja": "レッグスウィープ"
+    },
+    "icon": "actions/7863.png"
+  },
+  {
+    "id": 34631,
+    "name": {
+      "en": "Ouroboros",
+      "fr": "Esprit du Serpent-Monde",
+      "de": "Ouroboros",
+      "ja": "祖霊の大蛇牙"
+    },
+    "icon": "actions/34631.png"
+  },
+  {
+    "id": 34607,
+    "name": {
+      "en": "Reaving Fangs",
+      "fr": "Crochets mortels",
+      "de": "Tückische Fänge",
+      "ja": "壱の牙【穿裂】"
+    },
+    "icon": "actions/34607.png"
+  },
+  {
+    "id": 34615,
+    "name": {
+      "en": "Reaving Maw",
+      "fr": "Mâchoire mortelle",
+      "de": "Tückische Kiefer",
+      "ja": "壱の大牙【穿裂】"
+    },
+    "icon": "actions/34615.png"
+  },
+  {
+    "id": 34626,
+    "name": {
+      "en": "Reawaken",
+      "fr": "Réminiscence",
+      "de": "Ruf der Ahnen",
+      "ja": "祖霊降ろし"
+    },
+    "icon": "actions/34626.png"
+  },
+  {
+    "id": 34628,
+    "name": {
+      "en": "Second Generation",
+      "fr": "Deuxième ère",
+      "de": "Zweites Blut",
+      "ja": "祖霊の牙【弐】"
+    },
+    "icon": "actions/34628.png"
+  },
+  {
+    "id": 34641,
+    "name": {
+      "en": "Second Legacy",
+      "fr": "Deuxième cycle",
+      "de": "Zweites Erbe",
+      "ja": "祖霊の蛇【弐】"
+    },
+    "icon": "actions/34641.png"
+  },
+  {
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
+    "icon": "actions/7541.png"
+  },
+  {
+    "id": 34647,
+    "name": {
+      "en": "Serpent's Ire",
+      "fr": "Communion ophidienne",
+      "de": "Geist der Viper",
+      "ja": "蛇の霊気"
+    },
+    "icon": "actions/34647.png"
+  },
+  {
+    "id": 35920,
+    "name": {
+      "en": "Serpent's Tail",
+      "fr": "Queue serpentine",
+      "de": "Serpentiner Schwanz",
+      "ja": "蛇尾術"
+    },
+    "icon": "actions/35920.png"
+  },
+  {
+    "id": 34646,
+    "name": {
+      "en": "Slither",
+      "fr": "Reptation",
+      "de": "Schuppensprung",
+      "ja": "蛇行"
+    },
+    "icon": "actions/34646.png"
+  },
+  {
+    "id": 34606,
+    "name": {
+      "en": "Steel Fangs",
+      "fr": "Crochets d'acier",
+      "de": "Tödliche Fänge",
+      "ja": "壱の牙【咬創】"
+    },
+    "icon": "actions/34606.png"
+  },
+  {
+    "id": 34614,
+    "name": {
+      "en": "Steel Maw",
+      "fr": "Mâchoire d'acier",
+      "de": "Tödliche Kiefer",
+      "ja": "壱の大牙【咬創】"
+    },
+    "icon": "actions/34614.png"
+  },
+  {
+    "id": 34617,
+    "name": {
+      "en": "Swiftskin's Bite",
+      "fr": "Morsure véloce",
+      "de": "Flinke Kiefer",
+      "ja": "弐の大牙【疾速】"
+    },
+    "icon": "actions/34617.png"
+  },
+  {
+    "id": 34622,
+    "name": {
+      "en": "Swiftskin's Coil",
+      "fr": "Anneaux de l'écorcheur",
+      "de": "Flinker Otterngriff",
+      "ja": "弐の蛇【疾速】"
+    },
+    "icon": "actions/34622.png"
+  },
+  {
+    "id": 34625,
+    "name": {
+      "en": "Swiftskin's Den",
+      "fr": "Tanière de l'écorcheur",
+      "de": "Flinke Otterngrube",
+      "ja": "弐の大蛇【疾速】"
+    },
+    "icon": "actions/34625.png"
+  },
+  {
+    "id": 34609,
+    "name": {
+      "en": "Swiftskin's Sting",
+      "fr": "Ponction véloce",
+      "de": "Flinke Fänge",
+      "ja": "弐の牙【疾速】"
+    },
+    "icon": "actions/34609.png"
+  },
+  {
+    "id": 34629,
+    "name": {
+      "en": "Third Generation",
+      "fr": "Troisième ère",
+      "de": "Drittes Blut",
+      "ja": "祖霊の牙【参】"
+    },
+    "icon": "actions/34629.png"
+  },
+  {
+    "id": 34642,
+    "name": {
+      "en": "Third Legacy",
+      "fr": "Troisième cycle",
+      "de": "Drittes Erbe",
+      "ja": "祖霊の蛇【参】"
+    },
+    "icon": "actions/34642.png"
+  },
+  {
+    "id": 7546,
+    "name": {
+      "en": "True North",
+      "fr": "Vrai Nord",
+      "de": "Neuausrichtung",
+      "ja": "トゥルーノース"
+    },
+    "icon": "actions/7546.png"
+  },
+  {
+    "id": 35922,
+    "name": {
+      "en": "Twinblood",
+      "fr": "Crochets frénétiques",
+      "de": "Zwillingsschuppen",
+      "ja": "双牙乱術"
+    },
+    "icon": "actions/35922.png"
+  },
+  {
+    "id": 34637,
+    "name": {
+      "en": "Twinblood Bite",
+      "fr": "Morsure frénétique",
+      "de": "Biss der Zwillingsschuppen",
+      "ja": "双牙乱撃"
+    },
+    "icon": "actions/34637.png"
+  },
+  {
+    "id": 34639,
+    "name": {
+      "en": "Twinblood Thresh",
+      "fr": "Vortex frénétique",
+      "de": "Nest der Zwillingsschuppen",
+      "ja": "双牙乱閃"
+    },
+    "icon": "actions/34639.png"
+  },
+  {
+    "id": 35921,
+    "name": {
+      "en": "Twinfang",
+      "fr": "Crochets vicieux",
+      "de": "Zwillingsfänge",
+      "ja": "双牙連術"
+    },
+    "icon": "actions/35921.png"
+  },
+  {
+    "id": 34636,
+    "name": {
+      "en": "Twinfang Bite",
+      "fr": "Morsure vicieuse",
+      "de": "Biss der Zwillingsfänge",
+      "ja": "双牙連撃"
+    },
+    "icon": "actions/34636.png"
+  },
+  {
+    "id": 34638,
+    "name": {
+      "en": "Twinfang Thresh",
+      "fr": "Vortex vicieux",
+      "de": "Nest der Zwillingsfänge",
+      "ja": "双牙連閃"
+    },
+    "icon": "actions/34638.png"
+  },
+  {
+    "id": 34633,
+    "name": {
+      "en": "Uncoiled Fury",
+      "fr": "Assaut ophidien",
+      "de": "Schlangenschwinge",
+      "ja": "飛蛇の尾"
+    },
+    "icon": "actions/34633.png"
+  },
+  {
+    "id": 34645,
+    "name": {
+      "en": "Uncoiled Twinblood",
+      "fr": "Assaut frénétique",
+      "de": "Flug der Zwillingsschuppen",
+      "ja": "飛蛇乱尾撃"
+    },
+    "icon": "actions/34645.png"
+  },
+  {
+    "id": 34644,
+    "name": {
+      "en": "Uncoiled Twinfang",
+      "fr": "Assaut vicieux",
+      "de": "Flug der Zwillingsfänge",
+      "ja": "飛蛇連尾撃"
+    },
+    "icon": "actions/34644.png"
+  },
+  {
+    "id": 34623,
+    "name": {
+      "en": "Vicepit",
+      "fr": "Fosse de l'effroi",
+      "de": "Harte Otterngrube",
+      "ja": "壱の大蛇【強砕】"
+    },
+    "icon": "actions/34623.png"
+  },
+  {
+    "id": 34620,
+    "name": {
+      "en": "Vicewinder",
+      "fr": "Anneaux de l'effroi",
+      "de": "Harter Otterngriff",
+      "ja": "壱の蛇【強砕】"
+    },
+    "icon": "actions/34620.png"
+  },
+  {
+    "id": 34632,
+    "name": {
+      "en": "Writhing Snap",
+      "fr": "Assaut serpentin",
+      "de": "Lange Jagd",
+      "ja": "飛蛇の牙"
+    },
+    "icon": "actions/34632.png"
+  }
+]

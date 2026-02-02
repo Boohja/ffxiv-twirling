@@ -1,192 +1,389 @@
 [
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 3557,
-    "name": "Battle Litany",
+    "id": 3557,
+    "name": {
+      "en": "Battle Litany",
+      "fr": "Litanie combattante",
+      "de": "Litanei der Schlacht",
+      "ja": "バトルリタニー"
+    },
     "icon": "actions/3557.png"
   },
   {
-    "row_id": 7542,
-    "name": "Bloodbath",
+    "id": 7542,
+    "name": {
+      "en": "Bloodbath",
+      "fr": "Bain de sang",
+      "de": "Blutbad",
+      "ja": "ブラッドバス"
+    },
     "icon": "actions/7542.png"
   },
   {
-    "row_id": 88,
-    "name": "Chaos Thrust",
+    "id": 88,
+    "name": {
+      "en": "Chaos Thrust",
+      "fr": "Percée chaotique",
+      "de": "Chaotischer Tjost",
+      "ja": "桜華狂咲"
+    },
     "icon": "actions/88.png"
   },
   {
-    "row_id": 25772,
-    "name": "Chaotic Spring",
+    "id": 25772,
+    "name": {
+      "en": "Chaotic Spring",
+      "fr": "Floraison chaotique",
+      "de": "Chaotischer Sturm",
+      "ja": "桜華繚乱"
+    },
     "icon": "actions/25772.png"
   },
   {
-    "row_id": 16477,
-    "name": "Coerthan Torment",
+    "id": 16477,
+    "name": {
+      "en": "Coerthan Torment",
+      "fr": "Tourment du Coerthas",
+      "de": "Coerthische Folter",
+      "ja": "クルザントーメント"
+    },
     "icon": "actions/16477.png"
   },
   {
-    "row_id": 87,
-    "name": "Disembowel",
+    "id": 87,
+    "name": {
+      "en": "Disembowel",
+      "fr": "Éventration",
+      "de": "Drachengriff",
+      "ja": "ディセムボウル"
+    },
     "icon": "actions/87.png"
   },
   {
-    "row_id": 86,
-    "name": "Doom Spike",
+    "id": 86,
+    "name": {
+      "en": "Doom Spike",
+      "fr": "Pointe du destin",
+      "de": "Schicksalsdorn",
+      "ja": "ドゥームスパイク"
+    },
     "icon": "actions/86.png"
   },
   {
-    "row_id": 96,
-    "name": "Dragonfire Dive",
+    "id": 25770,
+    "name": {
+      "en": "Draconian Fury",
+      "fr": "Fureur du dragon",
+      "de": "Groll des Drachen",
+      "ja": "竜眼蒼穹"
+    },
+    "icon": "actions/25770.png"
+  },
+  {
+    "id": 96,
+    "name": {
+      "en": "Dragonfire Dive",
+      "fr": "Piqué du dragon",
+      "de": "Wyrmodem",
+      "ja": "ドラゴンダイブ"
+    },
     "icon": "actions/96.png"
   },
   {
-    "row_id": 36952,
-    "name": "Drakesbane",
+    "id": 36952,
+    "name": {
+      "en": "Drakesbane",
+      "fr": "Fléau du dragon",
+      "de": "Drachenhort",
+      "ja": "雲蒸竜変"
+    },
     "icon": "actions/36952.png"
   },
   {
-    "row_id": 94,
-    "name": "Elusive Jump",
+    "id": 94,
+    "name": {
+      "en": "Elusive Jump",
+      "fr": "Saut insaisissable",
+      "de": "Ausweichsprung",
+      "ja": "イルーシブジャンプ"
+    },
     "icon": "actions/94.png"
   },
   {
-    "row_id": 3554,
-    "name": "Fang and Claw",
+    "id": 3554,
+    "name": {
+      "en": "Fang and Claw",
+      "fr": "Croc-et-griffe",
+      "de": "Fang und Klaue",
+      "ja": "竜牙竜爪"
+    },
     "icon": "actions/3554.png"
   },
   {
-    "row_id": 7549,
-    "name": "Feint",
+    "id": 7549,
+    "name": {
+      "en": "Feint",
+      "fr": "Restreinte",
+      "de": "Zermürben",
+      "ja": "牽制"
+    },
     "icon": "actions/7549.png"
   },
   {
-    "row_id": 84,
-    "name": "Full Thrust",
+    "id": 84,
+    "name": {
+      "en": "Full Thrust",
+      "fr": "Percée totale",
+      "de": "Ungebremster Stoß",
+      "ja": "フルスラスト"
+    },
     "icon": "actions/84.png"
   },
   {
-    "row_id": 3555,
-    "name": "Geirskogul",
+    "id": 3555,
+    "name": {
+      "en": "Geirskogul",
+      "fr": "Geirskögul",
+      "de": "Geirskogul",
+      "ja": "ゲイルスコグル"
+    },
     "icon": "actions/3555.png"
   },
   {
-    "row_id": 25771,
-    "name": "Heavens' Thrust",
+    "id": 25771,
+    "name": {
+      "en": "Heavens' Thrust",
+      "fr": "Percée céleste",
+      "de": "Himmelsstoß",
+      "ja": "ヘヴンスラスト"
+    },
     "icon": "actions/25771.png"
   },
   {
-    "row_id": 16478,
-    "name": "High Jump",
+    "id": 16478,
+    "name": {
+      "en": "High Jump",
+      "fr": "Grand saut",
+      "de": "Hochsprung",
+      "ja": "ハイジャンプ"
+    },
     "icon": "actions/16478.png"
   },
   {
-    "row_id": 92,
-    "name": "Jump",
+    "id": 92,
+    "name": {
+      "en": "Jump",
+      "fr": "Saut",
+      "de": "Sprung",
+      "ja": "ジャンプ"
+    },
     "icon": "actions/92.png"
   },
   {
-    "row_id": 36954,
-    "name": "Lance Barrage",
+    "id": 36954,
+    "name": {
+      "en": "Lance Barrage",
+      "fr": "Percée barrage",
+      "de": "Sperrstoß",
+      "ja": "スラストラッシュ"
+    },
     "icon": "actions/36954.png"
   },
   {
-    "row_id": 85,
-    "name": "Lance Charge",
+    "id": 85,
+    "name": {
+      "en": "Lance Charge",
+      "fr": "Lance acérée",
+      "de": "Lanzenschärfung",
+      "ja": "ランスチャージ"
+    },
     "icon": "actions/85.png"
   },
   {
-    "row_id": 7863,
-    "name": "Leg Sweep",
+    "id": 7863,
+    "name": {
+      "en": "Leg Sweep",
+      "fr": "Fauchage de jambe",
+      "de": "Stolperfalle",
+      "ja": "レッグスウィープ"
+    },
     "icon": "actions/7863.png"
   },
   {
-    "row_id": 83,
-    "name": "Life Surge",
+    "id": 83,
+    "name": {
+      "en": "Life Surge",
+      "fr": "Souffle de vie",
+      "de": "Vitalwallung",
+      "ja": "ライフサージ"
+    },
     "icon": "actions/83.png"
   },
   {
-    "row_id": 7399,
-    "name": "Mirage Dive",
+    "id": 7399,
+    "name": {
+      "en": "Mirage Dive",
+      "fr": "Piqué mirage",
+      "de": "Illusionssprung",
+      "ja": "ミラージュダイブ"
+    },
     "icon": "actions/7399.png"
   },
   {
-    "row_id": 7400,
-    "name": "Nastrond",
+    "id": 7400,
+    "name": {
+      "en": "Nastrond",
+      "fr": "Naströnd",
+      "de": "Nastrond",
+      "ja": "ナーストレンド"
+    },
     "icon": "actions/7400.png"
   },
   {
-    "row_id": 90,
-    "name": "Piercing Talon",
+    "id": 90,
+    "name": {
+      "en": "Piercing Talon",
+      "fr": "Griffe perçante",
+      "de": "Reißende Klauen",
+      "ja": "ピアシングタロン"
+    },
     "icon": "actions/90.png"
   },
   {
-    "row_id": 16479,
-    "name": "Raiden Thrust",
+    "id": 16479,
+    "name": {
+      "en": "Raiden Thrust"
+    },
     "icon": "actions/16479.png"
   },
   {
-    "row_id": 36953,
-    "name": "Rise of the Dragon",
+    "id": 36953,
+    "name": {
+      "en": "Rise of the Dragon",
+      "fr": "Envol du dragon",
+      "de": "Steigender Drache",
+      "ja": "ドラゴンライズ"
+    },
     "icon": "actions/36953.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 7397,
-    "name": "Sonic Thrust",
+    "id": 7397,
+    "name": {
+      "en": "Sonic Thrust",
+      "fr": "Percée sonique",
+      "de": "Schallspitze",
+      "ja": "ソニックスラスト"
+    },
     "icon": "actions/7397.png"
   },
   {
-    "row_id": 36955,
-    "name": "Spiral Blow",
+    "id": 36955,
+    "name": {
+      "en": "Spiral Blow",
+      "fr": "Vrille explosive",
+      "de": "Spiralhieb",
+      "ja": "スパイラルブロウ"
+    },
     "icon": "actions/36955.png"
   },
   {
-    "row_id": 36956,
-    "name": "Starcross",
+    "id": 36956,
+    "name": {
+      "en": "Starcross",
+      "fr": "Traversée céleste",
+      "de": "Sternenkreuz",
+      "ja": "スタークロッサー"
+    },
     "icon": "actions/36956.png"
   },
   {
-    "row_id": 16480,
-    "name": "Stardiver",
+    "id": 16480,
+    "name": {
+      "en": "Stardiver",
+      "fr": "Plongeon céleste",
+      "de": "Sternensturz",
+      "ja": "スターダイバー"
+    },
     "icon": "actions/16480.png"
   },
   {
-    "row_id": 7546,
-    "name": "True North",
+    "id": 7546,
+    "name": {
+      "en": "True North",
+      "fr": "Vrai Nord",
+      "de": "Neuausrichtung",
+      "ja": "トゥルーノース"
+    },
     "icon": "actions/7546.png"
   },
   {
-    "row_id": 75,
-    "name": "True Thrust",
+    "id": 75,
+    "name": {
+      "en": "True Thrust",
+      "fr": "Percée véritable",
+      "de": "Sauberer Stoß",
+      "ja": "トゥルースラスト"
+    },
     "icon": "actions/75.png"
   },
   {
-    "row_id": 78,
-    "name": "Vorpal Thrust",
+    "id": 78,
+    "name": {
+      "en": "Vorpal Thrust",
+      "fr": "Percée vorpale",
+      "de": "Vorpalstoß",
+      "ja": "ボーパルスラスト"
+    },
     "icon": "actions/78.png"
   },
   {
-    "row_id": 3556,
-    "name": "Wheeling Thrust",
+    "id": 3556,
+    "name": {
+      "en": "Wheeling Thrust",
+      "fr": "Percée tournante",
+      "de": "Fächerstoß",
+      "ja": "竜尾大車輪"
+    },
     "icon": "actions/3556.png"
   },
   {
-    "row_id": 36951,
-    "name": "Winged Glide",
+    "id": 36951,
+    "name": {
+      "en": "Winged Glide",
+      "fr": "Glissade aérienne",
+      "de": "Gleitflügel",
+      "ja": "ウィンググライド"
+    },
     "icon": "actions/36951.png"
   },
   {
-    "row_id": 25773,
-    "name": "Wyrmwind Thrust",
+    "id": 25773,
+    "name": {
+      "en": "Wyrmwind Thrust",
+      "fr": "Percée des dragons anciens",
+      "de": "Zwillingswyrm",
+      "ja": "天竜点睛"
+    },
     "icon": "actions/25773.png"
   }
 ]

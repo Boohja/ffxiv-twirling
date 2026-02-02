@@ -1,287 +1,542 @@
 [
   {
-    "row_id": 3603,
-    "name": "Ascend",
+    "id": 3603,
+    "name": {
+      "en": "Ascend",
+      "fr": "Ascendant",
+      "de": "Aszension",
+      "ja": "アセンド"
+    },
     "icon": "actions/3603.png"
   },
   {
-    "row_id": 3595,
-    "name": "Aspected Benefic",
+    "id": 3595,
+    "name": {
+      "en": "Aspected Benefic",
+      "fr": "Bienfaisance aspectée",
+      "de": "Harmonischer Orbis",
+      "ja": "アスペクト・ベネフィク"
+    },
     "icon": "actions/3595.png"
   },
   {
-    "row_id": 29243,
-    "name": "Aspected Benefic",
-    "icon": "actions/29243.png"
-  },
-  {
-    "row_id": 3601,
-    "name": "Aspected Helios",
+    "id": 3601,
+    "name": {
+      "en": "Aspected Helios",
+      "fr": "Hélios aspecté",
+      "de": "Aspektierter Helios",
+      "ja": "アスペクト・ヘリオス"
+    },
     "icon": "actions/3601.png"
   },
   {
-    "row_id": 37017,
-    "name": "Astral Draw",
+    "id": 37017,
+    "name": {
+      "en": "Astral Draw",
+      "fr": "Tirage astral",
+      "de": "Lichtziehen",
+      "ja": "アストラルドロー"
+    },
     "icon": "actions/37017.png"
   },
   {
-    "row_id": 3594,
-    "name": "Benefic",
+    "id": 3594,
+    "name": {
+      "en": "Benefic",
+      "fr": "Bienfaisance",
+      "de": "Harmonieaspekt",
+      "ja": "ベネフィク"
+    },
     "icon": "actions/3594.png"
   },
   {
-    "row_id": 3610,
-    "name": "Benefic II",
+    "id": 3610,
+    "name": {
+      "en": "Benefic II",
+      "fr": "Bienfaisance II",
+      "de": "Harmonieaspekt II",
+      "ja": "ベネフィラ"
+    },
     "icon": "actions/3610.png"
   },
   {
-    "row_id": 16556,
-    "name": "Celestial Intersection",
+    "id": 16556,
+    "name": {
+      "en": "Celestial Intersection",
+      "fr": "Rencontre céleste",
+      "de": "Kongruenz",
+      "ja": "星天交差"
+    },
     "icon": "actions/16556.png"
   },
   {
-    "row_id": 16553,
-    "name": "Celestial Opposition",
+    "id": 16553,
+    "name": {
+      "en": "Celestial Opposition",
+      "fr": "Opposition céleste",
+      "de": "Opposition",
+      "ja": "星天対抗"
+    },
     "icon": "actions/16553.png"
   },
   {
-    "row_id": 29255,
-    "name": "Celestial River",
-    "icon": "actions/29255.png"
-  },
-  {
-    "row_id": 3613,
-    "name": "Collective Unconscious",
+    "id": 3613,
+    "name": {
+      "en": "Collective Unconscious",
+      "fr": "Inconscient collectif",
+      "de": "Numinosum",
+      "ja": "運命の輪"
+    },
     "icon": "actions/3613.png"
   },
   {
-    "row_id": 3599,
-    "name": "Combust",
+    "id": 3599,
+    "name": {
+      "en": "Combust",
+      "fr": "Conjonction supérieure",
+      "de": "Konjunktion",
+      "ja": "コンバス"
+    },
     "icon": "actions/3599.png"
   },
   {
-    "row_id": 3608,
-    "name": "Combust II",
+    "id": 3608,
+    "name": {
+      "en": "Combust II",
+      "fr": "Conjonction supérieure II",
+      "de": "Konjunktion II",
+      "ja": "コンバラ"
+    },
     "icon": "actions/3608.png"
   },
   {
-    "row_id": 16554,
-    "name": "Combust III",
+    "id": 16554,
+    "name": {
+      "en": "Combust III",
+      "fr": "Conjonction supérieure III",
+      "de": "Konjunktion III",
+      "ja": "コンバガ"
+    },
     "icon": "actions/16554.png"
   },
   {
-    "row_id": 16552,
-    "name": "Divination",
+    "id": 16552,
+    "name": {
+      "en": "Divination",
+      "fr": "Divination",
+      "de": "Weissagung",
+      "ja": "ディヴィネーション"
+    },
     "icon": "actions/16552.png"
   },
   {
-    "row_id": 29245,
-    "name": "Double Cast",
-    "icon": "actions/29245.png"
-  },
-  {
-    "row_id": 7439,
-    "name": "Earthly Star",
+    "id": 7439,
+    "name": {
+      "en": "Earthly Star",
+      "fr": "Étoile terrestre",
+      "de": "Irdischer Stern",
+      "ja": "アーサリースター"
+    },
     "icon": "actions/7439.png"
   },
   {
-    "row_id": 41506,
-    "name": "Epicycle",
-    "icon": "actions/41506.png"
-  },
-  {
-    "row_id": 3614,
-    "name": "Essential Dignity",
+    "id": 3614,
+    "name": {
+      "en": "Essential Dignity",
+      "fr": "Dignité essentielle",
+      "de": "Essenzielle Würde",
+      "ja": "ディグニティ"
+    },
     "icon": "actions/3614.png"
   },
   {
-    "row_id": 7568,
-    "name": "Esuna",
+    "id": 7568,
+    "name": {
+      "en": "Esuna",
+      "fr": "Guérison",
+      "de": "Medica",
+      "ja": "エスナ"
+    },
     "icon": "actions/7568.png"
   },
   {
-    "row_id": 25873,
-    "name": "Exaltation",
+    "id": 25873,
+    "name": {
+      "en": "Exaltation",
+      "fr": "Exaltation",
+      "de": "Exaltation",
+      "ja": "エクザルテーション"
+    },
     "icon": "actions/25873.png"
   },
   {
-    "row_id": 25871,
-    "name": "Fall Malefic",
+    "id": 25871,
+    "name": {
+      "en": "Fall Malefic",
+      "fr": "Malfaisance en chute",
+      "de": "Aspekt im Fall",
+      "ja": "フォールマレフィク"
+    },
     "icon": "actions/25871.png"
   },
   {
-    "row_id": 29242,
-    "name": "Fall Malefic",
-    "icon": "actions/29242.png"
-  },
-  {
-    "row_id": 3615,
-    "name": "Gravity",
+    "id": 3615,
+    "name": {
+      "en": "Gravity",
+      "fr": "Gravité",
+      "de": "Gravitas",
+      "ja": "グラビデ"
+    },
     "icon": "actions/3615.png"
   },
   {
-    "row_id": 25872,
-    "name": "Gravity II",
+    "id": 25872,
+    "name": {
+      "en": "Gravity II",
+      "fr": "Extra Gravité",
+      "de": "Gravitra",
+      "ja": "グラビラ"
+    },
     "icon": "actions/25872.png"
   },
   {
-    "row_id": 29244,
-    "name": "Gravity II",
-    "icon": "actions/29244.png"
-  },
-  {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
-    "row_id": 3600,
-    "name": "Helios",
+    "id": 3600,
+    "name": {
+      "en": "Helios",
+      "fr": "Hélios",
+      "de": "Helios",
+      "ja": "ヘリオス"
+    },
     "icon": "actions/3600.png"
   },
   {
-    "row_id": 37030,
-    "name": "Helios Conjunction",
+    "id": 37030,
+    "name": {
+      "en": "Helios Conjunction",
+      "fr": "Hélios combiné",
+      "de": "Helios in Konjunktion",
+      "ja": "コンジャンクション・ヘリオス"
+    },
     "icon": "actions/37030.png"
   },
   {
-    "row_id": 16557,
-    "name": "Horoscope",
+    "id": 16557,
+    "name": {
+      "en": "Horoscope",
+      "fr": "Horoscope",
+      "de": "Horoskop",
+      "ja": "ホロスコープ"
+    },
     "icon": "actions/16557.png"
   },
   {
-    "row_id": 3606,
-    "name": "Lightspeed",
+    "id": 16558,
+    "name": {
+      "en": "Horoscope",
+      "fr": "Horoscope",
+      "de": "Horoskop",
+      "ja": "ホロスコープ"
+    },
+    "icon": "actions/16558.png"
+  },
+  {
+    "id": 7445,
+    "name": {
+      "en": "Lady of Crowns",
+      "fr": "Reine des couronnes",
+      "de": "Königin der Kronen",
+      "ja": "クラウンレディ"
+    },
+    "icon": "actions/7445.png"
+  },
+  {
+    "id": 3606,
+    "name": {
+      "en": "Lightspeed",
+      "fr": "Vitesse de la lumière",
+      "de": "Lichtgeschwindigkeit",
+      "ja": "ライトスピード"
+    },
     "icon": "actions/3606.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7444,
+    "name": {
+      "en": "Lord of Crowns",
+      "fr": "Roi des couronnes",
+      "de": "König der Kronen",
+      "ja": "クラウンロード"
+    },
+    "icon": "actions/7444.png"
+  },
+  {
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 25874,
-    "name": "Macrocosmos",
+    "id": 25874,
+    "name": {
+      "en": "Macrocosmos",
+      "fr": "Macrocosme",
+      "de": "Makrokosmos",
+      "ja": "マクロコスモス"
+    },
     "icon": "actions/25874.png"
   },
   {
-    "row_id": 29253,
-    "name": "Macrocosmos",
-    "icon": "actions/29253.png"
-  },
-  {
-    "row_id": 3596,
-    "name": "Malefic",
+    "id": 3596,
+    "name": {
+      "en": "Malefic",
+      "fr": "Malfaisance",
+      "de": "Spannungsaspekt",
+      "ja": "マレフィク"
+    },
     "icon": "actions/3596.png"
   },
   {
-    "row_id": 3598,
-    "name": "Malefic II",
+    "id": 3598,
+    "name": {
+      "en": "Malefic II",
+      "fr": "Malfaisance II",
+      "de": "Spannungsaspekt II",
+      "ja": "マレフィラ"
+    },
     "icon": "actions/3598.png"
   },
   {
-    "row_id": 7442,
-    "name": "Malefic III",
+    "id": 7442,
+    "name": {
+      "en": "Malefic III",
+      "fr": "Malfaisance III",
+      "de": "Spannungsaspekt III",
+      "ja": "マレフィガ"
+    },
     "icon": "actions/7442.png"
   },
   {
-    "row_id": 16555,
-    "name": "Malefic IV",
+    "id": 16555,
+    "name": {
+      "en": "Malefic IV",
+      "fr": "Malfaisance IV",
+      "de": "Spannungsaspekt IV",
+      "ja": "マレフィジャ"
+    },
     "icon": "actions/16555.png"
   },
   {
-    "row_id": 25875,
-    "name": "Microcosmos",
+    "id": 25875,
+    "name": {
+      "en": "Microcosmos",
+      "fr": "Microcosme",
+      "de": "Mikrokosmos",
+      "ja": "ミクロコスモス"
+    },
     "icon": "actions/25875.png"
   },
   {
-    "row_id": 37022,
-    "name": "Minor Arcana",
+    "id": 37022,
+    "name": {
+      "en": "Minor Arcana",
+      "fr": "Arcane mineur",
+      "de": "Kleine Arkana",
+      "ja": "マイナーアルカナ"
+    },
     "icon": "actions/37022.png"
   },
   {
-    "row_id": 41503,
-    "name": "Minor Arcana",
-    "icon": "actions/41503.png"
-  },
-  {
-    "row_id": 16559,
-    "name": "Neutral Sect",
+    "id": 16559,
+    "name": {
+      "en": "Neutral Sect",
+      "fr": "Adepte de la neutralité",
+      "de": "Neutral",
+      "ja": "ニュートラルセクト"
+    },
     "icon": "actions/16559.png"
   },
   {
-    "row_id": 37029,
-    "name": "Oracle",
+    "id": 37029,
+    "name": {
+      "en": "Oracle",
+      "fr": "Oracle",
+      "de": "Orakel",
+      "ja": "オラクル"
+    },
     "icon": "actions/37029.png"
   },
   {
-    "row_id": 37019,
-    "name": "Play I",
+    "id": 37019,
+    "name": {
+      "en": "Play I",
+      "fr": "Atout I",
+      "de": "Ausspielen I",
+      "ja": "プレイI"
+    },
     "icon": "actions/37019.png"
   },
   {
-    "row_id": 37020,
-    "name": "Play II",
+    "id": 37020,
+    "name": {
+      "en": "Play II",
+      "fr": "Atout II",
+      "de": "Ausspielen II",
+      "ja": "プレイII"
+    },
     "icon": "actions/37020.png"
   },
   {
-    "row_id": 37021,
-    "name": "Play III",
+    "id": 37021,
+    "name": {
+      "en": "Play III",
+      "fr": "Atout III",
+      "de": "Ausspielen III",
+      "ja": "プレイIII"
+    },
     "icon": "actions/37021.png"
   },
   {
-    "row_id": 1584,
-    "name": "Purify",
-    "icon": "actions/1584.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
-    "row_id": 16560,
-    "name": "Repose",
+    "id": 16560,
+    "name": {
+      "en": "Repose",
+      "fr": "Sérénité",
+      "de": "Schlummer",
+      "ja": "リポーズ"
+    },
     "icon": "actions/16560.png"
   },
   {
-    "row_id": 7571,
-    "name": "Rescue",
+    "id": 7571,
+    "name": {
+      "en": "Rescue",
+      "fr": "Secours",
+      "de": "Rettung",
+      "ja": "救出"
+    },
     "icon": "actions/7571.png"
   },
   {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
+    "id": 8324,
+    "name": {
+      "en": "Stellar Detonation",
+      "fr": "Détonation stellaire",
+      "de": "Stellare Detonation",
+      "ja": "ステラデトネーション"
+    },
+    "icon": "actions/8324.png"
   },
   {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
-    "row_id": 37031,
-    "name": "Sun Sign",
+    "id": 37031,
+    "name": {
+      "en": "Sun Sign",
+      "fr": "Signe solaire",
+      "de": "Sonnenzeichen",
+      "ja": "サンサイン"
+    },
     "icon": "actions/37031.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 3612,
-    "name": "Synastry",
+    "id": 3612,
+    "name": {
+      "en": "Synastry",
+      "fr": "Synastrie",
+      "de": "Synastrie",
+      "ja": "シナストリー"
+    },
     "icon": "actions/3612.png"
+  },
+  {
+    "id": 37024,
+    "name": {
+      "en": "the Arrow",
+      "fr": "La Flèche",
+      "de": "Pfeil",
+      "ja": "オシュオンの矢"
+    },
+    "icon": "actions/37024.png"
+  },
+  {
+    "id": 37023,
+    "name": {
+      "en": "the Balance",
+      "fr": "La Balance",
+      "de": "Waage",
+      "ja": "アーゼマの均衡"
+    },
+    "icon": "actions/37023.png"
+  },
+  {
+    "id": 37027,
+    "name": {
+      "en": "the Bole",
+      "fr": "Le Tronc",
+      "de": "Eiche",
+      "ja": "世界樹の幹"
+    },
+    "icon": "actions/37027.png"
+  },
+  {
+    "id": 37028,
+    "name": {
+      "en": "the Ewer",
+      "fr": "L'Aiguière",
+      "de": "Krug",
+      "ja": "サリャクの水瓶"
+    },
+    "icon": "actions/37028.png"
+  },
+  {
+    "id": 37026,
+    "name": {
+      "en": "the Spear",
+      "fr": "L'Épieu",
+      "de": "Speer",
+      "ja": "ハルオーネの槍"
+    },
+    "icon": "actions/37026.png"
+  },
+  {
+    "id": 37025,
+    "name": {
+      "en": "the Spire",
+      "fr": "La Tour",
+      "de": "Turm",
+      "ja": "ビエルゴの塔"
+    },
+    "icon": "actions/37025.png"
+  },
+  {
+    "id": 37018,
+    "name": {
+      "en": "Umbral Draw",
+      "fr": "Tirage ombral",
+      "de": "Schattenziehen",
+      "ja": "アンブラルドロー"
+    },
+    "icon": "actions/37018.png"
   }
 ]

@@ -1,257 +1,412 @@
 [
   {
-    "row_id": 16496,
-    "name": "Apex Arrow",
+    "id": 16496,
+    "name": {
+      "en": "Apex Arrow",
+      "fr": "Trait alpha",
+      "de": "Apex-Pfeil",
+      "ja": "エイペックスアロー"
+    },
     "icon": "actions/16496.png"
   },
   {
-    "row_id": 29393,
-    "name": "Apex Arrow",
-    "icon": "actions/29393.png"
-  },
-  {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 116,
-    "name": "Army's Paeon",
+    "id": 116,
+    "name": {
+      "en": "Army's Paeon",
+      "fr": "Péan martial",
+      "de": "Hymne der Krieger",
+      "ja": "軍神のパイオン"
+    },
     "icon": "actions/116.png"
   },
   {
-    "row_id": 107,
-    "name": "Barrage",
+    "id": 107,
+    "name": {
+      "en": "Barrage",
+      "fr": "Rafale de coups",
+      "de": "Sperrfeuer",
+      "ja": "乱れ撃ち"
+    },
     "icon": "actions/107.png"
   },
   {
-    "row_id": 118,
-    "name": "Battle Voice",
+    "id": 118,
+    "name": {
+      "en": "Battle Voice",
+      "fr": "Voix de combat",
+      "de": "Ode an die Seele",
+      "ja": "バトルボイス"
+    },
     "icon": "actions/118.png"
   },
   {
-    "row_id": 110,
-    "name": "Bloodletter",
+    "id": 25784,
+    "name": {
+      "en": "Blast Arrow",
+      "fr": "Flèche explosive",
+      "de": "Stoßpfeil",
+      "ja": "ブラストアロー"
+    },
+    "icon": "actions/25784.png"
+  },
+  {
+    "id": 110,
+    "name": {
+      "en": "Bloodletter",
+      "fr": "Hémorragie",
+      "de": "Aderlass",
+      "ja": "ブラッドレッター"
+    },
     "icon": "actions/110.png"
   },
   {
-    "row_id": 16495,
-    "name": "Burst Shot",
+    "id": 16495,
+    "name": {
+      "en": "Burst Shot",
+      "fr": "Tir éclatant",
+      "de": "Berstender Schuss",
+      "ja": "バーストショット"
+    },
     "icon": "actions/16495.png"
   },
   {
-    "row_id": 7406,
-    "name": "Caustic Bite",
+    "id": 7406,
+    "name": {
+      "en": "Caustic Bite",
+      "fr": "Morsure caustique",
+      "de": "Kaustischer Biss",
+      "ja": "コースティックバイト"
+    },
     "icon": "actions/7406.png"
   },
   {
-    "row_id": 3558,
-    "name": "Empyreal Arrow",
+    "id": 3558,
+    "name": {
+      "en": "Empyreal Arrow",
+      "fr": "Flèche empyréenne",
+      "de": "Empyreischer Pfeil",
+      "ja": "エンピリアルアロー"
+    },
     "icon": "actions/3558.png"
   },
   {
-    "row_id": 29401,
-    "name": "Final Fantasia",
-    "icon": "actions/29401.png"
-  },
-  {
-    "row_id": 7553,
-    "name": "Foot Graze",
+    "id": 7553,
+    "name": {
+      "en": "Foot Graze",
+      "fr": "Écorche-pied",
+      "de": "Stolperschuss",
+      "ja": "フットグレイズ"
+    },
     "icon": "actions/7553.png"
   },
   {
-    "row_id": 29054,
-    "name": "Guard",
-    "icon": "actions/29054.png"
-  },
-  {
-    "row_id": 41464,
-    "name": "Harmonic Arrow",
-    "icon": "actions/41464.png"
-  },
-  {
-    "row_id": 7551,
-    "name": "Head Graze",
+    "id": 7551,
+    "name": {
+      "en": "Head Graze",
+      "fr": "Écorche-tête",
+      "de": "Haarscharfer Schuss",
+      "ja": "ヘッドグレイズ"
+    },
     "icon": "actions/7551.png"
   },
   {
-    "row_id": 36975,
-    "name": "Heartbreak Shot",
+    "id": 36975,
+    "name": {
+      "en": "Heartbreak Shot",
+      "fr": "Tir crève-cœur",
+      "de": "Herzeleid",
+      "ja": "ハートブレイクショット"
+    },
     "icon": "actions/36975.png"
   },
   {
-    "row_id": 97,
-    "name": "Heavy Shot",
+    "id": 97,
+    "name": {
+      "en": "Heavy Shot",
+      "fr": "Tir à l'arc puissant",
+      "de": "Gewaltiger Schuss",
+      "ja": "ヘヴィショット"
+    },
     "icon": "actions/97.png"
   },
   {
-    "row_id": 3560,
-    "name": "Iron Jaws",
+    "id": 3560,
+    "name": {
+      "en": "Iron Jaws",
+      "fr": "Mâchoires de fer",
+      "de": "Eiserne Kiefer",
+      "ja": "アイアンジョー"
+    },
     "icon": "actions/3560.png"
   },
   {
-    "row_id": 25783,
-    "name": "Ladonsbite",
+    "id": 25783,
+    "name": {
+      "en": "Ladonsbite",
+      "fr": "Morsure de Ladon",
+      "de": "Ladonsbiss",
+      "ja": "ラドンバイト"
+    },
     "icon": "actions/25783.png"
   },
   {
-    "row_id": 7554,
-    "name": "Leg Graze",
+    "id": 7554,
+    "name": {
+      "en": "Leg Graze",
+      "fr": "Écorche-jambe",
+      "de": "Beinschuss",
+      "ja": "レッググレイズ"
+    },
     "icon": "actions/7554.png"
   },
   {
-    "row_id": 114,
-    "name": "Mage's Ballad",
+    "id": 114,
+    "name": {
+      "en": "Mage's Ballad",
+      "fr": "Ballade du mage",
+      "de": "Ballade des Weisen",
+      "ja": "賢人のバラード"
+    },
     "icon": "actions/114.png"
   },
   {
-    "row_id": 7408,
-    "name": "Nature's Minne",
+    "id": 7408,
+    "name": {
+      "en": "Nature's Minne",
+      "fr": "Minne de la nature",
+      "de": "Nophicas Minne",
+      "ja": "地神のミンネ"
+    },
     "icon": "actions/7408.png"
   },
   {
-    "row_id": 7557,
-    "name": "Peloton",
+    "id": 7557,
+    "name": {
+      "en": "Peloton",
+      "fr": "Peloton",
+      "de": "Peloton",
+      "ja": "プロトン"
+    },
     "icon": "actions/7557.png"
   },
   {
-    "row_id": 7404,
-    "name": "Pitch Perfect",
+    "id": 7404,
+    "name": {
+      "en": "Pitch Perfect",
+      "fr": "Ton parfait",
+      "de": "Absolutes Gehör",
+      "ja": "ピッチパーフェクト"
+    },
     "icon": "actions/7404.png"
   },
   {
-    "row_id": 29391,
-    "name": "Powerful Shot",
-    "icon": "actions/29391.png"
-  },
-  {
-    "row_id": 29056,
-    "name": "Purify",
-    "icon": "actions/29056.png"
-  },
-  {
-    "row_id": 106,
-    "name": "Quick Nock",
+    "id": 106,
+    "name": {
+      "en": "Quick Nock",
+      "fr": "Salve fulgurante",
+      "de": "Pfeilsalve",
+      "ja": "クイックノック"
+    },
     "icon": "actions/106.png"
   },
   {
-    "row_id": 36977,
-    "name": "Radiant Encore",
+    "id": 36977,
+    "name": {
+      "en": "Radiant Encore",
+      "fr": "Rappel radieux",
+      "de": "Luminöse Zugabe",
+      "ja": "光神のアンコール"
+    },
     "icon": "actions/36977.png"
   },
   {
-    "row_id": 25785,
-    "name": "Radiant Finale",
+    "id": 25785,
+    "name": {
+      "en": "Radiant Finale",
+      "fr": "Final radieux",
+      "de": "Luminöses Finale",
+      "ja": "光神のフィナーレ"
+    },
     "icon": "actions/25785.png"
   },
   {
-    "row_id": 101,
-    "name": "Raging Strikes",
+    "id": 101,
+    "name": {
+      "en": "Raging Strikes",
+      "fr": "Tir furieux",
+      "de": "Wütende Attacke",
+      "ja": "猛者の撃"
+    },
     "icon": "actions/101.png"
   },
   {
-    "row_id": 117,
-    "name": "Rain of Death",
+    "id": 117,
+    "name": {
+      "en": "Rain of Death",
+      "fr": "Pluie mortelle",
+      "de": "Tödlicher Regen",
+      "ja": "レイン・オブ・デス"
+    },
     "icon": "actions/117.png"
   },
   {
-    "row_id": 29711,
-    "name": "Recuperate",
-    "icon": "actions/29711.png"
-  },
-  {
-    "row_id": 7409,
-    "name": "Refulgent Arrow",
+    "id": 7409,
+    "name": {
+      "en": "Refulgent Arrow",
+      "fr": "Flèche rayonnante",
+      "de": "Glänzender Pfeil",
+      "ja": "リフルジェントアロー"
+    },
     "icon": "actions/7409.png"
   },
   {
-    "row_id": 112,
-    "name": "Repelling Shot",
+    "id": 112,
+    "name": {
+      "en": "Repelling Shot",
+      "fr": "Tir repoussant",
+      "de": "Mannstopper",
+      "ja": "リペリングショット"
+    },
     "icon": "actions/112.png"
   },
   {
-    "row_id": 29399,
-    "name": "Repelling Shot",
-    "icon": "actions/29399.png"
-  },
-  {
-    "row_id": 36976,
-    "name": "Resonant Arrow",
+    "id": 36976,
+    "name": {
+      "en": "Resonant Arrow",
+      "fr": "Flèche résonante",
+      "de": "Resonanzpfeil",
+      "ja": "レゾナンスアロー"
+    },
     "icon": "actions/36976.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 16494,
-    "name": "Shadowbite",
+    "id": 16494,
+    "name": {
+      "en": "Shadowbite",
+      "fr": "Morsure de l'ombre",
+      "de": "Schattenbiss",
+      "ja": "シャドウバイト"
+    },
     "icon": "actions/16494.png"
   },
   {
-    "row_id": 3562,
-    "name": "Sidewinder",
+    "id": 3562,
+    "name": {
+      "en": "Sidewinder",
+      "fr": "Vent venimeux",
+      "de": "Seitenschneider",
+      "ja": "サイドワインダー"
+    },
     "icon": "actions/3562.png"
   },
   {
-    "row_id": 29395,
-    "name": "Silent Nocturne",
-    "icon": "actions/29395.png"
-  },
-  {
-    "row_id": 29057,
-    "name": "Sprint",
-    "icon": "actions/29057.png"
-  },
-  {
-    "row_id": 29055,
-    "name": "Standard-issue Elixir",
-    "icon": "actions/29055.png"
-  },
-  {
-    "row_id": 7407,
-    "name": "Stormbite",
+    "id": 7407,
+    "name": {
+      "en": "Stormbite",
+      "fr": "Morsure de la tempête",
+      "de": "Sturmbiss",
+      "ja": "ストームバイト"
+    },
     "icon": "actions/7407.png"
   },
   {
-    "row_id": 98,
-    "name": "Straight Shot",
+    "id": 98,
+    "name": {
+      "en": "Straight Shot",
+      "fr": "Tir droit",
+      "de": "Direkter Schuss",
+      "ja": "ストレートショット"
+    },
     "icon": "actions/98.png"
   },
   {
-    "row_id": 3559,
-    "name": "the Wanderer's Minuet",
+    "id": 3559,
+    "name": {
+      "en": "the Wanderer's Minuet",
+      "fr": "Menuet du Vagabond",
+      "de": "Menuett des Wanderers",
+      "ja": "旅神のメヌエット"
+    },
     "icon": "actions/3559.png"
   },
   {
-    "row_id": 3561,
-    "name": "the Warden's Paean",
+    "id": 3561,
+    "name": {
+      "en": "the Warden's Paean",
+      "fr": "Péon du Contemplateur",
+      "de": "Päan des Hüters",
+      "ja": "時神のピーアン"
+    },
     "icon": "actions/3561.png"
   },
   {
-    "row_id": 29400,
-    "name": "the Warden's Paean",
-    "icon": "actions/29400.png"
-  },
-  {
-    "row_id": 7405,
-    "name": "Troubadour",
+    "id": 7405,
+    "name": {
+      "en": "Troubadour",
+      "fr": "Troubadour",
+      "de": "Troubadour",
+      "ja": "トルバドゥール"
+    },
     "icon": "actions/7405.png"
   },
   {
-    "row_id": 100,
-    "name": "Venomous Bite",
+    "id": 100,
+    "name": {
+      "en": "Venomous Bite",
+      "fr": "Morsure venimeuse",
+      "de": "Giftbiss",
+      "ja": "ベノムバイト"
+    },
     "icon": "actions/100.png"
   },
   {
-    "row_id": 36974,
-    "name": "Wide Volley",
+    "id": 36974,
+    "name": {
+      "en": "Wide Volley",
+      "fr": "Rafale impitoyable",
+      "de": "Sternenhagel",
+      "ja": "ワイドボレー"
+    },
     "icon": "actions/36974.png"
   },
   {
-    "row_id": 113,
-    "name": "Windbite",
+    "id": 111,
+    "name": {
+      "en": "Wide Volley",
+      "fr": "Rafale impitoyable",
+      "de": "Sternenhagel",
+      "ja": "ワイドボレー"
+    },
+    "icon": "actions/111.png"
+  },
+  {
+    "id": 113,
+    "name": {
+      "en": "Windbite",
+      "fr": "Morsure du vent",
+      "de": "Beißender Wind",
+      "ja": "ウィンドバイト"
+    },
     "icon": "actions/113.png"
   }
 ]

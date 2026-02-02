@@ -1,202 +1,413 @@
 [
   {
-    "row_id": 3641,
-    "name": "Abyssal Drain",
+    "id": 3641,
+    "name": {
+      "en": "Abyssal Drain",
+      "fr": "Drainage abyssal",
+      "de": "Abyssale Blutung",
+      "ja": "アビサルドレイン"
+    },
     "icon": "actions/3641.png"
   },
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 3625,
-    "name": "Blood Weapon",
+    "id": 3625,
+    "name": {
+      "en": "Blood Weapon",
+      "fr": "Arme de sang",
+      "de": "Blutwaffe",
+      "ja": "ブラッドウェポン"
+    },
     "icon": "actions/3625.png"
   },
   {
-    "row_id": 7392,
-    "name": "Bloodspiller",
+    "id": 7392,
+    "name": {
+      "en": "Bloodspiller",
+      "fr": "Marée de sang",
+      "de": "Blutvergießen",
+      "ja": "ブラッドスピラー"
+    },
     "icon": "actions/7392.png"
   },
   {
-    "row_id": 3643,
-    "name": "Carve and Spit",
+    "id": 3643,
+    "name": {
+      "en": "Carve and Spit",
+      "fr": "Tranchage-habillage",
+      "de": "Zweischnitt",
+      "ja": "カーヴ・アンド・スピット"
+    },
     "icon": "actions/3643.png"
   },
   {
-    "row_id": 36929,
-    "name": "Comeuppance",
+    "id": 36929,
+    "name": {
+      "en": "Comeuppance"
+    },
     "icon": "actions/36929.png"
   },
   {
-    "row_id": 3634,
-    "name": "Dark Mind",
+    "id": 3634,
+    "name": {
+      "en": "Dark Mind",
+      "fr": "Esprit ténébreux",
+      "de": "Dunkler Geist",
+      "ja": "ダークマインド"
+    },
     "icon": "actions/3634.png"
   },
   {
-    "row_id": 16471,
-    "name": "Dark Missionary",
+    "id": 16471,
+    "name": {
+      "en": "Dark Missionary",
+      "fr": "Missionnaire des Ténèbres",
+      "de": "Dunkler Bote",
+      "ja": "ダークミッショナリー"
+    },
     "icon": "actions/16471.png"
   },
   {
-    "row_id": 7390,
-    "name": "Delirium",
+    "id": 7390,
+    "name": {
+      "en": "Delirium",
+      "fr": "Delirium de sang",
+      "de": "Blutdelirium",
+      "ja": "ブラッドデリリアム"
+    },
     "icon": "actions/7390.png"
   },
   {
-    "row_id": 36932,
-    "name": "Disesteem",
+    "id": 36932,
+    "name": {
+      "en": "Disesteem",
+      "fr": "Sillon de morgue",
+      "de": "Antiheld",
+      "ja": "ディセスティーム"
+    },
     "icon": "actions/36932.png"
   },
   {
-    "row_id": 16467,
-    "name": "Edge of Darkness",
+    "id": 16467,
+    "name": {
+      "en": "Edge of Darkness",
+      "fr": "Tranchant de ténèbres",
+      "de": "Finstere Klinge",
+      "ja": "暗黒の剣"
+    },
     "icon": "actions/16467.png"
   },
   {
-    "row_id": 16470,
-    "name": "Edge of Shadow",
+    "id": 16470,
+    "name": {
+      "en": "Edge of Shadow",
+      "fr": "Tranchant d'ombre",
+      "de": "Schattenklinge",
+      "ja": "漆黒の剣"
+    },
     "icon": "actions/16470.png"
   },
   {
-    "row_id": 16466,
-    "name": "Flood of Darkness",
+    "id": 16466,
+    "name": {
+      "en": "Flood of Darkness",
+      "fr": "Déluge de ténèbres",
+      "de": "Finstere Flut",
+      "ja": "暗黒の波動"
+    },
     "icon": "actions/16466.png"
   },
   {
-    "row_id": 16469,
-    "name": "Flood of Shadow",
+    "id": 16469,
+    "name": {
+      "en": "Flood of Shadow",
+      "fr": "Déluge d'ombre",
+      "de": "Schattenflut",
+      "ja": "漆黒の波動"
+    },
     "icon": "actions/16469.png"
   },
   {
-    "row_id": 3629,
-    "name": "Grit",
+    "id": 3629,
+    "name": {
+      "en": "Grit",
+      "fr": "Férocité",
+      "de": "Zähigkeit",
+      "ja": "グリットスタンス"
+    },
     "icon": "actions/3629.png"
   },
   {
-    "row_id": 3617,
-    "name": "Hard Slash",
+    "id": 3617,
+    "name": {
+      "en": "Hard Slash",
+      "fr": "Taillade violente",
+      "de": "Harter Schlitzer",
+      "ja": "ハードスラッシュ"
+    },
     "icon": "actions/3617.png"
   },
   {
-    "row_id": 7538,
-    "name": "Interject",
+    "id": 36931,
+    "name": {
+      "en": "Impalement",
+      "fr": "Empalement sanglant",
+      "de": "Blutige Pfählung",
+      "ja": "インペイルメント"
+    },
+    "icon": "actions/36931.png"
+  },
+  {
+    "id": 7538,
+    "name": {
+      "en": "Interject",
+      "fr": "Interjection",
+      "de": "Zwischenruf",
+      "ja": "インタージェクト"
+    },
     "icon": "actions/7538.png"
   },
   {
-    "row_id": 3638,
-    "name": "Living Dead",
+    "id": 3638,
+    "name": {
+      "en": "Living Dead",
+      "fr": "Mort-vivant",
+      "de": "Totenerweckung",
+      "ja": "リビングデッド"
+    },
     "icon": "actions/3638.png"
   },
   {
-    "row_id": 16472,
-    "name": "Living Shadow",
+    "id": 16472,
+    "name": {
+      "en": "Living Shadow",
+      "fr": "Ombre vivante",
+      "de": "Schattenschemen",
+      "ja": "影身具現"
+    },
     "icon": "actions/16472.png"
   },
   {
-    "row_id": 7540,
-    "name": "Low Blow",
+    "id": 7540,
+    "name": {
+      "en": "Low Blow",
+      "fr": "Coup bas",
+      "de": "Tiefschlag",
+      "ja": "ロウブロウ"
+    },
     "icon": "actions/7540.png"
   },
   {
-    "row_id": 25754,
-    "name": "Oblation",
+    "id": 25754,
+    "name": {
+      "en": "Oblation",
+      "fr": "Oblation",
+      "de": "Opfergabe",
+      "ja": "オブレーション"
+    },
     "icon": "actions/25754.png"
   },
   {
-    "row_id": 7533,
-    "name": "Provoke",
+    "id": 7533,
+    "name": {
+      "en": "Provoke",
+      "fr": "Provocation",
+      "de": "Herausforderung",
+      "ja": "挑発"
+    },
     "icon": "actions/7533.png"
   },
   {
-    "row_id": 7391,
-    "name": "Quietus",
+    "id": 7391,
+    "name": {
+      "en": "Quietus",
+      "fr": "Quietus",
+      "de": "Quietus",
+      "ja": "クワイタス"
+    },
     "icon": "actions/7391.png"
   },
   {
-    "row_id": 7531,
-    "name": "Rampart",
+    "id": 7531,
+    "name": {
+      "en": "Rampart",
+      "fr": "Rempart",
+      "de": "Schutzwall",
+      "ja": "ランパート"
+    },
     "icon": "actions/7531.png"
   },
   {
-    "row_id": 7535,
-    "name": "Reprisal",
+    "id": 32067,
+    "name": {
+      "en": "Release Grit",
+      "fr": "Dissipe Férocité",
+      "de": "Bruch der Zähigkeit",
+      "ja": "グリットスタンス解除"
+    },
+    "icon": "actions/32067.png"
+  },
+  {
+    "id": 7535,
+    "name": {
+      "en": "Reprisal",
+      "fr": "Rétorsion",
+      "de": "Reflexion",
+      "ja": "リプライザル"
+    },
     "icon": "actions/7535.png"
   },
   {
-    "row_id": 25755,
-    "name": "Salt and Darkness",
+    "id": 25755,
+    "name": {
+      "en": "Salt and Darkness",
+      "fr": "Sel et Ténèbres",
+      "de": "Salz und Schwärze",
+      "ja": "ソルト・アンド・ダーク"
+    },
     "icon": "actions/25755.png"
   },
   {
-    "row_id": 3639,
-    "name": "Salted Earth",
+    "id": 3639,
+    "name": {
+      "en": "Salted Earth",
+      "fr": "Terre salée",
+      "de": "Salzige Erde",
+      "ja": "ソルトアース"
+    },
     "icon": "actions/3639.png"
   },
   {
-    "row_id": 36928,
-    "name": "Scarlet Delirium",
+    "id": 36928,
+    "name": {
+      "en": "Scarlet Delirium"
+    },
     "icon": "actions/36928.png"
   },
   {
-    "row_id": 3636,
-    "name": "Shadow Wall",
+    "id": 3636,
+    "name": {
+      "en": "Shadow Wall",
+      "fr": "Mur d'ombre",
+      "de": "Schattenwand",
+      "ja": "シャドウウォール"
+    },
     "icon": "actions/3636.png"
   },
   {
-    "row_id": 25757,
-    "name": "Shadowbringer",
+    "id": 25757,
+    "name": {
+      "en": "Shadowbringer",
+      "fr": "Porteur d'ombre",
+      "de": "Schattenbringer",
+      "ja": "シャドウブリンガー"
+    },
     "icon": "actions/25757.png"
   },
   {
-    "row_id": 36927,
-    "name": "Shadowed Vigil",
+    "id": 36927,
+    "name": {
+      "en": "Shadowed Vigil",
+      "fr": "Vigile ténébreux",
+      "de": "Schattenwacht",
+      "ja": "シャドウヴィジル"
+    },
     "icon": "actions/36927.png"
   },
   {
-    "row_id": 36926,
-    "name": "Shadowstride",
+    "id": 36926,
+    "name": {
+      "en": "Shadowstride",
+      "fr": "Foulée ténébreuse",
+      "de": "Schattenschritt",
+      "ja": "シャドウストライド"
+    },
     "icon": "actions/36926.png"
   },
   {
-    "row_id": 7537,
-    "name": "Shirk",
+    "id": 7537,
+    "name": {
+      "en": "Shirk",
+      "fr": "Dérobade",
+      "de": "Geteiltes Leid",
+      "ja": "シャーク"
+    },
     "icon": "actions/7537.png"
   },
   {
-    "row_id": 3632,
-    "name": "Souleater",
+    "id": 3632,
+    "name": {
+      "en": "Souleater",
+      "fr": "Dévoreur d'âme",
+      "de": "Seelenfresser",
+      "ja": "ソウルイーター"
+    },
     "icon": "actions/3632.png"
   },
   {
-    "row_id": 16468,
-    "name": "Stalwart Soul",
+    "id": 16468,
+    "name": {
+      "en": "Stalwart Soul",
+      "fr": "Noirceur insoumise",
+      "de": "Seelenstärke",
+      "ja": "ストルワートソウル"
+    },
     "icon": "actions/16468.png"
   },
   {
-    "row_id": 3623,
-    "name": "Syphon Strike",
+    "id": 3623,
+    "name": {
+      "en": "Syphon Strike",
+      "fr": "Frappe siphon",
+      "de": "Osmose",
+      "ja": "サイフォンストライク"
+    },
     "icon": "actions/3623.png"
   },
   {
-    "row_id": 7393,
-    "name": "The Blackest Night",
+    "id": 7393,
+    "name": {
+      "en": "The Blackest Night",
+      "fr": "Nuit noirissime",
+      "de": "Schwärzeste Nacht",
+      "ja": "ブラックナイト"
+    },
     "icon": "actions/7393.png"
   },
   {
-    "row_id": 36930,
-    "name": "Torcleaver",
+    "id": 36930,
+    "name": {
+      "en": "Torcleaver"
+    },
     "icon": "actions/36930.png"
   },
   {
-    "row_id": 3621,
-    "name": "Unleash",
+    "id": 3621,
+    "name": {
+      "en": "Unleash",
+      "fr": "Déchaînement",
+      "de": "Entfesselung",
+      "ja": "アンリーシュ"
+    },
     "icon": "actions/3621.png"
   },
   {
-    "row_id": 3624,
-    "name": "Unmend",
+    "id": 3624,
+    "name": {
+      "en": "Unmend",
+      "fr": "Détérioration",
+      "de": "Zerfall",
+      "ja": "アンメンド"
+    },
     "icon": "actions/3624.png"
   }
 ]

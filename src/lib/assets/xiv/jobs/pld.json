@@ -1,227 +1,444 @@
 [
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 16460,
-    "name": "Atonement",
+    "id": 16460,
+    "name": {
+      "en": "Atonement",
+      "fr": "Absolution",
+      "de": "Absolution",
+      "ja": "ロイエ"
+    },
     "icon": "actions/16460.png"
   },
   {
-    "row_id": 25748,
-    "name": "Blade of Faith",
+    "id": 25748,
+    "name": {
+      "en": "Blade of Faith"
+    },
     "icon": "actions/25748.png"
   },
   {
-    "row_id": 36922,
-    "name": "Blade of Honor",
+    "id": 36922,
+    "name": {
+      "en": "Blade of Honor"
+    },
     "icon": "actions/36922.png"
   },
   {
-    "row_id": 25749,
-    "name": "Blade of Truth",
+    "id": 25749,
+    "name": {
+      "en": "Blade of Truth"
+    },
     "icon": "actions/25749.png"
   },
   {
-    "row_id": 25750,
-    "name": "Blade of Valor",
+    "id": 25750,
+    "name": {
+      "en": "Blade of Valor"
+    },
     "icon": "actions/25750.png"
   },
   {
-    "row_id": 22,
-    "name": "Bulwark",
+    "id": 22,
+    "name": {
+      "en": "Bulwark",
+      "fr": "Forteresse",
+      "de": "Bollwerk",
+      "ja": "ブルワーク"
+    },
     "icon": "actions/22.png"
   },
   {
-    "row_id": 23,
-    "name": "Circle of Scorn",
+    "id": 23,
+    "name": {
+      "en": "Circle of Scorn",
+      "fr": "Cercle du destin",
+      "de": "Kreis der Verachtung",
+      "ja": "サークル・オブ・ドゥーム"
+    },
     "icon": "actions/23.png"
   },
   {
-    "row_id": 3541,
-    "name": "Clemency",
+    "id": 3541,
+    "name": {
+      "en": "Clemency",
+      "fr": "Clémence",
+      "de": "Klemenz",
+      "ja": "クレメンシー"
+    },
     "icon": "actions/3541.png"
   },
   {
-    "row_id": 16459,
-    "name": "Confiteor",
+    "id": 16459,
+    "name": {
+      "en": "Confiteor",
+      "fr": "Confiteor",
+      "de": "Confiteor",
+      "ja": "コンフィテオル"
+    },
     "icon": "actions/16459.png"
   },
   {
-    "row_id": 27,
-    "name": "Cover",
+    "id": 27,
+    "name": {
+      "en": "Cover",
+      "fr": "Couverture",
+      "de": "Deckung",
+      "ja": "かばう"
+    },
     "icon": "actions/27.png"
   },
   {
-    "row_id": 3540,
-    "name": "Divine Veil",
+    "id": 3540,
+    "name": {
+      "en": "Divine Veil",
+      "fr": "Voile divin",
+      "de": "Heiliger Quell",
+      "ja": "ディヴァインヴェール"
+    },
     "icon": "actions/3540.png"
   },
   {
-    "row_id": 25747,
-    "name": "Expiacion",
+    "id": 25747,
+    "name": {
+      "en": "Expiacion",
+      "fr": "Expiation",
+      "de": "Expiacion",
+      "ja": "エクスピアシオン"
+    },
     "icon": "actions/25747.png"
   },
   {
-    "row_id": 9,
-    "name": "Fast Blade",
+    "id": 9,
+    "name": {
+      "en": "Fast Blade",
+      "fr": "Lame rapide",
+      "de": "Vortexschnitt",
+      "ja": "ファストブレード"
+    },
     "icon": "actions/9.png"
   },
   {
-    "row_id": 20,
-    "name": "Fight or Flight",
+    "id": 20,
+    "name": {
+      "en": "Fight or Flight",
+      "fr": "Combat acharné",
+      "de": "Verwegenheit",
+      "ja": "ファイト・オア・フライト"
+    },
     "icon": "actions/20.png"
   },
   {
-    "row_id": 3538,
-    "name": "Goring Blade",
+    "id": 3538,
+    "name": {
+      "en": "Goring Blade",
+      "fr": "Lame étripante",
+      "de": "Ausweiden",
+      "ja": "ゴアブレード"
+    },
     "icon": "actions/3538.png"
   },
   {
-    "row_id": 36920,
-    "name": "Guardian",
+    "id": 36920,
+    "name": {
+      "en": "Guardian",
+      "fr": "Garde extrême",
+      "de": "Heilige Wacht",
+      "ja": "エクストリームガード"
+    },
     "icon": "actions/36920.png"
   },
   {
-    "row_id": 30,
-    "name": "Hallowed Ground",
+    "id": 30,
+    "name": {
+      "en": "Hallowed Ground",
+      "fr": "Invincible",
+      "de": "Heiliger Boden",
+      "ja": "インビンシブル"
+    },
     "icon": "actions/30.png"
   },
   {
-    "row_id": 16458,
-    "name": "Holy Circle",
+    "id": 16458,
+    "name": {
+      "en": "Holy Circle",
+      "fr": "Cercle sacré",
+      "de": "Heiliger Kreis",
+      "ja": "ホーリーサークル"
+    },
     "icon": "actions/16458.png"
   },
   {
-    "row_id": 25746,
-    "name": "Holy Sheltron",
+    "id": 25746,
+    "name": {
+      "en": "Holy Sheltron",
+      "fr": "Schiltron sacré",
+      "de": "Heiliges Schiltron",
+      "ja": "ホーリーシェルトロン"
+    },
     "icon": "actions/25746.png"
   },
   {
-    "row_id": 7384,
-    "name": "Holy Spirit",
+    "id": 7384,
+    "name": {
+      "en": "Holy Spirit",
+      "fr": "Esprit saint",
+      "de": "Heiliger Geist",
+      "ja": "ホーリースピリット"
+    },
     "icon": "actions/7384.png"
   },
   {
-    "row_id": 36921,
-    "name": "Imperator",
+    "id": 36921,
+    "name": {
+      "en": "Imperator",
+      "fr": "Imperator",
+      "de": "Imperator",
+      "ja": "インペラトル"
+    },
     "icon": "actions/36921.png"
   },
   {
-    "row_id": 7538,
-    "name": "Interject",
+    "id": 7538,
+    "name": {
+      "en": "Interject",
+      "fr": "Interjection",
+      "de": "Zwischenruf",
+      "ja": "インタージェクト"
+    },
     "icon": "actions/7538.png"
   },
   {
-    "row_id": 16461,
-    "name": "Intervene",
+    "id": 16461,
+    "name": {
+      "en": "Intervene",
+      "fr": "Irruption brutale",
+      "de": "Einschreiten",
+      "ja": "インターヴィーン"
+    },
     "icon": "actions/16461.png"
   },
   {
-    "row_id": 7382,
-    "name": "Intervention",
+    "id": 7382,
+    "name": {
+      "en": "Intervention",
+      "fr": "Intervention",
+      "de": "Intervention",
+      "ja": "インターベンション"
+    },
     "icon": "actions/7382.png"
   },
   {
-    "row_id": 28,
-    "name": "Iron Will",
+    "id": 28,
+    "name": {
+      "en": "Iron Will",
+      "fr": "Volonté de fer",
+      "de": "Schild-Eid",
+      "ja": "アイアンウィル"
+    },
     "icon": "actions/28.png"
   },
   {
-    "row_id": 7540,
-    "name": "Low Blow",
+    "id": 7540,
+    "name": {
+      "en": "Low Blow",
+      "fr": "Coup bas",
+      "de": "Tiefschlag",
+      "ja": "ロウブロウ"
+    },
     "icon": "actions/7540.png"
   },
   {
-    "row_id": 7385,
-    "name": "Passage of Arms",
+    "id": 7385,
+    "name": {
+      "en": "Passage of Arms",
+      "fr": "Passe d'armes",
+      "de": "Waffengang",
+      "ja": "パッセージ・オブ・アームズ"
+    },
     "icon": "actions/7385.png"
   },
   {
-    "row_id": 16457,
-    "name": "Prominence",
+    "id": 16457,
+    "name": {
+      "en": "Prominence",
+      "fr": "Évidence",
+      "de": "Protuberanz",
+      "ja": "プロミネンス"
+    },
     "icon": "actions/16457.png"
   },
   {
-    "row_id": 7533,
-    "name": "Provoke",
+    "id": 7533,
+    "name": {
+      "en": "Provoke",
+      "fr": "Provocation",
+      "de": "Herausforderung",
+      "ja": "挑発"
+    },
     "icon": "actions/7533.png"
   },
   {
-    "row_id": 21,
-    "name": "Rage of Halone",
+    "id": 21,
+    "name": {
+      "en": "Rage of Halone",
+      "fr": "Rage de Halone",
+      "de": "Halones Groll",
+      "ja": "レイジ・オブ・ハルオーネ"
+    },
     "icon": "actions/21.png"
   },
   {
-    "row_id": 7531,
-    "name": "Rampart",
+    "id": 7531,
+    "name": {
+      "en": "Rampart",
+      "fr": "Rempart",
+      "de": "Schutzwall",
+      "ja": "ランパート"
+    },
     "icon": "actions/7531.png"
   },
   {
-    "row_id": 7535,
-    "name": "Reprisal",
+    "id": 32065,
+    "name": {
+      "en": "Release Iron Will",
+      "fr": "Dissipe Volonté de fer",
+      "de": "Bruch des Schild-Eids",
+      "ja": "アイアンウィル解除"
+    },
+    "icon": "actions/32065.png"
+  },
+  {
+    "id": 7535,
+    "name": {
+      "en": "Reprisal",
+      "fr": "Rétorsion",
+      "de": "Reflexion",
+      "ja": "リプライザル"
+    },
     "icon": "actions/7535.png"
   },
   {
-    "row_id": 7383,
-    "name": "Requiescat",
+    "id": 7383,
+    "name": {
+      "en": "Requiescat",
+      "fr": "Requiescat",
+      "de": "Requiescat",
+      "ja": "レクイエスカット"
+    },
     "icon": "actions/7383.png"
   },
   {
-    "row_id": 15,
-    "name": "Riot Blade",
+    "id": 15,
+    "name": {
+      "en": "Riot Blade",
+      "fr": "Lame déchaînée",
+      "de": "Donnerklinge",
+      "ja": "ライオットソード"
+    },
     "icon": "actions/15.png"
   },
   {
-    "row_id": 3539,
-    "name": "Royal Authority",
+    "id": 3539,
+    "name": {
+      "en": "Royal Authority",
+      "fr": "Autorité royale",
+      "de": "Königsklinge",
+      "ja": "ロイヤルアソリティ"
+    },
     "icon": "actions/3539.png"
   },
   {
-    "row_id": 17,
-    "name": "Sentinel",
+    "id": 17,
+    "name": {
+      "en": "Sentinel",
+      "fr": "Sentinelle",
+      "de": "Sentinel",
+      "ja": "センチネル"
+    },
     "icon": "actions/17.png"
   },
   {
-    "row_id": 36919,
-    "name": "Sepulchre",
+    "id": 36919,
+    "name": {
+      "en": "Sepulchre"
+    },
     "icon": "actions/36919.png"
   },
   {
-    "row_id": 3542,
-    "name": "Sheltron",
+    "id": 3542,
+    "name": {
+      "en": "Sheltron",
+      "fr": "Schiltron",
+      "de": "Schiltron",
+      "ja": "シェルトロン"
+    },
     "icon": "actions/3542.png"
   },
   {
-    "row_id": 16,
-    "name": "Shield Bash",
+    "id": 16,
+    "name": {
+      "en": "Shield Bash",
+      "fr": "Coup de bouclier",
+      "de": "Schildschlag",
+      "ja": "シールドバッシュ"
+    },
     "icon": "actions/16.png"
   },
   {
-    "row_id": 24,
-    "name": "Shield Lob",
+    "id": 24,
+    "name": {
+      "en": "Shield Lob",
+      "fr": "Lancer de bouclier",
+      "de": "Schildwurf",
+      "ja": "シールドロブ"
+    },
     "icon": "actions/24.png"
   },
   {
-    "row_id": 7537,
-    "name": "Shirk",
+    "id": 7537,
+    "name": {
+      "en": "Shirk",
+      "fr": "Dérobade",
+      "de": "Geteiltes Leid",
+      "ja": "シャーク"
+    },
     "icon": "actions/7537.png"
   },
   {
-    "row_id": 29,
-    "name": "Spirits Within",
+    "id": 29,
+    "name": {
+      "en": "Spirits Within",
+      "fr": "Esprits intérieurs",
+      "de": "Selbsterhaltungstrieb",
+      "ja": "スピリッツウィズイン"
+    },
     "icon": "actions/29.png"
   },
   {
-    "row_id": 36918,
-    "name": "Supplication",
+    "id": 36918,
+    "name": {
+      "en": "Supplication"
+    },
     "icon": "actions/36918.png"
   },
   {
-    "row_id": 7381,
-    "name": "Total Eclipse",
+    "id": 7381,
+    "name": {
+      "en": "Total Eclipse",
+      "fr": "Éclipse totale",
+      "de": "Eklipse",
+      "ja": "トータルエクリプス"
+    },
     "icon": "actions/7381.png"
   }
 ]

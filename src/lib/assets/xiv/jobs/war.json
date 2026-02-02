@@ -1,192 +1,393 @@
 [
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 38,
-    "name": "Berserk",
+    "id": 38,
+    "name": {
+      "en": "Berserk",
+      "fr": "Berserk",
+      "de": "Tollwut",
+      "ja": "バーサク"
+    },
     "icon": "actions/38.png"
   },
   {
-    "row_id": 25751,
-    "name": "Bloodwhetting",
+    "id": 25751,
+    "name": {
+      "en": "Bloodwhetting",
+      "fr": "Intuition fougueuse",
+      "de": "Urimpuls",
+      "ja": "原初の血気"
+    },
     "icon": "actions/25751.png"
   },
   {
-    "row_id": 36923,
-    "name": "Damnation",
+    "id": 16463,
+    "name": {
+      "en": "Chaotic Cyclone",
+      "fr": "Cyclone chaotique",
+      "de": "Chaosklinge",
+      "ja": "カオティックサイクロン"
+    },
+    "icon": "actions/16463.png"
+  },
+  {
+    "id": 36923,
+    "name": {
+      "en": "Damnation",
+      "fr": "Damnation",
+      "de": "Verdammnis",
+      "ja": "ダムネーション"
+    },
     "icon": "actions/36923.png"
   },
   {
-    "row_id": 3550,
-    "name": "Decimate",
+    "id": 3550,
+    "name": {
+      "en": "Decimate",
+      "fr": "Décimation",
+      "de": "Dezimieren",
+      "ja": "デシメート"
+    },
     "icon": "actions/3550.png"
   },
   {
-    "row_id": 48,
-    "name": "Defiance",
+    "id": 48,
+    "name": {
+      "en": "Defiance",
+      "fr": "Défi",
+      "de": "Verteidiger",
+      "ja": "ディフェンダー"
+    },
     "icon": "actions/48.png"
   },
   {
-    "row_id": 3552,
-    "name": "Equilibrium",
+    "id": 3552,
+    "name": {
+      "en": "Equilibrium",
+      "fr": "Équilibre",
+      "de": "Äquilibrium",
+      "ja": "エクリブリウム"
+    },
     "icon": "actions/3552.png"
   },
   {
-    "row_id": 3549,
-    "name": "Fell Cleave",
+    "id": 3549,
+    "name": {
+      "en": "Fell Cleave",
+      "fr": "Sape-fendeur",
+      "de": "Niedermähen",
+      "ja": "フェルクリーヴ"
+    },
     "icon": "actions/3549.png"
   },
   {
-    "row_id": 31,
-    "name": "Heavy Swing",
+    "id": 31,
+    "name": {
+      "en": "Heavy Swing",
+      "fr": "Coup puissant",
+      "de": "Gewaltiger Hieb",
+      "ja": "ヘヴィスウィング"
+    },
     "icon": "actions/31.png"
   },
   {
-    "row_id": 43,
-    "name": "Holmgang",
+    "id": 43,
+    "name": {
+      "en": "Holmgang",
+      "fr": "Holmgang",
+      "de": "Holmgang",
+      "ja": "ホルムギャング"
+    },
     "icon": "actions/43.png"
   },
   {
-    "row_id": 52,
-    "name": "Infuriate",
+    "id": 52,
+    "name": {
+      "en": "Infuriate",
+      "fr": "Cri de guerre",
+      "de": "Schlachtruf",
+      "ja": "ウォークライ"
+    },
     "icon": "actions/52.png"
   },
   {
-    "row_id": 49,
-    "name": "Inner Beast",
+    "id": 49,
+    "name": {
+      "en": "Inner Beast",
+      "fr": "Bête intérieure",
+      "de": "Tier in dir",
+      "ja": "原初の魂"
+    },
     "icon": "actions/49.png"
   },
   {
-    "row_id": 16465,
-    "name": "Inner Chaos",
+    "id": 16465,
+    "name": {
+      "en": "Inner Chaos"
+    },
     "icon": "actions/16465.png"
   },
   {
-    "row_id": 7389,
-    "name": "Inner Release",
+    "id": 7389,
+    "name": {
+      "en": "Inner Release",
+      "fr": "Relâchement bestial",
+      "de": "Urbefreiung",
+      "ja": "原初の解放"
+    },
     "icon": "actions/7389.png"
   },
   {
-    "row_id": 7538,
-    "name": "Interject",
+    "id": 7538,
+    "name": {
+      "en": "Interject",
+      "fr": "Interjection",
+      "de": "Zwischenruf",
+      "ja": "インタージェクト"
+    },
     "icon": "actions/7538.png"
   },
   {
-    "row_id": 7540,
-    "name": "Low Blow",
+    "id": 7540,
+    "name": {
+      "en": "Low Blow",
+      "fr": "Coup bas",
+      "de": "Tiefschlag",
+      "ja": "ロウブロウ"
+    },
     "icon": "actions/7540.png"
   },
   {
-    "row_id": 37,
-    "name": "Maim",
+    "id": 37,
+    "name": {
+      "en": "Maim",
+      "fr": "Mutilation",
+      "de": "Verstümmelung",
+      "ja": "メイム"
+    },
     "icon": "actions/37.png"
   },
   {
-    "row_id": 16462,
-    "name": "Mythril Tempest",
+    "id": 16462,
+    "name": {
+      "en": "Mythril Tempest",
+      "fr": "Tempête de mithril",
+      "de": "Mithril-Gewitter",
+      "ja": "ミスリルテンペスト"
+    },
     "icon": "actions/16462.png"
   },
   {
-    "row_id": 16464,
-    "name": "Nascent Flash",
+    "id": 16464,
+    "name": {
+      "en": "Nascent Flash",
+      "fr": "Exaltation naissante",
+      "de": "Urflackern",
+      "ja": "原初の猛り"
+    },
     "icon": "actions/16464.png"
   },
   {
-    "row_id": 7386,
-    "name": "Onslaught",
+    "id": 7386,
+    "name": {
+      "en": "Onslaught",
+      "fr": "Assaut violent",
+      "de": "Sturmlauf",
+      "ja": "オンスロート"
+    },
     "icon": "actions/7386.png"
   },
   {
-    "row_id": 25752,
-    "name": "Orogeny",
+    "id": 25752,
+    "name": {
+      "en": "Orogeny",
+      "fr": "Orogenèse",
+      "de": "Orogenese",
+      "ja": "オロジェネシス"
+    },
     "icon": "actions/25752.png"
   },
   {
-    "row_id": 41,
-    "name": "Overpower",
+    "id": 41,
+    "name": {
+      "en": "Overpower",
+      "fr": "Domination",
+      "de": "Kahlrodung",
+      "ja": "オーバーパワー"
+    },
     "icon": "actions/41.png"
   },
   {
-    "row_id": 25753,
-    "name": "Primal Rend",
+    "id": 25753,
+    "name": {
+      "en": "Primal Rend",
+      "fr": "Griffade primitive",
+      "de": "Brachiale Gewalt",
+      "ja": "プライマルレンド"
+    },
     "icon": "actions/25753.png"
   },
   {
-    "row_id": 36925,
-    "name": "Primal Ruination",
+    "id": 36925,
+    "name": {
+      "en": "Primal Ruination"
+    },
     "icon": "actions/36925.png"
   },
   {
-    "row_id": 36924,
-    "name": "Primal Wrath",
+    "id": 36924,
+    "name": {
+      "en": "Primal Wrath"
+    },
     "icon": "actions/36924.png"
   },
   {
-    "row_id": 7533,
-    "name": "Provoke",
+    "id": 7533,
+    "name": {
+      "en": "Provoke",
+      "fr": "Provocation",
+      "de": "Herausforderung",
+      "ja": "挑発"
+    },
     "icon": "actions/7533.png"
   },
   {
-    "row_id": 7531,
-    "name": "Rampart",
+    "id": 7531,
+    "name": {
+      "en": "Rampart",
+      "fr": "Rempart",
+      "de": "Schutzwall",
+      "ja": "ランパート"
+    },
     "icon": "actions/7531.png"
   },
   {
-    "row_id": 3551,
-    "name": "Raw Intuition",
+    "id": 3551,
+    "name": {
+      "en": "Raw Intuition",
+      "fr": "Intuition pure",
+      "de": "Urinstinkt",
+      "ja": "原初の直感"
+    },
     "icon": "actions/3551.png"
   },
   {
-    "row_id": 7535,
-    "name": "Reprisal",
+    "id": 32066,
+    "name": {
+      "en": "Release Defiance",
+      "fr": "Dissipe Défi",
+      "de": "Bruch des Verteidigers",
+      "ja": "ディフェンダー解除"
+    },
+    "icon": "actions/32066.png"
+  },
+  {
+    "id": 7535,
+    "name": {
+      "en": "Reprisal",
+      "fr": "Rétorsion",
+      "de": "Reflexion",
+      "ja": "リプライザル"
+    },
     "icon": "actions/7535.png"
   },
   {
-    "row_id": 7388,
-    "name": "Shake It Off",
+    "id": 7388,
+    "name": {
+      "en": "Shake It Off",
+      "fr": "Débarrassage",
+      "de": "Abschütteln",
+      "ja": "シェイクオフ"
+    },
     "icon": "actions/7388.png"
   },
   {
-    "row_id": 7537,
-    "name": "Shirk",
+    "id": 7537,
+    "name": {
+      "en": "Shirk",
+      "fr": "Dérobade",
+      "de": "Geteiltes Leid",
+      "ja": "シャーク"
+    },
     "icon": "actions/7537.png"
   },
   {
-    "row_id": 51,
-    "name": "Steel Cyclone",
+    "id": 51,
+    "name": {
+      "en": "Steel Cyclone",
+      "fr": "Cyclone de fer",
+      "de": "Kreiselklinge",
+      "ja": "スチールサイクロン"
+    },
     "icon": "actions/51.png"
   },
   {
-    "row_id": 45,
-    "name": "Storm's Eye",
+    "id": 45,
+    "name": {
+      "en": "Storm's Eye",
+      "fr": "Œil de la tempête",
+      "de": "Sturmbrecher",
+      "ja": "シュトルムブレハ"
+    },
     "icon": "actions/45.png"
   },
   {
-    "row_id": 42,
-    "name": "Storm's Path",
+    "id": 42,
+    "name": {
+      "en": "Storm's Path",
+      "fr": "Couperet de justice",
+      "de": "Sturmkeil",
+      "ja": "シュトルムヴィント"
+    },
     "icon": "actions/42.png"
   },
   {
-    "row_id": 40,
-    "name": "Thrill of Battle",
+    "id": 40,
+    "name": {
+      "en": "Thrill of Battle",
+      "fr": "Frisson de la bataille",
+      "de": "Kampfrausch",
+      "ja": "スリル・オブ・バトル"
+    },
     "icon": "actions/40.png"
   },
   {
-    "row_id": 46,
-    "name": "Tomahawk",
+    "id": 46,
+    "name": {
+      "en": "Tomahawk",
+      "fr": "Tomahawk",
+      "de": "Tomahawk",
+      "ja": "トマホーク"
+    },
     "icon": "actions/46.png"
   },
   {
-    "row_id": 7387,
-    "name": "Upheaval",
+    "id": 7387,
+    "name": {
+      "en": "Upheaval",
+      "fr": "Révolte",
+      "de": "Umsturz",
+      "ja": "アップヒーバル"
+    },
     "icon": "actions/7387.png"
   },
   {
-    "row_id": 44,
-    "name": "Vengeance",
+    "id": 44,
+    "name": {
+      "en": "Vengeance",
+      "fr": "Représailles",
+      "de": "Rachsucht",
+      "ja": "ヴェンジェンス"
+    },
     "icon": "actions/44.png"
   }
 ]

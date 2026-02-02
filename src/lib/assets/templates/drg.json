@@ -7,122 +7,98 @@
     "updated": "2026-01-02",
     "steps": [
       {
-        "name": "True Thrust",
         "icon": "actions/75.png",
         "action": 75
       },
       {
-        "name": "Spiral Blow",
         "icon": "actions/36955.png",
         "action": 36955
       },
       {
-        "name": "Lance Charge",
         "icon": "actions/85.png",
         "action": 85
       },
       {
-        "name": "Chaotic Spring",
         "icon": "actions/25772.png",
         "action": 25772
       },
       {
-        "name": "Battle Litany",
         "icon": "actions/3557.png",
         "action": 3557
       },
       {
-        "name": "Geirskogul",
         "icon": "actions/3555.png",
         "action": 3555
       },
       {
-        "name": "Wheeling Thrust",
         "icon": "actions/3556.png",
         "action": 3556
       },
       {
-        "name": "High Jump",
         "icon": "actions/16478.png",
         "action": 16478
       },
       {
-        "name": "Life Surge",
         "icon": "actions/83.png",
         "action": 83
       },
       {
-        "name": "Drakesbane",
         "icon": "actions/36952.png",
         "action": 36952
       },
       {
-        "name": "Dragonfire Dive",
         "icon": "actions/96.png",
         "action": 96
       },
       {
-        "name": "Nastrond",
         "icon": "actions/7400.png",
         "action": 7400
       },
       {
-        "name": "Raiden Thrust",
         "icon": "actions/16479.png",
         "action": 16479
       },
       {
-        "name": "Stardiver",
         "icon": "actions/16480.png",
         "action": 16480
       },
       {
-        "name": "Lance Barrage",
         "icon": "actions/36954.png",
         "action": 36954
       },
       {
-        "name": "Starcross",
         "icon": "actions/36956.png",
         "action": 36956
       },
       {
-        "name": "Life Surge",
         "icon": "actions/83.png",
         "action": 83
       },
       {
-        "name": "Heavens' Thrust",
         "icon": "actions/25771.png",
         "action": 25771
       },
       {
-        "name": "Rise of the Dragon",
         "icon": "actions/36953.png",
         "action": 36953
       },
       {
-        "name": "Mirage Dive",
         "icon": "actions/7399.png",
         "action": 7399
       },
       {
-        "name": "Fang and Claw",
         "icon": "actions/3554.png",
         "action": 3554
       },
       {
-        "name": "Drakesbane",
         "icon": "actions/36952.png",
         "action": 36952
       },
       {
-        "name": "Raiden Thrust",
         "icon": "actions/16479.png",
         "action": 16479
       },
       {
-        "name": "Wyrmwind Thrust",
         "icon": "actions/25773.png",
         "action": 25773
       }

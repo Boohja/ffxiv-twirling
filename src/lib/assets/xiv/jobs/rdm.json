@@ -1,177 +1,482 @@
 [
   {
-    "row_id": 7518,
-    "name": "Acceleration",
+    "id": 7518,
+    "name": {
+      "en": "Acceleration",
+      "fr": "Accélération",
+      "de": "Präparation",
+      "ja": "アクセラレーション"
+    },
     "icon": "actions/7518.png"
   },
   {
-    "row_id": 7560,
-    "name": "Addle",
+    "id": 7560,
+    "name": {
+      "en": "Addle",
+      "fr": "Embrouillement",
+      "de": "Stumpfsinn",
+      "ja": "アドル"
+    },
     "icon": "actions/7560.png"
   },
   {
-    "row_id": 7519,
-    "name": "Contre Sixte",
+    "id": 7519,
+    "name": {
+      "en": "Contre Sixte",
+      "fr": "Contre de sixte",
+      "de": "Contre Sixte",
+      "ja": "コントルシクスト"
+    },
     "icon": "actions/7519.png"
   },
   {
-    "row_id": 7506,
-    "name": "Corps-a-corps",
+    "id": 7506,
+    "name": {
+      "en": "Corps-a-corps",
+      "fr": "Corps-à-corps",
+      "de": "Corps-a-corps",
+      "ja": "コル・ア・コル"
+    },
     "icon": "actions/7506.png"
   },
   {
-    "row_id": 7515,
-    "name": "Displacement",
+    "id": 7515,
+    "name": {
+      "en": "Displacement",
+      "fr": "Déplacement",
+      "de": "Körperparade",
+      "ja": "デプラスマン"
+    },
     "icon": "actions/7515.png"
   },
   {
-    "row_id": 7520,
-    "name": "Embolden",
+    "id": 7520,
+    "name": {
+      "en": "Embolden",
+      "fr": "Enhardissement",
+      "de": "Ermutigen",
+      "ja": "エンボルデン"
+    },
     "icon": "actions/7520.png"
   },
   {
-    "row_id": 16527,
-    "name": "Engagement",
+    "id": 7530,
+    "name": {
+      "en": "Enchanted Moulinet",
+      "fr": "Moulinet enchanté",
+      "de": "Magischer Moulinet Un",
+      "ja": "エンムーリネ・アン"
+    },
+    "icon": "actions/7530.png"
+  },
+  {
+    "id": 37002,
+    "name": {
+      "en": "Enchanted Moulinet Deux",
+      "fr": "Deuxième Moulinet",
+      "de": "Magischer Moulinet Deux",
+      "ja": "エンムーリネ・ドゥ"
+    },
+    "icon": "actions/37002.png"
+  },
+  {
+    "id": 37003,
+    "name": {
+      "en": "Enchanted Moulinet Trois",
+      "fr": "Troisième Moulinet",
+      "de": "Magischer Moulinet Trois",
+      "ja": "エンムーリネ・トロワ"
+    },
+    "icon": "actions/37003.png"
+  },
+  {
+    "id": 7529,
+    "name": {
+      "en": "Enchanted Redoublement",
+      "fr": "Redoublement enchanté",
+      "de": "Magisches Redoublement",
+      "ja": "エンルドゥブルマン"
+    },
+    "icon": "actions/7529.png"
+  },
+  {
+    "id": 16528,
+    "name": {
+      "en": "Enchanted Reprise",
+      "fr": "Reprise enchantée",
+      "de": "Magische Reprise",
+      "ja": "エンルプリーズ"
+    },
+    "icon": "actions/16528.png"
+  },
+  {
+    "id": 7527,
+    "name": {
+      "en": "Enchanted Riposte",
+      "fr": "Riposte enchantée",
+      "de": "Magische Riposte",
+      "ja": "エンリポスト"
+    },
+    "icon": "actions/7527.png"
+  },
+  {
+    "id": 7528,
+    "name": {
+      "en": "Enchanted Zwerchhau",
+      "fr": "Zwerchhau enchanté",
+      "de": "Magischer Zwerchhau",
+      "ja": "エンツヴェルクハウ"
+    },
+    "icon": "actions/7528.png"
+  },
+  {
+    "id": 16527,
+    "name": {
+      "en": "Engagement",
+      "fr": "Engagement",
+      "de": "Arret-Stoß",
+      "ja": "アンガジェマン"
+    },
     "icon": "actions/16527.png"
   },
   {
-    "row_id": 7517,
-    "name": "Fleche",
+    "id": 7517,
+    "name": {
+      "en": "Fleche",
+      "fr": "Flèche",
+      "de": "Fleche",
+      "ja": "フレッシュ"
+    },
     "icon": "actions/7517.png"
   },
   {
-    "row_id": 16526,
-    "name": "Impact",
+    "id": 37006,
+    "name": {
+      "en": "Grand Impact",
+      "fr": "Impact majestueux",
+      "de": "Nobler Impakt",
+      "ja": "ノーブルインパクト"
+    },
+    "icon": "actions/37006.png"
+  },
+  {
+    "id": 16526,
+    "name": {
+      "en": "Impact",
+      "fr": "Impact",
+      "de": "Impakt",
+      "ja": "インパクト"
+    },
     "icon": "actions/16526.png"
   },
   {
-    "row_id": 7503,
-    "name": "Jolt",
+    "id": 7503,
+    "name": {
+      "en": "Jolt",
+      "fr": "À-coup",
+      "de": "Stoß",
+      "ja": "ジョルト"
+    },
     "icon": "actions/7503.png"
   },
   {
-    "row_id": 7524,
-    "name": "Jolt II",
+    "id": 7524,
+    "name": {
+      "en": "Jolt II",
+      "fr": "Extra À-coup",
+      "de": "Stoß II",
+      "ja": "ジョルラ"
+    },
     "icon": "actions/7524.png"
   },
   {
-    "row_id": 37004,
-    "name": "Jolt III",
+    "id": 37004,
+    "name": {
+      "en": "Jolt III",
+      "fr": "Méga À-coup",
+      "de": "Stoß III",
+      "ja": "ジョルガ"
+    },
     "icon": "actions/37004.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 25857,
-    "name": "Magick Barrier",
+    "id": 25857,
+    "name": {
+      "en": "Magick Barrier",
+      "fr": "Barrière anti-magie",
+      "de": "Magiebarriere",
+      "ja": "バマジク"
+    },
     "icon": "actions/25857.png"
   },
   {
-    "row_id": 7521,
-    "name": "Manafication",
+    "id": 7521,
+    "name": {
+      "en": "Manafication",
+      "fr": "Manafication",
+      "de": "Manafizierung",
+      "ja": "マナフィケーション"
+    },
     "icon": "actions/7521.png"
   },
   {
-    "row_id": 7513,
-    "name": "Moulinet",
+    "id": 7513,
+    "name": {
+      "en": "Moulinet",
+      "fr": "Moulinet",
+      "de": "Moulinet",
+      "ja": "ムーリネ"
+    },
     "icon": "actions/7513.png"
   },
   {
-    "row_id": 7516,
-    "name": "Redoublement",
+    "id": 37007,
+    "name": {
+      "en": "Prefulgence",
+      "fr": "Syncristallisation",
+      "de": "Kristallglanz",
+      "ja": "プリフルジェンス"
+    },
+    "icon": "actions/37007.png"
+  },
+  {
+    "id": 7516,
+    "name": {
+      "en": "Redoublement",
+      "fr": "Redoublement",
+      "de": "Redoublement",
+      "ja": "ルドゥブルマン"
+    },
     "icon": "actions/7516.png"
   },
   {
-    "row_id": 16529,
-    "name": "Reprise",
+    "id": 16529,
+    "name": {
+      "en": "Reprise",
+      "fr": "Reprise",
+      "de": "Reprise",
+      "ja": "ルプリーズ"
+    },
     "icon": "actions/16529.png"
   },
   {
-    "row_id": 7504,
-    "name": "Riposte",
+    "id": 25858,
+    "name": {
+      "en": "Resolution",
+      "fr": "Résolution",
+      "de": "Entschlossenheit",
+      "ja": "レゾリューション"
+    },
+    "icon": "actions/25858.png"
+  },
+  {
+    "id": 7504,
+    "name": {
+      "en": "Riposte",
+      "fr": "Riposte",
+      "de": "Riposte",
+      "ja": "リポスト"
+    },
     "icon": "actions/7504.png"
   },
   {
-    "row_id": 7509,
-    "name": "Scatter",
+    "id": 7509,
+    "name": {
+      "en": "Scatter",
+      "fr": "Éparpillement",
+      "de": "Zerstreuen",
+      "ja": "スキャッター"
+    },
     "icon": "actions/7509.png"
   },
   {
-    "row_id": 25880,
-    "name": "Sleep",
+    "id": 16530,
+    "name": {
+      "en": "Scorch",
+      "fr": "Calcination",
+      "de": "Versengung",
+      "ja": "スコーチ"
+    },
+    "icon": "actions/16530.png"
+  },
+  {
+    "id": 25880,
+    "name": {
+      "en": "Sleep",
+      "fr": "Sommeil",
+      "de": "Schlaf",
+      "ja": "スリプル"
+    },
     "icon": "actions/25880.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 7507,
-    "name": "Veraero",
+    "id": 7507,
+    "name": {
+      "en": "Veraero",
+      "fr": "VerVent",
+      "de": "Erzwind",
+      "ja": "ヴァルエアロ"
+    },
     "icon": "actions/7507.png"
   },
   {
-    "row_id": 16525,
-    "name": "Veraero II",
+    "id": 16525,
+    "name": {
+      "en": "Veraero II",
+      "fr": "Extra VerVent",
+      "de": "Erzwindra",
+      "ja": "ヴァルエアロラ"
+    },
     "icon": "actions/16525.png"
   },
   {
-    "row_id": 25856,
-    "name": "Veraero III",
+    "id": 25856,
+    "name": {
+      "en": "Veraero III",
+      "fr": "Méga VerVent",
+      "de": "Erzwindga",
+      "ja": "ヴァルエアロガ"
+    },
     "icon": "actions/25856.png"
   },
   {
-    "row_id": 7514,
-    "name": "Vercure",
+    "id": 7514,
+    "name": {
+      "en": "Vercure",
+      "fr": "VerSoin",
+      "de": "Erzvita",
+      "ja": "ヴァルケアル"
+    },
     "icon": "actions/7514.png"
   },
   {
-    "row_id": 7510,
-    "name": "Verfire",
+    "id": 7510,
+    "name": {
+      "en": "Verfire",
+      "fr": "VerFeu",
+      "de": "Erzfeuer",
+      "ja": "ヴァルファイア"
+    },
     "icon": "actions/7510.png"
   },
   {
-    "row_id": 7523,
-    "name": "Verraise",
+    "id": 7525,
+    "name": {
+      "en": "Verflare",
+      "fr": "VerBrasier",
+      "de": "Erzflare",
+      "ja": "ヴァルフレア"
+    },
+    "icon": "actions/7525.png"
+  },
+  {
+    "id": 7526,
+    "name": {
+      "en": "Verholy",
+      "fr": "VerMiracle",
+      "de": "Erz-Sanctus",
+      "ja": "ヴァルホーリー"
+    },
+    "icon": "actions/7526.png"
+  },
+  {
+    "id": 7523,
+    "name": {
+      "en": "Verraise",
+      "fr": "VerVie",
+      "de": "Erz-Wiederbeleben",
+      "ja": "ヴァルレイズ"
+    },
     "icon": "actions/7523.png"
   },
   {
-    "row_id": 7511,
-    "name": "Verstone",
+    "id": 7511,
+    "name": {
+      "en": "Verstone",
+      "fr": "VerTerre",
+      "de": "Erzstein",
+      "ja": "ヴァルストーン"
+    },
     "icon": "actions/7511.png"
   },
   {
-    "row_id": 7505,
-    "name": "Verthunder",
+    "id": 7505,
+    "name": {
+      "en": "Verthunder",
+      "fr": "VerFoudre",
+      "de": "Erzblitz",
+      "ja": "ヴァルサンダー"
+    },
     "icon": "actions/7505.png"
   },
   {
-    "row_id": 16524,
-    "name": "Verthunder II",
+    "id": 16524,
+    "name": {
+      "en": "Verthunder II",
+      "fr": "Extra VerFoudre",
+      "de": "Erzblitzra",
+      "ja": "ヴァルサンダラ"
+    },
     "icon": "actions/16524.png"
   },
   {
-    "row_id": 25855,
-    "name": "Verthunder III",
+    "id": 25855,
+    "name": {
+      "en": "Verthunder III",
+      "fr": "Méga VerFoudre",
+      "de": "Erzblitzga",
+      "ja": "ヴァルサンダガ"
+    },
     "icon": "actions/25855.png"
   },
   {
-    "row_id": 37005,
-    "name": "Vice of Thorns",
+    "id": 37005,
+    "name": {
+      "en": "Vice of Thorns",
+      "fr": "Épine croisée",
+      "de": "Blüte des Mutes",
+      "ja": "ブライヤー・クロゼ"
+    },
     "icon": "actions/37005.png"
   },
   {
-    "row_id": 7512,
-    "name": "Zwerchhau",
+    "id": 7512,
+    "name": {
+      "en": "Zwerchhau",
+      "fr": "Zwerchhau",
+      "de": "Zwerchhau",
+      "ja": "ツヴェルクハウ"
+    },
     "icon": "actions/7512.png"
   }
 ]

@@ -1,177 +1,452 @@
 [
   {
-    "row_id": 7548,
-    "name": "Arm's Length",
+    "id": 7548,
+    "name": {
+      "en": "Arm's Length",
+      "fr": "Portée de bras",
+      "de": "Abtausch",
+      "ja": "アームズレングス"
+    },
     "icon": "actions/7548.png"
   },
   {
-    "row_id": 7542,
-    "name": "Bloodbath",
+    "id": 7542,
+    "name": {
+      "en": "Bloodbath",
+      "fr": "Bain de sang",
+      "de": "Blutbad",
+      "ja": "ブラッドバス"
+    },
     "icon": "actions/7542.png"
   },
   {
-    "row_id": 7486,
-    "name": "Enpi",
+    "id": 7486,
+    "name": {
+      "en": "Enpi",
+      "fr": "Enpi",
+      "de": "Enpi",
+      "ja": "燕飛"
+    },
     "icon": "actions/7486.png"
   },
   {
-    "row_id": 7549,
-    "name": "Feint",
+    "id": 7549,
+    "name": {
+      "en": "Feint",
+      "fr": "Restreinte",
+      "de": "Zermürben",
+      "ja": "牽制"
+    },
     "icon": "actions/7549.png"
   },
   {
-    "row_id": 7483,
-    "name": "Fuga",
+    "id": 7483,
+    "name": {
+      "en": "Fuga",
+      "fr": "Fûga",
+      "de": "Fuga",
+      "ja": "風雅"
+    },
     "icon": "actions/7483.png"
   },
   {
-    "row_id": 25780,
-    "name": "Fuko",
+    "id": 25780,
+    "name": {
+      "en": "Fuko",
+      "fr": "Fûkô",
+      "de": "Fuko",
+      "ja": "風光"
+    },
     "icon": "actions/25780.png"
   },
   {
-    "row_id": 7481,
-    "name": "Gekko",
+    "id": 7481,
+    "name": {
+      "en": "Gekko",
+      "fr": "Gekkô",
+      "de": "Gekko",
+      "ja": "月光"
+    },
     "icon": "actions/7481.png"
   },
   {
-    "row_id": 36963,
-    "name": "Gyofu",
+    "id": 36963,
+    "name": {
+      "en": "Gyofu",
+      "fr": "Gyôfû",
+      "de": "Gyofu",
+      "ja": "暁風"
+    },
     "icon": "actions/36963.png"
   },
   {
-    "row_id": 7495,
-    "name": "Hagakure",
+    "id": 7495,
+    "name": {
+      "en": "Hagakure",
+      "fr": "Hagakure",
+      "de": "Hagakure",
+      "ja": "葉隠"
+    },
     "icon": "actions/7495.png"
   },
   {
-    "row_id": 7477,
-    "name": "Hakaze",
+    "id": 7477,
+    "name": {
+      "en": "Hakaze",
+      "fr": "Hakaze",
+      "de": "Hakaze",
+      "ja": "刃風"
+    },
     "icon": "actions/7477.png"
   },
   {
-    "row_id": 7496,
-    "name": "Hissatsu: Guren",
+    "id": 7489,
+    "name": {
+      "en": "Higanbana",
+      "fr": "Higanbana",
+      "de": "Higanbana",
+      "ja": "彼岸花"
+    },
+    "icon": "actions/7489.png"
+  },
+  {
+    "id": 7496,
+    "name": {
+      "en": "Hissatsu: Guren",
+      "fr": "Hissatsu : Guren",
+      "de": "Hissatsu: Guren",
+      "ja": "必殺剣・紅蓮"
+    },
     "icon": "actions/7496.png"
   },
   {
-    "row_id": 7492,
-    "name": "Hissatsu: Gyoten",
+    "id": 7492,
+    "name": {
+      "en": "Hissatsu: Gyoten",
+      "fr": "Hissatsu : Gyôten",
+      "de": "Hissatsu: Gyoten",
+      "ja": "必殺剣・暁天"
+    },
     "icon": "actions/7492.png"
   },
   {
-    "row_id": 7491,
-    "name": "Hissatsu: Kyuten",
+    "id": 7491,
+    "name": {
+      "en": "Hissatsu: Kyuten",
+      "fr": "Hissatsu : Kyûten",
+      "de": "Hissatsu: Kyuten",
+      "ja": "必殺剣・九天"
+    },
     "icon": "actions/7491.png"
   },
   {
-    "row_id": 16481,
-    "name": "Hissatsu: Senei",
+    "id": 16481,
+    "name": {
+      "en": "Hissatsu: Senei",
+      "fr": "Hissatsu : Sen'ei",
+      "de": "Hissatsu: Senei",
+      "ja": "必殺剣・閃影"
+    },
     "icon": "actions/16481.png"
   },
   {
-    "row_id": 7490,
-    "name": "Hissatsu: Shinten",
+    "id": 7490,
+    "name": {
+      "en": "Hissatsu: Shinten",
+      "fr": "Hissatsu : Shinten",
+      "de": "Hissatsu: Shinten",
+      "ja": "必殺剣・震天"
+    },
     "icon": "actions/7490.png"
   },
   {
-    "row_id": 7493,
-    "name": "Hissatsu: Yaten",
+    "id": 7493,
+    "name": {
+      "en": "Hissatsu: Yaten",
+      "fr": "Hissatsu : Yaten",
+      "de": "Hissatsu: Yaten",
+      "ja": "必殺剣・夜天"
+    },
     "icon": "actions/7493.png"
   },
   {
-    "row_id": 7867,
-    "name": "Iaijutsu",
+    "id": 7867,
+    "name": {
+      "en": "Iaijutsu",
+      "fr": "Iaijutsu",
+      "de": "Iaijutsu",
+      "ja": "居合術"
+    },
     "icon": "actions/7867.png"
   },
   {
-    "row_id": 16482,
-    "name": "Ikishoten",
+    "id": 16482,
+    "name": {
+      "en": "Ikishoten",
+      "fr": "Ikishôten",
+      "de": "Ikishoten",
+      "ja": "意気衝天"
+    },
     "icon": "actions/16482.png"
   },
   {
-    "row_id": 7478,
-    "name": "Jinpu",
+    "id": 7478,
+    "name": {
+      "en": "Jinpu",
+      "fr": "Jinpû",
+      "de": "Jinpu",
+      "ja": "陣風"
+    },
     "icon": "actions/7478.png"
   },
   {
-    "row_id": 7482,
-    "name": "Kasha",
+    "id": 16485,
+    "name": {
+      "en": "Kaeshi: Goken",
+      "fr": "Kaeshi Goken",
+      "de": "Kaeshi Goken",
+      "ja": "返し五剣"
+    },
+    "icon": "actions/16485.png"
+  },
+  {
+    "id": 25782,
+    "name": {
+      "en": "Kaeshi: Namikiri",
+      "fr": "Kaeshi Namikiri",
+      "de": "Kaeshi Namikiri",
+      "ja": "返し波切"
+    },
+    "icon": "actions/25782.png"
+  },
+  {
+    "id": 16486,
+    "name": {
+      "en": "Kaeshi: Setsugekka",
+      "fr": "Kaeshi Setsugekka",
+      "de": "Kaeshi Setsugekka",
+      "ja": "返し雪月花"
+    },
+    "icon": "actions/16486.png"
+  },
+  {
+    "id": 7482,
+    "name": {
+      "en": "Kasha",
+      "fr": "Kasha",
+      "de": "Kasha",
+      "ja": "花車"
+    },
     "icon": "actions/7482.png"
   },
   {
-    "row_id": 7863,
-    "name": "Leg Sweep",
+    "id": 7863,
+    "name": {
+      "en": "Leg Sweep",
+      "fr": "Fauchage de jambe",
+      "de": "Stolperfalle",
+      "ja": "レッグスウィープ"
+    },
     "icon": "actions/7863.png"
   },
   {
-    "row_id": 7484,
-    "name": "Mangetsu",
+    "id": 7484,
+    "name": {
+      "en": "Mangetsu",
+      "fr": "Mangetsu",
+      "de": "Mangetsu",
+      "ja": "満月"
+    },
     "icon": "actions/7484.png"
   },
   {
-    "row_id": 7497,
-    "name": "Meditate",
+    "id": 7497,
+    "name": {
+      "en": "Meditate",
+      "fr": "Mokusô",
+      "de": "Meditieren",
+      "ja": "黙想"
+    },
     "icon": "actions/7497.png"
   },
   {
-    "row_id": 7499,
-    "name": "Meikyo Shisui",
+    "id": 7499,
+    "name": {
+      "en": "Meikyo Shisui",
+      "fr": "Meikyô Shisui",
+      "de": "Meikyo Shisui",
+      "ja": "明鏡止水"
+    },
     "icon": "actions/7499.png"
   },
   {
-    "row_id": 25781,
-    "name": "Ogi Namikiri",
+    "id": 7487,
+    "name": {
+      "en": "Midare Setsugekka",
+      "fr": "Midare Setsugekka",
+      "de": "Midare Setsugekka",
+      "ja": "乱れ雪月花"
+    },
+    "icon": "actions/7487.png"
+  },
+  {
+    "id": 25781,
+    "name": {
+      "en": "Ogi Namikiri",
+      "fr": "Ôgi : Namikiri",
+      "de": "Ogi Namikiri",
+      "ja": "奥義波切"
+    },
     "icon": "actions/25781.png"
   },
   {
-    "row_id": 7485,
-    "name": "Oka",
+    "id": 7485,
+    "name": {
+      "en": "Oka",
+      "fr": "Ôka",
+      "de": "Oka",
+      "ja": "桜花"
+    },
     "icon": "actions/7485.png"
   },
   {
-    "row_id": 7541,
-    "name": "Second Wind",
+    "id": 7541,
+    "name": {
+      "en": "Second Wind",
+      "fr": "Second souffle",
+      "de": "Chakra",
+      "ja": "内丹"
+    },
     "icon": "actions/7541.png"
   },
   {
-    "row_id": 7479,
-    "name": "Shifu",
+    "id": 7479,
+    "name": {
+      "en": "Shifu",
+      "fr": "Shifû",
+      "de": "Shifu",
+      "ja": "士風"
+    },
     "icon": "actions/7479.png"
   },
   {
-    "row_id": 16487,
-    "name": "Shoha",
+    "id": 16487,
+    "name": {
+      "en": "Shoha",
+      "fr": "Shôha",
+      "de": "Shoha",
+      "ja": "照破"
+    },
     "icon": "actions/16487.png"
   },
   {
-    "row_id": 36962,
-    "name": "Tengentsu",
+    "id": 36965,
+    "name": {
+      "en": "Tendo Goken",
+      "fr": "Tendô Goken",
+      "de": "Tendo Goken",
+      "ja": "天道五剣"
+    },
+    "icon": "actions/36965.png"
+  },
+  {
+    "id": 36967,
+    "name": {
+      "en": "Tendo Kaeshi Goken",
+      "fr": "Tendô Kaeshi Goken",
+      "de": "Tendo Kaeshi Goken",
+      "ja": "天道返し五剣"
+    },
+    "icon": "actions/36967.png"
+  },
+  {
+    "id": 36968,
+    "name": {
+      "en": "Tendo Kaeshi Setsugekka",
+      "fr": "Tendô Kaeshi Setsugekka",
+      "de": "Tendo Kaeshi Setsugekka",
+      "ja": "天道返し雪月花"
+    },
+    "icon": "actions/36968.png"
+  },
+  {
+    "id": 36966,
+    "name": {
+      "en": "Tendo Setsugekka",
+      "fr": "Tendô Setsugekka",
+      "de": "Tendo Setsugekka",
+      "ja": "天道雪月花"
+    },
+    "icon": "actions/36966.png"
+  },
+  {
+    "id": 36962,
+    "name": {
+      "en": "Tengentsu",
+      "fr": "Tengentsû",
+      "de": "Tengentsu",
+      "ja": "天眼通"
+    },
     "icon": "actions/36962.png"
   },
   {
-    "row_id": 7498,
-    "name": "Third Eye",
+    "id": 7488,
+    "name": {
+      "en": "Tenka Goken",
+      "fr": "Tenka Goken",
+      "de": "Tenka Goken",
+      "ja": "天下五剣"
+    },
+    "icon": "actions/7488.png"
+  },
+  {
+    "id": 7498,
+    "name": {
+      "en": "Third Eye",
+      "fr": "Troisième œil",
+      "de": "Drittes Auge",
+      "ja": "心眼"
+    },
     "icon": "actions/7498.png"
   },
   {
-    "row_id": 7546,
-    "name": "True North",
+    "id": 7546,
+    "name": {
+      "en": "True North",
+      "fr": "Vrai Nord",
+      "de": "Neuausrichtung",
+      "ja": "トゥルーノース"
+    },
     "icon": "actions/7546.png"
   },
   {
-    "row_id": 16483,
-    "name": "Tsubame-gaeshi",
+    "id": 16483,
+    "name": {
+      "en": "Tsubame-gaeshi",
+      "fr": "Tsubamegaeshi",
+      "de": "Tsubamegaeshi",
+      "ja": "燕返し"
+    },
     "icon": "actions/16483.png"
   },
   {
-    "row_id": 7480,
-    "name": "Yukikaze",
+    "id": 7480,
+    "name": {
+      "en": "Yukikaze",
+      "fr": "Yukikaze",
+      "de": "Yukikaze",
+      "ja": "雪風"
+    },
     "icon": "actions/7480.png"
   },
   {
-    "row_id": 36964,
-    "name": "Zanshin",
+    "id": 36964,
+    "name": {
+      "en": "Zanshin",
+      "fr": "Zanshin",
+      "de": "Zanshin",
+      "ja": "残心"
+    },
     "icon": "actions/36964.png"
   }
 ]

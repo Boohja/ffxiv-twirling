@@ -1,217 +1,422 @@
 [
   {
-    "row_id": 121,
-    "name": "Aero",
+    "id": 121,
+    "name": {
+      "en": "Aero",
+      "fr": "Vent",
+      "de": "Wind",
+      "ja": "エアロ"
+    },
     "icon": "actions/121.png"
   },
   {
-    "row_id": 132,
-    "name": "Aero II",
+    "id": 132,
+    "name": {
+      "en": "Aero II",
+      "fr": "Extra Vent",
+      "de": "Windra",
+      "ja": "エアロラ"
+    },
     "icon": "actions/132.png"
   },
   {
-    "row_id": 37008,
-    "name": "Aetherial Shift",
+    "id": 37008,
+    "name": {
+      "en": "Aetherial Shift",
+      "fr": "Déplacement éthéréen",
+      "de": "Ätherische Verschiebung",
+      "ja": "エーテリアルシフト"
+    },
     "icon": "actions/37008.png"
   },
   {
-    "row_id": 16535,
-    "name": "Afflatus Misery",
+    "id": 16535,
+    "name": {
+      "en": "Afflatus Misery",
+      "fr": "Offrande de misère",
+      "de": "Afflatus miseriae",
+      "ja": "ハート・オブ・ミゼリ"
+    },
     "icon": "actions/16535.png"
   },
   {
-    "row_id": 16534,
-    "name": "Afflatus Rapture",
+    "id": 16534,
+    "name": {
+      "en": "Afflatus Rapture",
+      "fr": "Offrande de ravissement",
+      "de": "Afflatus laetitiae",
+      "ja": "ハート・オブ・ラプチャー"
+    },
     "icon": "actions/16534.png"
   },
   {
-    "row_id": 16531,
-    "name": "Afflatus Solace",
+    "id": 16531,
+    "name": {
+      "en": "Afflatus Solace",
+      "fr": "Offrande de réconfort",
+      "de": "Afflatus solatii",
+      "ja": "ハート・オブ・ソラス"
+    },
     "icon": "actions/16531.png"
   },
   {
-    "row_id": 25861,
-    "name": "Aquaveil",
+    "id": 25861,
+    "name": {
+      "en": "Aquaveil",
+      "fr": "Aquavoile",
+      "de": "Wasserschleier",
+      "ja": "アクアヴェール"
+    },
     "icon": "actions/25861.png"
   },
   {
-    "row_id": 3571,
-    "name": "Assize",
+    "id": 3571,
+    "name": {
+      "en": "Assize",
+      "fr": "Assises",
+      "de": "Assise",
+      "ja": "アサイズ"
+    },
     "icon": "actions/3571.png"
   },
   {
-    "row_id": 3569,
-    "name": "Asylum",
+    "id": 3569,
+    "name": {
+      "en": "Asylum",
+      "fr": "Asile",
+      "de": "Refugium",
+      "ja": "アサイラム"
+    },
     "icon": "actions/3569.png"
   },
   {
-    "row_id": 140,
-    "name": "Benediction",
+    "id": 140,
+    "name": {
+      "en": "Benediction",
+      "fr": "Bénédiction",
+      "de": "Benediktion",
+      "ja": "ベネディクション"
+    },
     "icon": "actions/140.png"
   },
   {
-    "row_id": 120,
-    "name": "Cure",
+    "id": 120,
+    "name": {
+      "en": "Cure",
+      "fr": "Soin",
+      "de": "Vita",
+      "ja": "ケアル"
+    },
     "icon": "actions/120.png"
   },
   {
-    "row_id": 135,
-    "name": "Cure II",
+    "id": 135,
+    "name": {
+      "en": "Cure II",
+      "fr": "Extra Soin",
+      "de": "Vitra",
+      "ja": "ケアルラ"
+    },
     "icon": "actions/135.png"
   },
   {
-    "row_id": 131,
-    "name": "Cure III",
+    "id": 131,
+    "name": {
+      "en": "Cure III",
+      "fr": "Méga Soin",
+      "de": "Vitaga",
+      "ja": "ケアルガ"
+    },
     "icon": "actions/131.png"
   },
   {
-    "row_id": 16532,
-    "name": "Dia",
+    "id": 16532,
+    "name": {
+      "en": "Dia",
+      "fr": "Lumen",
+      "de": "Dia",
+      "ja": "ディア"
+    },
     "icon": "actions/16532.png"
   },
   {
-    "row_id": 7432,
-    "name": "Divine Benison",
+    "id": 7432,
+    "name": {
+      "en": "Divine Benison",
+      "fr": "Faveur divine",
+      "de": "Göttlicher Segen",
+      "ja": "ディヴァインベニゾン"
+    },
     "icon": "actions/7432.png"
   },
   {
-    "row_id": 37011,
-    "name": "Divine Caress",
+    "id": 37011,
+    "name": {
+      "en": "Divine Caress",
+      "fr": "Caresse divine",
+      "de": "Göttliche Umarmung",
+      "ja": "ディヴァインカレス"
+    },
     "icon": "actions/37011.png"
   },
   {
-    "row_id": 7568,
-    "name": "Esuna",
+    "id": 7568,
+    "name": {
+      "en": "Esuna",
+      "fr": "Guérison",
+      "de": "Medica",
+      "ja": "エスナ"
+    },
     "icon": "actions/7568.png"
   },
   {
-    "row_id": 16533,
-    "name": "Glare",
+    "id": 16533,
+    "name": {
+      "en": "Glare",
+      "fr": "Chatoiement",
+      "de": "Blendung",
+      "ja": "グレア"
+    },
     "icon": "actions/16533.png"
   },
   {
-    "row_id": 25859,
-    "name": "Glare III",
+    "id": 25859,
+    "name": {
+      "en": "Glare III",
+      "fr": "Méga Chatoiement",
+      "de": "Blendga",
+      "ja": "グレアガ"
+    },
     "icon": "actions/25859.png"
   },
   {
-    "row_id": 37009,
-    "name": "Glare IV",
+    "id": 37009,
+    "name": {
+      "en": "Glare IV",
+      "fr": "Giga Chatoiement",
+      "de": "Blendka",
+      "ja": "グレアジャ"
+    },
     "icon": "actions/37009.png"
   },
   {
-    "row_id": 139,
-    "name": "Holy",
+    "id": 139,
+    "name": {
+      "en": "Holy",
+      "fr": "Miracle",
+      "de": "Sanctus",
+      "ja": "ホーリー"
+    },
     "icon": "actions/139.png"
   },
   {
-    "row_id": 25860,
-    "name": "Holy III",
+    "id": 25860,
+    "name": {
+      "en": "Holy III",
+      "fr": "Méga Miracle",
+      "de": "Sanctga",
+      "ja": "ホーリガ"
+    },
     "icon": "actions/25860.png"
   },
   {
-    "row_id": 25862,
-    "name": "Liturgy of the Bell",
+    "id": 25862,
+    "name": {
+      "en": "Liturgy of the Bell",
+      "fr": "Tintinnabule",
+      "de": "Glockenspiel",
+      "ja": "リタージー・オブ・ベル"
+    },
     "icon": "actions/25862.png"
   },
   {
-    "row_id": 7562,
-    "name": "Lucid Dreaming",
+    "id": 7562,
+    "name": {
+      "en": "Lucid Dreaming",
+      "fr": "Rêve lucide",
+      "de": "Klartraum",
+      "ja": "ルーシッドドリーム"
+    },
     "icon": "actions/7562.png"
   },
   {
-    "row_id": 124,
-    "name": "Medica",
+    "id": 124,
+    "name": {
+      "en": "Medica",
+      "fr": "Médica",
+      "de": "Reseda",
+      "ja": "メディカ"
+    },
     "icon": "actions/124.png"
   },
   {
-    "row_id": 133,
-    "name": "Medica II",
+    "id": 133,
+    "name": {
+      "en": "Medica II",
+      "fr": "Extra Médica",
+      "de": "Resedra",
+      "ja": "メディカラ"
+    },
     "icon": "actions/133.png"
   },
   {
-    "row_id": 37010,
-    "name": "Medica III",
+    "id": 37010,
+    "name": {
+      "en": "Medica III",
+      "fr": "Méga Médica",
+      "de": "Resega",
+      "ja": "メディガ"
+    },
     "icon": "actions/37010.png"
   },
   {
-    "row_id": 7433,
-    "name": "Plenary Indulgence",
+    "id": 7433,
+    "name": {
+      "en": "Plenary Indulgence",
+      "fr": "Indulgence plénière",
+      "de": "Vollkommener Ablass",
+      "ja": "インドゥルゲンティア"
+    },
     "icon": "actions/7433.png"
   },
   {
-    "row_id": 136,
-    "name": "Presence of Mind",
+    "id": 136,
+    "name": {
+      "en": "Presence of Mind",
+      "fr": "Présence d'esprit",
+      "de": "Geistesgegenwart",
+      "ja": "神速魔"
+    },
     "icon": "actions/136.png"
   },
   {
-    "row_id": 1584,
-    "name": "Purify",
-    "icon": "actions/1584.png"
-  },
-  {
-    "row_id": 125,
-    "name": "Raise",
+    "id": 125,
+    "name": {
+      "en": "Raise",
+      "fr": "Vie",
+      "de": "Wiederbeleben",
+      "ja": "レイズ"
+    },
     "icon": "actions/125.png"
   },
   {
-    "row_id": 137,
-    "name": "Regen",
+    "id": 137,
+    "name": {
+      "en": "Regen",
+      "fr": "Récup",
+      "de": "Regena",
+      "ja": "リジェネ"
+    },
     "icon": "actions/137.png"
   },
   {
-    "row_id": 16560,
-    "name": "Repose",
+    "id": 16560,
+    "name": {
+      "en": "Repose",
+      "fr": "Sérénité",
+      "de": "Schlummer",
+      "ja": "リポーズ"
+    },
     "icon": "actions/16560.png"
   },
   {
-    "row_id": 7571,
-    "name": "Rescue",
+    "id": 7571,
+    "name": {
+      "en": "Rescue",
+      "fr": "Secours",
+      "de": "Rettung",
+      "ja": "救出"
+    },
     "icon": "actions/7571.png"
   },
   {
-    "row_id": 119,
-    "name": "Stone",
+    "id": 119,
+    "name": {
+      "en": "Stone",
+      "fr": "Terre",
+      "de": "Stein",
+      "ja": "ストーン"
+    },
     "icon": "actions/119.png"
   },
   {
-    "row_id": 127,
-    "name": "Stone II",
+    "id": 127,
+    "name": {
+      "en": "Stone II",
+      "fr": "Extra Terre",
+      "de": "Steinra",
+      "ja": "ストンラ"
+    },
     "icon": "actions/127.png"
   },
   {
-    "row_id": 3568,
-    "name": "Stone III",
+    "id": 3568,
+    "name": {
+      "en": "Stone III",
+      "fr": "Méga Terre",
+      "de": "Steinga",
+      "ja": "ストンガ"
+    },
     "icon": "actions/3568.png"
   },
   {
-    "row_id": 7431,
-    "name": "Stone IV",
+    "id": 7431,
+    "name": {
+      "en": "Stone IV",
+      "fr": "Giga Terre",
+      "de": "Steinka",
+      "ja": "ストンジャ"
+    },
     "icon": "actions/7431.png"
   },
   {
-    "row_id": 7559,
-    "name": "Surecast",
+    "id": 7559,
+    "name": {
+      "en": "Surecast",
+      "fr": "Stoïcisme",
+      "de": "Unbeirrbarkeit",
+      "ja": "堅実魔"
+    },
     "icon": "actions/7559.png"
   },
   {
-    "row_id": 7561,
-    "name": "Swiftcast",
+    "id": 7561,
+    "name": {
+      "en": "Swiftcast",
+      "fr": "Magie prompte",
+      "de": "Spontaneität",
+      "ja": "迅速魔"
+    },
     "icon": "actions/7561.png"
   },
   {
-    "row_id": 16536,
-    "name": "Temperance",
+    "id": 16536,
+    "name": {
+      "en": "Temperance",
+      "fr": "Tempérance",
+      "de": "Linderung",
+      "ja": "テンパランス"
+    },
     "icon": "actions/16536.png"
   },
   {
-    "row_id": 3570,
-    "name": "Tetragrammaton",
+    "id": 3570,
+    "name": {
+      "en": "Tetragrammaton",
+      "fr": "Tétragramme",
+      "de": "Tetragrammaton",
+      "ja": "テトラグラマトン"
+    },
     "icon": "actions/3570.png"
   },
   {
-    "row_id": 7430,
-    "name": "Thin Air",
+    "id": 7430,
+    "name": {
+      "en": "Thin Air",
+      "fr": "Sponte",
+      "de": "Ex Machina",
+      "ja": "シンエアー"
+    },
     "icon": "actions/7430.png"
   }
 ]

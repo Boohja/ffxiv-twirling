@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "ast",
+    "slug": "ast-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/healers/astrologian/openers/",
+    "updated": "2022-09-21",
+    "steps": [
+        {
+            "icon": "actions/7439.png",
+            "action": 7439
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/16554.png",
+            "action": 16554
+        },
+        {
+            "icon": "actions/3606.png",
+            "action": 3606
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/16552.png",
+            "action": 16552
+        },
+        {
+            "icon": "actions/37023.png",
+            "action": 37023
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/7444.png",
+            "action": 7444
+        },
+        {
+            "icon": "actions/37018.png",
+            "action": 37018
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/37026.png",
+            "action": 37026
+        },
+        {
+            "icon": "actions/37029.png",
+            "action": 37029
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        },
+        {
+            "icon": "actions/16554.png",
+            "action": 16554
+        },
+        {
+            "icon": "actions/25871.png",
+            "action": 25871
+        }
+    ]
+  }
+]

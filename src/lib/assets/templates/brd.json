@@ -1,0 +1,95 @@
+[
+  {
+    "name": "Comfy Opener 2.49 (The Balance)",
+    "job": "brd",
+    "slug": "brd-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/ranged/bard/openers/",
+    "updated": "2025-12-27",
+    "steps": [
+        {
+            "icon": "actions/7407.png",
+            "action": 7407
+        },
+        {
+            "icon": "actions/36975.png",
+            "action": 36975
+        },
+        {
+            "icon": "actions/3559.png",
+            "action": 3559
+        },
+        {
+            "icon": "actions/7406.png",
+            "action": 7406
+        },
+        {
+            "icon": "actions/3558.png",
+            "action": 3558
+        },
+        {
+            "icon": "actions/25785.png",
+            "action": 25785
+        },
+        {
+            "icon": "actions/16495.png",
+            "action": 16495
+        },
+        {
+            "icon": "actions/118.png",
+            "action": 118
+        },
+        {
+            "icon": "actions/101.png",
+            "action": 101
+        },
+        {
+            "icon": "actions/16495.png",
+            "action": 16495
+        },
+        {
+            "icon": "actions/107.png",
+            "action": 107
+        },
+        {
+            "icon": "actions/7409.png",
+            "action": 7409
+        },
+        {
+            "icon": "actions/3562.png",
+            "action": 3562
+        },
+        {
+            "icon": "actions/36977.png",
+            "action": 36977
+        },
+        {
+            "icon": "actions/36976.png",
+            "action": 36976
+        },
+        {
+            "icon": "actions/7409.png",
+            "action": 7409
+        },
+        {
+            "icon": "actions/3558.png",
+            "action": 3558
+        },
+        {
+            "icon": "actions/16495.png",
+            "action": 16495
+        },
+        {
+            "icon": "actions/3560.png",
+            "action": 3560
+        },
+        {
+            "icon": "actions/16495.png",
+            "action": 16495
+        },
+        {
+            "icon": "actions/7404.png",
+            "action": 7404
+        }
+    ]
+  }
+]

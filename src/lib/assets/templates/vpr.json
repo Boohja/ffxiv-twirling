@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Standard Opener (The Balance)",
+    "job": "vpr",
+    "slug": "vpr-opener",
+    "url": "https://www.thebalanceffxiv.com/jobs/melee/viper/openers/",
+    "updated": "2025-12-17",
+    "steps": [
+        {
+            "icon": "actions/34606.png",
+            "action": 34606
+        },
+        {
+            "icon": "actions/34647.png",
+            "action": 34647
+        },
+        {
+            "icon": "actions/34609.png",
+            "action": 34609
+        },
+        {
+            "icon": "actions/34620.png",
+            "action": 34620
+        },
+        {
+            "icon": "actions/34621.png",
+            "action": 34621
+        },
+        {
+            "icon": "actions/34636.png",
+            "action": 34636
+        },
+        {
+            "icon": "actions/34637.png",
+            "action": 34637
+        },
+        {
+            "icon": "actions/34622.png",
+            "action": 34622
+        },
+        {
+            "icon": "actions/34637.png",
+            "action": 34637
+        },
+        {
+            "icon": "actions/34636.png",
+            "action": 34636
+        },
+        {
+            "icon": "actions/34626.png",
+            "action": 34626
+        },
+        {
+            "icon": "actions/34627.png",
+            "action": 34627
+        },
+        {
+            "icon": "actions/34640.png",
+            "action": 34640
+        },
+        {
+            "icon": "actions/34628.png",
+            "action": 34628
+        },
+        {
+            "icon": "actions/34641.png",
+            "action": 34641
+        },
+        {
+            "icon": "actions/34629.png",
+            "action": 34629
+        },
+        {
+            "icon": "actions/34642.png",
+            "action": 34642
+        },
+        {
+            "icon": "actions/34630.png",
+            "action": 34630
+        },
+        {
+            "icon": "actions/34643.png",
+            "action": 34643
+        },
+        {
+            "icon": "actions/34631.png",
+            "action": 34631
+        },
+        {
+            "icon": "actions/34633.png",
+            "action": 34633
+        },
+        {
+            "icon": "actions/34644.png",
+            "action": 34644
+        },
+        {
+            "icon": "actions/34645.png",
+            "action": 34645
+        },
+        {
+            "icon": "actions/34633.png",
+            "action": 34633
+        },
+        {
+            "icon": "actions/34644.png",
+            "action": 34644
+        },
+        {
+            "icon": "actions/34645.png",
+            "action": 34645
+        },
+        {
+            "icon": "actions/34612.png",
+            "action": 34612
+        },
+        {
+            "icon": "actions/34634.png",
+            "action": 34634
+        },
+        {
+            "icon": "actions/34620.png",
+            "action": 34620
+        },
+        {
+            "icon": "actions/34633.png",
+            "action": 34633
+        },
+        {
+            "icon": "actions/34644.png",
+            "action": 34644
+        },
+        {
+            "icon": "actions/34645.png",
+            "action": 34645
+        },
+        {
+            "icon": "actions/34621.png",
+            "action": 34621
+        },
+        {
+            "icon": "actions/34636.png",
+            "action": 34636
+        },
+        {
+            "icon": "actions/34637.png",
+            "action": 34637
+        },
+        {
+            "icon": "actions/34622.png",
+            "action": 34622
+        },
+        {
+            "icon": "actions/34637.png",
+            "action": 34637
+        },
+        {
+            "icon": "actions/34636.png",
+            "action": 34636
+        }
+    ]
+  }
+]

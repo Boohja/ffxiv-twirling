@@ -7,97 +7,78 @@
     "updated": "2025-12-17",
     "steps": [
       {
-        "name": "Fast Blade",
         "icon": "actions/9.png",
         "action": 9
       },
       {
-        "name": "Riot Blade",
         "icon": "actions/15.png",
         "action": 15
       },
       {
-        "name": "Royal Authority",
         "icon": "actions/3539.png",
         "action": 3539
       },
       {
-        "name": "Fight or Flight",
         "icon": "actions/20.png",
         "action": 20
       },
       {
-        "name": "Imperator",
         "icon": "actions/36921.png",
         "action": 36921
       },
       {
-        "name": "Confiteor",
         "icon": "actions/16459.png",
         "action": 16459
       },
       {
-        "name": "Circle of Scorn",
         "icon": "actions/23.png",
         "action": 23
       },
       {
-        "name": "Expiacion",
         "icon": "actions/25747.png",
         "action": 25747
       },
       {
-        "name": "Blade of Faith",
         "icon": "actions/25748.png",
         "action": 25748
       },
       {
-        "name": "Intervene",
         "icon": "actions/16461.png",
         "action": 16461
       },
       {
-        "name": "Blade of Truth",
         "icon": "actions/25749.png",
         "action": 25749
       },
       {
-        "name": "Intervene",
         "icon": "actions/16461.png",
         "action": 16461
       },
       {
-        "name": "Blade of Valor",
         "icon": "actions/25750.png",
         "action": 25750
       },
       {
-        "name": "Blade of Honor",
         "icon": "actions/36922.png",
         "action": 36922
       },
       {
-        "name": "Goring Blade",
         "icon": "actions/3538.png",
         "action": 3538
       },
       {
-        "name": "Atonement",
         "icon": "actions/16460.png",
         "action": 16460
       },
       {
-        "name": "Supplication",
         "icon": "actions/36918.png",
         "action": 36918
       },
       {
-        "name": "Sepulchre",
         "icon": "actions/36919.png",
         "action": 36919
       },
       {
-        "name": "Holy Spirit",
         "icon": "actions/7384.png",
         "action": 7384
       }
